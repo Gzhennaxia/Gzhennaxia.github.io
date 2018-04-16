@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="酒店系统项目总结1. 我是否对系统的业务有了整体的了解？ 我能不能对其他人（例如面试官）描述下该系统实现的业务：  系统有哪些角色，这些角色如何与系统交互； 系统有哪些主要流程，次要流程，都有哪些角色参与其中。  2. 系统的整体架构是什么样子？ 系统都分为哪些组件，这些组件是如何部署在服务器/客户端的？ 它们之间是怎么交互的？用的什么协议？ 3. 系统用到了哪些技术和框架，我是不是都已经精通了？">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-15T15:56:39.275Z">
+<meta property="og:updated_time" content="2018-04-16T15:40:10.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="酒店系统项目总结1. 我是否对系统的业务有了整体的了解？ 我能不能对其他人（例如面试官）描述下该系统实现的业务：  系统有哪些角色，这些角色如何与系统交互； 系统有哪些主要流程，次要流程，都有哪些角色参与其中。  2. 系统的整体架构是什么样子？ 系统都分为哪些组件，这些组件是如何部署在服务器/客户端的？ 它们之间是怎么交互的？用的什么协议？ 3. 系统用到了哪些技术和框架，我是不是都已经精通了？">
@@ -107,11 +107,29 @@
 <p>我是不是经常可以给大家做技术分享？</p>
 <p>列举出这些，就是让我们<strong>去脱离自己的“一亩三分地”，aim higher，慢慢地成为一个有影响力的Leader</strong>。</p>
 <p>大家肯定能看出来，要成为这样的人，肯定得付出比常人更多的努力才可以，没有人能随随便便就成功的。</p>
+<p>最近无聊想自己搞个博客，于是就试了下HEXO，前面的没啥问题，按照网上的教程，前面加上sudo基本没啥问题</p>
+<p>但是在部署的时候遇到 ERROR Deployer not found: github  的错误</p>
+<p>经过调查后才知道HEXO更新到3.0之后，deploy的type 的github需要改成git</p>
+<p>但是还是不行  出现了 ERROR Deployer not found: git 的错误</p>
+<p>后来经过调查之后 才知道 需要运行下这个指令才行 </p>
+<p><strong>[plain]</strong> <a href="https://blog.csdn.net/crow1108/article/details/50445671#" target="_blank" rel="noopener">view plain</a> <a href="https://blog.csdn.net/crow1108/article/details/50445671#" target="_blank" rel="noopener">copy</a></p>
+<ol>
+<li>npm install hexo-deployer-git –save  </li>
+</ol>
+<p>然后就可以部署了</p>
+<p><strong>[plain]</strong> <a href="https://blog.csdn.net/crow1108/article/details/50445671#" target="_blank" rel="noopener">view plain</a> <a href="https://blog.csdn.net/crow1108/article/details/50445671#" target="_blank" rel="noopener">copy</a></p>
+<ol>
+<li>sudo hexo g  </li>
+</ol>
+<p><strong>[plain]</strong> <a href="https://blog.csdn.net/crow1108/article/details/50445671#" target="_blank" rel="noopener">view plain</a> <a href="https://blog.csdn.net/crow1108/article/details/50445671#" target="_blank" rel="noopener">copy</a></p>
+<ol>
+<li>sudo hexo d  </li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/16/酒店系统项目的总结/" data-id="cjg2e931l0001mwawot3d7290" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/16/酒店系统项目的总结/" data-id="cjg2eregy00012oawj15b4wf7" class="article-share-link">Share</a>
       
       
     </footer>
