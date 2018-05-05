@@ -138,9 +138,10 @@
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525453070093&di=ef28b6f2d34adc2e6eebbeded78ef13c&imgtype=0&src=http%3A%2F%2Fwww.zhaolongedu.com%2Fuploads%2Fallimg%2F180103%2F1-1P103094552640.jpg">
 <meta property="og:image" content="https://images2015.cnblogs.com/blog/1010726/201706/1010726-20170621004734695-988542448.png">
 <meta property="og:image" content="https://img-blog.csdn.net/20161205160942891?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/702767/201509/702767-20150907115314981-2080783917.jpg">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1525489497&di=4d25c2882b100546e268917fc25610b8&src=http://img0.ph.126.net/SGfD-1zXK3qOdf7aHVwotg==/6630842365817029155.png">
 <meta property="og:image" content="https://img-blog.csdn.net/20170119141709623?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFtZXNfc2h1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2018-05-05T09:43:48.480Z">
+<meta property="og:updated_time" content="2018-05-05T15:45:40.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔试问答">
 <meta name="twitter:description" content="目录[TOC] Java语言基础语法数据类型 面向对象的特征有哪些? 面向对象有三大特征，封装、继承和多态。  封装 将数据（即私有属性）和对数据的操作（即set/get方法）封装到一个对象中。  继承 不支持多继承  多态 多态的三个条件：继承、重写、父类引用指向子类实例。 与抽象类、接口等共同弥补缺失多继承的不足。    Java中的数据类型都有哪些？ Java语言提供了八种基本类型。六种数字">
@@ -384,7 +385,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-05 17:43:48" itemprop="dateModified" datetime="2018-05-05T17:43:48+08:00">2018-05-05</time>
+                <time title="修改时间：2018-05-05 23:45:40" itemprop="dateModified" datetime="2018-05-05T23:45:40+08:00">2018-05-05</time>
               
             
           </span>
@@ -687,7 +688,43 @@
 </ol>
 </li>
 </ol>
-<h2 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h2><h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><ol>
+<h2 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h2><h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h1 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h1><h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><p><img src="http://images2015.cnblogs.com/blog/702767/201509/702767-20150907115314981-2080783917.jpg" alt="Spring框架"></p>
+<ol>
+<li><p>Spring有哪些模块？</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/xlgen157387/article/details/45290799" target="_blank" rel="noopener">Spring框架的七大模块</a></p>
+</blockquote>
+<ol>
+<li><p>Spring Core：</p>
+<p>Core封装包是框架的最基础部分，提供<strong>IOC和依赖注入</strong>特性。这里的基础概念是BeanFactory，它提供对Factory模式的经典实现来消除对程序性单例模式的需要，并真正地允许你从程序逻辑中分离出依赖关系和配置。</p>
+</li>
+<li><p>Spring Context:</p>
+<p>构建于Core封装包基础上的 Context封装包，提供了一种框架式的对象访问方法，有些象JNDI注册器。Context封装包的特性得自于Beans封装包，并添加了对国际化（I18N）的支持（例如资源绑定），事件传播，资源装载的方式和Context的透明创建，比如说通过Servlet容器。</p>
+</li>
+<li><p>Spring DAO:</p>
+<p>DAO (Data Access Object)提供了<strong><em>JDBC的抽象层</em></strong>，它可消除冗长的JDBC编码和解析数据库厂商特有的错误代码。 并且，JDBC封装包还提供了一种比编程性更好的<strong>声明性事务管理方法</strong>，不仅仅是实现了特定接口，而且对所有的POJOs（plain old Java objects）都适用。</p>
+</li>
+<li><p>Spring ORM:</p>
+<p>ORM 封装包提供了常用的<strong>“对象/关系”映射</strong>APIs的集成层。 其中包括JPA、JDO、Hibernate 和 iBatis 。利用ORM封装包，可以混合使用所有Spring提供的特性进行“对象/关系”映射，如前边提到的简单声明性事务管理。 </p>
+</li>
+<li><p>Spring AOP:</p>
+<p>Spring的 AOP 封装包提供了符合AOP Alliance规范的<strong>面向方面的编程</strong>实现，让你可以定义，例如方法拦截器（method-interceptors）和切点（pointcuts），从逻辑上讲，从而减弱代码的功能耦合，清晰的被分离开。而且，利用source-level的元数据功能，还可以将各种行为信息合并到你的代码中。</p>
+</li>
+<li><p>Spring Web:</p>
+<p>Spring中的 Web 包提供了基础的针对Web开发的集成特性，例如多方文件上传，利用Servlet listeners进行IOC容器初始化和针对Web的ApplicationContext。当与WebWork或Struts一起使用Spring时，这个包使Spring可与其他框架结合。</p>
+</li>
+<li><p>Spring Web MVC:</p>
+<p>Spring中的MVC封装包提供了Web应用的Model-View-Controller（MVC）实现。Spring的MVC框架并不是仅仅提供一种传统的实现，它提供了一种清晰的分离模型，在领域模型代码和Web Form之间。并且，还可以借助Spring框架的其他特性。</p>
+</li>
+</ol>
+</li>
+<li><p>Spring框架中的三大核心思想是什么?</p>
+<ol>
+<li><strong>DI(依赖注入)</strong></li>
+<li><strong>IOC(控制反转)</strong></li>
+<li><strong>AOP(面向切面编程) </strong></li>
+</ol>
+</li>
 <li><p>Spring事务管理的四种方式</p>
 <ol>
 <li><p><strong>编程式事务管理</strong>(基于Java编程控制，很少使用)</p>
@@ -722,6 +759,19 @@
 <p>​</p>
 </li>
 </ol>
+<h2 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate"></a>Hibernate</h2><ol>
+<li><p>Hibernate的查询有几种方式 ？</p>
+<p>hibernate查询的6种方法：</p>
+<ol>
+<li><strong>HQL查询</strong></li>
+<li>对象化查询Criteria方法</li>
+<li>动态查询DetachedCriteria</li>
+<li>例子查询</li>
+<li><strong>sql查询</strong></li>
+<li>命名查询 </li>
+</ol>
+</li>
+</ol>
 <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><ol>
 <li><p>斐波那契数列 </p>
 <ul>
@@ -748,7 +798,23 @@
 </ul>
 </li>
 </ol>
-<h1 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h1><h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2>
+<h1 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h1><h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="JSP"><a href="#JSP" class="headerlink" title="JSP"></a>JSP</h2><ol>
+<li><p>九大内置对象（隐含对象）</p>
+<p>JSP中一共预先定义了9个这样的对象，分别为：request、response、session、application、out、pagecontext、config、page、exception </p>
+<ol>
+<li><strong>out对象</strong>：用于向客户端、浏览器输出数据。</li>
+<li><strong>request对象</strong>：封装了来自客户端、浏览器的各种信息。</li>
+<li><strong>response对象</strong>：封装了服务器的响应信息。</li>
+<li><strong>exception对象</strong>：封装了jsp程序执行过程中发生的异常和错误信息。</li>
+<li><strong>config对象</strong>：封装了应用程序的配置信息。</li>
+<li><strong>page对象</strong>：指向了当前jsp程序本身。</li>
+<li><strong>session对象</strong>：用来保存会话信息。也就是说，可以实现在同一用户的不同请求之间共享数</li>
+<li><strong>application对象</strong>：代表了当前应用程序的上下文。可以在不同的用户之间共享信息。</li>
+<li><strong>pageContext对象</strong>：提供了对jsp页面所有对象以及命名空间的访问。</li>
+</ol>
+</li>
+</ol>
+
       
     </div>
 
@@ -1004,7 +1070,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java语言基础"><span class="nav-number">2.</span> <span class="nav-text">Java语言基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.1.2.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内部类"><span class="nav-number">2.1.3.</span> <span class="nav-text">内部类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程思想"><span class="nav-number">2.2.</span> <span class="nav-text">编程思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM内存模型"><span class="nav-number">2.3.</span> <span class="nav-text">JVM内存模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java的垃圾回收机制"><span class="nav-number">2.4.</span> <span class="nav-text">Java的垃圾回收机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中类及方法的加载顺序"><span class="nav-number">2.5.</span> <span class="nav-text">Java中类及方法的加载顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">2.6.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程"><span class="nav-number">2.7.</span> <span class="nav-text">线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-number">2.8.</span> <span class="nav-text">IO流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式"><span class="nav-number">2.9.</span> <span class="nav-text">正则表达式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaEE"><span class="nav-number">3.</span> <span class="nav-text">JavaEE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#规范"><span class="nav-number">3.1.</span> <span class="nav-text">规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XML-JSON解析"><span class="nav-number">3.2.</span> <span class="nav-text">XML/JSON解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义注解"><span class="nav-number">3.3.</span> <span class="nav-text">自定义注解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">4.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#框架"><span class="nav-number">5.</span> <span class="nav-text">框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">5.1.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-MVC"><span class="nav-number">5.2.</span> <span class="nav-text">Spring MVC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MyBatis"><span class="nav-number">5.3.</span> <span class="nav-text">MyBatis</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">6.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-number">7.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">8.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#协议"><span class="nav-number">9.</span> <span class="nav-text">协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器"><span class="nav-number">10.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前端"><span class="nav-number">11.</span> <span class="nav-text">前端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP"><span class="nav-number">11.1.</span> <span class="nav-text">JSP</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java语言基础"><span class="nav-number">2.</span> <span class="nav-text">Java语言基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语法"><span class="nav-number">2.1.</span> <span class="nav-text">语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串"><span class="nav-number">2.1.2.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内部类"><span class="nav-number">2.1.3.</span> <span class="nav-text">内部类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程思想"><span class="nav-number">2.2.</span> <span class="nav-text">编程思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM内存模型"><span class="nav-number">2.3.</span> <span class="nav-text">JVM内存模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java的垃圾回收机制"><span class="nav-number">2.4.</span> <span class="nav-text">Java的垃圾回收机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中类及方法的加载顺序"><span class="nav-number">2.5.</span> <span class="nav-text">Java中类及方法的加载顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合"><span class="nav-number">2.6.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线程"><span class="nav-number">2.7.</span> <span class="nav-text">线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO流"><span class="nav-number">2.8.</span> <span class="nav-text">IO流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正则表达式"><span class="nav-number">2.9.</span> <span class="nav-text">正则表达式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaEE"><span class="nav-number">3.</span> <span class="nav-text">JavaEE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#规范"><span class="nav-number">3.1.</span> <span class="nav-text">规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XML-JSON解析"><span class="nav-number">3.2.</span> <span class="nav-text">XML/JSON解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义注解"><span class="nav-number">3.3.</span> <span class="nav-text">自定义注解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">4.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#框架"><span class="nav-number">5.</span> <span class="nav-text">框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring"><span class="nav-number">5.1.</span> <span class="nav-text">Spring</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-MVC"><span class="nav-number">5.2.</span> <span class="nav-text">Spring MVC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MyBatis"><span class="nav-number">5.3.</span> <span class="nav-text">MyBatis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hibernate"><span class="nav-number">5.4.</span> <span class="nav-text">Hibernate</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">6.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-number">7.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">8.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#协议"><span class="nav-number">9.</span> <span class="nav-text">协议</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器"><span class="nav-number">10.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux"><span class="nav-number">11.</span> <span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前端"><span class="nav-number">12.</span> <span class="nav-text">前端</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP"><span class="nav-number">12.1.</span> <span class="nav-text">JSP</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1060,7 +1126,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共7.5k字</span>
+  <span class="post-count">| 博客全站共8.9k字</span>
 </div>
 
         
