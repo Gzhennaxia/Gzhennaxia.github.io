@@ -141,7 +141,7 @@
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/702767/201509/702767-20150907115314981-2080783917.jpg">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1525489497&di=4d25c2882b100546e268917fc25610b8&src=http://img0.ph.126.net/SGfD-1zXK3qOdf7aHVwotg==/6630842365817029155.png">
 <meta property="og:image" content="https://img-blog.csdn.net/20170119141709623?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFtZXNfc2h1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2018-05-06T03:32:25.740Z">
+<meta property="og:updated_time" content="2018-05-07T15:13:32.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔试问答">
 <meta name="twitter:description" content="目录[TOC] Java语言基础语法数据类型 面向对象的特征有哪些? 面向对象有三大特征，封装、继承和多态。  封装 将数据（即私有属性）和对数据的操作（即set/get方法）封装到一个对象中。  继承 不支持多继承  多态 多态的三个条件：继承、重写、父类引用指向子类实例。 与抽象类、接口等共同弥补缺失多继承的不足。    Java中的数据类型都有哪些？ Java语言提供了八种基本类型。六种数字">
@@ -385,7 +385,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-06 11:32:25" itemprop="dateModified" datetime="2018-05-06T11:32:25+08:00">2018-05-06</time>
+                <time title="修改时间：2018-05-07 23:13:32" itemprop="dateModified" datetime="2018-05-07T23:13:32+08:00">2018-05-07</time>
               
             
           </span>
@@ -551,7 +551,11 @@
 <p>在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。</p>
 </li>
 </ol>
-<h2 id="JVM内存模型"><a href="#JVM内存模型" class="headerlink" title="JVM内存模型"></a>JVM内存模型</h2><p>Java虚拟机(Java Virtual Machine=JVM)的内存空间分为五个部分，分别是： </p>
+<h2 id="JVM内存模型"><a href="#JVM内存模型" class="headerlink" title="JVM内存模型"></a>JVM内存模型</h2><blockquote>
+<p><a href="http://gityuan.com/2016/01/09/java-memory/" target="_blank" rel="noopener">http://gityuan.com/2016/01/09/java-memory/</a></p>
+<p><a href="https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.md#%E4%BA%8C%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86" target="_blank" rel="noopener">https://github.com/CyC2018/Interview-Notebook/blob/master/notes/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.md#%E4%BA%8C%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86</a></p>
+</blockquote>
+<p>Java虚拟机(Java Virtual Machine=JVM)的内存空间分为五个部分，分别是： </p>
 <ol>
 <li>程序计数器 </li>
 <li>Java虚拟机栈 </li>
@@ -614,7 +618,25 @@
 </ol>
 </li>
 </ol>
-<h2 id="Java的垃圾回收机制"><a href="#Java的垃圾回收机制" class="headerlink" title="Java的垃圾回收机制"></a>Java的垃圾回收机制</h2><h2 id="Java中类及方法的加载顺序"><a href="#Java中类及方法的加载顺序" class="headerlink" title="Java中类及方法的加载顺序"></a>Java中类及方法的加载顺序</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p><img src="https://images2015.cnblogs.com/blog/1010726/201706/1010726-20170621004734695-988542448.png" alt="集合框架体系图"></p>
+<h2 id="Java的垃圾回收机制"><a href="#Java的垃圾回收机制" class="headerlink" title="Java的垃圾回收机制"></a>Java的垃圾回收机制</h2><ol>
+<li>判断一个对象是否可回收<ol>
+<li>引用计数</li>
+<li>可达性</li>
+</ol>
+</li>
+<li>垃圾回收算法<ol>
+<li>标记-清除法</li>
+<li>标记-整理法</li>
+<li>复制</li>
+</ol>
+</li>
+<li>分代收集<ol>
+<li>新生代使用：复制算法</li>
+<li>老年代使用：标记 - 清理 或者 标记 - 整理 算法</li>
+</ol>
+</li>
+</ol>
+<h2 id="Java中类及方法的加载顺序"><a href="#Java中类及方法的加载顺序" class="headerlink" title="Java中类及方法的加载顺序"></a>Java中类及方法的加载顺序</h2><h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p><img src="https://images2015.cnblogs.com/blog/1010726/201706/1010726-20170621004734695-988542448.png" alt="集合框架体系图"></p>
 <ol>
 <li><p>ArrayList和HsahSet的区别?</p>
 <ol>
@@ -772,7 +794,62 @@
 </ol>
 </li>
 </ol>
-<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><ol>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><ol>
+<li><p>数据库的优化</p>
+<ol>
+<li><p>语句优化</p>
+<ul>
+<li><p>批量插入（大概10条左后效率最高）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO score (change_type,score,user_id) VALUES (&apos;吃饭&apos;,10,1),(&apos;喝茶&apos;,10,1),(&apos;喝茶&apos;,10,1);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>批量更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Update score  </span><br><span class="line">  SET change_type = CASE id  </span><br><span class="line">    WHEN 1 THEN &apos;value1&apos;  </span><br><span class="line">    WHEN 2 THEN &apos;value2&apos;  </span><br><span class="line">    WHEN 3 THEN &apos;value3&apos;  </span><br><span class="line">  END , </span><br><span class="line">    score = CASE id</span><br><span class="line">    WHEN 1 THEN 1</span><br><span class="line">    WHEN 2 THEN 2</span><br><span class="line">    WHEN 3 THEN 3</span><br><span class="line">  END</span><br><span class="line">WHERE id IN (1,2,3)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>合理使用replace 语句代替insert/update语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//含义一：与普通INSERT一样功能</span><br><span class="line">REPLACE INTO score (change_type,score,user_id) VALUES (&apos;吃饭&apos;,10,1),(&apos;喝茶&apos;,10,1),(&apos;喝茶&apos;,10,1);  </span><br><span class="line">//含义二：找到第一条记录，用后面的值进行替换</span><br><span class="line">REPLACE INTO score (id,change_type,score,user_id) VALUES (1,&apos;吃饭&apos;,10,1)</span><br><span class="line"></span><br><span class="line">//根据change_type字段找到&quot;做任务&quot;的数据，用&quot;bb&quot;来替换</span><br><span class="line">UPDATE score SET change_type=REPLACE(change_type,&apos;做任务&apos;,&apos;bb&apos;)</span><br></pre></td></tr></table></figure>
+<p>UPDATE和REPLACE的区别：</p>
+<p>1）UPDATE在没有匹配记录时什么都不做，而REPLACE在有重复记录时更新，在没有重复记录时插入。</p>
+<p>2）UPDATE可以选择性地更新记录的一部分字段。而REPLACE在发现有重复记录时就将这条记录彻底删除，再插入新的记录。也就是说，将所有的字段都更新了。</p>
+</li>
+<li><p>查询</p>
+<p>衡量查询开销三个指标：<strong>响应时间；扫描的行数；返回的行数</strong>。</p>
+<p>如果发现查询需要扫描大量的数据但只返回少数的行：使用索引覆盖扫描</p>
+<p><strong>分解关联查询</strong></p>
+<p>避免使用offset：数据不是定长存储，不能像数组那样用index来访问，只能依次遍历，就导致<strong>偏移量越大查询越费时 </strong></p>
+<p><strong>避免全表扫描</strong></p>
+</li>
+</ul>
+</li>
+<li><p>表的设计</p>
+<ul>
+<li>能设计成数值型就不要设置为字符型，因为引擎在处理查询和连接时会逐个比较字符串中每一个字符，而对于数字型而言只需要比较一次就够了。</li>
+</ul>
+</li>
+<li><p><strong><em>索引</em></strong></p>
+<p>数据库索引好比是一本书前面的目录，能加快数据库的查询速度。在没有索引的情况下，数据库会遍历全部数据后选择符合条件的；而有了相应的索引之后，数据库会直接在索引中查找符合条件的选项</p>
+<p><strong>索引分为聚簇索引和非聚簇索引两种</strong></p>
+<p><strong>索引分为普通索引、唯一索引（允许列值为空）、主键索引（特殊的唯一索引，不允许列值为空）</strong></p>
+<p><strong>CREATE INDEX语句无法创建PRIMARY KEY索引</strong></p>
+<p><strong>一个表只可能有一个PRIMARY KEY索引，但可以具有一个或多个UNIQUE索引</strong></p>
+<p><strong>索引的数据结构为B+树</strong></p>
+<p>一般情况下不鼓励使用like操作</p>
+<p><strong>like “%aaa%” 不会使用索引，而like “aaa%”可以使用索引</strong></p>
+<p>应尽量<strong>避免在 where 子句中对字段进行表达式操作/函数操作，这将导致引擎放弃使用索引而进行全表扫描</strong></p>
+</li>
+<li><p><strong>存储过程、视图、函数的适当使用</strong></p>
+</li>
+<li><p>使用存储过程</p>
+</li>
+<li><p>分割你的表，减小表尺寸（分区—分表—）</p>
+<p>如果你发现某个表的记录太多，例如超过一千万条，则要对该表进行<strong>水平分割</strong>。水平分割的做法是，以该表主键的某个值为界线，将该表的记录水平分割为两个表。</p>
+<p>如果你若发现某个表的字段太多，例如超过八十个，则<strong>垂直分割</strong>该表，将原来的一个表分解为两个表</p>
+<p><strong>散列库表</strong>（基于hash算法的切分）</p>
+<p>表分区相对于分表，操作方便，不需要创建子表。</p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><ol>
 <li><p>斐波那契数列 </p>
 <ul>
 <li>循环方式</li>
@@ -970,7 +1047,7 @@ var jiathis_config={
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1129,7 +1206,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共9.2k字</span>
+  <span class="post-count">| 博客全站共11.8k字</span>
 </div>
 
         
