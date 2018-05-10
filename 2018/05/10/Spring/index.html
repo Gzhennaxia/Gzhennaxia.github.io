@@ -127,24 +127,27 @@
 
 
 
-  <meta name="description" content="基础语言JVM数据结构操作系统网络数据库设计模式算法主流框架服务器并发">
+  <meta name="description" content="简介与使用AOP的实现原理 Spring AOP 实现原理  实现AOP的技术，主要分为两大类： 一是采用动态代理技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行； 二是采用静态织入的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。  Spring AOP（动态）：通过代理程序运行时织入 优点：简单，易用 缺点：性能略低，仅适用于方法调用，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java后台开发技能清单">
-<meta property="og:url" content="http://yoursite.com/2018/05/03/Java后台开发技能清单/index.html">
+<meta property="og:title" content="Spring">
+<meta property="og:url" content="http://yoursite.com/2018/05/10/Spring/index.html">
 <meta property="og:site_name" content="Gzhennaxia">
-<meta property="og:description" content="基础语言JVM数据结构操作系统网络数据库设计模式算法主流框架服务器并发">
+<meta property="og:description" content="简介与使用AOP的实现原理 Spring AOP 实现原理  实现AOP的技术，主要分为两大类： 一是采用动态代理技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行； 二是采用静态织入的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。  Spring AOP（动态）：通过代理程序运行时织入 优点：简单，易用 缺点：性能略低，仅适用于方法调用，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-03T13:15:12.469Z">
+<meta property="og:image" content="https://img-blog.csdn.net/20160324011156424">
+<meta property="og:image" content="https://img-blog.csdn.net/20160325003448793">
+<meta property="og:updated_time" content="2018-05-10T12:42:06.648Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java后台开发技能清单">
-<meta name="twitter:description" content="基础语言JVM数据结构操作系统网络数据库设计模式算法主流框架服务器并发">
+<meta name="twitter:title" content="Spring">
+<meta name="twitter:description" content="简介与使用AOP的实现原理 Spring AOP 实现原理  实现AOP的技术，主要分为两大类： 一是采用动态代理技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行； 二是采用静态织入的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。  Spring AOP（动态）：通过代理程序运行时织入 优点：简单，易用 缺点：性能略低，仅适用于方法调用，">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20160324011156424">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/03/Java后台开发技能清单/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/10/Spring/"/>
 
 
 
@@ -154,7 +157,7 @@
   };
 </script>
 
-  <title>Java后台开发技能清单 | Gzhennaxia</title>
+  <title>Spring | Gzhennaxia</title>
   
 
 
@@ -318,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/03/Java后台开发技能清单/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/Spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="朕">
@@ -335,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java后台开发技能清单
+          <h1 class="post-title" itemprop="name headline">Spring
               
             
           </h1>
@@ -360,7 +363,7 @@
                 
               
 
-              <time title="创建时间：2018-05-03 20:55:17 / 修改时间：21:15:12" itemprop="dateCreated datePublished" datetime="2018-05-03T20:55:17+08:00">2018-05-03</time>
+              <time title="创建时间：2018-05-10 16:57:09 / 修改时间：20:42:06" itemprop="dateCreated datePublished" datetime="2018-05-10T16:57:09+08:00">2018-05-10</time>
             
 
             
@@ -370,24 +373,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java后台/" itemprop="url" rel="index"><span itemprop="name">Java后台</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -416,7 +401,55 @@
       
 
       
-        <h1 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h1><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><h1 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h1><h1 id="主流框架"><a href="#主流框架" class="headerlink" title="主流框架"></a>主流框架</h1><h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h1 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h1>
+        <h1 id="简介与使用"><a href="#简介与使用" class="headerlink" title="简介与使用"></a>简介与使用</h1><h2 id="AOP的实现原理"><a href="#AOP的实现原理" class="headerlink" title="AOP的实现原理"></a>AOP的实现原理</h2><blockquote>
+<p><a href="https://blog.csdn.net/moreevan/article/details/11977115/#t5" target="_blank" rel="noopener">Spring AOP 实现原理</a></p>
+</blockquote>
+<p>实现AOP的技术，主要分为两大类：</p>
+<p>一是采用<strong>动态代理</strong>技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行；</p>
+<p>二是采用<strong>静态织入</strong>的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。 </p>
+<p>Spring AOP（动态）：通过代理程序运行时织入</p>
+<p>优点：简单，易用</p>
+<p>缺点：性能略低，仅适用于方法调用，必须在Spring容器</p>
+<p>Aspect J（静态）：通过修改程序的字节码完成织入</p>
+<p>优点：性能好，功能强大，无需Spring容器</p>
+<p>缺点：修改需要重新编译，要引入Aspect J的编译器／织入器，复杂</p>
+<h2 id="spring的事务管理"><a href="#spring的事务管理" class="headerlink" title="spring的事务管理"></a>spring的事务管理</h2><blockquote>
+<p><a href="https://blog.csdn.net/trigl/article/details/50968079" target="_blank" rel="noopener">Spring事务管理</a></p>
+</blockquote>
+<p><img src="https://img-blog.csdn.net/20160324011156424" alt="Spring事务管理的核心接口"></p>
+<p>Spring事务管理高层抽象主要包括3个接口</p>
+<ol>
+<li><code>PlatformTransactionManager</code>事务管理器</li>
+<li><code>TransactionDefinition</code>事务定义信息(隔离、传播、超时、只读)</li>
+<li><code>TransactionStatus</code>事务具体运行状态</li>
+</ol>
+<p>它们之间的关系:</p>
+<p><strong>PlatformTransactionManager</strong>通过<strong>TransactionDefinition</strong>设置事务相关信息来管理事务，管理事务过程中，产生一些事务状态，这些状态由<strong>TransactionStatus</strong>记录</p>
+<h3 id="事务管理器"><a href="#事务管理器" class="headerlink" title="事务管理器"></a>事务管理器</h3><p>Spring并不直接管理事务，而是提供了多种事务管理器，他们将事务管理的职责委托给Hibernate或者JTA等持久化机制所提供的相关平台框架的事务来实现。  </p>
+<p>Spring事务管理器的接口是org.springframework.transaction.PlatformTransactionManager，通过这个接口，Spring为各个平台如JDBC、Hibernate等都提供了对应的事务管理器，但是具体的实现就是各个平台自己的事情了。此接口的内容如下： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Public interface <span class="title">PlatformTransactionManager</span><span class="params">()</span>...</span>&#123;  </span><br><span class="line">    <span class="comment">// 由TransactionDefinition得到TransactionStatus对象</span></span><br><span class="line">    <span class="function">TransactionStatus <span class="title">getTransaction</span><span class="params">(TransactionDefinition definition)</span> <span class="keyword">throws</span> TransactionException</span>; </span><br><span class="line">    <span class="comment">// 提交</span></span><br><span class="line">    <span class="function">Void <span class="title">commit</span><span class="params">(TransactionStatus status)</span> <span class="keyword">throws</span> TransactionException</span>;  </span><br><span class="line">    <span class="comment">// 回滚</span></span><br><span class="line">    <span class="function">Void <span class="title">rollback</span><span class="params">(TransactionStatus status)</span> <span class="keyword">throws</span> TransactionException</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="基本事务属性的定义"><a href="#基本事务属性的定义" class="headerlink" title="基本事务属性的定义"></a>基本事务属性的定义</h3><p>上面讲到的事务管理器接口PlatformTransactionManager通过getTransaction(TransactionDefinition definition)方法来得到事务，这个方法里面的参数是TransactionDefinition类，这个类就定义了一些基本的事务属性。  那么什么是事务属性呢？事务属性可以理解成事务的一些基本配置，描述了事务策略如何应用到方法上。事务属性包含了5个方面，如图所示： </p>
+<p><img src="https://img-blog.csdn.net/20160325003448793" alt="事务属性"></p>
+<p>TransactionDefinition接口内容如下： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TransactionDefinition</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getPropagationBehavior</span><span class="params">()</span></span>; <span class="comment">// 返回事务的传播行为</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getIsolationLevel</span><span class="params">()</span></span>; <span class="comment">// 返回事务的隔离级别，事务管理器根据它来控制另外一个事务可以看到本事务内的哪些数据</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getTimeout</span><span class="params">()</span></span>;  <span class="comment">// 返回事务必须在多少秒内完成</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isReadOnly</span><span class="params">()</span></span>; <span class="comment">// 事务是否只读，事务管理器能够根据这个返回值进行优化，确保事务是只读的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="事务状态"><a href="#事务状态" class="headerlink" title="事务状态"></a>事务状态</h3><p>PlatformTransactionManager接口的getTransaction()的方法得到的是TransactionStatus接口的一个实现，这个接口的内容如下： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TransactionStatus</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isNewTransaction</span><span class="params">()</span></span>; <span class="comment">// 是否是新的事物</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">hasSavepoint</span><span class="params">()</span></span>; <span class="comment">// 是否有恢复点</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setRollbackOnly</span><span class="params">()</span></span>;  <span class="comment">// 设置为只回滚</span></span><br><span class="line">    <span class="function"><span class="keyword">boolean</span> <span class="title">isRollbackOnly</span><span class="params">()</span></span>; <span class="comment">// 是否为只回滚</span></span><br><span class="line">    <span class="keyword">boolean</span> isCompleted; <span class="comment">// 是否已完成</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个接口描述的是一些处理事务提供简单的<strong>控制事务执行和查询事务状态的方法</strong>，在回滚或提交的时候需要应用对应的事务状态。 </p>
+<h1 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h1><ol>
+<li><p>spring aop字节码增强用到哪些第三方库？ </p>
+<blockquote>
+<p><a href="https://blog.csdn.net/airpor/article/details/70163253" target="_blank" rel="noopener">Spring AOP(动态代理\动态字节码)精华一页纸</a></p>
+</blockquote>
+<ol>
+<li><strong>Instrumentation 指令改写</strong> </li>
+<li><strong>asm</strong>  </li>
+<li><strong>CGLib (Code Generation Library)</strong> </li>
+<li><strong>javasist</strong> </li>
+<li><strong>Bcel/Serl</strong> </li>
+</ol>
+</li>
+</ol>
+
       
     </div>
 
@@ -453,8 +486,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/02/时刻清单/" rel="next" title="look for job schedule">
-                <i class="fa fa-chevron-left"></i> look for job schedule
+              <a href="/2018/05/10/设计模式/" rel="next" title="设计模式">
+                <i class="fa fa-chevron-left"></i> 设计模式
               </a>
             
           </div>
@@ -463,8 +496,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/04/Java基础/" rel="prev" title="Java基础">
-                Java基础 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/10/Redis/" rel="prev" title="Redis">
+                Redis <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -678,7 +711,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#语言"><span class="nav-number">1.1.</span> <span class="nav-text">语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM"><span class="nav-number">1.2.</span> <span class="nav-text">JVM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构"><span class="nav-number">1.3.</span> <span class="nav-text">数据结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作系统"><span class="nav-number">1.4.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">1.5.</span> <span class="nav-text">网络</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">2.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">3.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法"><span class="nav-number">4.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主流框架"><span class="nav-number">5.</span> <span class="nav-text">主流框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器"><span class="nav-number">6.</span> <span class="nav-text">服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#并发"><span class="nav-number">7.</span> <span class="nav-text">并发</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介与使用"><span class="nav-number">1.</span> <span class="nav-text">简介与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#AOP的实现原理"><span class="nav-number">1.1.</span> <span class="nav-text">AOP的实现原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring的事务管理"><span class="nav-number">1.2.</span> <span class="nav-text">spring的事务管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事务管理器"><span class="nav-number">1.2.1.</span> <span class="nav-text">事务管理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本事务属性的定义"><span class="nav-number">1.2.2.</span> <span class="nav-text">基本事务属性的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务状态"><span class="nav-number">1.2.3.</span> <span class="nav-text">事务状态</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
             
 
           </div>

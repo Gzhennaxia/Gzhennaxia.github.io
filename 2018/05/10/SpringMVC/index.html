@@ -127,18 +127,20 @@
 
 
 
-  <meta name="description" content="简介与使用 SpringMVC是Spring框架的一部分，负责表示层 面试">
+  <meta name="description" content="简介与使用 SpringMVC是Spring框架的一部分，负责表示层 Spring Web MVC是一种基于Java的实现了Web MVC设计模式的请求驱动类型的轻量级Web框架，即使用了MVC架构模式的思想，将web层进行职责解耦，基于请求驱动指的就是使用请求-响应模型，框架的目的就是帮助我们简化开发。  SpringMVC这个框架时如何实现MVC模式的注意SpringMVC中并没有涉及有关于C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC">
 <meta property="og:url" content="http://yoursite.com/2018/05/10/SpringMVC/index.html">
 <meta property="og:site_name" content="Gzhennaxia">
-<meta property="og:description" content="简介与使用 SpringMVC是Spring框架的一部分，负责表示层 面试">
+<meta property="og:description" content="简介与使用 SpringMVC是Spring框架的一部分，负责表示层 Spring Web MVC是一种基于Java的实现了Web MVC设计模式的请求驱动类型的轻量级Web框架，即使用了MVC架构模式的思想，将web层进行职责解耦，基于请求驱动指的就是使用请求-响应模型，框架的目的就是帮助我们简化开发。  SpringMVC这个框架时如何实现MVC模式的注意SpringMVC中并没有涉及有关于C">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://www.ibm.com/developerworks/cn/java/wa-spring1/spring_framework.gif">
-<meta property="og:updated_time" content="2018-05-10T07:58:00.308Z">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1525489497&di=4d25c2882b100546e268917fc25610b8&src=http://img0.ph.126.net/SGfD-1zXK3qOdf7aHVwotg==/6630842365817029155.png">
+<meta property="og:image" content="https://img-blog.csdn.net/20170119141709623?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFtZXNfc2h1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2018-05-10T12:37:49.685Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC">
-<meta name="twitter:description" content="简介与使用 SpringMVC是Spring框架的一部分，负责表示层 面试">
+<meta name="twitter:description" content="简介与使用 SpringMVC是Spring框架的一部分，负责表示层 Spring Web MVC是一种基于Java的实现了Web MVC设计模式的请求驱动类型的轻量级Web框架，即使用了MVC架构模式的思想，将web层进行职责解耦，基于请求驱动指的就是使用请求-响应模型，框架的目的就是帮助我们简化开发。  SpringMVC这个框架时如何实现MVC模式的注意SpringMVC中并没有涉及有关于C">
 <meta name="twitter:image" content="https://www.ibm.com/developerworks/cn/java/wa-spring1/spring_framework.gif">
 
 
@@ -362,7 +364,7 @@
                 
               
 
-              <time title="创建时间：2018-05-10 15:50:06 / 修改时间：15:58:00" itemprop="dateCreated datePublished" datetime="2018-05-10T15:50:06+08:00">2018-05-10</time>
+              <time title="创建时间：2018-05-10 15:50:06 / 修改时间：20:37:49" itemprop="dateCreated datePublished" datetime="2018-05-10T15:50:06+08:00">2018-05-10</time>
             
 
             
@@ -402,6 +404,23 @@
       
         <h1 id="简介与使用"><a href="#简介与使用" class="headerlink" title="简介与使用"></a>简介与使用</h1><p><img src="https://www.ibm.com/developerworks/cn/java/wa-spring1/spring_framework.gif" alt="spring框架七大模块"></p>
 <p>SpringMVC是Spring框架的一部分，负责表示层</p>
+<p>Spring Web MVC是一种基于Java的实现了<a href="">Web MVC设计模式</a>的<strong>请求驱动类型的轻量级Web框架</strong>，即使用了MVC架构模式的思想，将web层进行职责解耦，基于请求驱动指的就是使用请求-响应模型，框架的目的就是帮助我们简化开发。 </p>
+<h2 id="SpringMVC这个框架时如何实现MVC模式的"><a href="#SpringMVC这个框架时如何实现MVC模式的" class="headerlink" title="SpringMVC这个框架时如何实现MVC模式的"></a>SpringMVC这个框架时如何实现MVC模式的</h2><p>注意SpringMVC中并没有涉及有关于Controller接口规范的实现,SpringMVC是通过调用Handler来实现Controller这一层的。SpringMVC使用了适配器模式，前端控制器（核心控制器DispatcherServlet）使用HandlerAdapter来调用不同的Controller,然后才是Controller调用Model产生数据模型，产生的数据模型将会再次返回到前端控制器，并由前端控制器决定使用不同的模板引擎将页面进行渲染。</p>
+<h2 id="Spring-MVC的工作流程"><a href="#Spring-MVC的工作流程" class="headerlink" title="Spring MVC的工作流程"></a>Spring MVC的工作流程</h2><blockquote>
+<p><a href="https://blog.csdn.net/james_shu/article/details/54616120" target="_blank" rel="noopener">浅谈SpringMVC之架构与工作流程 </a></p>
+<p><a href="http://www.cnblogs.com/xiaoxi/p/6164383.html" target="_blank" rel="noopener">SpringMVC工作原理</a></p>
+</blockquote>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b10000_10000&amp;sec=1525489497&amp;di=4d25c2882b100546e268917fc25610b8&amp;src=http://img0.ph.126.net/SGfD-1zXK3qOdf7aHVwotg==/6630842365817029155.png" alt="spring mvc"></p>
+<p><img src="https://img-blog.csdn.net/20170119141709623?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFtZXNfc2h1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="spring mvc"></p>
+<p>工作流程为:<br>1、用户发送请求至<strong>前端控制器/核心控制器（中央调度器）</strong>DispatcherServlet<br>2、DispatcherServlet收到请求调用<strong>HandlerMapping处理器映射器</strong>。<br>3、处理器映射器根据请求url找到具体的处理器，生成<strong>处理器对象及处理器拦截器(二者组成HandlerExecutionChain)</strong>,并将其一并返回给DispatcherServlet。<br>4、DispatcherServlet通过<strong>HandlerAdapter处理器适配器</strong>调用处理器<br>5、执行处理器<strong>(Controller，也叫后端控制器)</strong>。<br>6、Controller执行完成返回ModelAndView<br>7、HandlerAdapter将controller执行结果ModelAndView返回给DispatcherServlet<br>8、DispatcherServlet将ModelAndView传给<strong>ViewReslover视图解析器</strong><br>9、ViewReslover解析后返回具体View<br>10、DispatcherServlet对View进行<strong>渲染视图（即将模型数据填充至视图中）</strong>。<br>11、DispatcherServlet对用户进行响应</p>
+<p><strong>springMVC中的几个组件：</strong></p>
+<ol>
+<li>前端控制器（DispatcherServlet）：接收请求，响应结果，相当于电脑的CPU。</li>
+<li>处理器映射器（HandlerMapping）：根据URL去查找处理器</li>
+<li>处理器（Handler）：（需要程序员去写代码处理逻辑的）</li>
+<li>处理器适配器（HandlerAdapter）：会把处理器包装成适配器，这样就可以支持多种类型的处理器，类比笔记本的适配器（适配器模式的应用）</li>
+<li>视图解析器（ViewResovler）：进行视图解析，支持更多类型的视图解析，例如：jsp、freemarker、pdf、excel等 </li>
+</ol>
 <h1 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h1>
       
     </div>
@@ -439,8 +458,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/10/Struts2/" rel="next" title="Struts2">
-                <i class="fa fa-chevron-left"></i> Struts2
+              <a href="/2018/05/10/Struts2/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
               </a>
             
           </div>
@@ -448,6 +467,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/10/设计模式/" rel="prev" title="设计模式">
+                设计模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -551,7 +574,7 @@ var jiathis_config={
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-count">27</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -582,7 +605,11 @@ var jiathis_config={
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -656,7 +683,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介与使用"><span class="nav-number">1.</span> <span class="nav-text">简介与使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介与使用"><span class="nav-number">1.</span> <span class="nav-text">简介与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SpringMVC这个框架时如何实现MVC模式的"><span class="nav-number">1.1.</span> <span class="nav-text">SpringMVC这个框架时如何实现MVC模式的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-MVC的工作流程"><span class="nav-number">1.2.</span> <span class="nav-text">Spring MVC的工作流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
             
 
           </div>
@@ -712,7 +739,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共17.7k字</span>
+  <span class="post-count">| 博客全站共21.2k字</span>
 </div>
 
         
