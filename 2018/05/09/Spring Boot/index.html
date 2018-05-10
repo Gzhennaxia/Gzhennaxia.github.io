@@ -127,17 +127,17 @@
 
 
 
-  <meta name="description" content="spring boot的pom文件中有一个parent标签，用与继承父项目的配置  123456&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;    &amp;lt;ver">
+  <meta name="description" content="琐碎的点（待整理） spring boot的pom文件中有一个parent标签，用与继承父项目的配置  123456&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Boot">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/Spring Boot/index.html">
 <meta property="og:site_name" content="Gzhennaxia">
-<meta property="og:description" content="spring boot的pom文件中有一个parent标签，用与继承父项目的配置  123456&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;    &amp;lt;ver">
+<meta property="og:description" content="琐碎的点（待整理） spring boot的pom文件中有一个parent标签，用与继承父项目的配置  123456&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-09T09:46:41.588Z">
+<meta property="og:updated_time" content="2018-05-09T13:34:27.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Boot">
-<meta name="twitter:description" content="spring boot的pom文件中有一个parent标签，用与继承父项目的配置  123456&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;    &amp;lt;ver">
+<meta name="twitter:description" content="琐碎的点（待整理） spring boot的pom文件中有一个parent标签，用与继承父项目的配置  123456&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;">
 
 
 
@@ -360,7 +360,7 @@
                 
               
 
-              <time title="创建时间：2018-05-09 10:05:34 / 修改时间：17:46:41" itemprop="dateCreated datePublished" datetime="2018-05-09T10:05:34+08:00">2018-05-09</time>
+              <time title="创建时间：2018-05-09 10:05:34 / 修改时间：21:34:27" itemprop="dateCreated datePublished" datetime="2018-05-09T10:05:34+08:00">2018-05-09</time>
             
 
             
@@ -398,7 +398,7 @@
       
 
       
-        <ul>
+        <h1 id="琐碎的点（待整理）"><a href="#琐碎的点（待整理）" class="headerlink" title="琐碎的点（待整理）"></a>琐碎的点（待整理）</h1><ul>
 <li>spring boot的pom文件中有一个parent标签，用与继承父项目的配置</li>
 </ul>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.1.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -418,7 +418,7 @@
 </ul>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  datasource:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">jdbc:mysql://localhost:3306/todaynews</span></span><br><span class="line"><span class="attr">    driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">    username:</span> <span class="string">root</span></span><br><span class="line"><span class="attr">    password:</span> <span class="number">666666</span></span><br><span class="line"><span class="attr">  velocity:</span></span><br><span class="line"><span class="attr">    toolbox-config-location:</span> <span class="string">toolbox.xml</span></span><br><span class="line"><span class="attr">mybatis:</span></span><br><span class="line"><span class="attr">  config-location:</span> <span class="attr">classpath:mybatis.xml</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">  port:</span> <span class="number">80</span> <span class="comment">#端口号</span></span><br><span class="line"><span class="attr">  servlet:</span></span><br><span class="line"><span class="attr">    context-path:</span> <span class="string">/hello</span> <span class="comment">#应用入口（spring boot2.0之前是serve.context-path）</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>可以在类上使用<code>@ConfigurationProperties来读取配置文件中的内容</code></p>
+<li><p><span id="ConfigurationProperties">可以在类上使用<code>@ConfigurationProperties来读取配置文件中自定义的内容</code></span></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">test:</span></span><br><span class="line"><span class="attr">  from:</span> <span class="string">shanxi</span></span><br><span class="line"><span class="attr">  to:</span> <span class="string">shenzhen</span></span><br></pre></td></tr></table></figure>
 <p>方式1：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">YamlText</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;test.from&#125;"</span>)</span><br><span class="line">    String from;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@Value</span>(<span class="string">"$&#123;test.to&#125;"</span>)</span><br><span class="line">    String to;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -431,8 +431,10 @@
 </li>
 <li><p>提供<code>@RestController</code>注解，方法上不用再加<code>@ResponseBody</code>注解，默认返回的就是json数据，<strong>更激进的支持前后端分离</strong>。</p>
 </li>
-<li><p>注册Servlet,Filter,Listener </p>
-<ul>
+<li><p>spring boot 2.0支持的jdk版本最低为jdk8</p>
+</li>
+</ul>
+<h1 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h1><h2 id="注册Servlet-Filter-Listener"><a href="#注册Servlet-Filter-Listener" class="headerlink" title="注册Servlet,Filter,Listener"></a>注册Servlet,Filter,Listener</h2><ul>
 <li>配置servlet</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        resp.getWriter().println(<span class="string">"MyServlet.doGet"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -450,8 +452,53 @@
 <ul>
 <li>spring boot 2.0之后filter和listener不用配置（即不用上面的哪些注册方法），只要生成（@Component），默认生效</li>
 </ul>
+<h2 id="spring-boot打包"><a href="#spring-boot打包" class="headerlink" title="spring boot打包"></a>spring boot打包</h2><h3 id="打包类型"><a href="#打包类型" class="headerlink" title="打包类型"></a>打包类型</h3><h4 id="jar包"><a href="#jar包" class="headerlink" title="jar包"></a>jar包</h4><p>pom.xml文件中</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="war包"><a href="#war包" class="headerlink" title="war包"></a>war包</h4><p>pom.xml文件中</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="打包方式"><a href="#打包方式" class="headerlink" title="打包方式"></a>打包方式</h3><h4 id="jar包方式之一：maven命令行打包"><a href="#jar包方式之一：maven命令行打包" class="headerlink" title="jar包方式之一：maven命令行打包"></a>jar包方式之一：maven命令行打包</h4><ol>
+<li>cd到项目的target同级目录</li>
+<li>执行打包命令 mvn clean package</li>
+<li>启动命令 java -jar 包名.jar</li>
+</ol>
+<h4 id="jar包方式之二：idea插件打包"><a href="#jar包方式之二：idea插件打包" class="headerlink" title="jar包方式之二：idea插件打包"></a>jar包方式之二：idea插件打包</h4><p>在IDEA右侧Maven Projects栏双击package等待Build Success即可  </p>
+<h4 id="打包成war包"><a href="#打包成war包" class="headerlink" title="打包成war包"></a>打包成war包</h4><blockquote>
+<p><a href="https://blog.csdn.net/qq_30065395/article/details/79636580" target="_blank" rel="noopener">https://blog.csdn.net/qq_30065395/article/details/79636580</a></p>
+</blockquote>
+<ol>
+<li>pom文件中jar改成war</li>
+<li>添加外置的tomcat依赖</li>
+<li>入口类继承SpringBootServletInitializer并重写configure方法</li>
+<li>把target目录下生成的war放到tomcat的webapps目录下</li>
+</ol>
+<h2 id="在-spring-boot-starter-web-中用-jetty-代替-tomcat"><a href="#在-spring-boot-starter-web-中用-jetty-代替-tomcat" class="headerlink" title="在 spring-boot-starter-web 中用 jetty 代替 tomcat"></a><strong>在 spring-boot-starter-web 中用 jetty 代替 tomcat</strong></h2><p>修改pom.xml文件</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-jetty<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="连接一个外部数据库，如MySQL？"><a href="#连接一个外部数据库，如MySQL？" class="headerlink" title="连接一个外部数据库，如MySQL？"></a>连接一个外部数据库，如MySQL？</h2><ol>
+<li><p>pom.xml文件中添加MySQL依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>application.yml中配置MySQL 数据库连接信息</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  datasource:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">jdbc:mysql://localhost:3306/todaynews</span></span><br><span class="line"><span class="attr">    driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line"><span class="attr">    username:</span> <span class="string">root</span></span><br><span class="line"><span class="attr">    password:</span> <span class="number">666666</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><blockquote>
+<p><a href="http://www.3xmq.com/article/1522809264295" target="_blank" rel="noopener">http://www.3xmq.com/article/1522809264295</a></p>
+</blockquote>
+<ol>
+<li><p><strong>为什么我们需要 spring-boot-maven-plugin?</strong> </p>
+<p>spring-boot-maven-plugin 提供了一些像 jar 一样打包或者运行应用程序的命令。 </p>
+<ul>
+<li><code>spring-boot:run</code> 运行你的 SpringBoot应用程序。</li>
+<li><code>spring-boot:repackage</code> 重新打包你的 jar 包或者是 war 包使其可执行</li>
+<li><code>spring-boot:start 和 spring-boot:stop</code> 管理 Spring Boot 应用程序的生命周期（也可以说是为了集成测试）。</li>
 </ul>
+</li>
+<li><p><strong>@RequestMapping 和 @GetMapping 的不同之处在哪里？</strong> </p>
+<p>@GetMapping是@RequestMapping(method = RequestMethod.GET)的缩写</p>
+</li>
+<li><p><a href="#ConfigurationProperties">Spring Boot 用户应用程序自定义配置的最佳实践</a></p>
+</li>
+</ol>
 
       
     </div>
@@ -498,6 +545,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/09/CMD命令大全/" rel="prev" title="CMD命令大全">
+                CMD命令大全 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -572,8 +623,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -592,7 +652,7 @@ var jiathis_config={
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">24</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -621,7 +681,9 @@ var jiathis_config={
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -686,6 +748,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#琐碎的点（待整理）"><span class="nav-number">1.</span> <span class="nav-text">琐碎的点（待整理）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#知识点"><span class="nav-number">2.</span> <span class="nav-text">知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Servlet-Filter-Listener"><span class="nav-number">2.1.</span> <span class="nav-text">注册Servlet,Filter,Listener</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#spring-boot打包"><span class="nav-number">2.2.</span> <span class="nav-text">spring boot打包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打包类型"><span class="nav-number">2.2.1.</span> <span class="nav-text">打包类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jar包"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">jar包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#war包"><span class="nav-number">2.2.1.2.</span> <span class="nav-text">war包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打包方式"><span class="nav-number">2.2.2.</span> <span class="nav-text">打包方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jar包方式之一：maven命令行打包"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">jar包方式之一：maven命令行打包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jar包方式之二：idea插件打包"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">jar包方式之二：idea插件打包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打包成war包"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">打包成war包</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-spring-boot-starter-web-中用-jetty-代替-tomcat"><span class="nav-number">2.3.</span> <span class="nav-text">在 spring-boot-starter-web 中用 jetty 代替 tomcat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接一个外部数据库，如MySQL？"><span class="nav-number">2.4.</span> <span class="nav-text">连接一个外部数据库，如MySQL？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试题"><span class="nav-number">3.</span> <span class="nav-text">面试题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -735,7 +813,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共15.2k字</span>
+  <span class="post-count">| 博客全站共17.7k字</span>
 </div>
 
         
