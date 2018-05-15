@@ -127,17 +127,17 @@
 
 
 
-  <meta name="description" content="简述及使用事务什么是事务,为何用事务 ？ 保证数据的一致性和完整性  存储过程连接池分类 DBCP连接池  JNDI连接池  C3P0连接池  索引数据库索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使用B树及其变种B+树。  一般来说，应该在这些列上创建索引：在经常需要搜索的列上，可以加快搜索的速度；在作为主键的列上，强制该列的唯一性和组织表中数据">
+  <meta name="description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库">
 <meta property="og:url" content="http://yoursite.com/2018/05/10/数据库/index.html">
 <meta property="og:site_name" content="Gzhennaxia">
-<meta property="og:description" content="简述及使用事务什么是事务,为何用事务 ？ 保证数据的一致性和完整性  存储过程连接池分类 DBCP连接池  JNDI连接池  C3P0连接池  索引数据库索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使用B树及其变种B+树。  一般来说，应该在这些列上创建索引：在经常需要搜索的列上，可以加快搜索的速度；在作为主键的列上，强制该列的唯一性和组织表中数据">
+<meta property="og:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-14T02:59:54.767Z">
+<meta property="og:updated_time" content="2018-05-15T01:50:13.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
-<meta name="twitter:description" content="简述及使用事务什么是事务,为何用事务 ？ 保证数据的一致性和完整性  存储过程连接池分类 DBCP连接池  JNDI连接池  C3P0连接池  索引数据库索引，是数据库管理系统中一个排序的数据结构，以协助快速查询、更新数据库表中数据。索引的实现通常使用B树及其变种B+树。  一般来说，应该在这些列上创建索引：在经常需要搜索的列上，可以加快搜索的速度；在作为主键的列上，强制该列的唯一性和组织表中数据">
+<meta name="twitter:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
 
 
 
@@ -377,7 +377,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-14 10:59:54" itemprop="dateModified" datetime="2018-05-14T10:59:54+08:00">2018-05-14</time>
+                <time title="修改时间：2018-05-15 09:50:13" itemprop="dateModified" datetime="2018-05-15T09:50:13+08:00">2018-05-15</time>
               
             
           </span>
@@ -410,7 +410,17 @@
       
 
       
-        <h1 id="简述及使用"><a href="#简述及使用" class="headerlink" title="简述及使用"></a>简述及使用</h1><h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>什么是事务,为何用事务 ？</p>
+        <h1 id="简述及使用"><a href="#简述及使用" class="headerlink" title="简述及使用"></a>简述及使用</h1><blockquote>
+<p><a href="https://blog.csdn.net/m8396017/article/details/51348668" target="_blank" rel="noopener">https://blog.csdn.net/m8396017/article/details/51348668</a></p>
+<p><a href="https://www.2cto.com/database/201504/390838.html" target="_blank" rel="noopener">https://www.2cto.com/database/201504/390838.html</a></p>
+<p><a href="https://www.cnblogs.com/wmbg/p/6800354.html" target="_blank" rel="noopener">https://www.cnblogs.com/wmbg/p/6800354.html</a></p>
+</blockquote>
+<h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><p>数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式： </p>
+<p>第1规范：没有重复的组或多值的列，这是数据库设计的最低要求。</p>
+<p>第2规范: 每个非关键字段必须依赖于主关键字，不能依赖于一个组合式主关键字的某些组成部分。消除部分依赖，大部分情况下，数据库设计都应该达到第二范式。</p>
+<p>第3规范: 一个非关键字段不能依赖于另一个非关键字段。消除传递依赖，达到第三范式应该是系统中大部分表的要求，除非一些特殊作用的表。</p>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>什么是事务,为何用事务 ？</p>
+<p>数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。  </p>
 <p>保证数据的一致性和完整性 </p>
 <h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><h2 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ol>
 <li>DBCP连接池 </li>
@@ -422,8 +432,13 @@
 <p>聚集索引：在聚集索引中，表中行的物理顺序与键值的逻辑（索引）顺序相同。</p>
 <p>一个表只能包含一个聚集索引。</p>
 <p>如果某索引不是聚集索引，则表中行的物理顺序与键值的逻辑顺序不匹配。<strong>与非聚集索引相比，聚集索引通常提供更快的数据访问速度。</strong> </p>
-<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="数据库优化的思路"><a href="#数据库优化的思路" class="headerlink" title="数据库优化的思路"></a>数据库优化的思路</h3><p>这个我借鉴了慕课上关于数据库优化的课程。</p>
-<h2 id="1-SQL语句优化"><a href="#1-SQL语句优化" class="headerlink" title="1.SQL语句优化"></a>1.SQL语句优化</h2><p>1）应尽量避免在 where 子句中使用!=或&lt;&gt;操作符，否则将引擎放弃使用索引而进行全表扫描。</p>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><h3 id="优化的思路"><a href="#优化的思路" class="headerlink" title="优化的思路"></a>优化的思路</h3><p>数据库—服务器—业务代码—系统环境—页面</p>
+<p>业务<a href="http://www.makaidong.com/search.jspx?q=%E6%95%B0%E6%8D%AE%E5%BA%93" target="_blank" rel="noopener">数据库</a> -》 数据水平分割(分区分表分库)、读写分离 </p>
+<p>业务应用 -》 逻辑<a href="http://www.makaidong.com/search.jspx?q=%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96" target="_blank" rel="noopener">代码优化</a>(算法优化)、公共数据缓存</p>
+<p><a href="http://www.makaidong.com/search.jspx?q=%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8" target="_blank" rel="noopener">应用服务器</a> -》 反向静态代理、配置优化、负载均衡(apache分发，多tomcat实例) </p>
+<p>系统环境 -》 jvm调优 </p>
+<p>页面优化 -》 减少页面连接数、页面尺寸瘦身 </p>
+<h4 id="1-SQL语句优化"><a href="#1-SQL语句优化" class="headerlink" title="1.SQL语句优化"></a>1.SQL语句优化</h4><p>1）应尽量避免在 where 子句中使用!=或&lt;&gt;操作符，否则将引擎放弃使用索引而进行全表扫描。</p>
 <p>2）应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，如：</p>
 <p>select id from t where num is null</p>
 <p>可以在num上设置默认值0，确保表中num列没有null值</p>
@@ -431,8 +446,8 @@
 <p>select id from t where num=0</p>
 <p>3）很多时候用 exists 代替 in 是一个好的选择</p>
 <p>4）用Where子句替换HAVING 子句 因为HAVING 只会在检索出所有记录之后才对结果集进行过滤</p>
-<h2 id="2-索引优化"><a href="#2-索引优化" class="headerlink" title="2.索引优化"></a>2.索引优化</h2><p>看上文索引</p>
-<h2 id="3-数据库结构优化"><a href="#3-数据库结构优化" class="headerlink" title="3.数据库结构优化"></a>3.数据库结构优化</h2><p>1）范式优化： 比如消除冗余（节省空间。。） 2）反范式优化：比如适当加冗余等（减少join） 3）拆分表： 分区将数据在物理上分隔开，不同分区的数据可以制定保存在处于不同磁盘上的数据文件里。这样，当对这个表进行查询时，只需要在表分区中进行扫描，而不必进行全表扫描，明显缩短了查询时间，另外处于不同磁盘的分区也将对这个表的数据传输分散在不同的磁盘I/O，一个精心设置的分区可以将数据传输对磁盘I/O竞争均匀地分散开。对数据量大的时时表可采取此方法。可按月自动建表分区。</p>
+<h4 id="2-索引优化"><a href="#2-索引优化" class="headerlink" title="2.索引优化"></a>2.索引优化</h4><p>看上文索引</p>
+<h4 id="3-数据库结构优化"><a href="#3-数据库结构优化" class="headerlink" title="3.数据库结构优化"></a>3.数据库结构优化</h4><p>1）范式优化： 比如消除冗余（节省空间。。） 2）反范式优化：比如适当加冗余等（减少join） 3）拆分表： 分区将数据在物理上分隔开，不同分区的数据可以制定保存在处于不同磁盘上的数据文件里。这样，当对这个表进行查询时，只需要在表分区中进行扫描，而不必进行全表扫描，明显缩短了查询时间，另外处于不同磁盘的分区也将对这个表的数据传输分散在不同的磁盘I/O，一个精心设置的分区可以将数据传输对磁盘I/O竞争均匀地分散开。对数据量大的时时表可采取此方法。可按月自动建表分区。</p>
 <p>4）拆分其实又分垂直拆分和水平拆分： 案例： 简单购物系统暂设涉及如下表： 1.产品表（数据量10w，稳定） 2.订单表（数据量200w，且有增长趋势） 3.用户表 （数据量100w，且有增长趋势） 以</p>
 <p>mysql</p>
 <p>为例讲述下水平拆分和垂直拆分，mysql能容忍的数量级在百万静态数据可以到千万 </p>
@@ -597,7 +612,7 @@ var jiathis_config={
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -632,7 +647,9 @@ var jiathis_config={
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -655,7 +672,9 @@ var jiathis_config={
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -700,7 +719,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述及使用"><span class="nav-number">1.</span> <span class="nav-text">简述及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">1.1.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程"><span class="nav-number">1.2.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接池"><span class="nav-number">1.3.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.3.1.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.4.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">1.5.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库优化的思路"><span class="nav-number">1.5.1.</span> <span class="nav-text">数据库优化的思路</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-SQL语句优化"><span class="nav-number">1.6.</span> <span class="nav-text">1.SQL语句优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-索引优化"><span class="nav-number">1.7.</span> <span class="nav-text">2.索引优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-数据库结构优化"><span class="nav-number">1.8.</span> <span class="nav-text">3.数据库结构优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述及使用"><span class="nav-number">1.</span> <span class="nav-text">简述及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范式"><span class="nav-number">1.1.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">1.2.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程"><span class="nav-number">1.3.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接池"><span class="nav-number">1.4.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.4.1.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.5.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">1.6.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化的思路"><span class="nav-number">1.6.1.</span> <span class="nav-text">优化的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-SQL语句优化"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">1.SQL语句优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-索引优化"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">2.索引优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数据库结构优化"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">3.数据库结构优化</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
             
 
           </div>
@@ -756,7 +775,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共31.0k字</span>
+  <span class="post-count">| 博客全站共31.4k字</span>
 </div>
 
         
