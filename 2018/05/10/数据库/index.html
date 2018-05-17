@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Gzhennaxia">
 <meta property="og:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-15T01:50:13.554Z">
+<meta property="og:updated_time" content="2018-05-17T06:42:33.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
@@ -377,7 +377,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-15 09:50:13" itemprop="dateModified" datetime="2018-05-15T09:50:13+08:00">2018-05-15</time>
+                <time title="修改时间：2018-05-17 14:42:33" itemprop="dateModified" datetime="2018-05-17T14:42:33+08:00">2018-05-17</time>
               
             
           </span>
@@ -422,7 +422,9 @@
 <h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>什么是事务,为何用事务 ？</p>
 <p>数据库事务(Database Transaction) ，是指作为单个逻辑工作单元执行的一系列操作，要么完全地执行，要么完全地不执行。  </p>
 <p>保证数据的一致性和完整性 </p>
-<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><h2 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ol>
+<h2 id="存储过程"><a href="#存储过程" class="headerlink" title="存储过程"></a>存储过程</h2><p>什么是存储过程？用什么来调用？</p>
+<p><strong>存储过程是一个预编译的SQL语句</strong>， 简单的说存储过程是为了完成某个数据库中的特定功能而编写的语句集，该语句集包括SQL语句（对数据的增删改查）、条件语句和循环语句等，然后再给这个代码块取一个名字，在用到这个功能的时候调用他就行了。优点是允许模块化的设计，就是说只需创建一次，以后在该程序中就可以调用多次。如果某次操作需要执行多次SQL，使用存储过程比单纯SQL语句执行要快。可以用一个命令对象来调用存储过程（CALL）。</p>
+<h2 id="连接池"><a href="#连接池" class="headerlink" title="连接池"></a>连接池</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ol>
 <li>DBCP连接池 </li>
 <li>JNDI连接池 </li>
 <li>C3P0连接池</li>
@@ -459,6 +461,50 @@
 <h1 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h1><blockquote>
 <p><a href="https://www.2cto.com/database/201504/390838.html" target="_blank" rel="noopener">数据库常见面试题 </a></p>
 </blockquote>
+<h2 id="SQL语句（笔试部分常见）"><a href="#SQL语句（笔试部分常见）" class="headerlink" title="SQL语句（笔试部分常见）"></a>SQL语句（笔试部分常见）</h2><ol>
+<li><p>用一条SQL 语句 查询出每门课都大于80 分的学生姓名</p>
+<p>name   kecheng   fenshu<br>张三    语文       81<br>张三     数学       75<br>李四     语文       76<br>李四     数学       90<br>王五     语文       81<br>王五     数学       100<br>王五     英语       90</p>
+<p>答案：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> <span class="keyword">name</span> <span class="keyword">NOT</span> <span class="keyword">IN</span>(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> fenshu &lt;=<span class="number">80</span>); <span class="comment">--关键词 DISTINCT 用于返回唯一不同的值。</span></span><br></pre></td></tr></table></figure>
+<p>关键词 DISTINCT 用于返回唯一不同的值。 </p>
+<p>更简单的：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> tablename <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">name</span> <span class="keyword">HAVING</span> <span class="keyword">MIN</span>(score) &gt; <span class="number">80</span>;</span><br></pre></td></tr></table></figure>
+<p>查询平均分大于80的学生的姓名：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span> <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">AS</span> t,<span class="keyword">SUM</span>(fenshu) <span class="keyword">AS</span> <span class="keyword">num</span>,<span class="keyword">name</span> <span class="keyword">FROM</span> tablename <span class="keyword">GROUP</span> <span class="keyword">BY</span> <span class="keyword">name</span>) <span class="keyword">AS</span> a <span class="keyword">WHERE</span> a.num &gt; <span class="number">80</span>*t;</span><br></pre></td></tr></table></figure>
+<p> 更简单的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select name from(select name, avg(fenshu) as sc from tablename group by name having sc&gt;80);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>学生表 如下: </p>
+<p>学号   姓名 课程编号 课程名称 分数 </p>
+<p>2005001 张三 0001     数学    69</p>
+<p>2005002 李四 0001      数学    89 </p>
+<p>2005001 张三 0001      数学    69 </p>
+<p>删除学生冗余信息 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE from tablename where (学号,姓名,课程编号,课程名称,分数) in (select * from tablename GROUP by 学号,姓名,课程编号,课程名称,分数 having count(*) &gt; 1) ;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一个叫 team 的表，里面只有一个字段name, 一共有4 条纪录，分别是a,b,c,d, 对应四个球队，现在四个球队进行比赛，用一条sql 语句显示所有可能的比赛组合</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select a.name, b.name from team a, team b where a.name &lt; b.name;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>怎么把这样一个表儿 </p>
+<p>year   month amount </p>
+<p>1991   1     1.1 </p>
+<p>1991   2     1.2 </p>
+<p>1991   3     1.3 </p>
+<p>1991   4     1.4 </p>
+<p>1992   1     2.1 </p>
+<p>1992   2     2.2 </p>
+<p>1992   3     2.3 </p>
+<p>1992   4     2.4 </p>
+<p>查成这样一个结果 </p>
+<p>year m1   m2   m3   m4 </p>
+<p>1991 1.1  1.2   1.3    1.4 </p>
+<p>1992 2.1  2.2   2.3    2.4  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">select year, </span><br><span class="line">(select year,amount from   aaa m where month=1   and m.year=aaa.year) as m1,</span><br><span class="line">(select year,amount from   aaa m where month=2   and m.year=aaa.year) as m2,</span><br><span class="line">(select year,amount from   aaa m where month=3   and m.year=aaa.year) as m3,</span><br><span class="line">(select year,amount from   aaa m where month=4   and m.year=aaa.year) as m4</span><br><span class="line">from aaa group by year;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有两个表A 和B ，均有key 和value 两个字段，如果B 的key 在A 中也有，就把B 的value 换为A 中对应的value<br>这道题的SQL 语句怎么写？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update b set b.value=(select a.value from a where a.key=b.key) where b.id in(select b.id from b,a where b.key=a.key);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -719,7 +765,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述及使用"><span class="nav-number">1.</span> <span class="nav-text">简述及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范式"><span class="nav-number">1.1.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">1.2.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程"><span class="nav-number">1.3.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接池"><span class="nav-number">1.4.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.4.1.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.5.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">1.6.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化的思路"><span class="nav-number">1.6.1.</span> <span class="nav-text">优化的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-SQL语句优化"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">1.SQL语句优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-索引优化"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">2.索引优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数据库结构优化"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">3.数据库结构优化</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述及使用"><span class="nav-number">1.</span> <span class="nav-text">简述及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范式"><span class="nav-number">1.1.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">1.2.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程"><span class="nav-number">1.3.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接池"><span class="nav-number">1.4.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.4.1.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.5.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">1.6.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化的思路"><span class="nav-number">1.6.1.</span> <span class="nav-text">优化的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-SQL语句优化"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">1.SQL语句优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-索引优化"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">2.索引优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数据库结构优化"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">3.数据库结构优化</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL语句（笔试部分常见）"><span class="nav-number">2.1.</span> <span class="nav-text">SQL语句（笔试部分常见）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -775,7 +821,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共31.4k字</span>
+  <span class="post-count">| 博客全站共34.6k字</span>
 </div>
 
         
