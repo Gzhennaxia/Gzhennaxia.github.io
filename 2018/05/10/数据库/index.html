@@ -134,7 +134,7 @@
 <meta property="og:site_name" content="Gzhennaxia">
 <meta property="og:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-17T13:59:06.684Z">
+<meta property="og:updated_time" content="2018-05-20T15:26:30.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
 <meta name="twitter:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
@@ -377,7 +377,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-17 21:59:06" itemprop="dateModified" datetime="2018-05-17T21:59:06+08:00">2018-05-17</time>
+                <time title="修改时间：2018-05-20 23:26:30" itemprop="dateModified" datetime="2018-05-20T23:26:30+08:00">2018-05-20</time>
               
             
           </span>
@@ -504,6 +504,23 @@
 <li><p>有两个表A 和B ，均有key 和value 两个字段，如果B 的key 在A 中也有，就把B 的value 换为A 中对应的value<br>这道题的SQL 语句怎么写？</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update b set b.value=(select a.value from a where a.key=b.key) where b.id in(select b.id from b,a where b.key=a.key);</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>（中科软笔试题，数据库第三章课后题）设学生课程数据库中有三个表：</p>
+<p>学生表Student（SNO，SNAME，AGE，SEX）</p>
+<p>成绩表SC（SNO，CNO，GRADE）</p>
+<p>课程表Course（CNO，CNAME）</p>
+<p>其中SNO，CNO，SNAME，AGE，SEX，GRADE，CNAME分别表示学号，课程号，姓名，年龄，性别，成绩和课程名。</p>
+<p>用SQL语句表达下列操作。</p>
+<p>（1）检索选修课程名称为‘MATHS’的学生的学号与姓名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT SNO, SNAME</span><br><span class="line">FROM Student,SC,Course</span><br><span class="line">WHERE Student.SNO = SC.SNO</span><br><span class="line">AND Course.CNO = SC.CNO</span><br><span class="line">AND CNAME = &apos;MATHS&apos;;</span><br></pre></td></tr></table></figure>
+<p>（2）检索至少学习了课程号为‘C1’和‘C2’的学生的学号。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT DISTINCT SNO</span><br><span class="line">FROM SC</span><br><span class="line">WHERE CNO = &apos;C1&apos;</span><br><span class="line">AND SNO IN(SELECT SNO FROM SC WHERE CNO = &apos;C2&apos;);</span><br></pre></td></tr></table></figure>
+<p>（3）检索年龄在18到20之间（含18和20）的女生的学号，姓名和年龄。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT SNO, SNAME, AGE</span><br><span class="line">FROM Student</span><br><span class="line">WHERE SEX = &apos;女&apos;</span><br><span class="line">AND AGE BETWEEN 18 AND 20;</span><br></pre></td></tr></table></figure>
+<p>（4）检索平均成绩超过80分的学生学号和平均成绩。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT SNO, AVG(GRADE)</span><br><span class="line">FROM SC</span><br><span class="line">GROUP BY SNO</span><br><span class="line">HAVING AVG(GRADE) &gt; 80;</span><br></pre></td></tr></table></figure>
+<p>（5）检索选修了三门课以上的学生的姓名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT SNAME</span><br><span class="line">FROM Student,SC</span><br><span class="line">WHERE Student.SNO = SC.SNO</span><br><span class="line">GROUP BY SNO</span><br><span class="line">HAVING COUNT(*) &gt; 3;</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h2 id="主键、外键、索引"><a href="#主键、外键、索引" class="headerlink" title="主键、外键、索引"></a>主键、外键、索引</h2><p>主键（primary key）与唯一索引（unique index）的关系 </p>
 <p>1：主键是特殊的唯一索引 </p>
@@ -557,8 +574,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/10/Struts2/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/10/Struts2/" rel="prev" title="Struts2">
+                Struts2 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -826,7 +843,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共36.2k字</span>
+  <span class="post-count">| 博客全站共37.4k字</span>
 </div>
 
         
