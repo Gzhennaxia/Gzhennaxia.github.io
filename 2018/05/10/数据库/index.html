@@ -127,17 +127,17 @@
 
 
 
-  <meta name="description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
+  <meta name="description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  MySQL的语句 建库 1CREATE DATABASE 数据库名;  删库 1drop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库">
 <meta property="og:url" content="http://yoursite.com/2018/05/10/数据库/index.html">
 <meta property="og:site_name" content="Gzhennaxia">
-<meta property="og:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
+<meta property="og:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  MySQL的语句 建库 1CREATE DATABASE 数据库名;  删库 1drop">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-21T02:16:25.681Z">
+<meta property="og:updated_time" content="2018-05-22T13:39:37.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库">
-<meta name="twitter:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  范式数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式：  第1规">
+<meta name="twitter:description" content="简述及使用 https://blog.csdn.net/m8396017/article/details/51348668 https://www.2cto.com/database/201504/390838.html https://www.cnblogs.com/wmbg/p/6800354.html  MySQL的语句 建库 1CREATE DATABASE 数据库名;  删库 1drop">
 
 
 
@@ -377,7 +377,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-21 10:16:25" itemprop="dateModified" datetime="2018-05-21T10:16:25+08:00">2018-05-21</time>
+                <time title="修改时间：2018-05-22 21:39:37" itemprop="dateModified" datetime="2018-05-22T21:39:37+08:00">2018-05-22</time>
               
             
           </span>
@@ -415,6 +415,28 @@
 <p><a href="https://www.2cto.com/database/201504/390838.html" target="_blank" rel="noopener">https://www.2cto.com/database/201504/390838.html</a></p>
 <p><a href="https://www.cnblogs.com/wmbg/p/6800354.html" target="_blank" rel="noopener">https://www.cnblogs.com/wmbg/p/6800354.html</a></p>
 </blockquote>
+<h2 id="MySQL的语句"><a href="#MySQL的语句" class="headerlink" title="MySQL的语句"></a>MySQL的语句</h2><ol>
+<li><p>建库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE 数据库名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database &lt;数据库名&gt;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>选择数据库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># mysql -u root -p</span><br><span class="line">Enter password:******</span><br><span class="line">mysql&gt; use 数据库名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE table_name (column1_name column1_type,column2_name column2_type...);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改表结构</p>
+<blockquote>
+<p><a href="http://www.cnblogs.com/Anidot/articles/7666909.html" target="_blank" rel="noopener">MySQL修改表结构操作命令总结</a></p>
+</blockquote>
+</li>
+<li><p>删表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE table_name ;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h2 id="范式"><a href="#范式" class="headerlink" title="范式"></a>范式</h2><p>数据库逻辑设计的规范化就是我们一般所说的范式，我们可以这样来简单理解范式： </p>
 <p>第1规范：没有重复的组或多值的列，这是数据库设计的最低要求。</p>
 <p>第2规范: 每个非关键字段必须依赖于主关键字，不能依赖于一个组合式主关键字的某些组成部分。消除部分依赖，大部分情况下，数据库设计都应该达到第二范式。</p>
@@ -813,7 +835,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述及使用"><span class="nav-number">1.</span> <span class="nav-text">简述及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#范式"><span class="nav-number">1.1.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">1.2.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是事务-为何用事务-？"><span class="nav-number">1.2.1.</span> <span class="nav-text">什么是事务,为何用事务 ？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务的四大特性（ACID）"><span class="nav-number">1.2.2.</span> <span class="nav-text">事务的四大特性（ACID）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不考虑事务的隔离性，会发生的几种问题："><span class="nav-number">1.2.3.</span> <span class="nav-text">不考虑事务的隔离性，会发生的几种问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL数据库为我们提供的四种隔离级别："><span class="nav-number">1.2.4.</span> <span class="nav-text">MySQL数据库为我们提供的四种隔离级别：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程"><span class="nav-number">1.3.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接池"><span class="nav-number">1.4.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.4.1.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.5.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">1.6.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化的思路"><span class="nav-number">1.6.1.</span> <span class="nav-text">优化的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-SQL语句优化"><span class="nav-number">1.6.1.1.</span> <span class="nav-text">1.SQL语句优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-索引优化"><span class="nav-number">1.6.1.2.</span> <span class="nav-text">2.索引优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数据库结构优化"><span class="nav-number">1.6.1.3.</span> <span class="nav-text">3.数据库结构优化</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL语句（笔试部分常见）"><span class="nav-number">2.1.</span> <span class="nav-text">SQL语句（笔试部分常见）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主键、外键、索引"><span class="nav-number">2.2.</span> <span class="nav-text">主键、外键、索引</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述及使用"><span class="nav-number">1.</span> <span class="nav-text">简述及使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL的语句"><span class="nav-number">1.1.</span> <span class="nav-text">MySQL的语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#范式"><span class="nav-number">1.2.</span> <span class="nav-text">范式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">1.3.</span> <span class="nav-text">事务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是事务-为何用事务-？"><span class="nav-number">1.3.1.</span> <span class="nav-text">什么是事务,为何用事务 ？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务的四大特性（ACID）"><span class="nav-number">1.3.2.</span> <span class="nav-text">事务的四大特性（ACID）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不考虑事务的隔离性，会发生的几种问题："><span class="nav-number">1.3.3.</span> <span class="nav-text">不考虑事务的隔离性，会发生的几种问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MySQL数据库为我们提供的四种隔离级别："><span class="nav-number">1.3.4.</span> <span class="nav-text">MySQL数据库为我们提供的四种隔离级别：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程"><span class="nav-number">1.4.</span> <span class="nav-text">存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接池"><span class="nav-number">1.5.</span> <span class="nav-text">连接池</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类"><span class="nav-number">1.5.1.</span> <span class="nav-text">分类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.6.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优化"><span class="nav-number">1.7.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优化的思路"><span class="nav-number">1.7.1.</span> <span class="nav-text">优化的思路</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-SQL语句优化"><span class="nav-number">1.7.1.1.</span> <span class="nav-text">1.SQL语句优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-索引优化"><span class="nav-number">1.7.1.2.</span> <span class="nav-text">2.索引优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-数据库结构优化"><span class="nav-number">1.7.1.3.</span> <span class="nav-text">3.数据库结构优化</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL语句（笔试部分常见）"><span class="nav-number">2.1.</span> <span class="nav-text">SQL语句（笔试部分常见）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主键、外键、索引"><span class="nav-number">2.2.</span> <span class="nav-text">主键、外键、索引</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -869,7 +891,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共43.3k字</span>
+  <span class="post-count">| 博客全站共43.4k字</span>
 </div>
 
         
