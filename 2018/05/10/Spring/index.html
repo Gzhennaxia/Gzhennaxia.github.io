@@ -127,19 +127,19 @@
 
 
 
-  <meta name="description" content="简介与使用简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  AOP的实现原理 Spring AOP 实现原理  实现AOP的技术，主要分为两大类： 一是采用动态代理技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行； 二是采用静态织入的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。  Spring A">
+  <meta name="description" content="简介与使用简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  spring的优点：  方便解耦，简化开发 spring就是一个大工厂，可以将所有对象创建和依赖关系的维护都交给spring管理。  AOP编程的支持  声明式事务的支持 只需要通过配置就可以完成对事务的管理，而无须手动编程。  方便程序的测试 spring对Junit4支持，可以通过注解方便的测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring">
 <meta property="og:url" content="http://yoursite.com/2018/05/10/Spring/index.html">
 <meta property="og:site_name" content="Gzhennaxia">
-<meta property="og:description" content="简介与使用简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  AOP的实现原理 Spring AOP 实现原理  实现AOP的技术，主要分为两大类： 一是采用动态代理技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行； 二是采用静态织入的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。  Spring A">
+<meta property="og:description" content="简介与使用简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  spring的优点：  方便解耦，简化开发 spring就是一个大工厂，可以将所有对象创建和依赖关系的维护都交给spring管理。  AOP编程的支持  声明式事务的支持 只需要通过配置就可以完成对事务的管理，而无须手动编程。  方便程序的测试 spring对Junit4支持，可以通过注解方便的测试">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://img-blog.csdn.net/20160324011156424">
 <meta property="og:image" content="https://img-blog.csdn.net/20160325003448793">
-<meta property="og:updated_time" content="2018-05-21T12:56:35.553Z">
+<meta property="og:updated_time" content="2018-05-22T07:12:20.262Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring">
-<meta name="twitter:description" content="简介与使用简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  AOP的实现原理 Spring AOP 实现原理  实现AOP的技术，主要分为两大类： 一是采用动态代理技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行； 二是采用静态织入的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。  Spring A">
+<meta name="twitter:description" content="简介与使用简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  spring的优点：  方便解耦，简化开发 spring就是一个大工厂，可以将所有对象创建和依赖关系的维护都交给spring管理。  AOP编程的支持  声明式事务的支持 只需要通过配置就可以完成对事务的管理，而无须手动编程。  方便程序的测试 spring对Junit4支持，可以通过注解方便的测试">
 <meta name="twitter:image" content="https://img-blog.csdn.net/20160324011156424">
 
 
@@ -380,7 +380,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-21 20:56:35" itemprop="dateModified" datetime="2018-05-21T20:56:35+08:00">2018-05-21</time>
+                <time title="修改时间：2018-05-22 15:12:20" itemprop="dateModified" datetime="2018-05-22T15:12:20+08:00">2018-05-22</time>
               
             
           </span>
@@ -414,6 +414,23 @@
 
       
         <h1 id="简介与使用"><a href="#简介与使用" class="headerlink" title="简介与使用"></a>简介与使用</h1><p>简单来说，Spring是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。 </p>
+<p>spring的优点：</p>
+<ol>
+<li><p>方便解耦，简化开发</p>
+<p>spring就是一个大工厂，可以将所有对象创建和依赖关系的维护都交给spring管理。</p>
+</li>
+<li><p>AOP编程的支持</p>
+</li>
+<li><p>声明式事务的支持</p>
+<p>只需要通过配置就可以完成对事务的管理，而无须手动编程。</p>
+</li>
+<li><p>方便程序的测试</p>
+<p>spring对Junit4支持，可以通过注解方便的测试spring程序</p>
+</li>
+<li><p>方便集成各种优秀框架</p>
+<p>spring不排斥各种优秀的开源框架，其内部提供了对各种优秀框架（Struts2、Hibernate、MyBatis）的直接支持。</p>
+</li>
+</ol>
 <h2 id="AOP的实现原理"><a href="#AOP的实现原理" class="headerlink" title="AOP的实现原理"></a>AOP的实现原理</h2><blockquote>
 <p><a href="https://blog.csdn.net/moreevan/article/details/11977115/#t5" target="_blank" rel="noopener">Spring AOP 实现原理</a></p>
 </blockquote>
@@ -779,7 +796,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共42.2k字</span>
+  <span class="post-count">| 博客全站共43.2k字</span>
 </div>
 
         

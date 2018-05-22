@@ -127,17 +127,17 @@
 
 
 
-  <meta name="description" content="简介与使用hibernate缓存 Hibernate之缓存详解   Hibernate中提供了两级缓存，一级缓存是Session级别的缓存，它属于事务范围的缓存，该级缓存由hibernate管理，应用程序无需干预； 二级缓存是SessionFactory级别的缓存，该级缓存可以进行配置和更改，并且可以动态加载和卸载，hibernate还为查询结果提供了一个查询缓存，它依赖于二级缓存；  一级缓存H">
+  <meta name="description" content="简介与使用实体类的编写规则 属性要是私有的。 公开的get/set方法 每一个实体类要有一个属性作为唯一值（一般都是使用对于数据表的主键）。 数据类型不要使用基本数据类型，要使用其包装类 使用基本类型的包装类型一个好处是，可以区分数据是没有传值默认生成的，还是本身就是这个默认值，比如一个表示数量的整数类型，如果使用int，没有传值时，数据库中会出现0，如果使用Integer，没有传值时，数据库中是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hibernate">
 <meta property="og:url" content="http://yoursite.com/2018/05/09/Hibernate/index.html">
 <meta property="og:site_name" content="Gzhennaxia">
-<meta property="og:description" content="简介与使用hibernate缓存 Hibernate之缓存详解   Hibernate中提供了两级缓存，一级缓存是Session级别的缓存，它属于事务范围的缓存，该级缓存由hibernate管理，应用程序无需干预； 二级缓存是SessionFactory级别的缓存，该级缓存可以进行配置和更改，并且可以动态加载和卸载，hibernate还为查询结果提供了一个查询缓存，它依赖于二级缓存；  一级缓存H">
+<meta property="og:description" content="简介与使用实体类的编写规则 属性要是私有的。 公开的get/set方法 每一个实体类要有一个属性作为唯一值（一般都是使用对于数据表的主键）。 数据类型不要使用基本数据类型，要使用其包装类 使用基本类型的包装类型一个好处是，可以区分数据是没有传值默认生成的，还是本身就是这个默认值，比如一个表示数量的整数类型，如果使用int，没有传值时，数据库中会出现0，如果使用Integer，没有传值时，数据库中是">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-13T09:24:49.672Z">
+<meta property="og:updated_time" content="2018-05-21T14:56:16.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hibernate">
-<meta name="twitter:description" content="简介与使用hibernate缓存 Hibernate之缓存详解   Hibernate中提供了两级缓存，一级缓存是Session级别的缓存，它属于事务范围的缓存，该级缓存由hibernate管理，应用程序无需干预； 二级缓存是SessionFactory级别的缓存，该级缓存可以进行配置和更改，并且可以动态加载和卸载，hibernate还为查询结果提供了一个查询缓存，它依赖于二级缓存；  一级缓存H">
+<meta name="twitter:description" content="简介与使用实体类的编写规则 属性要是私有的。 公开的get/set方法 每一个实体类要有一个属性作为唯一值（一般都是使用对于数据表的主键）。 数据类型不要使用基本数据类型，要使用其包装类 使用基本类型的包装类型一个好处是，可以区分数据是没有传值默认生成的，还是本身就是这个默认值，比如一个表示数量的整数类型，如果使用int，没有传值时，数据库中会出现0，如果使用Integer，没有传值时，数据库中是">
 
 
 
@@ -377,7 +377,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-05-13 17:24:49" itemprop="dateModified" datetime="2018-05-13T17:24:49+08:00">2018-05-13</time>
+                <time title="修改时间：2018-05-21 22:56:16" itemprop="dateModified" datetime="2018-05-21T22:56:16+08:00">2018-05-21</time>
               
             
           </span>
@@ -410,7 +410,21 @@
       
 
       
-        <h1 id="简介与使用"><a href="#简介与使用" class="headerlink" title="简介与使用"></a>简介与使用</h1><h2 id="hibernate缓存"><a href="#hibernate缓存" class="headerlink" title="hibernate缓存"></a>hibernate缓存</h2><blockquote>
+        <h1 id="简介与使用"><a href="#简介与使用" class="headerlink" title="简介与使用"></a>简介与使用</h1><h2 id="实体类的编写规则"><a href="#实体类的编写规则" class="headerlink" title="实体类的编写规则"></a>实体类的编写规则</h2><ol>
+<li>属性要是私有的。</li>
+<li>公开的get/set方法</li>
+<li>每一个实体类要有一个属性作为唯一值（一般都是使用对于数据表的主键）。</li>
+<li>数据类型不要使用基本数据类型，要使用其包装类<ul>
+<li>使用基本类型的包装类型一个好处是，可以区分数据是没有传值默认生成的，还是本身就是这个默认值，比如一个表示数量的整数类型，如果使用int，没有传值时，数据库中会出现0，如果使用Integer，没有传值时，数据库中是null。</li>
+</ul>
+</li>
+<li>提供一个无参数 public访问控制符的构造器：因为会用到反射。</li>
+<li>持久化类尽量不要使用final进行修饰。  <ul>
+<li>用final修饰的类不能被继承，因此无法生成代理对象，由于延迟加载返回的是代理对象，因此延迟加载就会失效。</li>
+</ul>
+</li>
+</ol>
+<h2 id="hibernate缓存"><a href="#hibernate缓存" class="headerlink" title="hibernate缓存"></a>hibernate缓存</h2><blockquote>
 <p><a href="https://blog.csdn.net/an_2016/article/details/52088712" target="_blank" rel="noopener">Hibernate之缓存详解 </a></p>
 </blockquote>
 <p>Hibernate中提供了两级缓存，一级缓存是Session级别的缓存，它属于事务范围的缓存，<strong>该级缓存由hibernate管理，应用程序无需干预；</strong></p>
@@ -709,7 +723,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介与使用"><span class="nav-number">1.</span> <span class="nav-text">简介与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hibernate缓存"><span class="nav-number">1.1.</span> <span class="nav-text">hibernate缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一级缓存"><span class="nav-number">1.1.1.</span> <span class="nav-text">一级缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二级缓存"><span class="nav-number">1.1.2.</span> <span class="nav-text">二级缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结："><span class="nav-number">1.1.3.</span> <span class="nav-text">总结：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#琐碎的点"><span class="nav-number">1.2.</span> <span class="nav-text">琐碎的点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介与使用"><span class="nav-number">1.</span> <span class="nav-text">简介与使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实体类的编写规则"><span class="nav-number">1.1.</span> <span class="nav-text">实体类的编写规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hibernate缓存"><span class="nav-number">1.2.</span> <span class="nav-text">hibernate缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一级缓存"><span class="nav-number">1.2.1.</span> <span class="nav-text">一级缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二级缓存"><span class="nav-number">1.2.2.</span> <span class="nav-text">二级缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结："><span class="nav-number">1.2.3.</span> <span class="nav-text">总结：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#琐碎的点"><span class="nav-number">1.3.</span> <span class="nav-text">琐碎的点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a></li></ol></div>
             
 
           </div>
@@ -765,7 +779,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">| 博客全站共42.2k字</span>
+  <span class="post-count">| 博客全站共43.2k字</span>
 </div>
 
         
