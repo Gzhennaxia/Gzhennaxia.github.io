@@ -8,8 +8,6 @@ tags:
  - NexT
 ---
 
-# GitHub Pages+Hexo+NexT
-
 > node.js	10.14.2
 >
 > npm 	6.4.1
@@ -20,7 +18,7 @@ tags:
 
 <!-- more -->
 
-## Hexo常用命令
+# Hexo常用命令
 
 > [Hexo 最常用的几个命令](http://moxfive.xyz/2015/12/21/common-hexo-commands/)
 >
@@ -28,7 +26,7 @@ tags:
 
 `hexo clean && hexo g && hexo s -s`
 
-## NexT 主题的使用
+# NexT 主题的使用
 
 > [hexo-theme-next](https://github.com/theme-next/hexo-theme-next)
 >
@@ -36,32 +34,109 @@ tags:
 
 推荐新入坑的兄弟使用[第一种方式](https://theme-next.org/docs/getting-started/installation/#download-next-3)来获取NexT主题。
 
-### 主题配置文件
+## 主题配置文件
 
 [Data Files](https://theme-next.org/docs/getting-started/data-files/)
 
 为了以后平滑升级，使用Hexo3.0的Data Files方式
 
-#### [NexT-Way](https://theme-next.org/docs/getting-started/data-files/#option-2)
+### [NexT-Way](https://theme-next.org/docs/getting-started/data-files/#option-2)
 
 1. 在`hexo/source/_data`目录（没有的话新建一个）下新建`next.yml`文件。
 2. 把**主题配置文件**中的选项全部 copy 到`next.yml`中。
 3. 在`next.yml`文件中设置`override`选项为`true`。
 4. 在**站点配置文件**中修改`theme`选项为`next`
 
-### 主题设置
+## 主题设置
 
 > [开始使用](https://theme-next.iissnan.com/getting-started.html)
 
-### 主题优化
+## 主题优化
 
-#### 文章底部带#号的标签
+### 头像旋转
+
+> [Hexo Next 头像圆形并旋转](http://www.iooeo.com/2017/07/20/Hexo-Next-%E5%A4%B4%E5%83%8F%E5%9C%86%E5%BD%A2%E5%B9%B6%E6%97%8B%E8%BD%AC/)
+
+注意[stylus中文版参考文档之注释(Comments)](https://www.zhangxinxu.com/jq/stylus/comments.php)
+
+单行注释使用`//`,多行使用`/* */`
+
+修改`/themes/next/source/css/_common/components/sidebar/sidebar-author.styl`如下：
+
+```stylus
+.site-author-image {
+  display: block;
+  margin: 0 auto;
+  padding: $site-author-image-padding;
+  max-width: $site-author-image-width;
+  height: $site-author-image-height;
+  border: $site-author-image-border-width solid $site-author-image-border-color;
+  opacity: hexo-config('avatar.opacity') is a 'unit' ? hexo-config('avatar.opacity') : 1;
+  // 头像圆形样式
+  /* start */
+  border-radius: 50%
+  webkit-transition: 1.4s all;
+  moz-transition: 1.4s all;
+  ms-transition: 1.4s all;
+  transition: 1.4s all;
+  /* end */
+}
+
+if hexo-config('avatar.rounded') {
+.site-author-image {
+  border-radius: 100%;
+}
+}
+
+if hexo-config('avatar.rotated') {
+.site-author-image {
+  -webkit-transition: -webkit-transform 1.0s ease-out;
+  -moz-transition: -moz-transform 1.0s ease-out;
+  -ms-transition: -ms-transform 1.0s ease-out;
+  transition: transform 1.0s ease-out;
+}
+
+.site-author-image:hover {
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotateZ(360deg);
+}
+}
+
+.site-author-name {
+  margin: $site-author-name-margin;
+  text-align: $site-author-name-align;
+  color: $site-author-name-color;
+  font-weight: $site-author-name-weight;
+}
+
+.site-description {
+  margin-top: $site-description-margin-top;
+  text-align: $site-description-align;
+  font-size: $site-description-font-size;
+  color: $site-description-color;
+}
+
+// 头像旋转事件
+/* start */
+.site-author-image:hover {
+  background-color: #55DAE1;
+  webkit-transform: rotate(360deg) scale(1.1);
+  moz-transform: rotate(360deg) scale(1.1);
+  ms-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
+}
+/* end */
+```
+
+### 文章底部带#号的标签
 
 > [文章底部带#号的标签](https://blog.csdn.net/qq_32454537/article/details/79482896#t11)
 
 修改模板`/themes/next/layout/_macro/post.swig`，搜索 `rel="tag">#`，将`#`换成`<i class="fa fa-tag"></i>`
 
-#### 在每篇文章末尾统一添加“本文结束”标记
+### 在每篇文章末尾统一添加“本文结束”标记
 
 > [在每篇文章末尾统一添加“本文结束](https://blog.csdn.net/qq_32454537/article/details/79482896#t12)
 
@@ -93,7 +168,7 @@ passage_end_tag:
   enabled: true
 ```
 
-#### 主页文章加阴影
+### 主页文章加阴影
 
 >  [主页文章加阴影](https://blog.csdn.net/qq_32454537/article/details/79482896#t14)
 
@@ -110,7 +185,7 @@ padding: 25px;
 }
 ```
 
-#### 显示文章更新时间
+### 显示文章更新时间
 
 修改**主题配置文件**的
 
@@ -126,7 +201,7 @@ post_meta:
 date_format: YYYY-MM-DD HH:mm:ss
 ```
 
-#### 代码添加复制按钮
+### 代码添加复制按钮
 
 > [Hexo NexT主题代码块添加复制功能](http://www.missfli.com/2018/06/19/github-hexo-next-08.html)
 
@@ -205,7 +280,7 @@ date_format: YYYY-MM-DD HH:mm:ss
    <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
    ```
 
-#### 文章加密
+### 文章加密
 
 > [hexo-blog-encrypt](https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md)
 
@@ -228,7 +303,7 @@ date_format: YYYY-MM-DD HH:mm:ss
    ---
    ```
 
-#### 二次元看板娘
+### 二次元看板娘
 
 > [hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md)
 
@@ -259,7 +334,7 @@ date_format: YYYY-MM-DD HH:mm:ss
 
    注：在`next.yml`中配置时，`width, height`等参数不起作用。
 
-#### 加载条
+### 加载条
 
 > [Load bar at the top for NexT](https://github.com/theme-next/theme-next-pace)
 
@@ -268,17 +343,17 @@ date_format: YYYY-MM-DD HH:mm:ss
 3. 将`pace`目录 copy 到`themes/next/source/lib`目录下
 4. 修改**主题配置文件**`next.yml`的`pace`属性值为`true`
 
-#### 显示文章浏览进度百分比
+### 显示文章浏览进度百分比
 
 在**主题配置文件**中修改属性`sidebar`下`scrollpercent`的值为`true`
 
-#### 文章预览
+### 文章预览
 
 在文章中使用截断标记`<!-- more -->`手动指定文章预览的内容。
 
-#### 评论系统
+### 评论系统
 
-##### Gitalk
+#### Gitalk
 
 > [在hexo next主题上使用gitalk](https://github.com/gitalk/gitalk/wiki/%E5%9C%A8hexo-next%E4%B8%BB%E9%A2%98%E4%B8%8A%E4%BD%BF%E7%94%A8gitalk)
 >
@@ -307,7 +382,7 @@ date_format: YYYY-MM-DD HH:mm:ss
      distraction_free_mode: true # Facebook-like distraction free mode
    ```
 
-##### Valine
+#### Valine
 
 > [Comment Systems Valine](https://theme-next.org/docs/third-party-services/comments-and-widgets/#Valine)
 
@@ -334,7 +409,7 @@ date_format: YYYY-MM-DD HH:mm:ss
      visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
    ```
 
-##### Gitalk + Valine双评论系统
+#### Gitalk + Valine双评论系统
 
 在完成各自配置后对`themes\next\layout\_partials\comments.swig`做如下修改：
 
@@ -362,15 +437,15 @@ date_format: YYYY-MM-DD HH:mm:ss
 	{% endif %}
 ```
 
-#### 自动部署
+### 自动部署
 
 > [Continuous Integration](https://theme-next.org/docs/getting-started/deployment/#Continuous-Integration)
 
 
 
-## 踩坑记录
+# 踩坑记录
 
-### npm install warnings
+## npm install warnings
 
 > [npm install warnings](https://github.com/Zulko/eagle.js/issues/35)
 
@@ -379,11 +454,11 @@ npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules/hex
 npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
 ```
 
-#### 解决方法
+### 解决方法
 
 忽略就好
 
-### Hexo g error
+## Hexo g error
 
 ```shell
 ERROR ENOENT: no such file or directory, open 'F:\Hexo\themes\next\layout\menu.swig'
@@ -405,14 +480,16 @@ Error: ENOENT: no such file or directory, open 'F:\Hexo\themes\next\layout\menu.
     at process._tickCallback (internal/process/next_tick.js:63:19)
 ```
 
-#### 场景再现
+### 场景再现
 
 从[releases](https://github.com/theme-next/hexo-theme-next/releases/tag/v6.6.0)下载的 NexT 主题，然后再通过修改目录名为`next`的方式使用该主题的时候，生成文件的时候报的错。
 
-#### 报错原因
+### 报错原因
 
 未知
 
-#### 解决方法
+### 解决方法
+
+> [Wget for windows——优雅地实现批量下载](https://zhuanlan.zhihu.com/p/28826000)
 
 换用[命令行](https://theme-next.org/docs/getting-started/installation/#download-next-3)下载的方式就不会报这个错了。
