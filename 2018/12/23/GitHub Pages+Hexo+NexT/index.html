@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="GitHub Pages+Hexo+NexT node.js    10.14.2 npm     6.4.1 hexo    3.8.0 NexT    6.6.0">
+<meta name="keywords" content="GitHub Pages,Hexo,NexT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub Pages+Hexo+NexT">
+<meta property="og:url" content="http://yoursite.com/2018/12/23/GitHub Pages+Hexo+NexT/index.html">
+<meta property="og:site_name" content="Gzhennaxia">
+<meta property="og:description" content="GitHub Pages+Hexo+NexT node.js    10.14.2 npm     6.4.1 hexo    3.8.0 NexT    6.6.0">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-12-23T13:08:21.316Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GitHub Pages+Hexo+NexT">
+<meta name="twitter:description" content="GitHub Pages+Hexo+NexT node.js    10.14.2 npm     6.4.1 hexo    3.8.0 NexT    6.6.0">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/23/GitHub Pages+Hexo+NexT/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>GitHub Pages+Hexo+NexT | Gzhennaxia</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Gzhennaxia</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Schedule</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/23/GitHub Pages+Hexo+NexT/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gzhennaxia">
+      <meta itemprop="description" content="我和我骄傲的倔强">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gzhennaxia">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">GitHub Pages+Hexo+NexT
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2018-12-23 21:08:21" itemprop="dateCreated datePublished" datetime="2018-12-23T21:08:21+08:00">2018-12-23</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/12/23/GitHub Pages+Hexo+NexT/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count valine-comment-count" data-xid="/2018/12/23/GitHub Pages+Hexo+NexT/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="GitHub-Pages-Hexo-NexT"><a href="#GitHub-Pages-Hexo-NexT" class="headerlink" title="GitHub Pages+Hexo+NexT"></a>GitHub Pages+Hexo+NexT</h1><blockquote>
+<p>node.js    10.14.2</p>
+<p>npm     6.4.1</p>
+<p>hexo    3.8.0</p>
+<p>NexT    6.6.0</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><blockquote>
+<p><a href="http://moxfive.xyz/2015/12/21/common-hexo-commands/" target="_blank" rel="noopener">Hexo 最常用的几个命令</a></p>
+<p><a href="http://tietang.wang/2016/02/21/%E6%8A%80%E6%9C%AF/Hexo/Hexo%E5%91%BD%E4%BB%A4%E9%80%9F%E8%AE%B0/" target="_blank" rel="noopener">Hexo命令速记</a></p>
+</blockquote>
+<p><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s -s</code></p>
+<h2 id="NexT-主题的使用"><a href="#NexT-主题的使用" class="headerlink" title="NexT 主题的使用"></a>NexT 主题的使用</h2><blockquote>
+<p><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">hexo-theme-next</a></p>
+<p><a href="https://theme-next.org/" target="_blank" rel="noopener">Theme NexT</a></p>
+</blockquote>
+<p>推荐新入坑的兄弟使用<a href="https://theme-next.org/docs/getting-started/installation/#download-next-3" target="_blank" rel="noopener">第一种方式</a>来获取NexT主题。</p>
+<h3 id="主题配置文件"><a href="#主题配置文件" class="headerlink" title="主题配置文件"></a>主题配置文件</h3><p><a href="https://theme-next.org/docs/getting-started/data-files/" target="_blank" rel="noopener">Data Files</a></p>
+<p>为了以后平滑升级，使用Hexo3.0的Data Files方式</p>
+<h4 id="NexT-Way"><a href="#NexT-Way" class="headerlink" title="NexT-Way"></a><a href="https://theme-next.org/docs/getting-started/data-files/#option-2" target="_blank" rel="noopener">NexT-Way</a></h4><ol>
+<li>在<code>hexo/source/_data</code>目录（没有的话新建一个）下新建<code>next.yml</code>文件。</li>
+<li>把<strong>主题配置文件</strong>中的选项全部 copy 到<code>next.yml</code>中。</li>
+<li>在<code>next.yml</code>文件中设置<code>override</code>选项为<code>true</code>。</li>
+<li>在<strong>站点配置文件</strong>中修改<code>theme</code>选项为<code>next</code></li>
+</ol>
+<h3 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h3><blockquote>
+<p><a href="https://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">开始使用</a></p>
+</blockquote>
+<h3 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h3><h4 id="文章底部带-号的标签"><a href="#文章底部带-号的标签" class="headerlink" title="文章底部带#号的标签"></a>文章底部带#号的标签</h4><blockquote>
+<p><a href="https://blog.csdn.net/qq_32454537/article/details/79482896#t11" target="_blank" rel="noopener">文章底部带#号的标签</a></p>
+</blockquote>
+<p>修改模板<code>/themes/next/layout/_macro/post.swig</code>，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将<code>#</code>换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<h4 id="在每篇文章末尾统一添加“本文结束”标记"><a href="#在每篇文章末尾统一添加“本文结束”标记" class="headerlink" title="在每篇文章末尾统一添加“本文结束”标记"></a>在每篇文章末尾统一添加“本文结束”标记</h4><blockquote>
+<p><a href="https://blog.csdn.net/qq_32454537/article/details/79482896#t12" target="_blank" rel="noopener">在每篇文章末尾统一添加“本文结束</a></p>
+</blockquote>
+<ol>
+<li>在路径<code>\themes\next\layout\_macro</code>中新建<code>passage-end-tag.swig</code>文件,并添加以下内容：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% if not is_index %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align:center;color: #ccc;font-size:14px;"</span>&gt;</span>-------------本文结束<span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"fa fa-paw"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span>感谢您的阅读-------------<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>打开<code>\themes\next\layout\_macro\post.swig</code>文件，在<code>post-body</code>之后， 添加以下代码：</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">	&#123;% if not is_index %&#125;</span><br><span class="line">		&#123;% include 'passage-end-tag.swig' %&#125;</span><br><span class="line">	&#123;% endif %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>打开<strong>主题配置文件</strong><code>next.yml</code>,在末尾添加：</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 文章末尾添加“本文结束”标记</span></span><br><span class="line"><span class="attr">passage_end_tag:</span></span><br><span class="line"><span class="attr">  enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h4 id="主页文章加阴影"><a href="#主页文章加阴影" class="headerlink" title="主页文章加阴影"></a>主页文章加阴影</h4><blockquote>
+<p> <a href="https://blog.csdn.net/qq_32454537/article/details/79482896#t14" target="_blank" rel="noopener">主页文章加阴影</a></p>
+</blockquote>
+<p>打开<code>\themes\next\source\css\_custom\custom.styl</code>,向里面加入：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 主页文章添加阴影效果</span><br><span class="line"><span class="selector-class">.post</span> &#123;</span><br><span class="line"><span class="attribute">margin-top</span>: <span class="number">60px</span>;</span><br><span class="line"><span class="attribute">margin-bottom</span>: <span class="number">60px</span>;</span><br><span class="line"><span class="attribute">padding</span>: <span class="number">25px</span>;</span><br><span class="line"><span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(202, 203, 203, .5);</span><br><span class="line"><span class="attribute">-moz-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(202, 203, 204, .5);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="显示文章更新时间"><a href="#显示文章更新时间" class="headerlink" title="显示文章更新时间"></a>显示文章更新时间</h4><p>修改<strong>主题配置文件</strong>的</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_meta:</span></span><br><span class="line"><span class="attr">  updated_at:</span></span><br><span class="line"><span class="attr">    enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>要想具体显示到时分秒,则修改<strong>站点配置文件</strong>的</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span> <span class="attr">HH:mm:ss</span></span><br></pre></td></tr></table></figure>
+<h4 id="代码添加复制按钮"><a href="#代码添加复制按钮" class="headerlink" title="代码添加复制按钮"></a>代码添加复制按钮</h4><blockquote>
+<p><a href="http://www.missfli.com/2018/06/19/github-hexo-next-08.html" target="_blank" rel="noopener">Hexo NexT主题代码块添加复制功能</a></p>
+</blockquote>
+<ol>
+<li><p><a href="https://clipboardjs.com/" target="_blank" rel="noopener">下载</a><code>clipboard.js</code></p>
+</li>
+<li><p>保存文件<code>clipboard.min.js</code> 到目录<code>\themes\next\source\js\src</code></p>
+</li>
+<li><p>在<code>.\themes\next\source\js\src</code>目录下，创建<code>clipboard-use.js</code>，文件内容如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*页面载入完成后，创建复制按钮*/</span></span><br><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">e, t, a</span>) </span>&#123; </span><br><span class="line">  <span class="comment">/* code */</span></span><br><span class="line">  <span class="keyword">var</span> initCopyCode = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> copyHtml = <span class="string">''</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;button class="btn-copy" data-clipboard-snippet=""&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'  &lt;i class="fa fa-globe"&gt;&lt;/i&gt;&lt;span&gt;copy&lt;/span&gt;'</span>;</span><br><span class="line">    copyHtml += <span class="string">'&lt;/button&gt;'</span>;</span><br><span class="line">    $(<span class="string">".highlight .code pre"</span>).before(copyHtml);</span><br><span class="line">    <span class="keyword">new</span> ClipboardJS(<span class="string">'.btn-copy'</span>, &#123;</span><br><span class="line">        target: <span class="function"><span class="keyword">function</span>(<span class="params">trigger</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> trigger.nextElementSibling;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  initCopyCode();</span><br><span class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>.\themes\next\source\css\_custom\custom.styl</code>样式文件中添加下面代码：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码块复制按钮</span></span><br><span class="line">.highlight&#123;</span><br><span class="line">  <span class="comment">//方便copy代码按钮（btn-copy）的定位</span></span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.btn-copy</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">cursor</span>: pointer;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">background-image</span>: linear-gradient(<span class="number">#fcfcfc</span>,<span class="number">#eee</span>);</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#d5d5d5</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    -webkit-user-select: <span class="attribute">none</span>;</span><br><span class="line">    -moz-user-select: <span class="attribute">none</span>;</span><br><span class="line">    -ms-user-select: <span class="attribute">none</span>;</span><br><span class="line">    user-select: <span class="attribute">none</span>;</span><br><span class="line">    -webkit-appearance: <span class="attribute">none</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">13px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: <span class="number">700</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#333</span>;</span><br><span class="line">    -webkit-transition: opacity .3s ease-in-out;</span><br><span class="line">    -o-transition: opacity .3s ease-in-out;</span><br><span class="line">    transition: opacity .3s ease-in-out;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.btn-copy</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.highlight</span>:hover .btn-copy&#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>.\themes\next\layout\_layout.swig</code>文件中，添加引用（注：在 swig 末尾或 body 结束标签（<code>&lt;/body&gt;</code>）之前添加）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 代码块复制功能 --&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/clipboard.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span>  </span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/clipboard-use.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h4><blockquote>
+<p><a href="https://github.com/MikeCoder/hexo-blog-encrypt/blob/master/ReadMe.zh.md" target="_blank" rel="noopener">hexo-blog-encrypt</a></p>
+</blockquote>
+<ol>
+<li><p><code>npm install --save hexo-blog-encrypt</code></p>
+</li>
+<li><p>在<strong>站点配置文件</strong>下添加如下配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">encrypt:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在需要加密的文章的头部添加上对应的字段，如 password, abstract, message</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">Mike</span></span><br><span class="line"><span class="attr">abstract:</span> <span class="string">Welcome</span> <span class="string">to</span> <span class="string">my</span> <span class="string">blog,</span> <span class="string">enter</span> <span class="string">password</span> <span class="string">to</span> <span class="string">read.</span></span><br><span class="line"><span class="attr">message:</span> <span class="string">Welcome</span> <span class="string">to</span> <span class="string">my</span> <span class="string">blog,</span> <span class="string">enter</span> <span class="string">password</span> <span class="string">to</span> <span class="string">read.</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="二次元看板娘"><a href="#二次元看板娘" class="headerlink" title="二次元看板娘"></a>二次元看板娘</h4><blockquote>
+<p><a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">hexo-helper-live2d</a></p>
+</blockquote>
+<ol>
+<li><p><code>npm install --save hexo-helper-live2d</code></p>
+</li>
+<li><p><code>npm install --save live2d-widget-model-wanko</code></p>
+</li>
+<li><p>向<strong>站点配置文件</strong>中添加如下配置：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  scriptFrom:</span> <span class="string">local</span></span><br><span class="line"><span class="attr">  pluginRootPath:</span> <span class="string">live2dw/</span></span><br><span class="line"><span class="attr">  pluginJsPath:</span> <span class="string">lib/</span></span><br><span class="line"><span class="attr">  pluginModelPath:</span> <span class="string">assets/</span></span><br><span class="line"><span class="attr">  tagMode:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  debug:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  model:</span></span><br><span class="line"><span class="attr">    use:</span> <span class="string">live2d-widget-model-wanko</span></span><br><span class="line"><span class="attr">  display:</span></span><br><span class="line"><span class="attr">    position:</span> <span class="string">right</span></span><br><span class="line"><span class="attr">    width:</span> <span class="number">150</span></span><br><span class="line"><span class="attr">    height:</span> <span class="number">300</span></span><br><span class="line"><span class="attr">  mobile:</span></span><br><span class="line"><span class="attr">    show:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>注：在<code>next.yml</code>中配置时，<code>width, height</code>等参数不起作用。</p>
+</li>
+</ol>
+<h4 id="加载条"><a href="#加载条" class="headerlink" title="加载条"></a>加载条</h4><blockquote>
+<p><a href="https://github.com/theme-next/theme-next-pace" target="_blank" rel="noopener">Load bar at the top for NexT</a></p>
+</blockquote>
+<ol>
+<li>将<code>theme-next-pace</code>克隆到本地一个空目录里。</li>
+<li>删掉<code>pace</code>目录下的<code>.git</code>文件夹</li>
+<li>将<code>pace</code>目录 copy 到<code>themes/next/source/lib</code>目录下</li>
+<li>修改<strong>主题配置文件</strong><code>next.yml</code>的<code>pace</code>属性值为<code>true</code></li>
+</ol>
+<h4 id="显示文章浏览进度百分比"><a href="#显示文章浏览进度百分比" class="headerlink" title="显示文章浏览进度百分比"></a>显示文章浏览进度百分比</h4><p>在<strong>主题配置文件</strong>中修改属性<code>sidebar</code>下<code>scrollpercent</code>的值为<code>true</code></p>
+<h4 id="文章预览"><a href="#文章预览" class="headerlink" title="文章预览"></a>文章预览</h4><p>在文章中使用截断标记<code>&lt;!-- more --&gt;</code>手动指定文章预览的内容。</p>
+<h4 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h4><h5 id="Gitalk"><a href="#Gitalk" class="headerlink" title="Gitalk"></a>Gitalk</h5><blockquote>
+<p><a href="https://github.com/gitalk/gitalk/wiki/%E5%9C%A8hexo-next%E4%B8%BB%E9%A2%98%E4%B8%8A%E4%BD%BF%E7%94%A8gitalk" target="_blank" rel="noopener">在hexo next主题上使用gitalk</a></p>
+<p><a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">Hexo NexT主题中集成gitalk评论系统</a></p>
+</blockquote>
+<ol>
+<li><p>Click here to sign up for a <a href="https://github.com/settings/applications/new" target="_blank" rel="noopener">new OAuth Application</a></p>
+<p>Application name： # 应用名称，随意，如<code>gitalk</code><br>Homepage URL： # 网站URL，如<code>https://username.github.io</code>,<code>username</code>是 GitHub 账户名<br>Application description # 描述，随意，如<code>Comment System for Blog</code><br>Authorization callback URL：# 网站URL，<code>https://username.github.io</code>,<code>username</code>是 GitHub 账户名</p>
+</li>
+<li><p>修改<strong>主题配置文件</strong>中的如下属性</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Gitalk </span></span><br><span class="line"><span class="comment"># Demo: https://gitalk.github.io</span></span><br><span class="line"><span class="comment"># Reference: https://asdfv1929.github.io/2018/01/20/gitalk/, https://liujunzhou.cn/2018/8/10/gitalk-error/#more</span></span><br><span class="line"><span class="attr">gitalk:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  github_id:</span> <span class="string">username</span> <span class="comment"># Github repo owner</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">gitalk</span> <span class="comment"># Repository name to store issues.</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="string">******</span> <span class="comment"># Github Application Client ID</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="string">******</span> <span class="comment"># Github Application Client Secret</span></span><br><span class="line"><span class="attr">  admin_user:</span> <span class="string">gzhennaxia</span> <span class="comment"># GitHub repo owner and collaborators, only these guys can initialize github issues</span></span><br><span class="line"><span class="attr">  distraction_free_mode:</span> <span class="literal">true</span> <span class="comment"># Facebook-like distraction free mode</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="Valine"><a href="#Valine" class="headerlink" title="Valine"></a>Valine</h5><blockquote>
+<p><a href="https://theme-next.org/docs/third-party-services/comments-and-widgets/#Valine" target="_blank" rel="noopener">Comment Systems Valine</a></p>
+</blockquote>
+<ol>
+<li><p>Create an account or log into <a href="https://leancloud.cn/dashboard/login.html#/signin" target="_blank" rel="noopener">LeanCloud</a>, and then click on the bottom left corner to <a href="https://leancloud.cn/dashboard/applist.html#/newapp" target="_blank" rel="noopener">create the application</a> in <a href="https://leancloud.cn/dashboard/applist.html#/apps" target="_blank" rel="noopener">dashboard</a>.</p>
+</li>
+<li><p>Go to the application you just created, select <code>Settings -&gt; Apply Key</code> in the lower left corner, and you will see your <code>APP ID</code> and <code>APP Key</code>.</p>
+</li>
+<li><p>Set the value <code>enable</code> to <code>true</code>, add the obtained APP ID (<code>appid</code>) and APP Key (<code>appkey</code>), and edit other configurations in <code>valine</code> section in the theme config file as following:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Valine.</span></span><br><span class="line"><span class="comment"># You can get your appid and appkey from https://leancloud.cn</span></span><br><span class="line"><span class="comment"># more info please open https://valine.js.org</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment"># When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.</span></span><br><span class="line"><span class="attr">  appid:</span> <span class="string">******</span> <span class="comment"># your leancloud application appid</span></span><br><span class="line"><span class="attr">  appkey:</span> <span class="string">******</span> <span class="comment"># your leancloud application appkey</span></span><br><span class="line"><span class="attr">  notify:</span> <span class="literal">false</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line"><span class="attr">  verify:</span> <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">Just</span> <span class="string">go</span> <span class="string">go</span> <span class="comment"># comment box placeholder</span></span><br><span class="line"><span class="attr">  avatar:</span> <span class="string">mm</span> <span class="comment"># gravatar style</span></span><br><span class="line"><span class="attr">  guest_info:</span> <span class="string">nick,mail,link</span> <span class="comment"># custom comment header</span></span><br><span class="line"><span class="attr">  pageSize:</span> <span class="number">10</span> <span class="comment"># pagination size</span></span><br><span class="line"><span class="attr">  visitor:</span> <span class="literal">false</span> <span class="comment"># leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="Gitalk-Valine双评论系统"><a href="#Gitalk-Valine双评论系统" class="headerlink" title="Gitalk + Valine双评论系统"></a>Gitalk + Valine双评论系统</h5><p>在完成各自配置后对<code>themes\next\layout\_partials\comments.swig</code>做如下修改：</p>
+<p><strong>Before</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elseif theme.valine.enable and theme.valine.appid and theme.valine.appkey %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"comments"</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% elseif theme.gitalk.enable %&#125;</span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitalk-container"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>After</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elseif theme.gitalk.enable %&#125;</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"gitalk-container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	&#123;% if theme.valine.enable and theme.valine.appid and theme.valine.appkey %&#125;</span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"comments"</span> <span class="attr">id</span>=<span class="string">"comments"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="自动部署"><a href="#自动部署" class="headerlink" title="自动部署"></a>自动部署</h4><blockquote>
+<p><a href="https://theme-next.org/docs/getting-started/deployment/#Continuous-Integration" target="_blank" rel="noopener">Continuous Integration</a></p>
+</blockquote>
+<h2 id="踩坑记录"><a href="#踩坑记录" class="headerlink" title="踩坑记录"></a>踩坑记录</h2><h3 id="npm-install-warnings"><a href="#npm-install-warnings" class="headerlink" title="npm install warnings"></a>npm install warnings</h3><blockquote>
+<p><a href="https://github.com/Zulko/eagle.js/issues/35" target="_blank" rel="noopener">npm install warnings</a></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.3 (node_modules/hexo-cli/node_modules/fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.3: wanted &#123;"os":"darwin","arch":"any"&#125; (current: &#123;"os":"linux","arch":"x64"&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>忽略就好</p>
+<h3 id="Hexo-g-error"><a href="#Hexo-g-error" class="headerlink" title="Hexo g error"></a>Hexo g error</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">ERROR ENOENT: no such file or directory, open 'F:\Hexo\themes\next\layout\menu.swig'</span><br><span class="line">Error: ENOENT: no such file or directory, open 'F:\Hexo\themes\next\layout\menu.swig'</span><br><span class="line">    at Object.openSync (fs.js:439:3)</span><br><span class="line">    at Object.readFileSync (fs.js:344:35)</span><br><span class="line">    at Object.ret.load (F:\Hexo\node_modules\swig-templates\lib\loaders\filesystem.js:59:15)</span><br><span class="line">    at exports.Swig.compileFile (F:\Hexo\node_modules\swig-templates\lib\swig.js:740:31)</span><br><span class="line">    at Object.eval [as tpl] (eval at precompile (F:\Hexo\node_modules\swig-templates\lib\swig.js:537:13), &lt;anonymous&gt;:7:18)</span><br><span class="line">    at compiled (F:\Hexo\node_modules\swig-templates\lib\swig.js:664:18)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (F:\Hexo\node_modules\hexo\lib\theme\view.js:125:48)</span><br><span class="line">    at Theme._View.View.View.render (F:\Hexo\node_modules\hexo\lib\theme\view.js:30:15)</span><br><span class="line">    at route.set (F:\Hexo\node_modules\hexo\lib\hexo\index.js:394:29)</span><br><span class="line">    at tryCatcher (F:\Hexo\node_modules\bluebird\js\release\util.js:16:23)</span><br><span class="line">    at F:\Hexo\node_modules\bluebird\js\release\method.js:15:34</span><br><span class="line">    at RouteStream._read (F:\Hexo\node_modules\hexo\lib\hexo\router.js:134:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:452:10)</span><br><span class="line">    at resume_ (_stream_readable.js:899:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br></pre></td></tr></table></figure>
+<h4 id="场景再现"><a href="#场景再现" class="headerlink" title="场景再现"></a>场景再现</h4><p>从<a href="https://github.com/theme-next/hexo-theme-next/releases/tag/v6.6.0" target="_blank" rel="noopener">releases</a>下载的 NexT 主题，然后再通过修改目录名为<code>next</code>的方式使用该主题的时候，生成文件的时候报的错。</p>
+<h4 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h4><p>未知</p>
+<h4 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法"></a>解决方法</h4><p>换用<a href="https://theme-next.org/docs/getting-started/installation/#download-next-3" target="_blank" rel="noopener">命令行</a>下载的方式就不会报这个错了。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/GitHub-Pages/" <i="" class="fa fa-tag"> GitHub Pages</a>
+          
+            <a href="/tags/Hexo/" <i="" class="fa fa-tag"> Hexo</a>
+          
+            <a href="/tags/NexT/" <i="" class="fa fa-tag"> NexT</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/23/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  
+  <div>
+	
+	<div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+	
+  </div>
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div id="gitalk-container">
+    </div>
+	
+		<div class="comments" id="comments">
+		</div>
+	
+    
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Gzhennaxia">
+            
+              <p class="site-author-name" itemprop="name">Gzhennaxia</p>
+              <p class="site-description motion-element" itemprop="description">我和我骄傲的倔强</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">categories</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/yourname" title="GitHub &rarr; https://github.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-Pages-Hexo-NexT"><span class="nav-number">1.</span> <span class="nav-text">GitHub Pages+Hexo+NexT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo常用命令"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NexT-主题的使用"><span class="nav-number">1.2.</span> <span class="nav-text">NexT 主题的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主题配置文件"><span class="nav-number">1.2.1.</span> <span class="nav-text">主题配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#NexT-Way"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">NexT-Way</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题设置"><span class="nav-number">1.2.2.</span> <span class="nav-text">主题设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题优化"><span class="nav-number">1.2.3.</span> <span class="nav-text">主题优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章底部带-号的标签"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">文章底部带#号的标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在每篇文章末尾统一添加“本文结束”标记"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">在每篇文章末尾统一添加“本文结束”标记</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#主页文章加阴影"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">主页文章加阴影</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示文章更新时间"><span class="nav-number">1.2.3.4.</span> <span class="nav-text">显示文章更新时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码添加复制按钮"><span class="nav-number">1.2.3.5.</span> <span class="nav-text">代码添加复制按钮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章加密"><span class="nav-number">1.2.3.6.</span> <span class="nav-text">文章加密</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#二次元看板娘"><span class="nav-number">1.2.3.7.</span> <span class="nav-text">二次元看板娘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载条"><span class="nav-number">1.2.3.8.</span> <span class="nav-text">加载条</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示文章浏览进度百分比"><span class="nav-number">1.2.3.9.</span> <span class="nav-text">显示文章浏览进度百分比</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文章预览"><span class="nav-number">1.2.3.10.</span> <span class="nav-text">文章预览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评论系统"><span class="nav-number">1.2.3.11.</span> <span class="nav-text">评论系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Gitalk"><span class="nav-number">1.2.3.11.1.</span> <span class="nav-text">Gitalk</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Valine"><span class="nav-number">1.2.3.11.2.</span> <span class="nav-text">Valine</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Gitalk-Valine双评论系统"><span class="nav-number">1.2.3.11.3.</span> <span class="nav-text">Gitalk + Valine双评论系统</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动部署"><span class="nav-number">1.2.3.12.</span> <span class="nav-text">自动部署</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#踩坑记录"><span class="nav-number">1.3.</span> <span class="nav-text">踩坑记录</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-install-warnings"><span class="nav-number">1.3.1.</span> <span class="nav-text">npm install warnings</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">解决方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-g-error"><span class="nav-number">1.3.2.</span> <span class="nav-text">Hexo g error</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#场景再现"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">场景再现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#报错原因"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">报错原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法-1"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">解决方法</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gzhennaxia</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v6.6.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'eVUj7cd3MyiEwfcYhXhBLmnh-gzGzoHsz',
+        appKey: 'IfKchdp9FY0HDE1drNF3FDln',
+        placeholder: 'Just Bi Bi',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
+
+
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+
+  
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.css">
+
+  
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+    
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'a77b279c5ba7ebd5fe7e',
+          clientSecret: '9cd07d5fdfa6a05f936ce4abc96c87473a48f7ca',
+          repo: 'gitalk',
+          owner: 'gzhennaxia',
+          admin: ['gzhennaxia'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <!-- 代码块复制功能 -->
+  <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
+  <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
+</html>
