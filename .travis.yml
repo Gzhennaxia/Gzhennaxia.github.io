@@ -10,7 +10,7 @@ install:
   - npm install  #配置Hexo环境
 
 script:
-  - hexo cl  #清除
+  - hexo clean  #清除
   - hexo g  #生成
 
 after_script:
