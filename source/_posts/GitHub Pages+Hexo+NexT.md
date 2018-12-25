@@ -152,7 +152,7 @@ if hexo-config('avatar.rotated') {
 </div>
 ```
 
-2. 打开`\themes\next\layout\_macro\post.swig`文件，在`post-body `之后， 添加以下代码：
+2. 打开`\themes\next\layout\_macro\post.swig`文件，在`END POST BLOCK `之后， 添加以下代码：
 
 ```html
 <div>
