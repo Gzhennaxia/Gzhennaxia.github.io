@@ -345,10 +345,190 @@ setrange key index value
 
    incr id (原子操作)
 
+### Hash键值结构
 
+| key         | field                   | value                    |
+| ----------- | ----------------------- | ------------------------ |
+| user:1:info | name<br />age<br />Date | Ronaldo<br />32<br />239 |
 
+#### 特点
 
+1. 是一个`value`为`Map`的`Map`
 
+2. `field`不能相同，`value`可以相同
+
+#### API
+
+所有以哈希为结构的命令都是以`H`开头的。
+
+```shell
+# 1. 获取hash key对应的field的value O(1)
+hget key field
+# 2. 设置hash key对应field的value O(1)
+hset key field value
+# 3. 删除hash key对应field的value O(1)
+hdel key field
+```
+
+```shell
+# 1. 判断hash key是否有field O(1)
+hexists key field
+# 2. 获取hash key field的数量 O(1)
+hlen key
+```
+
+```shell
+# 1. 批量获取hash key的一批field对应的值 O(n)
+hmget key field1 field2... fieldN
+# 2. 批量设置hash key的一批field value O(n)
+hmset key field1 value1 field2 value2...fieldN valueN
+```
+
+```shell
+# 1. 返回hash key对应所有的field和value O(n)
+hgetall key
+# 2. 返回hash key对应所有field的value O(n)
+hvals key
+# 3. 返回hash key对应多有field O(n)
+hkeys key
+```
+
+```shell
+# 1. 设置hash key对应field的value（若field已存在，则失败） O(1)
+hsetnx key field value
+# 2. hash key对应的filed的value自增intCounter O(1)
+hincrby key field intCounter
+# 3. hincrby浮点数版 O(1)
+hincrbyfloat key field floatCounter
+```
+
+##### 复杂度总结
+
+| 命令                | 复杂度 |
+| ------------------- | ------ |
+| hget hset hdel      | O(1)   |
+| hexists             | O(1)   |
+| hincrby             | O(1)   |
+| hgetall hvals hkeys | O(n)   |
+| hmget hmset         | O(n)   |
+
+### 列表
+
+#### 特点
+
+1. 有序（根据插入顺序得到遍历顺序）
+2. 可以重复
+3. 左右两边都可以插入和弹出
+
+#### API
+
+列表的API都以`L`开头
+
+##### 增
+
+```shell
+# 1. 从列表右端插入值 O(1)
+rpush key value1 value2 ... valueN
+# 2. 从列表左端插入值 O(1)
+lpush key value1 value2 ... valueN
+# 3. 在list指定的值前|后插入newValue O(n)
+linsert key before|after value newValue
+```
+
+##### 删
+
+```shell
+# 1. 从列表左侧弹出一个item O(1)
+lpop key
+# 2. 从列表右侧弹出一个item O(1)
+rpop key
+```
+
+```shell
+# 3. 根据count值，从列表中删除所有value相等的项 O(n)
+# （1）count>0，从左到右，删除最多count个value相等的项
+# （2）count<0，从右到左，删除最多Math。abs（count）个value相等的项
+# （3）count=0，删除所有value相等的项
+lrem key count value
+```
+
+```shell
+# 4. 按照索引范围修剪列表 O(n)
+# 	 如ltrime listkey 1 4 是指删除除了下标为1-4（包括1和4）其他项
+ltrim key start end
+```
+
+##### 查
+
+```shell
+# 1. 获取列表指定索引范围所有item O(n)
+#  	 如lrange listKey 0 2获取的是下标0-2（包括0和2）的项
+#  	 再如lrange listKey 1 -1获取的是下标1-（len-1）的项
+lrange key start end
+```
+
+```shell
+# 2. 获取列表指定索引的item O(n)
+#    如lindex listkye -1 取到的是最后一个元素
+lindex key index
+```
+
+```shell
+# 3. 获取列表长度 O(1)
+llen key
+```
+
+##### 改
+
+```shell
+# 1. 设置列表指定索引值为newValue O(n)
+lset key index newValue
+```
+
+##### 其他
+
+```shell
+# 1. lpop阻塞版本，timeout是阻塞超时时间，timeout=0为永远不阻塞 O(1)
+blpop key timeout
+# 2. rpop阻塞版本，timeout是阻塞超时时间，timeout=0为永远不阻塞 O(1)
+brpop key timeout
+```
+
+##### TIPS
+
+1. LPUSH + LPOP = Stack
+2. LPUSH + RPOP = Queue
+3. LPUSH + LTRIM = Capped Collection
+4. LPUSH + BRPOP = Message Queue
+
+#### 实战
+
+1. TimeLine
+
+#### 实战
+
+1. 记录网站每个用户个人主页的访问量
+
+   ```shell
+   hincrby user:1:info pageview count
+   ```
+
+2. 缓存视频的基本信息（数据源在mysql中）伪代码
+
+   ```java
+   public VideoInfo get(long id){
+       String redisKey = redisPrefix + id;
+       Map<String, String> hashMap = redis.hgetAll(redisKey);
+       VideoInfo videoInfo = transferMapToVideo(hashMap);
+       if(videoInfo == null){
+           videoInfo = mysql.get(id);
+           if(videoInfo != null){
+               redis.hmset(redisKey, transferVideoToMap(videoInfo));
+           }
+       }
+       return videoInfo;
+   }
+   ```
 
 
 ## 单线程架构
@@ -372,3 +552,44 @@ Redis在同一时刻只会执行一条命令
    fysnc file descriptor
 
    close file descriptor
+
+# Redis客户端
+
+## Java客户端：Jedis
+
+### 获取Jedis
+
+1. 添加`Maven`依赖
+
+```xml
+<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+<dependency>
+    <groupId>redis.clients</groupId>
+    <artifactId>jedis</artifactId>
+    <version>2.9.0</version>
+</dependency>
+```
+
+2. Jedis直连
+
+   ```java
+   Jedis jedis = new Jedis("127.0.0.1", 6379);
+   jedis.set("hello","world");
+   String value = jedis.get("hello");
+   ```
+
+   `Jedis(String host, int port, int connectionTimeout, int soTimeout)`
+
+   - host : Redis节点所在机器的IP
+   - port : Redis节点的端口
+   - connectionTimeout : 客户端连接超时时间（内部使用socket技术）
+   - soTimeout : 客户端读写超时时间
+
+### Jedis基本使用
+
+### Jedis连接池使用
+
+
+
+## python客户端：redis-py
+
