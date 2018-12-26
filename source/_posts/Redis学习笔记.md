@@ -222,7 +222,134 @@ get hello
 
 ## 数据结构和内部编码
 
-![](https://i.loli.net/2018/12/25/5c2240654f22b.png)
+### 内部编码
+
+![Redis 内部编码](https://i.loli.net/2018/12/25/5c2240654f22b.png)
+
+### 字符串键值结构
+
+| key     | value                                                        |
+| ------- | ------------------------------------------------------------ |
+| hello   | world                                                        |
+| counter | 1                                                            |
+| bits    | \|1\|0\|1\|1\|1\|0\|1\|                                      |
+|         | {<br />"prodduct":{<br />"id": "3242"<br />"name": "test423"<br />}<br />} |
+
+Value up to 512MB，up to 100k is recommended
+
+#### 场景
+
+- 缓存
+- 计数器
+- 分布式锁
+
+#### 命令
+
+```shell
+# 1. 获取key对应的value O(1)
+get key
+# 2. 设置key-value O(1)
+set key value
+# 3. 删除key-value O(1)
+del key
+```
+
+```shell
+# 1. key自增1，如果key不存在，自增后get（key）=1 O(1)
+incr key
+# 2. key自减1，如果key不存在，自减后get（key）=-1 O(1)
+decr key
+# 3. key自增k，如果key不存在，自增后get（key）=k O(1)
+incrby key k
+# 4. key自减k，如果key不存在，自减后get（key）=-k O(1)
+decrby key k
+```
+
+```shell
+# 1. 不管key是否存在，都设置 O(1)
+set key value
+# 2. key不存在，才设置 O(1)
+setnx key value
+# 3. key存在，才设置 O(1)
+set key value xx
+```
+
+```shell
+# 1. 批量获取key，原子操作 O(n)
+mget key1 key2 key3...
+# 2. 批量设置key-value O(n)
+mset key1 value1 key2 vlaue2 key3 value3
+```
+
+n次get = n次网络时间 + n次命令时间
+
+1次mget = 1次网络时间 + n次命令时间
+
+```shell
+# 1. set key newvalue并返回旧的value O(1)
+getset key newvalue
+# 2. 将value追加到旧的value O(1)
+append key value
+# 3. 返回字符串的长度（注意中文） O(1)
+strlen key
+```
+
+```shell
+# 1. 增加key对应的值3.5 O(1)
+incrbyfloat key 3.5
+# 2. 获取字符串指定下标范围内的值 O(1)
+getrange key start end
+# 3. 设置指定下标范围内对应的值 O(1)
+setrange key index value
+```
+
+##### 复杂度总结
+
+| 命令          | 含义                         | 复杂度 |
+| ------------- | ---------------------------- | ------ |
+| set key value | 是指key-value                | O(1)   |
+| get key       | 获取key-value                | O(1)   |
+| del key       | 删除key-value                | O(1)   |
+| setnx setxx   | 根据key是否存在设置key-value | O(1)   |
+| Incr decr     | 计数                         | O(1)   |
+| mget mset     | 批量操作key-value            | O(n)   |
+
+
+
+#### 实战
+
+1. 记录网站每个用户个人主页的访问量？
+
+   ```shell
+   incr userid:pageview
+   ```
+
+2. 缓存视频的基本信息（数据源在MySQL中）伪代码
+
+   ```java
+   public VideoInfo get(long id){
+       String redisKey = redisPrefix + id;
+       VideoInfo videoInfo = redis.get(redisKey);
+       if(videoInfo == null){
+           videoInfo = mysql.get(id);
+           if(videoInfo != null){
+               //序列化
+               redis.set(redisKey, serialize(videoInfo));
+           }
+       }
+       return videoInfo;
+   }
+   ```
+
+3. 分布式计数器
+
+   incr id (原子操作)
+
+
+
+
+
+
 
 ## 单线程架构
 
@@ -231,5 +358,17 @@ Redis在同一时刻只会执行一条命令
 ### 单线程为什么这么快
 
 1. 纯内存
+
 2. 非阻塞IO
+
 3. 避免线程切换和竞态消耗
+
+4. 拒绝长（慢）命令
+
+   ​	keys, flushall, flushdb, slow lua script, mutil/exec, operate big value(collection)
+
+5. 其实不是单线程
+
+   fysnc file descriptor
+
+   close file descriptor
