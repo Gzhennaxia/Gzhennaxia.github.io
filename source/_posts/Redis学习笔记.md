@@ -570,7 +570,7 @@ Redis在同一时刻只会执行一条命令
 </dependency>
 ```
 
-2. Jedis直连
+2. Jedis直连（TCP连接）
 
    ```java
    Jedis jedis = new Jedis("127.0.0.1", 6379);
@@ -589,7 +589,189 @@ Redis在同一时刻只会执行一条命令
 
 ### Jedis连接池使用
 
+#### 简单使用
+
+```java
+// 初始化Jedis连接池，通常来讲JedisPool是单例的。
+GenericObjectPoolConfig poolConfig = new GenericObjectPoolConfig();
+JedisPool jedisPool = new JedisPool(poolConfig, "127.0.0.1", 6379);
+
+Jedis jedis = null;
+try{
+    // 1. 从连接池获取jedis对象
+    jedis = jedisPool.getResource();
+    // 2. 执行操作
+    jedis.set("hello", "world");
+} catch (Exception e){
+    e.printStackTrance();
+} finally {
+    if(jedis != null){
+        // 如果使用JedisPool，close操作不是关闭连接，二十代表归还连接池。
+        jedis.close();
+    }
+}
+```
+
+
+
+|        | 优点                                                         | 缺点                                                         |
+| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 直连   | - 简单方便<br />- 适用于少量长期连接的场景                   | - 存在每次新建/关闭TCP开销<br />- 资源无法控制，存在连接泄露的可能<br />- Jedis对象线程不安全 |
+| 连接池 | - Jedis预先生成，降低开销使用<br />- 连接池的形式保护和控制资源的使用 | 相对于直连，使用相对麻烦，尤其在资源的管理上需要很多参数来保证，一旦规划不合理也会出现问题。 |
+
 
 
 ## python客户端：redis-py
+
+### 源码安装
+
+> [Redis-clients-python](https://redis.io/clients#python)
+
+```shell
+wget https://github.com/andymccurdy/redis-py/archive/3.0.0.zip
+unzip redis-3.0.0.zip
+cd redis-3.0.0
+# 安装redis-py
+sudo python setup.py install
+```
+
+### 简单使用
+
+```python
+import redis
+client = redis.StrictRedis(host='127.0.0.1', port=6379)
+key = "hello"
+setResult = client.set(key, "python-redis")
+print setResult
+value = client.get(key)
+print "key:" + key + ", value:" + value
+```
+
+## Go客户端
+
+ ```go
+c,err := redis.Dial("tcp", "127.0.0.1:6379")
+if err != nil{
+    fmt.Println(err)
+    return
+}
+defer c.Close()
+v, err := c.Do("SET", "hello", "world")
+if err != nil{
+    fmt.Println(err)
+    return
+}
+fmt.Println(v)
+v, err = redis.String(c.Do("GET", "hello"))
+if err != nil {
+    fmt.Println(err)
+    return
+}
+ ```
+
+# 瑞士军刀Redis
+
+## 慢查询
+
+### 生命周期
+
+![](https://i.loli.net/2018/12/27/5c2419d644e00.png)
+
+1. 慢查询发生在第三阶段
+2. 客户端超时不一定是慢查询导致的，慢查询只是导致客户端超时的一个可能因素
+
+### 两个配置
+
+#### slowlog-max-len
+
+1. 先进先出队列
+2. 固定长度
+3. 保存在内存内
+
+#### slowlog-log-slower-than
+
+1. 慢查询阈值（单位：微妙，1毫秒等于1000微秒）
+2. slowlog-log-slower-than=0，记录所有命令
+3. slowlog-log-slower-than<0，不记录任何命令
+
+#### 配置方法
+
+1. 默认值
+   - config get slowlog-max-len = 128
+   - config get slowlog-log-slower-than = 10000
+2. 修改配置文件后重启（适用于未启动时）
+3. 动态配置
+   - config set slowlog-max-len 1000
+   - config set slowlog-log-slower-than 1000
+
+### 三个命令
+
+1. slowlog get [n] ：获取慢查询队列
+2. slowlog len ：获取慢查询队列长度
+3. slowlog reset ：清空慢查询队列
+
+### 运维经验
+
+1. slowlog-max-len不要是指过大，默认10ms，通常是指1ms
+2. slowlog-log-slower-than不要设置太小，通常设置1000左右
+3. 理解命令生命周期
+4. 定期持久化慢查询
+
+## pipeline
+
+### 什么是流水线
+
+流水线就是一次网络连接里传输一批命令，节省网络传输时间
+
+| 命令   | N个命令操作       | 1次pipeline       |
+| ------ | ----------------- | ----------------- |
+| 时间   | n次网络 + n次命令 | 1次网络 + n次命令 |
+| 数据量 | 1条命令           | n条命令           |
+
+注意：
+
+1. Redis的命令时间是微秒级别。
+2. pipeline每次条数要控制（网络）。
+
+### 客户端实现 pipeline-Jedis
+
+```java
+// before pipeline
+Jedis jedis = new jedis("127.0.0.1", 6379);
+for (int i = 0; i < 10000; i++){
+    jedis.hset("hashkey:" + i, "field" + i, "value" + i);
+}
+```
+
+```java
+// after pipeline
+Jedis jedis = new jedis("127.0.0.1", 6379);
+for (int i = 0; i < 100; i++){
+    Pipeline pipeline = jedis.pipelined();
+    for(int j = i*100; j < (i+1)*100; j++){
+        pipeline.hset("hashkey:" + j, "field" + j, "value" + j);
+    }
+    pipeline.syncAndReturnAll();
+}
+```
+
+
+
+### 与原生M操作做对比
+
+M操作是原子操作，pipeline是非原子操作。
+
+### 使用建议
+
+1. 注意每次pipeline携带数据量
+2. pipeline每次只能作用在一个Redis节点上
+3. M操作与pipeline区别
+
+## 发布订阅
+
+## Bitmap
+
+## HyperLogLog
+
+## GEO
 
