@@ -769,7 +769,121 @@ M操作是原子操作，pipeline是非原子操作。
 
 ## 发布订阅
 
+### 角色
+
+- 发布者（publisher）
+- 订阅者（subscriber）
+- 频道（channel）
+
+### 模型 
+
+Redis server中有各个频道。
+
+发布者向频道中发布消息
+
+订阅者收到其所订阅频道的消息，只能收到订阅时刻之后的消息，之前的收不到。
+
+![](https://upload-images.jianshu.io/upload_images/7432257-f91184b81f782b4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
+
+需要注意的是，redis没有消息堆积的能力。
+
+### API
+
+#### publish
+
+```shell
+publish channel message
+```
+
+eg:
+
+```shell
+redis> publish sohu:tv "hello world"
+(integer) 3 # 订阅者个数
+```
+
+#### subscribe
+
+```shell
+subscribe [channel] # 一个或多个
+```
+
+#### unsubscribe
+
+```shell
+unsubcribe [channle] # 一个或多个
+```
+
+#### 其他
+
+ ```shell
+# 1. 订阅模式
+psubscribe [pattern]
+# 2. 推定指定的模式
+punsubscribe [pattern]
+# 3. 列出至少有一个订阅者的频道
+pubsub channels
+# 4. 列出给定频道的订阅者数量
+pubsub numsub [channel]
+# 5. 列出被订阅模式的数量
+pubsub numpat
+ ```
+
+### 发布订阅与消息队列   
+
+发布订阅是所有订阅者可以收到所有的消息
+
+消息队列是订阅者要进行消息抢夺，一条消息只有一个订阅者能够抢到。
+
 ## Bitmap
+
+### 位图
+
+| b        | i        | g        |
+| -------- | -------- | -------- |
+| 01100010 | 01101001 | 01100111 |
+
+### 相关命令
+
+```shell
+# 1. 给位图指定索引设置值
+setbit key offset value
+# 2. 获取位图指定索引的值
+getbit key offset
+# 3. 获取位图指定范围（start到end，单位为字节，如果不指定就是获取全部）位值为1的个数
+bitcount key [start end]
+# 4. 做多个Bitmap的and（交集）、or（并集）、not（非）、xor（抑或）操作并将结果保存在destkey中
+bitop op destkey key [key...]
+# 5. 计算位图指定范围（start到end，单位为字节，如果不指定就是取全部）第一个偏移量对应的值等于targetBit的位置
+bitpos key targetBit [start][end]
+```
+
+### 独立用户统计
+
+1. 使用set和Bitmap
+2. 总共1亿用户，每日5千万独立访问。
+
+| 数据类型 | 每个userid只用空间                                           | 需要存储的用户量 | 全部内存量              |
+| -------- | ------------------------------------------------------------ | ---------------- | ----------------------- |
+| set      | 32位<br />（假设userid用的是整型，<br />实际很多网站用的是长整型） | 50，000，000     | 32位*50，000，000=100MB |
+| Bitmap   | 1位                                                          | 100，000，000    | 12.5MB                  |
+
+|        | 一天  | 一个月 | 一年 |
+| ------ | ----- | ------ | ---- |
+| set    | 200M  | 6G     | 72G  |
+| Bitmap | 12.5M | 375M   | 4.5G |
+
+如果只有10万对立用户：
+| 数据类型 | 每个userid占用空间 | 需要存储的用户量 | 全部内存量             |
+| -------- | ------------------ | ---------------- | ---------------------- |
+| set      | 32位               | 1,000,000        | 32位*1,000,000=4MB     |
+| Bitmap   | 1位                | 100,000,000      | 1位*100,000,000=12.5MB |
+
+### 使用经验
+
+1. type=string，最大512MB
+2. 注意setbit时的偏移量，可能有较大耗时
+3. 位图不是绝对好。
 
 ## HyperLogLog
 
