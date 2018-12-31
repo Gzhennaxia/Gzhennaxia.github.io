@@ -1162,3 +1162,282 @@ AOF 重写的两种实现方式
 2. 缓存或者存储
 3. 监控（硬盘、内存、负载、网络）
 4. 足够的内存
+
+## 开发运维常见问题
+
+### fork 操作
+
+1. 同步操作
+2. 与内存量息息相关：内存越大，耗时越长（与机器类型有关）
+3. info: latest_fork_usec 查询上一次 fork 的时间
+
+如何改善fork
+
+1. 优先使用物理机或者高效支持 fork 操作的虚拟化技术
+2. 控制 Redis 实例最大可用内存：maxmemory
+3. 合理配置 Linux 内存分配策略：vm.overcommit_memory = 1
+4. 降低 fork 频率：例如放宽 AOF 重写自动触发时机，不必要的全量复制
+
+### 进程外开销
+
+子进程开销和优化
+
+1. CPU：
+   - 开销：RDB 和 AOF 文件生成，属于 CPU 密集型
+   - 优化：不做 CPU 绑定，不和 CPU 密集型部署
+2. 内存：
+   - 开销：fork 内存开销，copy-on-write。
+   - 优化：echo never > /sys/kernel/mm/transparent_hugepage/enabled
+3. 硬盘
+   - 开销：AOF 和 RDB 文件写入，可以结合 iostat，iotop 分析
+   - 优化：
+     - 不要和高硬盘负责服务部署在一起：存储服务、消息队列等
+     - no-appendfsync-on-rewrite = yes
+     - 根据写入量决定磁盘类型：例如 ssd
+     - 单机多实例持久化文件目录可以考虑分盘
+
+### AOF追加阻塞
+
+![](https://upload-images.jianshu.io/upload_images/12588973-ed80e9c29a4d1ef2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
+AOF 阻塞定位
+
+​	Reids 日志：
+
+​	Asynchronous AOF fsync is taking too long (disk is busy?).
+
+​	Writing the AOF buffer without waiting for fsync to complete,this may slow down Redis.
+
+​	info Persistence:
+
+​	...
+
+​	aof_delayed_fsync: 100
+
+​	...
+
+### 单机多实例部署
+
+## Redis 复制的原理与优化
+
+### 什么是主从复制
+
+（1）单机有什么问题？
+
+​	机器故障
+
+​	容量瓶颈
+
+​	QPS 瓶颈
+
+（2）作用
+
+​	数据副本
+
+​	扩展读性能
+
+### 复制的配置
+
+两种实现方式
+
+1. slaveof 命令
+
+2. 配置
+
+   ```shell
+   slaveof ip port
+   slave-read-only yes
+   ```
+
+### 全量复制和部分复制
+
+查看 run_id
+
+```shell
+redis-cli -p 6379 info server | grep run
+```
+
+查看偏移量
+
+```shell
+redis-cli -p 6379 info replication
+```
+
+全量复制开销：
+
+1. bgsave 时间
+2. RDB文件网络传输时间
+3. 从节点清空数据时间
+4. 从节点加载 RDB 的时间
+5. 可能的 AOF 重写时间
+
+### 故障处理
+
+### 开发运维常见问题
+
+1. 读写分离
+
+   将读流量分摊到从节点
+
+   可能遇到的问题：
+
+   - 复制数据延迟
+   - 读到过期数据
+   - 从节点故障
+
+2. 主从配置不一致
+
+3. 规避全量复制
+
+   - 第一次不可避免
+   - 系欸但运行 ID  不匹配
+     - 主节点重启
+     - 故障转移
+   - 复制积压缓冲区不足
+     - 网络中断，部分复制无法满足
+     - 增大复制缓冲区配置 rel_backlog_size，网络“增强”。
+
+4. 规避复制风暴
+
+   - 单主节点复制风暴
+     - 问题：主节点重启，多从节点复制
+     - 解决：更换复制拓扑
+   - 单机器复制风暴
+     - 机器宕机后，大量全量复制
+     - 主节点分散多机器
+
+## Redis Sentinel
+
+### 主从复制高可用存在的问题
+
+1. 手动故障转移
+2. 写能力和存储能力受限
+
+### 架构说明
+
+客户端不直接访问 redis，而是通过 sentinel 来访问。由 sentinel 来负责主从节点的管理。
+
+### 安装配置
+
+sentinel 的默认端口为 26379
+
+1. 配置开启主从节点
+2. 配置开启 sentinel 监控主节点（sentinel 是特殊的 redis）
+
+### 客户端连接
+
+请求相应流程
+
+jedis
+
+```shell
+JedisSentinelPool sentinelPool = new JedisSentinelPool(masterName, sentinelSet, poolConfig, timeout);
+Jedis jedis = null;
+try {
+    jedis = redisSentinelPool.getResource();
+    // jedis command
+} catch (Exception e){
+    logger.error(e.getMessage(), e);
+} finally {
+    if (jedis != null){
+        jedis.close();
+    }
+}
+```
+
+
+
+redis-py
+
+### 实现原理
+
+### 常见开发运维问题
+
+## Redis Cluster
+
+### 呼唤集群
+
+1. 超高并发量需求
+2. 超大数据量需求
+
+### 数据分布
+
+顺序分布
+
+哈希分布
+
+- 节点取余
+  - 使用多倍扩容降低迁移率
+- 一致性哈希
+  - 顺时针取余
+  - 只影响邻近节点
+  - 扩容后会存在负载不均衡的情况
+- 虚拟槽
+  - 每个槽映射一个数据子集
+  - 良好的哈希函数：例如 CRC16
+  - 服务端管理节点、槽、数据：例如 Redis Cluster
+
+| 分布方式 | 特点                                                         | 典型产品                                     |
+| -------- | ------------------------------------------------------------ | -------------------------------------------- |
+| 哈希分布 | 数据分散度高<br />键值分布业务无关<br />无法顺序访问<br />支持批量操作 | 一致性哈希 Memcache<br />Redis Cluster<br /> |
+| 顺序分布 | 数据分散度易倾斜<br />键值业务相关<br />可顺序访问<br />不支持批量操作 | BigTable<br />HBase                          |
+
+### 搭建集群
+
+### 集群伸缩
+
+### 客户端路由
+
+### 集群原理
+
+### 开发运维常见问题
+
+### Redis Cluster 架构
+
+1. 节点
+2. meet
+3. 指派槽
+4. 复制
+
+### Redis Cluster 特性
+
+1. 复制
+2. 高可用
+3. 分片
+
+### 两种安装方式
+
+#### 原生命令安装
+
+1. 配置开启节点
+
+   ```shell
+   port ${port}
+   daemonize yes
+   dir "/opt/redis/data"
+   dbfilename "dump-${port}.rdb"
+   logfile "${port}.log"
+   cluster-enabled yes
+   cluster-config-file nodes-${port}.conf
+   ```
+
+2. meet
+
+   ```shell
+   cluster meet ip port
+   ```
+
+3. 指派槽
+
+   ```shell
+   cluster addslots slot [slot ...]
+   ```
+
+4. 分配主从关系
+
+   ```shell
+   cluster replicate node-id
+   ```
+
+####  官方工具安装
+
