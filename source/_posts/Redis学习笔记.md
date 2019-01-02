@@ -1441,3 +1441,8 @@ redis-py
 
 ####  官方工具安装
 
+
+
+> 链接：https://pan.baidu.com/s/1Y0_Aq8UOzIDoqluORSuCww 
+> 提取码：5r0v
+
