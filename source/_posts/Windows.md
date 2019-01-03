@@ -1,10 +1,15 @@
 ---
 title: Windows
+description: Something about Windows.
 categories:
  - Windows
 tags:
  - Windows
 ---
+
+<img src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
+
+<!-- more -->
 
 ## 激活
 

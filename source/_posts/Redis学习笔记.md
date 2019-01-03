@@ -8,6 +8,9 @@ categories:
 date: 2018-12-25 23:27:15
 ---
 
+<img src="https://guides.wp-bullet.com/wp-content/uploads/2016/09/redis-unix-socket-object-cache-wordpress.png" width="100%"/>
+
+<!-- more -->
 
 # 简介
 

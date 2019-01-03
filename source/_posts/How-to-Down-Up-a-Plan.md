@@ -4,6 +4,10 @@ date: 2019-01-02 08:21:38
 tags:
 ---
 
+<img src="http://www.thebluediamondgallery.com/handwriting/images/plan.jpg" width="100%"/>
+
+<!-- more -->
+
 ## 为什么要制定计划
 
 > [这样制定计划 让你的效率翻倍](https://study.163.com/topics/coursefinder40_m/)
