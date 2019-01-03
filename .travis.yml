@@ -34,6 +34,6 @@ env:
  global:
    - GH_REF: github.com/gzhennaxia/gzhennaxia.github.io.git  #设置GH_REF
 
-# cache:
-#   directories:  #缓存特定目录, 加快构建速度
-#     - node_modules
+cache:
+  directories:  #缓存特定目录, 加快构建速度
+    - node_modules
