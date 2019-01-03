@@ -1,16 +1,17 @@
 ---
 title: Git
+description: Git是目前世界上最先进的分布式版本控制系统（没有之一）。
 categories:
  - Version Control
 tags：
  - Git
 ---
 
-> [Pro Git](https://git-scm.com/book/zh/v2)
-
-Git是目前世界上最先进的分布式版本控制系统（没有之一）。
+<img src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <!-- more -->
+
+> [Pro Git](https://git-scm.com/book/zh/v2)
 
 # 下载
 

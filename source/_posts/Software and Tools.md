@@ -1,5 +1,6 @@
 ---
 title: Software and Tools
+description: 工欲善其事必先利其器
 categories:
  - Software
  - Tools
@@ -7,6 +8,10 @@ tags:
  - Software
  - Tools
 ---
+
+<img src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
+
+<!-- more -->
 
 # Listary
 
