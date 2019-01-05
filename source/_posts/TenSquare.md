@@ -121,6 +121,8 @@ twitter 的 snowflake（雪花）算法。
 >
 > [Twitter Snowflake算法详解](https://blog.csdn.net/yangding_/article/details/52768906)
 
+## 泛型
+
 
 
 
