@@ -47,13 +47,17 @@ tags:
 >
 > [中文官网](http://www.xshellcn.com/)
 
-# maven
+## maven
 
 > [maven下载和安装](https://blog.csdn.net/cs4380/article/details/79158268)
 
 ## Lombok
 
 > [Lombok 看这篇就够了](https://zhuanlan.zhihu.com/p/32779910)
+
+## PDF 阅读器
+
+> [sumatrapdf](https://www.sumatrapdfreader.org/free-pdf-reader.html)
 
 ## Chrome插件
 
