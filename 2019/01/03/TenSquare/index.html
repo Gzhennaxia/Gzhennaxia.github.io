@@ -123,7 +123,7 @@
 <meta property="og:description" content="十次方项目">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://cdn3.img.sputniknews.cn/images/101711/57/1017115745.jpg">
-<meta property="og:updated_time" content="2019-01-06T14:07:34.958Z">
+<meta property="og:updated_time" content="2019-01-07T00:51:49.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TenSquare">
 <meta name="twitter:description" content="十次方项目">
@@ -440,7 +440,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-06 22:07:34" itemprop="dateModified" datetime="2019-01-06T22:07:34+08:00">2019-01-06</time>
+                <time title="Modified: 2019-01-07 08:51:49" itemprop="dateModified" datetime="2019-01-07T08:51:49+08:00">2019-01-07</time>
               
             
           </span>
@@ -610,6 +610,9 @@
 <h2 id="JPA"><a href="#JPA" class="headerlink" title="JPA"></a>JPA</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Label <span class="title">findById</span><span class="params">(String labelId)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> labelDao.findById(labelId).get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>条件查询</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public List&lt;Label&gt; findSearch(Label label) &#123;</span><br><span class="line">    return labelDao.findAll(new Specification&lt;Label&gt;() &#123;</span><br><span class="line">        /**</span><br><span class="line">         * @param root 根对象，及条件即将被封装到该对象中。where 列名 = label.getXXX</span><br><span class="line">         * @param query 查询关键字的封装。例如 group by，order by等。几乎不用！</span><br><span class="line">         * @param cb 用来封装条件对象。</span><br><span class="line">         * @return 返回null代表没有任何条件</span><br><span class="line">         */</span><br><span class="line">        @Override</span><br><span class="line">        public Predicate toPredicate(Root&lt;Label&gt; root, CriteriaQuery&lt;?&gt; query, CriteriaBuilder cb) &#123;</span><br><span class="line">            // new一个list集合，来存放所有的条件</span><br><span class="line">            List&lt;Predicate&gt; list = new ArrayList&lt;&gt;();</span><br><span class="line">            if (label.getLabelname() != null &amp;&amp; label.getLabelname() != &quot;&quot;) &#123;</span><br><span class="line">                Predicate predicate = cb.like(root.get(&quot;labelname&quot;).as(String.class), &quot;%&quot; + label.getLabelname() + &quot;%&quot;); // where labelname like &quot;%xiaoming%&quot;</span><br><span class="line">                list.add(predicate);</span><br><span class="line">            &#125;</span><br><span class="line">            if (label.getState() != null &amp;&amp; label.getState() != &quot;&quot;) &#123;</span><br><span class="line">                Predicate predicate = cb.equal(root.get(&quot;state&quot;).as(String.class), label.getState()); // where state = &quot;1&quot;</span><br><span class="line">                list.add(predicate);</span><br><span class="line">            &#125;</span><br><span class="line">            // new一个数组作为最终返回的条件</span><br><span class="line">            Predicate[] parr = new Predicate[list.size()];</span><br><span class="line">            // 把list转换为数组</span><br><span class="line">            // parr = list.toArray(parr);</span><br><span class="line">            list.toArray(parr);</span><br><span class="line">            return cb.and(parr); // where labelname like &quot;%xiaoming%&quot; and state = &quot;1&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Integer 与 int</p>
+<p>Integer 是类，有很多方法，int 可以保证没有空指针异常，初始化为0.</p>
+<p>jpa分页</p>
 <h2 id="相关账号"><a href="#相关账号" class="headerlink" title="相关账号"></a>相关账号</h2><h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><p>账号：root</p>
 <p>密码：itcast</p>
 <h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>账号：root</p>
