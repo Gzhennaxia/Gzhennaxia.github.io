@@ -113,7 +113,7 @@ UML 是 Unified（统一）Modeling Language
 
 ## 分布式ID生成器
 
-twitter 的 snowflake（雪花）算法。
+Twitter 的 SnowFlake（雪花）算法。
 
 > [snowflake](https://github.com/twitter-archive/snowflake)
 >
@@ -121,73 +121,36 @@ twitter 的 snowflake（雪花）算法。
 >
 > [Twitter Snowflake算法详解](https://blog.csdn.net/yangding_/article/details/52768906)
 
-## 泛型
 
 
 
 
+sql语句
 
-## Spring Cloud
-
-1. 要求应用名必须以横杠连接，所以配置`spring. application.name=tensquare-base`
-
-2. `@CrossOrigin`
+in 最怕嵌套，嵌套后效率立马降低。所以一般都使用连接，而不适用子查询
 
 
 
-## JPA
+select null+1  = null
+
+
+
+service层没有加@Transactional jpa会报错：
+
+Executing an update/delete query
+
+
+
+jpa 原生sql 语句
 
 ```java
-public Label findById(String labelId){
-    return labelDao.findById(labelId).get();
-}
-```
-
-条件查询
-
-```
-public List<Label> findSearch(Label label) {
-    return labelDao.findAll(new Specification<Label>() {
-        /**
-         * @param root 根对象，及条件即将被封装到该对象中。where 列名 = label.getXXX
-         * @param query 查询关键字的封装。例如 group by，order by等。几乎不用！
-         * @param cb 用来封装条件对象。
-         * @return 返回null代表没有任何条件
-         */
-        @Override
-        public Predicate toPredicate(Root<Label> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
-            // new一个list集合，来存放所有的条件
-            List<Predicate> list = new ArrayList<>();
-            if (label.getLabelname() != null && label.getLabelname() != "") {
-                Predicate predicate = cb.like(root.get("labelname").as(String.class), "%" + label.getLabelname() + "%"); // where labelname like "%xiaoming%"
-                list.add(predicate);
-            }
-            if (label.getState() != null && label.getState() != "") {
-                Predicate predicate = cb.equal(root.get("state").as(String.class), label.getState()); // where state = "1"
-                list.add(predicate);
-            }
-            // new一个数组作为最终返回的条件
-            Predicate[] parr = new Predicate[list.size()];
-            // 把list转换为数组
-            // parr = list.toArray(parr);
-            list.toArray(parr);
-            return cb.and(parr); // where labelname like "%xiaoming%" and state = "1"
-        }
-    });
-}
+@Query(value = "SELECT * FROM tb_problem, tb_pl WHERE id = problemid AND labelid = ? AND reply = 0 ORDER BY createtime DESC", nativeQuery = true)
+public List<Problem> waitlist(String labelid, Pageable pageable);
 ```
 
 
 
-Integer 与 int
-
-Integer 是类，有很多方法，int 可以保证没有空指针异常，初始化为0.
-
-
-
-jpa分页
-
-
+  jpa  @Modifying
 
 ## 相关账号
 
