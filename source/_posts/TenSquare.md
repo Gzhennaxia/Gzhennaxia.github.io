@@ -179,6 +179,16 @@ public List<Label> findSearch(Label label) {
 
 
 
+Integer 与 int
+
+Integer 是类，有很多方法，int 可以保证没有空指针异常，初始化为0.
+
+
+
+jpa分页
+
+
+
 ## 相关账号
 
 ### 虚拟机
