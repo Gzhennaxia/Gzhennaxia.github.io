@@ -13,6 +13,8 @@ tags:
 > [这样制定计划 让你的效率翻倍](https://study.163.com/topics/coursefinder40_m/)
 >
 > [【人生规划局 VOL.02】构建你的计划与时间管理系统](https://www.douban.com/note/697771300/)
+>
+> [计划没有变化快，为什么还要定计划？](https://know.baidu.com/question/a2a81ea12bef6a0a7e4af6bb214c1f577f664fb)
 
 - 清楚自己要做什么
 - 清楚事情的进展情况
@@ -44,7 +46,16 @@ SMART原则：
 
 **Relevant**（相关的）
 
-**Timeboxed**（时间可控的）
+**Time-bound**（时间可控的）
+
+### 模板
+
+> 链接：https://pan.baidu.com/s/1Sxb8lLL4QSXOeNRYOZy7cA 
+> 提取码：x3w1 
+
+![](https://i.loli.net/2019/01/08/5c345a0f38a05.jpg)
+
+
 
 ## 制定计划的流程
 
@@ -55,3 +66,14 @@ SMART原则：
 ## 计划的检查与调整
 
 日计划一般中午和晚上各检查一次，周计划则1-2天检查一次
+
+
+
+## 为什么完不成计划
+
+> [你！为什么总是完不成计划！](https://www.xinli001.com/info/100356090)
+>
+> [为什么制定的计划总是实现不了？](https://www.zhihu.com/question/50168355)
+>
+>
+

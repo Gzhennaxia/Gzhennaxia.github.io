@@ -152,6 +152,52 @@ public List<Problem> waitlist(String labelid, Pageable pageable);
 
   jpa  @Modifying
 
+
+
+### spring boot data redis
+
+80% 都用的是 redisTemplate.opsForValue()
+
+
+
+### Spring Cache
+
+1. @EnableCaching
+2. @Cacheable(value = "gathering", key = "#id")
+3. @CacheEvict(value = "gathering", key = "#id")
+
+
+
+需要过期时间使用redis，不需要过期时间使用spring cache
+
+
+
+## 单点登录
+
+并没有共享session，分布式的单点登录最流行的是JWT（GWT?），CAS也是一种，但是是有状态的（服务的要存储登录信息）
+
+qq登录后，qq音乐等都默认也是登录的，这就是单点登录
+
+## MongoDB
+
+为大数据而生
+
+非关系型数据库中最像关系型数据库的数据库
+
+关系型数据库与非关系型数据库的区别：关系型数据库就是表与表之间有关系（1：1 ，（靠主外键）1：n，（靠主外键）n:n（靠中间表））。
+
+
+
+数据库选型原因：
+
+
+
+mongodb的客户端与服务器是二合一的。
+
+默认端口是27017
+
+
+
 ## 相关账号
 
 ### 虚拟机
