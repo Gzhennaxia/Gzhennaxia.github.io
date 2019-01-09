@@ -196,6 +196,41 @@ mongodb的客户端与服务器是二合一的。
 
 默认端口是27017
 
+逐渐名必须为 _id
+
+emp表，树形结构
+
+_id 一般都是手动指定，不要用自动生成。
+
+
+
+## IDEA
+
+ctrl + alt + v
+
+
+
+Java原生操作mogodb
+
+```java
+public static void main(String[] args){
+    // 连接服务器
+    MongoClient client = new MongoClient("192.168.235.128");
+    // 得到要操作的数据库
+    MongoDatebase spitdb = client.getDatabase("spitdb");
+    // 得到要操作的集合
+    MongoCollection spit = spitdb.getCollection("spit");
+    // 得到集合中所有的文档
+    FindIterable<Document> documents = spit.find();
+    // 遍历数据
+    for(Document document:documents){
+        System.out.println("内容："+document.getString("content"));
+        System.out.println("用户ID："+document.getString("userid"));
+        System.out.println("访问量："+document.getString("visits"));
+    }
+}
+```
+
 
 
 ## 相关账号
