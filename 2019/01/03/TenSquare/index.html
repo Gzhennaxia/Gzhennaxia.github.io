@@ -123,7 +123,7 @@
 <meta property="og:description" content="十次方项目">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://cdn3.img.sputniknews.cn/images/101711/57/1017115745.jpg">
-<meta property="og:updated_time" content="2019-01-09T00:55:07.820Z">
+<meta property="og:updated_time" content="2019-01-09T23:26:39.590Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TenSquare">
 <meta name="twitter:description" content="十次方项目">
@@ -469,7 +469,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-01-09 08:55:07" itemprop="dateModified" datetime="2019-01-09T08:55:07+08:00">2019-01-09</time>
+                <time title="Modified: 2019-01-10 07:26:39" itemprop="dateModified" datetime="2019-01-10T07:26:39+08:00">2019-01-10</time>
               
             
           </span>
@@ -653,6 +653,12 @@
 <p>数据库选型原因：</p>
 <p>mongodb的客户端与服务器是二合一的。</p>
 <p>默认端口是27017</p>
+<p>逐渐名必须为 _id</p>
+<p>emp表，树形结构</p>
+<p>_id 一般都是手动指定，不要用自动生成。</p>
+<h2 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a>IDEA</h2><p>ctrl + alt + v</p>
+<p>Java原生操作mogodb</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 连接服务器</span></span><br><span class="line">    MongoClient client = <span class="keyword">new</span> MongoClient(<span class="string">"192.168.235.128"</span>);</span><br><span class="line">    <span class="comment">// 得到要操作的数据库</span></span><br><span class="line">    MongoDatebase spitdb = client.getDatabase(<span class="string">"spitdb"</span>);</span><br><span class="line">    <span class="comment">// 得到要操作的集合</span></span><br><span class="line">    MongoCollection spit = spitdb.getCollection(<span class="string">"spit"</span>);</span><br><span class="line">    <span class="comment">// 得到集合中所有的文档</span></span><br><span class="line">    FindIterable&lt;Document&gt; documents = spit.find();</span><br><span class="line">    <span class="comment">// 遍历数据</span></span><br><span class="line">    <span class="keyword">for</span>(Document document:documents)&#123;</span><br><span class="line">        System.out.println(<span class="string">"内容："</span>+document.getString(<span class="string">"content"</span>));</span><br><span class="line">        System.out.println(<span class="string">"用户ID："</span>+document.getString(<span class="string">"userid"</span>));</span><br><span class="line">        System.out.println(<span class="string">"访问量："</span>+document.getString(<span class="string">"visits"</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="相关账号"><a href="#相关账号" class="headerlink" title="相关账号"></a>相关账号</h2><h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><p>账号：root</p>
 <p>密码：itcast</p>
 <h3 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h3><p>账号：root</p>
@@ -789,7 +795,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -816,7 +822,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">categories</span>
                   
                 </div>
@@ -845,7 +853,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -895,7 +905,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是微服务"><span class="nav-number">1.</span> <span class="nav-text">什么是微服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构"><span class="nav-number">1.1.</span> <span class="nav-text">架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务"><span class="nav-number">1.2.</span> <span class="nav-text">微服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML"><span class="nav-number">2.</span> <span class="nav-text">UML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">2.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PowerDesigner"><span class="nav-number">2.2.</span> <span class="nav-text">PowerDesigner</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RESTful"><span class="nav-number">3.</span> <span class="nav-text">RESTful</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性和幂等性"><span class="nav-number">3.1.</span> <span class="nav-text">安全性和幂等性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker"><span class="nav-number">4.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令"><span class="nav-number">4.1.</span> <span class="nav-text">命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式ID生成器"><span class="nav-number">5.</span> <span class="nav-text">分布式ID生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spring-boot-data-redis"><span class="nav-number">5.1.</span> <span class="nav-text">spring boot data redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Cache"><span class="nav-number">5.2.</span> <span class="nav-text">Spring Cache</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单点登录"><span class="nav-number">6.</span> <span class="nav-text">单点登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-number">7.</span> <span class="nav-text">MongoDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关账号"><span class="nav-number">8.</span> <span class="nav-text">相关账号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机"><span class="nav-number">8.1.</span> <span class="nav-text">虚拟机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库"><span class="nav-number">8.2.</span> <span class="nav-text">数据库</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是微服务"><span class="nav-number">1.</span> <span class="nav-text">什么是微服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#架构"><span class="nav-number">1.1.</span> <span class="nav-text">架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微服务"><span class="nav-number">1.2.</span> <span class="nav-text">微服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UML"><span class="nav-number">2.</span> <span class="nav-text">UML</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">2.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PowerDesigner"><span class="nav-number">2.2.</span> <span class="nav-text">PowerDesigner</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RESTful"><span class="nav-number">3.</span> <span class="nav-text">RESTful</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安全性和幂等性"><span class="nav-number">3.1.</span> <span class="nav-text">安全性和幂等性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker"><span class="nav-number">4.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令"><span class="nav-number">4.1.</span> <span class="nav-text">命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式ID生成器"><span class="nav-number">5.</span> <span class="nav-text">分布式ID生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#spring-boot-data-redis"><span class="nav-number">5.1.</span> <span class="nav-text">spring boot data redis</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Cache"><span class="nav-number">5.2.</span> <span class="nav-text">Spring Cache</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单点登录"><span class="nav-number">6.</span> <span class="nav-text">单点登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB"><span class="nav-number">7.</span> <span class="nav-text">MongoDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDEA"><span class="nav-number">8.</span> <span class="nav-text">IDEA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关账号"><span class="nav-number">9.</span> <span class="nav-text">相关账号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#虚拟机"><span class="nav-number">9.1.</span> <span class="nav-text">虚拟机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库"><span class="nav-number">9.2.</span> <span class="nav-text">数据库</span></a></li></ol></li></ol></div>
             
 
           </div>
