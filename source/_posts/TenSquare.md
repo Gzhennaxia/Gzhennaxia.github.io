@@ -228,10 +228,64 @@ public static void main(String[] args){
         System.out.println("用户ID："+document.getString("userid"));
         System.out.println("访问量："+document.getString("visits"));
     }
+    client.close();
 }
 ```
 
+```java
+public static void main(String[] args){
+    MongoClient client = new MongoClient("192.168.235.128");
+    MongoDatebase spitdb = client.getDatabase("spitdb");
+    MongoCollection spit = spitdb.getCollection("spit");
+    // 封装查询条件，值查询用户id为1013的
+    // BasicDBObject bson = new BasicDBObject("userid", "1013");
+    // 封装查询条件，查询访问量大于1000的 find({visits:{$gt:1000}})
+    BasicDBObject bson = new BasicDBObject("visits", new BasicDBObject("$gt", 1000));
+    FindIterable<Document> documents = spit.find(bson);
+    for(Document document:documents){
+        System.out.println("内容："+document.getString("content"));
+        System.out.println("用户ID："+document.getString("userid"));
+        System.out.println("访问量："+document.getString("visits"));
+    }
+    client.close();
+}
+```
 
+```java
+public static void main(String[] args){
+    MongoClient client = new MongoClient("192.168.235.128");
+    MongoDatebase spitdb = client.getDatabase("spitdb");
+    MongoCollection spit = spitdb.getCollection("spit");
+    // 插入文档
+    Map<String, Object> map = new HashMap<>();
+    map.put("content", "lalalalallala");
+    map.put("userid", "1029");
+    map.put("visits", 1249);
+	Document document = new Document(map);
+    FindIterable<Document> documents = spit.insert(document);
+    client.close();
+}
+```
+
+## Spring Data MongoDB
+
+
+
+idea 切换窗口快捷键：alt + 左右方向键
+
+
+
+数据库
+
+逻辑主外键。公司基本上不会真正使用物理主外键
+
+避免 * 的出现，避免全表扫描
+
+## @Autowired 与 @Resource的区别
+
+@Autowired默认按类型查找，类型找不到会按名称找。可以通过@Quligier()来指定按名称查找
+
+@Resource默认按名称查找，（未指定name属性时）找不到按类型查找。
 
 ## 相关账号
 

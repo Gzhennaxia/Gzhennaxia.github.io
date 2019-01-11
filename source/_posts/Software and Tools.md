@@ -59,6 +59,12 @@ tags:
 
 > [sumatrapdf](https://www.sumatrapdfreader.org/free-pdf-reader.html)
 
+## PotPlayer
+
+> [Potplayer 快捷键](https://blog.csdn.net/u014015972/article/details/47264371)
+
+视频播放器。强大的内置解码器，强大的定制能力和个性化功能。
+
 ## Chrome插件
 
 ### Clear Cache
