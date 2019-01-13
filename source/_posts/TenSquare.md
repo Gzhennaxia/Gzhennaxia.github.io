@@ -287,7 +287,51 @@ idea 切换窗口快捷键：alt + 左右方向键
 
 @Resource默认按名称查找，（未指定name属性时）找不到按类型查找。
 
+
+
+## 分布式搜索引擎ElasticSearch
+
+
+
+## Head插件
+
+
+
+## IK分词器
+
+
+
+## 使用SpringDataElasticsearch完成搜索微服务的开发
+
+
+
+## 使用logstash完成mysql与Elasticsearch的同步工作
+
+
+
+搜索分两大类：搜索引擎（百度，谷歌），站内搜索（淘宝，京东）
+
+
+
+cnpm里没有grunt
+
+
+
+ik分词器，为了兼容不同系统，一般自定义词条时要加空行
+
+
+
+## Linux命令
+
+### CentOs命令
+
+1. vi
+2. shift+zz
+3. reboot
+
 ## 相关账号
+
+
 
 ### 虚拟机
 
