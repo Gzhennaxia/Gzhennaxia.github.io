@@ -329,6 +329,30 @@ ik分词器，为了兼容不同系统，一般自定义词条时要加空行
 2. shift+zz
 3. reboot
 
+
+
+## docker
+
+- docker exec -it tensquare_es /bin/bash
+- docker ps ik tensquare_es:/usr/share/elasticsearch/plugins
+- 挂载
+
+
+
+## 服务器
+
+系统调优
+
+修改/etc/security/limits.conf ，追加内容
+* soft nofile 65536
+* hard nofile 65536
+  nofile是单个进程允许打开的最大文件个数 soft nofile 是软限制 hard nofile是硬限制
+  修改/etc/sysctl.conf，追加内容
+  vm.max_map_count=655360
+  限制一个进程可以拥有的VMA(虚拟内存区域)的数量
+  执行下面命令 修改内核参数马上生效
+  sysctl ‐p
+
 ## 相关账号
 
 
