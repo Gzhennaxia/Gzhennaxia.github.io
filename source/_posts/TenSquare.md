@@ -125,22 +125,6 @@ Twitter 的 SnowFlake（雪花）算法。
 
 
 
-sql语句
-
-in 最怕嵌套，嵌套后效率立马降低。所以一般都使用连接，而不适用子查询
-
-
-
-select null+1  = null
-
-
-
-service层没有加@Transactional jpa会报错：
-
-Executing an update/delete query
-
-
-
 jpa 原生sql 语句
 
 ```java
@@ -352,6 +336,154 @@ ik分词器，为了兼容不同系统，一般自定义词条时要加空行
   限制一个进程可以拥有的VMA(虚拟内存区域)的数量
   执行下面命令 修改内核参数马上生效
   sysctl ‐p
+
+
+
+elasticsearch solr lucene 倒排索引
+
+
+
+## 消息中间件
+
+速度
+
+Kafka>RabbitMQ>ActiveMQ
+
+安全
+
+ActiveMQ>RabbitMQ>Kafka
+
+
+
+kafka用在大数据中。
+
+
+
+rabbitmq有交换机的概念，activemq没有
+
+
+
+spring boot
+
+@Runwith（）
+
+@SpringBootTest（）
+
+@RabbitLisener
+
+@RabbitHandler
+
+
+
+RoutingKey # * 匹配规则
+
+
+
+rabbitmq直连模式，分列模式，主题模式
+
+
+
+org.apache.commons.lang3.RandomStringUtils
+
+```
+// 生成6位随机数
+String checkcode = RandomStringUtils.randomNumeric(6);
+```
+
+
+
+阿里云发短信
+
+[Maven导入本地jar包](https://blog.csdn.net/wangjian1204/article/details/54563988)
+
+```
+@Autowired
+private Environment env;
+```
+
+
+
+SHA算法（啥算法），MD5算法（妈的5算法）
+
+BCrypt 加密算法
+
+认证 就是登录，就是告诉系统你是谁。
+
+认证后才进行授权。
+
+
+
+只使用spring security的加密算法。
+
+```java
+/**
+ * 安全配置类
+ */
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        // authorizeRequests()：所有security全注解是实现形式的开端，表示开始说明需要的权限
+        // 需要的权限分为两部分，第一部分时拦截的路径，第二部分是访问该路径所需要的权限。
+        // antMatchers：拦截的路径，permitAll：任何权限都可以访问，直接放行所有。
+        // .and().csrf().disable()：固定写法， 表示使csrf拦截失效。
+        http
+                .authorizeRequests()
+                .antMatchers("/**").permitAll()
+                .anyRequest().authenticated()
+                .and().csrf().disable();
+    }
+}
+```
+
+
+
+使用spring而不是spring boot时有一个原则：自己写的类用注解，框架的类用配置文件。
+
+
+
+web.xml时web工程的入口。
+
+web.xml就是为了初始化servlet容器。
+
+spring boot强就强在省了一个web.xml
+
+
+
+讲义第六章.2 常见的认证机制（即登录机制）
+
+有状态登录：服务端要存登录信息，就是有状态登录
+
+
+
+cookie在pc端浏览器里有，在移动端是没有的。
+
+
+
+签名算法：HS256
+
+
+
+用户 USER
+
+角色 role
+
+权限 permission
+
+用户和角色是多对多，角色和权限是多对多。
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 相关账号
 
