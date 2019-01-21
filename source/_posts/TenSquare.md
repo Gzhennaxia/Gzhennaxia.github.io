@@ -475,13 +475,56 @@ cookie在pc端浏览器里有，在移动端是没有的。
 
 
 
+```
+@Autowired
+private HttpServletRequest request;
+```
 
 
 
+quartz 定时任务，默认是多线程，但公司里都是用单线程。
+
+如果没有在规定时间执行完，可以将concurrent属性改为false，使得下次任务必须等上次任务执行完后再执行。
+
+七子表达式，即Cron表达式，共7位，周和日不能同时出现。
+
+单点登录，CAS, SSO
+
+单点登录与有无状态之间的区别
 
 
 
+eureka 实现服务之间的通信。
 
+feign 实现服务之间的调用。
+
+
+
+dependencyManager 锁版本
+
+```
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Finchley.M9</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+
+
+
+eureka.instance.prefer-ip-address=true 服务器各服务之间跨域访问
+
+
+
+@FeignClient("") 应用名不能有下划线。
+
+feign接口 @PaathVariable 必须加name属性。
 
 
 
