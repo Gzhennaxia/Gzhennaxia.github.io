@@ -528,6 +528,10 @@ feign接口 @PaathVariable 必须加name属性。
 
 
 
+@IdClass(Friend.class)
+
+
+
 ## 相关账号
 
 
