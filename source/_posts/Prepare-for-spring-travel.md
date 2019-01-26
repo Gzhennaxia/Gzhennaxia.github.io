@@ -1,15 +1,4 @@
----
-title: Prepare for spring travel
-description: 春游策划书
-top: true
-date: 2019-01-23 08:02:03
-categories:
- - Travel
-tags:
- - Travel
----
-
-<img src="cover" width="100%"/>
+<img src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <!-- more -->
 
