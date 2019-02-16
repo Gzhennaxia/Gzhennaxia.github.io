@@ -542,6 +542,20 @@ feign接口 @PaathVariable 必须加name属性。
 
 POI报表导入导出，apache poi，excel 转成 csv 格式poi处理更快。
 
+
+
+熔断器可以在服务恢复后不用重启项目就直接回复系统。
+
+
+
+bootstrap.yml 比 application.yml 优先级高。
+
+一般系统性的配置使用bootstrap.yml
+
+
+
+@RefreshScope
+
 ## 相关账号
 
 
