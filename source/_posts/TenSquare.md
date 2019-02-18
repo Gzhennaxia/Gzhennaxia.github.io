@@ -556,6 +556,14 @@ bootstrap.yml 比 application.yml 优先级高。
 
 @RefreshScope
 
+[VMware NAT方式创建虚拟机网络并配置固定IP](https://segmentfault.com/a/1190000008743806)
+
+
+
+### [*No* *plugin* *found* *for* *prefix* *'docker'* *in* *the* *current* *project* ...](https://www.baidu.com/link?url=C_kRnV807hpm-ZfqxZKw6JTTRbV1e2XvsElDGu3jZGPteYyk2jC7WUAZu8e6VLSkH0GyQijQtaFOoYV2tjyfIfnuM311gC05LtiKLf95Unm&wd=&eqid=f044666f000176b5000000065c692626)
+
+
+
 ## 相关账号
 
 
