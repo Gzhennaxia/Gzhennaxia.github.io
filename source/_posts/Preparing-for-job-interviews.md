@@ -19,6 +19,14 @@ Object 中的 hashcode 是根据对象的内存地址生成的，equals 使用 �
 
 改写 equals 时总是要改写 hashcode，使得 equals 结果为 true 时，hashcode 结果也为 true，hashcode 结果为 false，equals 结果也为 false（即 hashcode 是 equals 的必要不充分条件）。因为在集合类（HashMap，HashSet 等）中的比较操作为了提高效率，一般都是先比较 hashcode 值，再比较 equals。可以利用 IDEA 快速生成 equals 和 hashcode 方法。
 
+### String
+
+#### split 方法
+
+#### replace、replaceAll 方法
+
+
+
 ### Class
 
 
@@ -215,6 +223,95 @@ JDK 1.8对HashMap进行了比较大的优化，底层实现由之前的“数组
 ### byte
 
 两个byte类型相加，结果是int，也就是需要使用int接收。
+
+## 集合框架
+
+### List
+
+#### ArrayList
+
+ArrayList直接通过`transient Object[] elementData`一个Object的数组存储数据，默认初始容量是 10。每次扩容采用半倍扩容 `newCapacity = oldCapacity + (oldCapacity >> 1);`。
+
+```java
+public class ArrayList<E> extends AbstractList<E>
+        implements List<E>, RandomAccess, Cloneable, java.io.Serializable
+{
+	private static final int DEFAULT_CAPACITY = 10;
+	
+	transient Object[] elementData;
+	
+	private void grow(int minCapacity) {
+        // overflow-conscious code
+        int oldCapacity = elementData.length;
+        int newCapacity = oldCapacity + (oldCapacity >> 1);
+        if (newCapacity - minCapacity < 0)
+            newCapacity = minCapacity;
+        if (newCapacity - MAX_ARRAY_SIZE > 0)
+            newCapacity = hugeCapacity(minCapacity);
+        // minCapacity is usually close to size, so this is a win:
+        elementData = Arrays.copyOf(elementData, newCapacity);
+    }
+}
+```
+
+
+
+#### LinkedList
+
+LinkedList是靠一个名为Node的数据结构来存储数据和前后元素的指针，和双向链表类似。first和last分别存储了第一个和最后一个元素
+
+```java
+public class LinkedList<E>
+    extends AbstractSequentialList<E>
+    implements List<E>, Deque<E>, Cloneable, java.io.Serializable
+{
+	transient Node<E> first;
+
+    transient Node<E> last;
+    
+    private static class Node<E> {
+        E item;
+        Node<E> next;
+        Node<E> prev;
+
+        Node(Node<E> prev, E element, Node<E> next) {
+            this.item = element;
+            this.next = next;
+            this.prev = prev;
+        }
+    }
+}
+```
+
+
+
+1. ArrayList 和 LinkedList 遍历时的时间复杂度
+
+   > [ArrayList与LinkedList遍历性能比较](http://www.gcssloop.com/tips/arratlist-linkedlist-performance)
+
+   ```java
+   public void loopList(List<Integer> lists) {
+       for (int i=0; i< lists.size(); i++) {
+           Integer integer = lists.get(i);
+           // TODO 处理数据
+       }
+   }
+   ```
+
+   | List       | for 循环时间复杂度 | get(i)时间复杂度 | 总时间复杂度 |
+   | ---------- | ------------------ | ---------------- | ------------ |
+   | ArrayList  | O(n)               | O(1)             | O(n)         |
+   | LinkedList | O(n)               | O(n)             | O(n2)        |
+
+   在数据量为 10000 的情况下，for 循环的用时分别是 20ms 和 648ms，而使用迭代器和 ForEach 遍历时用时均在 4-6ms 之间。
+
+   **ForEach 循环底层使用的也是迭代器，所以和迭代器性能类似。**
+
+   **使用 迭代器(Iterator) 和 ForEach 遍历 List，不要使用传统的 For 循环。**
+
+   **LinkedList迭代器的next函数只是通过next指针快速得到下一个元素并返回。而get方法会从头遍历直到index下标。**
+
+   
 
 ## 泛型
 
@@ -961,6 +1058,222 @@ MySQL 的 InnoDB 存储引擎采用两段锁协议，会根据隔离级别在需
 （6） 使用绑定连接。
 
 ## 多线程
+
+> [Java多线程学习（吐血超详细总结） - Evankaka的专栏- CSDN博客](https://blog.csdn.net/evankaka/article/details/44153709)
+>
+> [高并发下Java多线程编程基础](https://segmentfault.com/a/1190000015744840)
+
+### 定义
+
+线程和进程一样分为五个阶段（状态）：创建、就绪、运行、阻塞、终止。
+
+多进程是指操作系统能同时运行多个任务（程序）。
+
+多线程是指在同一程序中有多个顺序流在执行。
+
+### 名词解释
+
+- 主线程：JVM调用程序main()所产生的线程。
+- 当前线程：这个是容易混淆的概念。一般指通过Thread.currentThread()来获取的进程。
+- 后台线程：指为其他线程提供服务的线程，也称为守护线程。JVM的垃圾回收线程就是一个后台线程。用户线程和守护线程的区别在于，是否等待主线程依赖于主线程结束而结束
+- 前台线程：是指接受后台线程服务的线程，其实前台后台线程是联系在一起，就像傀儡和幕后操纵者一样的关系。傀儡是前台线程、幕后操纵者是后台线程。由前台线程创建的线程默认也是前台线程。可以通过isDaemon()和setDaemon()方法来判断和设置一个线程是否为后台线程。
+
+### 多线程的实现方式
+
+在 java 中要想实现多线程，一般有 3 种手段：继承 Thread 类、实现 Runnable 接口和实现 Callable 接口。
+
+推荐使用 Runnable 方式的原因：
+
+- 可以避免 java 单继承的限制
+- 线程池只能放入实现 Runable 或 callable 类线程，不能直接放入继承 Thread 的类
+
+注意：
+
+- start() 方法调用后并不是立即执行多线程代码，而是使得该线程变为可运行态（Runnable），什么时候运行是由操作系统决定的。
+
+- start 方法重复调用的话，会出现java.lang.IllegalThreadStateException异常。
+- 启动线程的唯一方法就是通过 Thread 类的 start() 方法，所有的多线程代码都是通过运行Thread的start()方法来运行的。
+- Thread 类实际上也是实现了 Runnable 接口的类。
+- main 方法其实也是一个线程，是程序的主线程。
+- 在java中，每次程序运行至少启动2个线程。一个是main线程，一个是垃圾收集线程。因为每当使用java命令执行一个类的时候，实际上都会启动一个JVM，每一个JVM实际上就是在操作系统中启动了一个进程。
+
+### 多线程同步的实现方式
+
+Java 中提供了 3 中实现同步机制的方法：
+
+1. synchronized 关键字
+
+   Java 中每个对象都有一个对象锁与之相关联。
+
+   synchronized 关键字主要有两种用法：同步方法和同步代码块。此外，该关键字还可以作用于静态方法，类或者某个实例
+
+2. wait 与 notify 方法
+
+   在 synchronized 代码被执行期间，线程可以调用对象的 wait 方法，释放对象锁，进入等待状态，并且可以调用 notify 方法或者 notifyAll 方法通知正在等待的其他线程。
+
+3. Lock 接口
+
+### 状态转换
+
+![](https://img-blog.csdn.net/20150309140927553)
+
+1. 新建状态（New）：新创建了一个线程对象。
+2. 就绪状态（Runnable）：线程对象创建后，其他线程调用了该对象的start()方法。该状态的线程位于可运行线程池中，变得可运行，等待 OS 调度以获取CPU的使用权。
+3. 运行状态（Running）：就绪状态的线程获取了CPU，执行程序代码。
+4. 阻塞状态（Blocked）：阻塞状态是线程因为某种原因放弃CPU使用权，暂时停止运行。直到线程进入就绪状态，才有机会转到运行状态。阻塞的情况分三种：
+   1. 等待阻塞：运行的线程执行wait()方法，JVM会把该线程放入等待池中。(wait会释放持有的锁)
+   2. 同步阻塞：运行的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则JVM会把该线程放入锁池中。
+   3. 其他阻塞：运行的线程执行sleep()或join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。（注意,sleep是不会释放持有的锁）
+5. 死亡状态（Dead）：线程执行完了或者因异常退出了run()方法，该线程结束生命周期。
+
+### 线程调度
+
+1. 调整线程优先级：Java线程有优先级，优先级高的线程会获得较多的运行机会。
+
+   Java线程的优先级用整数表示，取值范围是1~10，Thread类有以下三个静态常量：
+
+   ```java
+   /**
+     * The minimum priority that a thread can have.
+     */
+    public final static int MIN_PRIORITY = 1;
+     
+   /**
+     * The default priority that is assigned to a thread.
+     */
+    public final static int NORM_PRIORITY = 5;
+     
+    /**
+     * The maximum priority that a thread can have.
+     */
+    public final static int MAX_PRIORITY = 10;
+   ```
+
+   Thread类的setPriority()和getPriority()方法分别用来设置和获取线程的优先级。
+   每个线程都有默认的优先级。主线程的默认优先级为Thread.NORM_PRIORITY。
+   线程的优先级有继承关系，比如A线程中创建了B线程，那么B将和A具有相同的优先级。
+   JVM提供了10个线程优先级，但与常见的操作系统都不能很好的映射。如果希望程序能移植到各个操作系统中，应该仅仅使用Thread类中的三个静态常量作为优先级，这样能保证同样的优先级采用了同样的调度方式。
+
+2. 线程睡眠：`Thread.sleep(long millis)`方法，使线程转到阻塞状态。millis参数设定睡眠的时间，以毫秒为单位。当睡眠结束后，就转为就绪（Runnable）状态。sleep() 平台移植性好。
+
+3. 线程等待：Object 类中的 wait() 方法，导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 唤醒方法。这个两个唤醒方法也是 Object 类中的方法，行为等价于调用 wait(0) 。
+
+4. 线程让步：`Thread.yield()` 方法，暂停当前正在执行的线程对象，把执行机会让给相同或者更高优先级的线程。
+
+5. 线程加入：join()方法，等待其他线程终止。在当前线程中调用另一个线程的 join() 方法，则当前线程转入阻塞状态，直到另一个进程运行结束，当前线程再由阻塞转为就绪状态。
+
+6. 线程唤醒：Object 类中的 notify() 方法，唤醒在此对象监视器上等待的单个线程。如果所有线程都在此对象上等待，则会选择唤醒其中一个线程。选择是任意性的，并在对实现做出决定时发生。线程通过调用其中一个 wait 方法，在对象的监视器上等待。直到当前的线程放弃此对象上的锁定，才能继续执行被唤醒的线程。被唤醒的线程将以常规方式与在该对象上主动同步的其他所有线程进行竞争；例如，唤醒的线程在作为锁定此对象的下一个线程方面没有可靠的特权或劣势。类似的方法还有一个 notifyAll()，唤醒在此对象监视器上等待的所有线程。
+
+### 常见方法
+
+- interrupt()：不要以为它是中断某个线程！它只是线程发送一个中断信号，让线程在无限等待时（如死锁时）能抛出异常，从而结束线程，但是如果你吃掉了这个异常，那么这个线程还是不会中断的！
+
+  需要注意的是，InterruptedException是线程自己从内部抛出的，并不是interrupt()方法抛出的。对某一线程调用 interrupt()时，如果该线程正在执行普通的代码，那么该线程根本就不会抛出InterruptedException。但是，一旦该线程进入到 wait()/sleep()/join()后，就会立刻抛出InterruptedException 。 
+
+- wait()
+
+  Object.wait()，与 Object.notify() 必须要与 synchronized(Obj) 一起使用，也就是wait与notify是针对已经获取了Obj锁进行操作，从语法角度来说就是Obj.wait(),Obj.notify必须在synchronized(Obj){...}语句块内，否则会在运行时抛出”java.lang.IllegalMonitorStateException“异常。。从功能上来说wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作。但有一点需要注意的是notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。这样就提供了在线程间同步、唤醒的操作。Thread.sleep()与Object.wait()二者都可以暂停当前线程，释放CPU控制权，主要的区别在于Object.wait()在释放CPU同时，释放了对象锁的控制。
+
+- 
+
+### 面试常见问题
+
+1. 进程和线程的区别
+
+   进程：每个进程都有独立的代码和数据空间（进程上下文），进程间的切换会有较大的开销，一个进程包含多个线程。（进程是资源分配的最小单位）
+
+   线程：同一类线程共享代码和数据空间，每个线程有独立的运行栈和程序计数器(PC)，线程切换开销小。（线程是cpu调度的最小单位）
+
+2. 同步和异步的区别
+
+   同步是阻塞模式，异步是非阻塞模式。 
+
+   同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直等待下去，直到收到返回信息才继续执行下去； 异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。
+
+3. wait和sleep的区别
+
+   1. sleep() 是 Thread 类的方法，而 wait() 是 Object 的方法。
+   2. sleep方法没有释放锁，而wait方法释放了锁。
+   3. wait，notify 和 notifyAll 只能在同步控制方法或者同步控制块里面使用，而sleep可以在任何地方使用 
+
+4. sleep() 和 yield() 的区别
+
+   1. sleep()使当前线程进入阻塞状态，所以执行sleep()的线程在指定的时间内肯定不会被执行；yield()只是使当前线程重新回到可执行状态，所以执行yield()的线程有可能在进入到可执行状态后马上又被执行。
+
+   2. sleep 方法使当前运行中的线程睡眼一段时间，进入不可运行状态，这段时间的长短是由程序设定的，yield 方法使当前线程让出 CPU 占有权，但让出的时间是不可设定的。实际上，yield()方法对应了如下操作：先检测当前是否有相同优先级的线程处于同可运行状态，如有，则把 CPU  的占有权交给此线程，否则，继续运行原来的线程。所以yield()方法称为“退让”，它把运行机会让给了同等优先级的其他线程。
+
+      另外，sleep 方法允许较低优先级的线程获得运行机会，但 yield()  方法执行时，当前线程仍处在可运行状态，所以，不可能让出较低优先级的线程些时获得 CPU 占有权。在一个运行系统中，如果较高优先级的线程没有调用 sleep 方法，又没有受到 I\O 阻塞，那么，较低优先级线程只能等待所有较高优先级的线程运行结束，才有机会运行。 
+
+5. Thread.sleep() 与 Object.wait() 的区别
+
+   二者都可以暂停当前线程，释放CPU控制权，主要的区别在于Object.wait()在释放CPU同时，释放了对象锁的控制。
+
+6. 三线程打印ABC
+
+   题目：建立三个线程，A线程打印10次A，B线程打印10次B,C线程打印10次C，要求线程同时运行，交替打印10次ABC。
+
+   思路：这个问题用Object的wait()，notify()就可以很方便的解决。
+
+   ```java
+   package com.multithread.wait;
+   public class MyThreadPrinter2 implements Runnable {   
+   	  
+       private String name;   
+       private Object prev;   
+       private Object self;   
+     
+       private MyThreadPrinter2(String name, Object prev, Object self) {   
+           this.name = name;   
+           this.prev = prev;   
+           this.self = self;   
+       }   
+     
+       @Override  
+       public void run() {   
+           int count = 10;   
+           while (count > 0) {   
+               synchronized (prev) {   
+                   synchronized (self) {   
+                       System.out.print(name);   
+                       count--;  
+                       
+                       self.notify();   
+                   }   
+                   try {   
+                       prev.wait();   
+                   } catch (InterruptedException e) {   
+                       e.printStackTrace();   
+                   }   
+               }   
+     
+           }   
+       }   
+     
+       public static void main(String[] args) throws Exception {   
+           Object a = new Object();   
+           Object b = new Object();   
+           Object c = new Object();   
+           MyThreadPrinter2 pa = new MyThreadPrinter2("A", c, a);   
+           MyThreadPrinter2 pb = new MyThreadPrinter2("B", a, b);   
+           MyThreadPrinter2 pc = new MyThreadPrinter2("C", b, c);   
+              
+              
+           new Thread(pa).start();
+           Thread.sleep(100);  //确保按顺序A、B、C执行
+           new Thread(pb).start();
+           Thread.sleep(100);  
+           new Thread(pc).start();   
+           Thread.sleep(100);  
+           }   
+   } 
+   ```
+
+   从大的方向上来讲，该问题为三线程间的同步唤醒操作，主要的目的就是ThreadA->ThreadB->ThreadC->ThreadA循环执行三个线程。为了控制线程执行的顺序，那么就必须要确定唤醒、等待的顺序，所以每一个线程必须同时持有两个对象锁，才能继续执行。一个对象锁是prev，就是前一个线程所持有的对象锁。还有一个就是自身对象锁。主要的思想就是，为了控制执行的顺序，必须要先持有prev锁，也就前一个线程要释放自身对象锁，再去申请自身对象锁，两者兼备时打印，之后首先调用self.notify()释放自身对象锁，唤醒下一个等待线程，再调用prev.wait()释放prev对象锁，终止当前线程，等待循环结束后再次被唤醒。运行上述代码，可以发现三个线程循环打印ABC，共10次。程序运行的主要过程就是A线程最先运行，持有C,A对象锁，后释放A,C锁，唤醒B。线程B等待A锁，再申请B锁，后打印B，再释放B，A锁，唤醒C，线程C等待B锁，再申请C锁，后打印C，再释放C,B锁，唤醒A。看起来似乎没什么问题，但如果你仔细想一下，就会发现有问题，就是初始条件，三个线程按照A,B,C的顺序来启动，按照前面的思考，A唤醒B，B唤醒C，C再唤醒A。但是这种假设依赖于JVM中线程调度、执行的顺序。
+
+7. 两个线程交替打印出100以内的奇数和偶数
+
+   
+
 
 - CAS
 - AQS
@@ -2501,3 +2814,133 @@ Spring AOP采用的是动态代理，在运行期间对业务方法进行增强�
 - mvn clean
 
   清除项目目录中的生成结果
+
+1. package 与 install 命令的区别
+
+   package 是把 jar 打到本项目的 target 目录下，而 install 是把 target 下的 jar 安装到本地仓库，供其他项目使用。
+
+## 正则表达式
+
+> [正则表达式 - 语法](http://www.runoob.com/regexp/regexp-syntax.html)
+
+### 非打印字符
+
+| 字符 | 描述                                                         |
+| ---- | ------------------------------------------------------------ |
+| \cx  | 匹配由x指明的控制字符。例如， \cM 匹配一个 Control-M 或回车符。x 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 'c' 字符。 |
+| \f   | 匹配一个换页符。等价于 \x0c 和 \cL。                         |
+| \n   | 匹配一个换行符。等价于 \x0a 和 \cJ。                         |
+| \r   | 匹配一个回车符。等价于 \x0d 和 \cM。                         |
+| \s   | 匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [ \f\n\r\t\v]。注意 Unicode 正则表达式会匹配全角空格符。 |
+| \S   | 匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。                  |
+| \t   | 匹配一个制表符。等价于 \x09 和 \cI。                         |
+| \v   | 匹配一个垂直制表符。等价于 \x0b 和 \cK。                     |
+
+### 特殊字符
+
+| 特别字符 | 描述                                                         |
+| -------- | ------------------------------------------------------------ |
+| $        | 匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 '\n' 或 '\r'。要匹配 $ 字符本身，请使用 \$。 |
+| ( )      | 标记一个子表达式的开始和结束位置。子表达式可以获取供以后使用。要匹配这些字符，请使用 \( 和 \)。 |
+| *        | 匹配前面的子表达式零次或多次。要匹配 * 字符，请使用 \*。     |
+| +        | 匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 \+。     |
+| .        | 匹配除换行符 \n 之外的任何单字符。要匹配 . ，请使用 \. 。    |
+| [        | 标记一个中括号表达式的开始。要匹配 [，请使用 \[。            |
+| ?        | 匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用 \?。 |
+| \        | 将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符。例如， 'n' 匹配字符 'n'。'\n' 匹配换行符。序列 '\\' 匹配 "\"，而 '\(' 则匹配 "("。 |
+| ^        | 匹配输入字符串的开始位置，除非在方括号表达式中使用，此时它表示不接受该字符集合。要匹配 ^ 字符本身，请使用 \^。 |
+| {        | 标记限定符表达式的开始。要匹配 {，请使用 \{。                |
+| \|       | 指明两项之间的一个选择。要匹配 \|，请使用 \|。               |
+
+### 限定符
+
+| 字符  | 描述                                                         |
+| ----- | ------------------------------------------------------------ |
+| *     | 匹配前面的子表达式零次或多次。例如，zo* 能匹配 "z" 以及 "zoo"。* 等价于{0,}。 |
+| +     | 匹配前面的子表达式一次或多次。例如，'zo+' 能匹配 "zo" 以及 "zoo"，但不能匹配 "z"。+ 等价于 {1,}。 |
+| ?     | 匹配前面的子表达式零次或一次。例如，"do(es)?" 可以匹配 "do" 、 "does" 中的 "does" 、 "doxy" 中的 "do" 。? 等价于 {0,1}。 |
+| {n}   | n 是一个非负整数。匹配确定的 n 次。例如，'o{2}' 不能匹配 "Bob" 中的 'o'，但是能匹配 "food" 中的两个 o。 |
+| {n,}  | n 是一个非负整数。至少匹配n 次。例如，'o{2,}' 不能匹配 "Bob" 中的 'o'，但能匹配 "foooood" 中的所有 o。'o{1,}' 等价于 'o+'。'o{0,}' 则等价于 'o*'。 |
+| {n,m} | m 和 n 均为非负整数，其中n <= m。最少匹配 n 次且最多匹配 m 次。例如，"o{1,3}" 将匹配 "fooooood" 中的前三个 o。'o{0,1}' 等价于 'o?'。请注意在逗号和两个数之间不能有空格。 |
+
+### 定位符
+
+| 字符 | 描述                                                         |
+| ---- | ------------------------------------------------------------ |
+| ^    | 匹配输入字符串开始的位置。如果设置了 RegExp 对象的 Multiline 属性，^ 还会与 \n 或 \r 之后的位置匹配。 |
+| $    | 匹配输入字符串结尾的位置。如果设置了 RegExp 对象的 Multiline 属性，$ 还会与 \n 或 \r 之前的位置匹配。 |
+| \b   | 匹配一个单词边界，即字与空格间的位置。                       |
+| \B   | 非单词边界匹配。                                             |
+
+### Java 正则表达式
+
+> [Java 正则表达式| 菜鸟教程](http://www.runoob.com/java/java-regular-expressions.html)
+
+在其他语言中，`\\` 表示：我想要在正则表达式中插入一个普通的（字面上的）反斜杠，请不要给它任何特殊的意义。
+
+在 Java 中，`\\` 表示：我要插入一个正则表达式的反斜线，所以其后的字符具有特殊的意义。
+
+所以，在其他的语言中（如Perl），一个反斜杠 `\` 就足以具有转义的作用，而在 Java 中正则表达式中则需要有两个反斜杠才能被解析为其他语言中的转义作用。也可以简单的理解在 Java 的正则表达式中，两个 `\\` 代表其他语言中的一个 `\`，这也就是为什么表示一位数字的正则表达式是 `\\d`，而表示一个普通的反斜杠是 `\\\\`。
+
+## 算法
+
+### IP 网段黑名单过滤
+
+> [设计一个ip网段黑名单过滤（网易面试题）](https://blog.csdn.net/jeffleo/article/details/72824240)
+
+**问题：**给出一个网段，该网段的地址都属于黑名单，验证其他ip地址是否属于黑名单
+**思路：**要想到通过二进制的位运算来实现：
+
+`ip & 子网掩码 = 网段`
+
+对于一个 [CIDR](https://baike.baidu.com/item/%E6%97%A0%E7%B1%BB%E5%9F%9F%E9%97%B4%E8%B7%AF%E7%94%B1/240168?fr=aladdin) 的ip地址，怎么得到子网掩码？ 
+先得到CIDR中的网络号位数netCount，然后：
+
+`int mask = 0xFFFFFFFF << (32 - netCount);`
+
+这样就能得到子网掩码
+
+```java
+public class IPFilter {
+
+    /**
+     * @param network 黑名单网段
+     * @param maskIp 扫描ip
+     * @return
+     */
+    public static boolean filt(String network, String maskIp){
+        //首先将网段转换为10进制数
+        String[] networks = network.split("\\.");
+        long networkIp = Long.parseLong(networks[0])  << 24 |
+                Long.parseLong(networks[1])  << 16|
+                Long.parseLong(networks[2])  << 8|
+                Long.parseLong(networks[3]);
+
+        //取出网络位数
+        int netCount = Integer.parseInt(maskIp.replaceAll(".*/", ""));
+        //这里实际上通过CIDR的网络号转换为子网掩码
+        int mask = 0xFFFFFFFF << (32 - netCount);
+
+        //再将验证的ip转换为10进制数
+        String testIp = maskIp.replaceAll("/.*", "");
+        String[] ips = testIp.split("\\.");
+        long ip = Long.parseLong(ips[0]) << 24|
+                Long.parseLong(ips[1]) << 16|
+                Long.parseLong(ips[2]) << 8|
+                Long.parseLong(ips[3]);
+
+        //将网段ip和验证ip分别和子网号进行&运算之后，得到的是网络号，如果相同，说明是同一个网段的
+        return (networkIp & mask) == (ip & mask);
+    }
+
+    public static void main(String[] args){
+        boolean isBlack = filt("10.168.1.2", "10.168.0.224/23");
+        if(isBlack){
+            System.out.println("是黑名单");
+        }else{
+            System.out.println("不是黑名单");
+        }
+    }
+}
+```
+
