@@ -6025,6 +6025,8 @@ public class IPFilter {
 }
 ```
 
+
+
 ## Spring Boot
 
 ### 简介
@@ -7024,6 +7026,10 @@ Redis的Java客户端主要有 Redisson、Jedis、lettuce 等等，官方推荐�
 **Spring Boot 2.0**中 Redis 客户端驱动现在由 **Jedis**变为了 **Lettuce**，但依然支持 jedis。
 
 Spring boot data-redis 依赖 jedis或Lettuce，实际上是对jedis这些客户端的封装，提供一套与客户端无关的api供应用使用，从而你在从一个redis客户端切换为另一个客户端，不需要修改业务代码。spring-boot-data-redis 内部实现了对Lettuce和jedis两个客户端的封装，默认使用的是Lettuce。
+
+#### SpringDataRedis
+
+Spring-data-redis是spring大家族的一部分，提供了在srping应用中通过简单的配置访问redis服务，对reids底层开发包(Jedis,  JRedis, and RJC)进行了高度封装，RedisTemplate提供了redis各种操作。
 
 ### Redis集群方案
 
@@ -8845,3 +8851,305 @@ RESTful架构有一些典型的设计误区。
 跨域是什么？浏览器从一个域名的网页去请求另一个域名的资源时，域名、端口、协议任一不同，都是跨域 。我们是采用前后端分离开发的，也是前后端分离部署的，必然会存在跨域问题。 怎么解决跨域？很简单，只需要在controller类上添加注解@CrossOrigin 即可！这个注解其实是CORS的实现。
 
 CORS(Cross-Origin Resource Sharing, 跨源资源共享)是W3C出的一个标准，其思想是使用自定义的HTTP头部让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。因此，要想实现CORS进行跨域，需要服务器进行一些设置，同时前端也需要做一些配置和分析。
+
+### 分布式ID生成器
+
+> [snowflake](https://github.com/twitter-archive/snowflake)
+>
+> [Twitter-Snowflake，64位自增ID算法详解](https://www.lanindex.com/twitter-snowflake%EF%BC%8C64%E4%BD%8D%E8%87%AA%E5%A2%9Eid%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/)
+>
+> [Twitter Snowflake算法详解](https://blog.csdn.net/yangding_/article/details/52768906)
+
+由于我们的数据库在生产环境中要分片部署（MyCat）,所以我们不能使用数据库本身的自增功能来产生主键值，只能由程序来生成唯一的主键值。我们采用的是开源的twitter的snowflake（雪花）算法。
+
+![](https://i.loli.net/2019/03/23/5c95e7bf10592.jpg)
+
+默认情况下41bit的时间戳可以支持该算法使用到2082年，10bit的工作机器id可以支持1024台机器，序列号支持1毫秒产生4096个自增序列id . SnowFlake的优点是，整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞(由数据中心ID和机器ID作区分)，并且效率较高，经测试，SnowFlake每秒能够产生26万ID左右。
+
+## MongoDB
+
+### 什么是MongoDB
+
+MongoDB 是一个跨平台的，面向文档的数据库，是当前 NoSQL 数据库产品中最热门的一种。它介于关系数据库和非关系数据库之间，是非关系数据库当中功能最丰富，最像关系数据库的产品。它支持的数据结构非常松散，是类似 JSON 的 BSON 格式，因此可以存储比较复杂的数据类型。
+
+### MongoDB特点
+
+MongoDB 最大的特点是他支持的查询语言非常强大，其语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引。它是一个面向集合的,模式自由的文档型数据库。
+具体特点总结如下：
+（1）面向集合存储，易于存储对象类型的数据
+（2）模式自由
+（3）支持动态查询
+（4）支持完全索引，包含内部对象
+（5）支持复制和故障恢复
+（6）使用高效的二进制数据存储，包括大型对象（如视频等）
+（7）自动处理碎片，以支持云计算层次的扩展性
+（8）支持各种语言的驱动程序
+（9） 文件存储格式为 BSON（一种 JSON 的扩展）
+
+### MongoDB体系结构
+
+MongoDB 的逻辑结构是一种层次结构。主要由：文档(document)、集合(collection)、数据库(database)这三部分组成的。逻辑结构是面向用户的，用户使用 MongoDB 开发应用程序使用的就是逻辑结构。
+（1）MongoDB 的文档（document），相当于关系数据库中的一行记录。
+（2）多个文档组成一个集合（collection），相当于关系数据库的表。
+（3）多个集合（collection），逻辑上组织在一起，就是数据库（database）。
+（4）一个 MongoDB 实例支持多个数据库（database）。
+文档(document)、集合(collection)、数据库(database)的层次结构如下图:
+
+![](https://i.loli.net/2019/03/23/5c95f6047e160.jpg)
+
+下表是MongoDB与MySQL数据库逻辑结构概念的对比
+
+| MongoDb           | 关系型数据库Mysql |
+| ----------------- | ----------------- |
+| 数据库(databases) | 数据库(databases) |
+| 集合(collections) | 表(table)         |
+| 文档(document)    | 行(row)           |
+
+### 数据类型
+
+基本数据类型
+
+- null：用于表示空值或者不存在的字段，{“x”:null}
+- 布尔型：布尔类型有两个值true和false，{“x”:true}
+- 数值：shell默认使用64为浮点型数值。{“x”：3.14}或{“x”：3}。对于整型值，可以使用 NumberInt（4字节符号整数）或NumberLong（8字节符号整数），{“x”:NumberInt(“3”)}{“x”:NumberLong(“3”)}
+- 字符串：UTF-8字符串都可以表示为字符串类型的数据，{“x”：“呵呵”}
+- 日期：日期被存储为自新纪元依赖经过的毫秒数，不存储时区，{“x”:new Date()}
+
+- 正则表达式：查询时，使用正则表达式作为限定条件，语法与JavaScript的正则表达式相同，{“x”:/[abc]/}
+- 数组：数据列表或数据集可以表示为数组，{“x”： [“a“，“b”,”c”]}
+- 内嵌文档：文档可以嵌套其他文档，被嵌套的文档作为值来处理，{“x”:{“y”:3 }}
+- 对象Id：对象id是一个12字节的字符串，是文档的唯一标识，{“x”: objectId() }
+- 二进制数据：二进制数据是一个任意字节的字符串。它不能直接在shell中使用。如果要将非utf-字符保存到数据库中，二进制数据是唯一的方式。
+- 代码：查询和文档中可以包括任何JavaScript代码，{“x”:function(){/…/}}
+
+### 常用命令
+
+#### 选择和创建数据库
+
+选择和创建数据库的语法格式：
+
+`use 数据库名称`
+
+如果数据库不存在则自动创建
+
+#### 插入与查询文档
+
+插入文档的语法格式：
+
+`db.集合名称.insert(数据);`
+
+查询集合的语法格式：
+
+`db.集合名称.find()`
+
+这里你会发现每条文档会有一个叫_id的字段，这个相当于我们原来关系数据库中表的主键，当你在插入文档记录时没有指定该字段，MongoDB会自动创建，其类型是ObjectID类型。如果我们在插入文档记录时指定该字段也可以，其类型可以是ObjectID类型，也可以是MongoDB支持的任意类型。
+
+#### 修改与删除文档
+
+修改文档的语法结构：
+
+`db.集合名称.update(条件,修改后的数据)`
+
+删除文档的语法结构：
+
+`db.集合名称.remove(条件)`
+
+#### 统计条数
+
+统计记录条件使用count()方法。以下语句统计spit集合的记录数
+
+`db.spit.count()`
+
+#### 模糊查询
+
+MongoDB的模糊查询是通过正则表达式的方式实现的。格式为：
+
+`/模糊查询字符串/`
+
+例如，我要查询吐槽内容包含“流量”的所有文档，代码如下：
+
+`db.spit.find({content:/流量/})`
+
+#### 大于 小于 不等于
+
+<, <=, >, >= 这个操作符也是很常用的，格式如下:
+
+```mongodb
+db.集合名称.find({ "field" : { $gt: value }}) // 大于: field > value
+db.集合名称.find({ "field" : { $lt: value }}) // 小于: field < value
+db.集合名称.find({ "field" : { $gte: value }}) // 大于等于: field >= value
+db.集合名称.find({ "field" : { $lte: value }}) // 小于等于: field <= value
+db.集合名称.find({ "field" : { $ne: value }}) // 不等于: field != value
+```
+
+#### 包含与不包含
+
+包含使用$in操作符。
+示例：查询吐槽集合中userid字段包含1013和1014的文档
+
+`db.spit.find({userid:{$in:["1013","1014"]}})`
+
+不包含使用$nin操作符。
+示例：查询吐槽集合中userid字段不包含1013和1014的文档
+
+`db.spit.find({userid:{$nin:["1013","1014"]}})`
+
+#### 条件连接
+
+我们如果需要查询同时满足两个以上条件，需要使用$and操作符将条件进行关联。（相当于SQL的and）
+格式为：
+
+`$and:[ {  },{  },{ } ]`
+
+示例：查询吐槽集合中visits大于等于1000 并且小于2000的文档
+
+`db.spit.find({$and:[ {visits:{$gte:1000}} ,{visits:{$lt:2000} }]})`
+
+#### 列值增长
+
+如果我们想实现对某列值在原有值的基础上进行增加或减少，可以使用$inc运算符来实现
+
+`db.spit.update({_id:"2"},{$inc:{visits:NumberInt(1)}}  )`
+
+### Java操作MongoDB
+
+mongodb-driver是mongo官方推出的java连接mongoDB的驱动包，相当于JDBC驱动。我们通过一个入门的案例来了解mongodb-driver的基本使用
+
+#### 查询全部记录
+
+（1）创建工程 mongoDemo, 引入依赖
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb‐driver</artifactId>
+        <version>3.6.3</version>
+    </dependency>
+  </dependencies>
+```
+
+（2）创建测试类
+
+```java
+/**
+ * MongoDb入门小demo
+ */
+public class MongoDemo {
+    public static void main(String[] args) {
+        MongoClient client=new MongoClient("192.168.184.134");//创建连接
+        MongoDatabase spitdb = client.getDatabase("spitdb");//打开数据库
+        MongoCollection<Document> spit = spitdb.getCollection("spit");//获取集合
+        FindIterable<Document> documents = spit.find();//查询记录获取文档集合
+        for(Document document:documents){ //
+            System.out.println("内容："+  document.getString("content"));
+            System.out.println("用户ID:"+document.getString("userid"));
+            System.out.println("浏览量："+document.getInteger("visits"));
+        }
+        client.close();//关闭连接
+    }
+}
+```
+
+#### 条件查询
+
+BasicDBObject对象：表示一个具体的记录，BasicDBObject实现了DBObject，是key-value的数据结构，用起来和HashMap是基本一致的。
+
+（1）查询userid为1013的记录
+
+```java
+public class MongoDemo1 {
+    public static void main(String[] args) {
+        MongoClient client=new MongoClient("192.168.184.134");//创建连接
+        MongoDatabase spitdb = client.getDatabase("spitdb");//打开数据库
+        MongoCollection<Document> spit = spitdb.getCollection("spit");//获取集合
+        BasicDBObject bson=new BasicDBObject("userid","1013");// 构建查询条件
+        FindIterable<Document> documents = spit.find(bson);//查询记录获取结果集合
+        for(Document document:documents){ //
+            System.out.println("内容："+  document.getString("content"));
+            System.out.println("用户ID:"+document.getString("userid"));
+            System.out.println("浏览量："+document.getInteger("visits"));
+        }
+        client.close();//关闭连接
+    }
+}
+```
+
+（2）查询浏览量大于1000的记录
+
+```java
+public class MongoDemo2 {
+    public static void main(String[] args) {
+        MongoClient client=new MongoClient("192.168.184.134");//创建连接
+        MongoDatabase spitdb = client.getDatabase("spitdb");//打开数据库
+        MongoCollection<Document> spit = spitdb.getCollection("spit");//获取集合
+        BasicDBObject bson=new BasicDBObject("visits",new BasicDBObject("$gt",1000) );// 构建查询条件
+       
+        FindIterable<Document> documents = spit.find(bson);//查询记录获取结果集合
+        for(Document document:documents){ //
+            System.out.println("内容："+  document.getString("content"));
+            System.out.println("用户ID:"+document.getString("userid"));
+            System.out.println("浏览量："+document.getInteger("visits"));
+        }
+        client.close();//关闭连接
+    }
+}
+```
+
+#### 插入数据
+
+```java
+public class MongoDemo3 {
+    public static void main(String[] args) {
+        MongoClient client=new MongoClient("192.168.184.134");//创建连接
+        MongoDatabase spitdb = client.getDatabase("spitdb");//打开数据库
+        MongoCollection<Document> spit = spitdb.getCollection("spit");//获取集合
+        Map<String,Object> map=new HashMap();
+        map.put("content","我要吐槽");
+        map.put("userid","9999");
+        map.put("visits",123);
+        map.put("publishtime",new Date());
+        Document document=new Document(map);
+        spit.insertOne(document);//插入数据
+        client.close();
+    }
+}
+```
+
+### SpringDataMongoDB
+
+SpringData家族成员之一，用于操作MongoDb的持久层框架，封装了底层的mongodb-driver。
+官网主页： https://projects.spring.io/spring-data-mongodb/
+
+## ElasticSearch
+
+### 什么是ElasticSearch
+
+Elasticsearch是一个实时的分布式搜索和分析引擎。它可以帮助你用前所未有的速度去处理大规模数据。ElasticSearch是一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。Elasticsearch是用Java开发的，并作为Apache许可条款下的开放源码发布，是当前流行的企业级搜索引擎。设计用于云计算中，能够达到实时搜索，稳定，可靠，快速，安装使用方便。
+
+### ElasticSearch特点
+
+1. 可以作为一个大型分布式集群（数百台服务器）技术，处理PB级数据，服务大公司；也可以运行在单机上
+2. 将全文检索、数据分析以及分布式技术，合并在了一起，才形成了独一无二的ES；
+3. 开箱即用的，部署简单
+4. 全文检索，同义词处理，相关度排名，复杂数据分析，海量数据的近实时处理
+
+### ElasticSearch体系结构
+
+下表是Elasticsearch与MySQL数据库逻辑结构概念的对比
+
+| Elasticsearch  | 关系型数据库Mysql |
+| -------------- | ----------------- |
+| 索引(index)    | 数据库(databases) |
+| 类型(type)     | 表(table)         |
+| 文档(document) | 行(row)           |
+
+### Head插件
+
+在学习Elasticsearch的过程中，必不可少需要通过一些工具查看es的运行状态以及数据。如果都是通过rest请求，未免太过麻烦，而且也不够人性化。此时，head可以完美的帮助你快速学习和使用es。
+
+Head插件可以实现基本信息的查看，rest请求的模拟，数据的检索等等。
+
+### IK分词器
+
+IK分词是一款国人开发的相对简单的中文分词器。虽然开发者自2012年之后就不在维护了，但在工程应用中IK算是比较流行的一款！
