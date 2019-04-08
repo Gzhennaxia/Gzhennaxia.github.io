@@ -1,7 +1,9 @@
-###### title: Preparing for job interviews
+---
+title: Preparing for job interviews
 description: 面试准备资料
 date: 2019-03-06 16:55:09
 top: true
+---
 
 <img src="https://www.insperity.com/wp-content/uploads/stay_interview_questions_640x302.jpg" width="100%"/>
 
@@ -1721,6 +1723,86 @@ Sun JDK监控和故障处理命令有jps jstat jmap jhat jstack jinfo
     | -XX:MaxTenuringThreshold      | 设置老年代阀值的最大值                           |
     | -XX:TargetSurvivorRatio       | 设置幸存区的目标使用率                           |
 
+## Linux
+
+### 常用命令
+
+1. 显示目录内容
+
+   - `ls -a` 显示当前目录下的所有文件及目录 (ls内定将文件名或目录名称开头为"."的视为隐藏档，不会列出)
+   - `ls -ltr s*` 列出当前目录下所有名称以 s 开头的文件，越新的排越后面
+
+2. 查看文本文件内容
+
+   1. cat
+
+      从第一行开始显示全部的文本内容； 
+
+   2. tac
+
+      从最后一行开始，倒序显示全部分文本内容，与cat相反； 
+
+   3. nl
+
+      显示文本时，可以输出行号； 
+
+   4. more
+
+      按页显示文本内容；
+
+      - 按一下空格则往下翻一页
+      - 按一下Enter则往下翻一行
+      - 按一下B键往上翻一页
+      - 不能往上一行一行的翻回去了
+      - ：f 可以显示文件名和现在的行数
+      - q退出 
+
+   5. less
+
+      与more差不多，也是按页显示文本内容，区别是less可以一行一行的回退，more回退只能一页一页回退； 
+
+      - more命令的所有按键less都支持
+      - ↑↓箭头可以实现一行一行的上下翻
+      - PageDown/PageUp可以实现一页一页的上下翻
+
+   6. head
+
+      从头开始显示文件指定的行数； 
+
+      默认只显示文件的前10行文本内容
+
+   7. tail
+
+      显示文件指定的结尾的行数，但每一行的位置还是原文件中的位置，不会像tac那样与原文件相反。 
+
+      默认只显示从文件最后一行开始的10行文本内容
+
+      `tail -100f test.log` : 实时监控100行日志
+
+3. 查找文件
+
+   - `find -name "filename"` 在当前目录下查找指定文件
+   - `find path -name "filename"` 在指定目录下查找指定文件
+   - `find path -name "prefix*"` 在指定目录下查找以prefix为前缀的文件
+   - `find path -iname "prefix*"` 在指定目录下查找以prefix为前缀的文件，忽略大小写。
+   - `man find` 查看find命令的帮助文档
+
+4. 检索文件内容：grep
+
+   - `grep 'partial\[true\]' test.log` 在test.log文件中检索包含patrial[true]的行
+   - `grep -o 'engine\[[0-9a-z]*\]'` 筛选出能够匹配指定正则表达式的内容，如engine[d93kd93nfut48]
+   - `grep -v 'abc'` 过滤掉包含指定字符串的内容（反向查找）
+
+5. 查看进程状态：ps
+
+   - `ps -ef|grep java` 查找特定进程
+
+6. 文本分析工具：awk
+
+   - `awk '{print $1,$4}' test.txt` 每行按空格或TAB分割，输出文本中的1、4项
+   - `awk  -F ','  $1,$4}' test.txt` 每行按逗号分割，输入文本的1、4项
+   - `awk '$1 == "tcp" && $2 == 1 {print $0}' test.txt` 输出第一项为tcp，第二项为1的行
+
 ## IO
 
 ### 概念
@@ -3074,6 +3156,161 @@ create table tree_paths (
    WHERE country = 'USA');
    ```
 
+### 执行计划
+
+#### 什么是数据库执行计划
+
+执行计划，简单的来说，是SQL语句在数据库中执行时的表现情况，即数据库是如何执行SQL语句的。通常用于SQL性能分析、优化等场景。在MySQL使用 explain 关键字来查看SQL的执行计划。
+
+#### 字段含义
+
+**Table 8.1 EXPLAIN Output Columns**
+
+| Column                                                       | Meaning                                                    |
+| ------------------------------------------------------------ | ---------------------------------------------------------- |
+| [`id`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_id) | 查询顺序                                                   |
+| [`select_type`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_select_type) | 查询类型，用于区分普通查询、联合查询、子查询等复杂的查询   |
+| [`table`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_table) | 查询的表                                                   |
+| [`partitions`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_partitions) | 使用的哪个分区,需要结合表分区才能看到                      |
+| [`type`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_type) | 访问类型                                                   |
+| [`possible_keys`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_possible_keys) | 可能用到的索引,如果是多个索引以逗号隔开                    |
+| [`key`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_key) | 实际用到的索引,保存的是索引的名称,如果是多个索引以逗号隔开 |
+| [`key_len`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_key_len) | 索引长度，表示索引所使用的字节数                           |
+| [`ref`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_ref) | 和索引做比较的列，全表扫描的话，值为null                   |
+| [`rows`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_rows) | 扫描行数                                                   |
+| [`filtered`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_filtered) | 满足条件的记录数占总记录数的百分比。                       |
+| [`Extra`](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html#explain_extra) | 额外信息                                                   |
+
+##### id
+
+id越大优先级越高，越先被执行。id相同时，从上至下顺序执行。
+
+##### select_type
+
+|      | select_type  | description                                                  |
+| ---- | ------------ | ------------------------------------------------------------ |
+| 1    | SIMPLE       | 简单查询，不使用union或子查询等                              |
+| 2    | PRIMARY      | 包含任何复杂的子部分时，最外层查询就显示为 `PRIMARY`         |
+| 3    | SUBQUERY     | 在`select`或 `where`字句中包含的子查询                       |
+| 4    | DERIVED      | `from`字句中包含的查询，derived：衍生，派生                  |
+| 5    | UNION        | 若第二个SELECT出现在UNION之后，则被标记为UNION；<br />若UNION包含在 FROM子句的子查询中，外层SELECT将被标记为：DERIVED |
+| 6    | UNION RESULT | 从UNION表获取结果的SELECT被标记为：UNION RESULT              |
+
+##### type
+
+访问类型，SQL查询优化中一个很重要的指标，结果值从好到坏依次是：
+
+system > const > eq_ref > ref > fulltext > ref_or_null > index_merge > unique_subquery > index_subquery > range > index > ALL
+
+|      | type   | description                                                  |
+| ---- | ------ | ------------------------------------------------------------ |
+| 1    | ALL    | 全表扫描                                                     |
+| 2    | index  | 使用扫描，index与ALL区别为index类型只遍历索引树              |
+| 3    | range  | 索引范围扫描<br />常见于between、<、>，IN等的查询            |
+| 4    | ref    | 非唯一索引扫描                                               |
+| 5    | eq_ref | 唯一索引扫描<br />通常出现在多表的 join 查询<br />表示对于前表的每一个结果, 都只能匹配到后表的一行结果 |
+| 6    | const  | 使用主键或者唯一索引，匹配的结果只有一条记录。               |
+| 7    | system | 表中只有一行记录（等于系统表），这是const类型的特例          |
+| 8    | NULL   | 不用访问表或者索引就可以直接得到结果                         |
+
+###### eq_ref
+
+此类型通常出现在多表的 join 查询, 表示对于前表的每一个结果, 都只能匹配到后表的一行结果. 并且查询的比较操作通常是 =, 查询效率较高：
+
+```mysql
+select * from t3,t4 where t3.id=t4.accountid;
+```
+
+##### Extra
+
+这个列可以显示的信息非常多，有几十种，常用的有：
+
+1. Using index 使用覆盖索引 
+2. Using where 使用了where子句来过滤结果集 
+3. Using filesort 使用文件排序，排序时无法使用到索引时，就会出现这个。MySQL无法利用索引完成的顺序操作称为“文件排序”。常见于order by和group by语句中 。
+4. Using temporary 使用了临时表，一般出现于排序, 分组和多表join的情况, 查询效率不高, 建议优化.
+
+##### 总结
+
+对查询性能影响最大的几个列是：
+
+- select_type：查询类型
+- type：连接使用了何种类型
+- rows：查询数据需要查询的行
+- key：查询真正使用到的索引
+- extra：额外的信息
+
+尽量让自己的SQL用上索引，避免让extra里面出现file sort(文件排序),using temporary(使用临时表)。
+
+##### 实例
+
+1. 对索引列进行了运算，无法使用索引。由于MySQL不像Oracle那样支持函数索引，即使函数内字段有索引，也会直接全表扫描。
+
+   ```mysql
+   SELECT ID FROM SENDLOG WHERE TO_DAYS(NOW())-TO_DAYS(GMT_CREATE) > 7;
+   -- 优化后sql：
+   select id from sendlog where gmt_create < now() - 7;
+   ```
+
+2. 数据类型不一致，导致没法用索引
+
+   ```mysql
+   SELECT * FROM SENDLOG where result = 1;
+   -- 优化后sql：
+   SELECT * FROM SENDLOG where result = '1';
+   ```
+
+### 索引
+
+#### 索引建立原则
+
+1. 最左匹配原则
+
+   在组合索引中，b+树的数据项是复合的数据结构，比如(name,age,sex)，b+树是按照从左到右的顺序来建立搜索树的，比如当(张三,20,F)这样的数据来检索的时候，b+树会优先比较name来确定下一步的所搜方向，如果name相同再依次比较age和sex，最后得到检索的数据；但当(20,F)这样的没有name的数据来的时候，b+树就不知道下一步该查哪个节点，因为建立搜索树的时候name就是第一个比较因子，必须要先根据name来搜索才能知道下一步去哪里查询。比如当(张三,F)这样的数据来检索时，b+树可以用name来指定搜索方向，但下一个字段age的缺失，所以只能把名字等于张三的数据都找到，然后再匹配性别是F的数据了。
+
+2. 经常需要排序、分组和联合操作的字段需要建立索引
+
+   经常需要ORDER BY、GROUP BY、DISTINCT和UNION等操作的字段，需要建立索引。
+
+3. 选择区分度高的列作为索引
+
+   区分度的公式是count(distinct col)/count(*)，表示字段不重复的比例，比例越大我们扫描的记录数越少
+
+#### 面试问题
+
+1. 为什么加索引能够优化查询速度？
+
+   因为索引的本质就是一种优化查询速度的数据结构，MySQL中使用B+树实现。
+
+2. MySQL为什么使用B+树来实现索引？
+
+   常见的能够提高查询速度的数据结构有：哈希表，完全平衡二叉树，B树，B+树。
+
+   哈希表对于范围查找的情况不理想，而对于树的情况，由于树的高度越低，所需要的磁盘IO次数就越少，故B+树性能更好，而且对于范围查找也适用。
+
+   对于B+树，一个节点所含元素的个数一般是操作系统中一页的大小的倍数。一般一页的大小为4kb，MySQL InnoDB的页大小为16kb
+
+3. 为什么不建议写 select *，结合索引给出优化案例
+
+   B+树非叶子节点只存索引值，叶子节点既存索引值也存数据值。当需要查找的字段添加了索引后，查找到索引后即可得到其数据值，不用再查找对应的记录来获取数据值了。
+
+   第一，如果仅仅需要获取一个字段值，并且这个值有索引，比如用户的Id主键索引，就不需要查询两次表，直接获取就行了。
+
+   第二，对于不必要的字段，比如文章内容这种占用空间比较大的字段会占用较大的网络带宽。
+
+4. 如何清空一张一百万级数据表里的一个字段？
+
+   使用主键索引分批执行。
+
+5. 如何对一张一百万级数据表进行快速分页查询？
+
+   利用覆盖索引，查询的语句中只包含索引列
+
+   ```mysql
+   SELECT * FROM product WHERE id >= (select id from product limit 866613, 1) limit 20
+   ```
+
+   
 
 ### 事务
 
@@ -3255,6 +3492,13 @@ Transactional注解中有4个属性通过设置系统异常类和自定义异常
 
   原因解释：spring的事物管理通过AOP代理来实现， 根据aop的思想，不可能在具体类上直接处理事务，而是通过代理类来处理，代理类在调用具体类的方法来实现，methodA通过this调用methodB，那么此时相当于调用methodB时是没有经过代理类的调用，因此spring无法对事物的传播行为做处理。
 
+#### @Transactional 失效的情况
+
+1. @Transactional 只能应用到 public 方法才有效
+
+2. 在 Spring 的 AOP 代理下，只有目标方法由外部调用，目标方法才由 Spring 生成的代理对象来管理，这会造成自调用问题：
+
+   若同一类中的其他没有@Transactional 注解的方法内部调用有@Transactional 注解的方法，有@Transactional 注解的方法的事务被忽略。
 
 ### 数据库的锁机制
 
@@ -3477,7 +3721,7 @@ Java 中提供了 3 中实现同步机制的方法：
 | 类别     | synchronized                                                 | Lock                                                         |
 | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 存在层次 | Java的关键字<br />托管给JVM执行，故为隐士锁                  | 是一个接口<br />代码控制，故为显示锁                         |
-| 锁的获取 | 假设A线程获得锁，B线程等待。<br />如果A线程阻塞，B线程会一直等待 | 分情况而定，Lock有多个锁获取的方式<br />可以尝试获得锁，线程可以不用一直等待 |
+| 锁的获取 | 阻塞式获取<br />假设A线程获得锁，B线程等待。<br />如果A线程阻塞，B线程会一直等待 | 可非阻塞式获取<br />Lock有多个锁获取的方式<br />可以尝试获得锁，线程可以不用一直等待 |
 | 锁的释放 | 1、以获取锁的线程执行完同步代码，释放锁 <br />2、线程执行发生异常时，jvm会让线程释放锁 | 在finally中必须释放锁，不然容易造成线程死锁                  |
 | 锁状态   | 无法判断                                                     | 可以判断                                                     |
 | 锁类型   | 可重入<br />不可中断<br />非公平                             | 可重入<br />可中断<br />可公平可非公平                       |
@@ -3491,6 +3735,68 @@ Java 中提供了 3 中实现同步机制的方法：
 | 可中断锁 | 在等待获取锁过程中可中断                                     |
 | 公平锁   | 按等待获取锁的线程的等待时间进行获取，<br />等待时间长的具有优先获取锁权利 |
 | 读写锁   | 对资源读取和写入的时候拆分为2部分处理，<br />读的时候可以多线程一起读，写的时候必须同步地写 |
+
+synchronized 在JavaSE1.6中，锁一共有4种状态，级别从低到高依次是：无锁状态、偏向锁状态、轻量级锁状态和重量级锁状态，这几个状态会随着竞争情况逐渐升级。
+
+当竞争不是很激烈的时候Synchronized使用的是轻量级锁或者偏向锁，这两种锁都能有效减少轮询或者阻塞的发生，相比与Lock仍旧要将未获得锁的线程放入等待队列阻塞带来的上下文切换的开销，此时Synchronized效率会高些，当竞争激烈的时候Synchronized会升级为重量级锁，由于Synchronized的出队速度相比Lock要慢，所以Lock的效率会更高些。一般对于数据结构设计或者框架的设计都倾向于使用Lock而非Synchronized。
+
+Lock是基于AQS（AbstractQueuedSynchronizer）实现的，AQS的基础又是CAS。
+
+- AQS
+
+  AQS(AbstractQueuedSynchronizer 队列同步器)，AQS是JDK下提供的一套用于实现基于FIFO等待队列的阻塞锁和相关的同步器的一个同步框架。它使用了一个int成员变量表示同步状态，使用 CAS 设置当前状态。CountDownLatch、FutureTask、Semaphore、ReentrantLock等都有一个内部类是这个抽象类的子类。AQS是JUC同步器的基石。
+
+- CAS
+  CAS（Compare And Swap 比较并交换）指的是现代 CPU 广泛支持的一种对内存中的共享数据进行操作的一种特殊指令。这个指令会对内存中的共享数据做原子的读写操作。JVM中的CAS操作是利用了处理器提供的CMPXCHG指令实现的。
+
+  简单介绍一下这个指令的操作过程：CAS 操作包含三个操作数 —— 内存位置（V）、预期原值（A）和新值(B)。首先，CPU 会将内存中将要被更改的数据与期望的值做比较。然后，当这两个值相等时，CPU 才会将内存中的数值替换为新的值。否则便不做操作。最后，CPU 会将旧的数值返回。这一系列的操作是原子的。它们虽然看似复杂，但却是 Java 5 并发机制优于原有锁机制的根本。简单来说，CAS 的含义是“我认为原有的值应该是什么，如果是，则将原有的值更新为新值，否则不做修改，并告诉我原来的值是多少”。（这段描述引自《Java并发编程实践》）
+
+  CAS的目的：利用CPU的CAS指令，同时借助JNI（Java Native Interface）来完成Java的非阻塞算法。其它原子操作都是利用类似的特性完成的。而整个J.U.C（java.util.concurrent）都是建立在CAS之上的，因此相对于synchronized阻塞算法，J.U.C在性能上有了很大的提升。
+
+  要实现无锁（lock-free）的非阻塞算法有多种实现方法，其中CAS（比较与交换，Compare and swap）是一种有名的无锁算法。CAS是项乐观锁技术，当多个线程尝试使用CAS同时更新同一个变量时，只有其中一个线程能更新变量的值，而其它线程都失败，失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次尝试。
+
+  接下来通过**源代码来看 AtomicInteger 具体是如何实现**的原子操作。
+
+  　　首先看 value 的声明：
+
+  ```java
+  private volatile int value;
+  ```
+
+  　　volatile 修饰的 value 变量，保证了变量的可见性。
+
+  　　incrementAndGet() 方法，下面是具体的代码：
+
+  ```java
+  public final int incrementAndGet() {
+          for (;;) {
+              int current = get();
+              int next = current + 1;
+              if (compareAndSet(current, next))
+                  return next;
+          }
+   }
+  ```
+
+  　　通过源码，可以知道，这个方法的做法为先获取到当前的 value 属性值，然后将 value 加 1，赋值给一个局部的 next 变量，然而，这两步都是非线程安全的，但是内部有一个死循环，不断去做 compareAndSet 操作，直到成功为止，也就是修改的根本在 compareAndSet 方法里面，compareAndSet()方法的代码如下：
+
+  ```java
+  public final boolean compareAndSet(int expect, int update) {
+          return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
+  }
+  ```
+
+  　　compareAndSet()方法调用的compareAndSwapInt()方法的声明如下，是一个native方法。 
+
+  ```java
+  public final native boolean compareAndSwapInt(Object var1, long var2, int var4, intvar5);
+  ```
+
+  　　compareAndSet 传入的为执行方法时获取到的 value 属性值，next 为加 1 后的值， compareAndSet 所做的为调用 Sun 的 UnSafe 的 compareAndSwapInt 方法来完成，此方法为 native 方法，compareAndSwapInt 基于的是 CPU 的 CAS 指令来实现的。所以基于 CAS 的操作可认为是无阻塞的，一个线程的失败或挂起不会引起其它线程也失败或挂起。并且由于 CAS 操作是 CPU 原语，所以性能比较好。
+
+  　　类似的，还有 decrementAndGet() 方法。它和 incrementAndGet() 的区别是将 value 减 1，赋值给next 变量。
+
+  ​      AtomicInteger 中还有 getAndIncrement() 和 getAndDecrement() 方法，他们的实现原理和上面的两个方法完全相同，区别是返回值不同，前两个方法返回的是改变之后的值，即 next。而这两个方法返回的是改变之前的值，即 current。还有很多的其他方法，就不列举了。
 
 ### 状态转换
 
@@ -4002,6 +4308,12 @@ public class TreadPoolConfig {
 
   Object.wait()，与 Object.notify() 必须要与 synchronized(Obj) 一起使用，也就是wait与notify是针对已经获取了Obj锁进行操作，从语法角度来说就是Obj.wait(),Obj.notify必须在synchronized(Obj){...}语句块内，否则会在运行时抛出”java.lang.IllegalMonitorStateException“异常。。从功能上来说wait就是说线程在获取对象锁后，主动释放对象锁，同时本线程休眠。直到有其它线程调用对象的notify()唤醒该线程，才能继续获取对象锁，并继续执行。相应的notify()就是对对象锁的唤醒操作。但有一点需要注意的是notify()调用后，并不是马上就释放对象锁的，而是在相应的synchronized(){}语句块执行结束，自动释放锁后，JVM会在wait()对象锁的线程中随机选取一线程，赋予其对象锁，唤醒线程，继续执行。这样就提供了在线程间同步、唤醒的操作。Thread.sleep()与Object.wait()二者都可以暂停当前线程，释放CPU控制权，主要的区别在于Object.wait()在释放CPU同时，释放了对象锁的控制。
 
+### 常见业务场景
+
+1. 应用世界自动跳转的实现
+2. 一个业务逻辑有很多次的循环，每次循环之间没有影响，比如验证1万条url路径是否存在，正常情况要循环1万次，逐个去验证每一条URL，这样效率会很低，假设验证一条需要1分钟，总共就需要1万分钟，有点恐怖。这时可以用多线程，将1万条URL分成50等份，开50个线程，没个线程只需验证200条，这样所有的线程执行完是远小于1万分钟的。
+
+2. 需要知道一个任务的执行进度，比如我们常看到的进度条，实现方式可以是在任务中加入一个整型属性变量(这样不同方法可以共享)，任务执行一定程度就给变量值加1，另外开一个线程按时间间隔不断去访问这个变量，并反馈给用户。
 
 ### 面试常见问题
 
@@ -4200,62 +4512,7 @@ public class TreadPoolConfig {
 
    
 
-- CAS
-  CAS（Compare And Swap）指的是现代 CPU 广泛支持的一种对内存中的共享数据进行操作的一种特殊指令。这个指令会对内存中的共享数据做原子的读写操作。简单介绍一下这个指令的操作过程：首先，CPU 会将内存中将要被更改的数据与期望的值做比较。然后，当这两个值相等时，CPU 才会将内存中的数值替换为新的值。否则便不做操作。最后，CPU 会将旧的数值返回。这一系列的操作是原子的。它们虽然看似复杂，但却是 Java 5 并发机制优于原有锁机制的根本。简单来说，CAS 的含义是“我认为原有的值应该是什么，如果是，则将原有的值更新为新值，否则不做修改，并告诉我原来的值是多少”。（这段描述引自《Java并发编程实践》）
-  简单的来说，CAS有3个操作数，内存值V，旧的预期值A，要修改的新值B。当且仅当预期值A和内存值V相同时，将内存值V修改为B，否则返回V。这是一种乐观锁的思路，它相信在它修改之前，没有其它线程去修改它；而Synchronized是一种悲观锁，它认为在它修改之前，一定会有其它线程去修改它，悲观锁效率很低。下面来看一下AtomicInteger是如何利用CAS实现原子性操作的。
 
-  CAS 操作包含三个操作数 —— 内存位置（V）、预期原值（A）和新值(B)。 如果内存位置的值与预期原值相匹配，那么处理器会自动将该位置值更新为新值 。否则，处理器不做任何操作。无论哪种情况，它都会在 CAS 指令之前返回该位置的值。（在 CAS 的一些特殊情况下将仅返回 CAS 是否成功，而不提取当前值。）CAS 有效地说明了“我认为位置 V 应该包含值 A；如果包含该值，则将 B 放到这个位置；否则，不要更改该位置，只告诉我这个位置现在的值即可。”
-
-  CAS的目的：利用CPU的CAS指令，同时借助JNI（Java Native Interface）来完成Java的非阻塞算法。其它原子操作都是利用类似的特性完成的。而整个J.U.C（java.util.concurrent）都是建立在CAS之上的，因此对于synchronized阻塞算法，J.U.C在性能上有了很大的提升。
-
-  要实现无锁（lock-free）的非阻塞算法有多种实现方法，其中CAS（比较与交换，Compare and swap）是一种有名的无锁算法。CAS, CPU指令，在大多数处理器架构，包括IA32、Space中采用的都是CAS指令，CAS的语义是“我认为V的值应该为A，如果是，那么将V的值更新为B，否则不修改并告诉V的值实际为多少”，CAS是项乐观锁技术，当多个线程尝试使用CAS同时更新同一个变量时，只有其中一个线程能更新变量的值，而其它线程都失败，失败的线程并不会被挂起，而是被告知这次竞争中失败，并可以再次尝试。CAS有3个操作数，内存值V，旧的预期值A，要修改的新值B。当且仅当预期值A和内存值V相同时，将内存值V修改为B，否则什么都不做。
-
-  接下来通过**源代码来看 AtomicInteger 具体是如何实现**的原子操作。
-
-  　　首先看 value 的声明：
-
-  ```java
-  private volatile int value;
-  ```
-
-  　　volatile 修饰的 value 变量，保证了变量的可见性。
-
-  　　incrementAndGet() 方法，下面是具体的代码：
-
-  ```java
-  public final int incrementAndGet() {
-          for (;;) {
-              int current = get();
-              int next = current + 1;
-              if (compareAndSet(current, next))
-                  return next;
-          }
-   }
-  ```
-
-  　　通过源码，可以知道，这个方法的做法为先获取到当前的 value 属性值，然后将 value 加 1，赋值给一个局部的 next 变量，然而，这两步都是非线程安全的，但是内部有一个死循环，不断去做 compareAndSet 操作，直到成功为止，也就是修改的根本在 compareAndSet 方法里面，compareAndSet()方法的代码如下：
-
-  ```java
-  public final boolean compareAndSet(int expect, int update) {
-          return unsafe.compareAndSwapInt(this, valueOffset, expect, update);
-  }
-  ```
-
-  　　compareAndSet()方法调用的compareAndSwapInt()方法的声明如下，是一个native方法。 
-
-  ```java
-  public final native boolean compareAndSwapInt(Object var1, long var2, int var4, intvar5);
-  ```
-
-  　　compareAndSet 传入的为执行方法时获取到的 value 属性值，next 为加 1 后的值， compareAndSet 所做的为调用 Sun 的 UnSafe 的 compareAndSwapInt 方法来完成，此方法为 native 方法，compareAndSwapInt 基于的是 CPU 的 CAS 指令来实现的。所以基于 CAS 的操作可认为是无阻塞的，一个线程的失败或挂起不会引起其它线程也失败或挂起。并且由于 CAS 操作是 CPU 原语，所以性能比较好。
-
-  　　类似的，还有 decrementAndGet() 方法。它和 incrementAndGet() 的区别是将 value 减 1，赋值给next 变量。
-
-  ​      AtomicInteger 中还有 getAndIncrement() 和 getAndDecrement() 方法，他们的实现原理和上面的两个方法完全相同，区别是返回值不同，前两个方法返回的是改变之后的值，即 next。而这两个方法返回的是改变之前的值，即 current。还有很多的其他方法，就不列举了。
-
-- AQS
-
-  AQS(`AbstractQueuedSynchronizer`)，AQS是JDK下提供的一套用于实现基于FIFO等待队列的阻塞锁和相关的同步器的一个同步框架。这个抽象类被设计为作为一些可用原子int值来表示状态的同步器的基类。如果你有看过类似 `CountDownLatch` 类的源码实现，会发现其内部有一个继承了 `AbstractQueuedSynchronizer` 的内部类 `Sync`。可见 `CountDownLatch` 是基于AQS框架来实现的一个同步器.类似的同步器在JUC下还有不少。(eg. `Semaphore`)，AQS是JUC同步器的基石。
 
 ##  设计模式
 
@@ -5845,6 +6102,31 @@ SpringMVC框架是一个基于请求驱动的Web框架，并且使用了‘前�
 
 5、  处理器（页面控制器）的配置，从而进行功能处理 
 
+#### SpringMVC与Struts2区别与比较总结
+
+> [SpringMVC与Struts2区别与比较总结](https://blog.csdn.net/chenleixing/article/details/44570681)
+
+1、Struts2是类级别的拦截， 一个类对应一个request上下文，SpringMVC是方法级别的拦截，一个方法对应一个request上下文，而方法同时又跟一个url对应,所以说从架构本身上SpringMVC就容易实现restful url,而struts2的架构实现起来要费劲，因为Struts2中Action的一个方法可以对应一个url，而其类属性却被所有方法共享，这也就无法用注解或其他方式标识其所属方法了。
+
+2、由上边原因，SpringMVC的方法之间基本上独立的，独享request response数据，请求数据通过参数获取，处理结果通过ModelMap交回给框架，方法之间不共享变量，而Struts2搞的就比较乱，虽然方法之间也是独立的，但其所有Action变量是共享的，这不会影响程序运行，却给我们编码 读程序时带来麻烦，每次来了请求就创建一个Action，一个Action对象对应一个request上下文。
+3、由于Struts2需要针对每个request进行封装，把request，session等servlet生命周期的变量封装成一个一个Map，供给每个Action使用，并保证线程安全，所以在原则上，是比较耗费内存的。
+
+4、 拦截器实现机制上，Struts2有以自己的interceptor机制，SpringMVC用的是独立的AOP方式，这样导致Struts2的配置文件量还是比SpringMVC大。
+
+5、SpringMVC的入口是servlet，而Struts2是filter（这里要指出，filter和servlet是不同的。以前认为filter是servlet的一种特殊），这就导致了二者的机制不同，这里就牵涉到servlet和filter的区别了。
+
+6、SpringMVC集成了Ajax，使用非常方便，只需一个注解@ResponseBody就可以实现，然后直接返回响应文本即可，而Struts2拦截器集成了Ajax，在Action中处理时一般必须安装插件或者自己写代码集成进去，使用起来也相对不方便。
+
+7、SpringMVC验证支持JSR303，处理起来相对更加灵活方便，而Struts2验证比较繁琐，感觉太烦乱。
+
+8、Spring MVC和Spring是无缝的。从这个项目的管理和安全上也比Struts2高（当然Struts2也可以通过不同的目录结构和相关配置做到SpringMVC一样的效果，但是需要xml配置的地方不少）。
+
+9、 设计思想上，Struts2更加符合OOP的编程思想， SpringMVC就比较谨慎，在servlet上扩展。
+
+10、SpringMVC开发效率和性能高于Struts2。
+
+11、SpringMVC可以认为已经100%零配置。
+
 ## Spring Boot
 
 ### Spring Boot 的三种启动方式
@@ -6023,6 +6305,206 @@ public class IPFilter {
         }
     }
 }
+```
+
+### 密码加密
+
+任何应用考虑到安全，绝不能明文的方式保存密码。密码应该通过哈希算法进行加密。有很多标准的算法比如SHA或者MD5，结合salt(盐)是一个不错的选择。 Spring Security提供了BCryptPasswordEncoder类,实现Spring的PasswordEncoder接口使用BCrypt强哈希方法来加密密码。
+
+BCrypt强哈希方法 每次加密的结果都不一样。
+
+（1）tensquare_user工程的pom引入依赖
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring‐boot‐starter‐security</artifactId>
+</dependency>
+```
+
+（2）添加配置类 （资源/工具类中提供）
+
+我们在添加了spring security依赖后，所有的地址都被spring security所控制了，我们目前只是需要用到BCrypt密码加密的部分，所以我们要添加一个配置类，配置为所有地址都可以匿名访问。
+
+```java
+/**
+ * 安全配置类
+ */
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .antMatchers("/**").permitAll()
+                .anyRequest().authenticated()
+                .and().csrf().disable();
+    }
+}
+```
+
+（3）修改tensquare_user工程的Application, 配置bean
+
+```java
+@Bean    
+public BCryptPasswordEncoder bcryptPasswordEncoder(){    
+	return new BCryptPasswordEncoder();        
+} 
+```
+
+#### 管理员密码加密
+
+##### 新增管理员密码加密
+
+修改tensquare_user工程的AdminService
+
+```java
+@Autowired    
+BCryptPasswordEncoder encoder;    
+   
+public void add(Admin admin) {    
+	admin.setId(idWorker.nextId()+""); //主键值        
+    //密码加密        
+    String newpassword = encoder.encode(admin.getPassword());//加密后的密码
+       
+    admin.setPassword(newpassword);                  
+    adminDao.save(admin);        
+}
+```
+
+##### 管理员登陆密码校验
+
+（1）AdminDao增加方法定义
+
+```java
+public Admin findByLoginname(String loginname);
+```
+
+（2）AdminService增加方法
+
+```java
+/**    
+ * 根据登陆名和密码查询    
+ * @param loginname    
+ * @param password    
+ * @return    
+ */    
+public Admin findByLoginnameAndPassword(String loginname, String password){
+   
+    Admin admin = adminDao.findByLoginname(loginname);        
+    if( admin!=null && encoder.matches(password,admin.getPassword())) {
+	    return admin;            
+    }else{        
+    	return null;            
+    }        
+} 
+```
+
+（3）AdminController增加方法
+
+```java
+/**    
+ * 用户登陆    
+ * @param loginname    
+ * @param password    
+ * @return    
+ */    
+@RequestMapping(value="/login",method=RequestMethod.POST)    
+public Result login(@RequestBody Map<String,String> loginMap){    
+    Admin admin =
+            adminService.findByLoginnameAndPassword(loginMap.get("loginname"),
+            loginMap.get("password"));
+
+    if(admin!=null){        
+	    return new Result(true,StatusCode.OK,"登陆成功");            
+    }else{        
+    	return new Result(false,StatusCode.LOGINERROR,"用户名或密码错误");
+    }        
+} 
+```
+
+#### 用户密码加密
+
+##### 用户注册密码加密
+
+（4）修改tensquare_user工程的UserService 类，引入BCryptPasswordEncoder
+
+```java
+@Autowired    
+BCryptPasswordEncoder encoder; 
+```
+
+（5）修改tensquare_user工程的UserService 类的add方法，添加密码加密的逻辑
+
+```java
+/**
+ * 增加    
+ * @param user    
+ * @param code    
+ */    
+public void add(User user,String code) {    
+    ........        
+    ........        
+    ........        
+    //密码加密        
+    String newpassword = encoder.encode(user.getPassword());//加密后的密码
+
+    user.setPassword(newpassword);        
+    userDao.save(user);        
+} 
+```
+
+##### 用户登陆密码判断
+
+（1）修改tensquare_user工程的UserDao接口，增加方法定义
+
+```JAVA
+/**
+ * 根据手机号查询用户
+ * @param mobile
+ * @return
+ */
+public User findByMobile(String mobile);
+```
+
+（2）修改tensquare_user工程的UserService 类，增加方法
+
+```java
+/**    
+ * 根据手机号和密码查询用户    
+ * @param mobile    
+ * @param password    
+ * @return    
+ */    
+public User findByMobileAndPassword(String mobile,String password){    
+    User user = userDao.findByMobile(mobile);        
+    if(user!=null &&  encoder.matches(password,user.getPassword())){        
+    	return user;            
+    }else{        
+    	return null;            
+    }        
+}
+```
+
+（4）修改tensquare_user工程的UserController类，增加login方法
+
+```java
+/**    
+ * 用户登陆    
+ * @param mobile    
+ * @param password    
+ * @return    
+ */    
+@RequestMapping(value="/login",method=RequestMethod.POST)    
+public Result login(String mobile,String password){    
+    User user = userService.findByMobileAndPassword(mobile,password);        
+    if(user!=null){        
+    	return new Result(true,StatusCode.OK,"登陆成功");            
+    }else{        
+    	return new Result(false,StatusCode.LOGINERROR,"用户名或密码错误");
+    }        
+} 
 ```
 
 
@@ -8844,7 +9326,216 @@ RESTful架构有一些典型的设计误区。
 >
 > 　　Accept: vnd.example-com.foo+json; version=2.0
 
+## 微服务
+
+> [单体、服务化架构一点概念](http://hyuga.top/2018/09/18/jiagou-gainian/)
+
+### 什么是系统架构设计
+
+系统架构设计描述了在应用系统的内部，如何根据业务、技术、组织、灵活性、可扩展性以及可维护性等多种因素，将应用系统划分成不同的部分，并使这些部分彼此之间相互分工、相互协作，从而使得这些部分之间能够进行有机的联系，合并组装成为一个整体，完成目标系统的所有工作。
+
+### 什么是微服务
+
+微服务架构(Microservice Architecture)是一种架构风格，它的主要作用是将功能分解到离散的各个服务当中，从而降低系统的耦合性，并提供更加灵活的服务支持。
+
+### 单体应用的优缺点
+
+所谓单体应用，就是把所有业务的代码都放在一起。随着业务递增，项目慢慢大了起来，单体应用的缺点就逐一暴露出来了。单体应用主要有以下缺点：
+
+1. 可扩展性差： 随着功能的增加，垂直扩展的成本将会越来越大；而对于水平扩展而言，因为所有代码都运行在同一个进程，没办法做到针对应用程序的部分功能做独立的扩展。
+
+   垂直扩展就是升级原有的系统处理能力，比如从硬件上可以扩充系统内存，增加CPU核数，升级网卡等；从软件上可以通过使用Cache减少IO次数，使用异步增加吞吐量
+
+   水平扩展就是使用结合负载均衡服务器实现集群部署，解决高可用问题。
+
+2. 维护成本大： 随着应用程序的功能越来越多，当出现 bug 时，可能引起 bug 的原因组合越来越多，导致分析、定位和修复的成本增加；并且在对全局功能缺乏深度理解的情况下，容易在修复 bug 时引入新的 bug。再就是团队越来越大时，沟通成本、管理成本也显著增加。
+
+3. 稳定性不高：一个微不足道的小问题，可以导致整个应用挂掉。
+
+4. 持续交付周期长： 构建和部署时间会随着功能的增多而增加，改了一个业务的一行代码，都需要重启整个单体应用，重新部署。
+
+5. 新人培养周期长： 新成员了解背景、熟悉业务和配置环境的时间越来越长。
+
+6. 技术选型成本高： 单块架构倾向于采用统一的技术平台或方案来解决所有问题，如果后续想引入新的技术或框架，成本和风险都很大。
+
+正因为单体应用有着这些缺陷，才有了微服务。
+
+优点：
+
+- 易于开发： 开发方式简单，IDE 支持好，方便运行和调试。
+- 易于测试： 所有功能运行在一个进程中，一旦进程启动，便可以进行系统测试。
+- 易于部署： 只需要将打好的一个软件包发布到服务器即可。
+- 易于水平伸缩： 只需要创建一个服务器节点，配置好运行时环境，再将软件包发布到新服务器节点即可运行程序（当然也需要采取分发策略保证请求能有效地分发到新节点）。
+
+### 微服务架构的特性
+
+**1. 独立性**
+
+微服务架构中的每个服务，都是具有自身的业务逻辑，符合高内聚、低耦合以及单一职责原则。每个服务在应用交付过程中，能够独立地开发、测试和部署。
+
+**2. 轻量级通信**
+
+服务之间通过轻量级的通信机制实现互通互联，而所谓的轻量级，通常指语言无关、平台无关的交互方式。
+
+对于轻量级通信的格式而言，我们熟悉的 XML 和 JSON，它们是语言无关、平台无关的；对于通信的协议而言，通常基于 HTTP，能让服务间的通信变得标准化、无状态化。目前大家熟悉的 REST（Representational State Transfer）是实现服务间互相协作的轻量级通信机制之一。使用轻量级通信机制，可以让团队选择更适合的语言、工具或者平台来开发服务本身。
+
+RPC与REST
+
+**RPC是面向过程，Restful是面向资源**，并且使用了Http动词。从这个维度上看，Restful风格的url在表述的精简性、可读性上都要更好。
+
+REST（Representational State Transfer 表现层状态转化）
+
+- 要求要将接口以资源的形式呈现。REST规范把所有内容都视为资源，网络上一切皆资源
+- 它的URL主体是资源，是个名词
+- 仅支持HTTP协议
+
+RPC（Remote Procedure Call 远程过程调用）
+
+- 主体都是动作，是个动词，表示我要做什么。
+- 像调用本地方法一样调用远程方法
+- 大多数都是用TCP协议
+
+比较：都是网络交互的协议规范。通常用于多个微服务之间的通信协议。
+
+![img](https://mmbiz.qpic.cn/mmbiz_png/VxcvTeWncReyq4GXO296qb1BuqBHZJkJyxiaFjsvq1vrMm7bHiautH18Ej5NF0o3KyWkmq30eQoTRicPC5gqXxxGg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+高与低是对实现两种规范框架的相对比较，但也不是绝对的，需要根据实际情况而定。
+
+1、HTTP相对更规范，更标准，更通用，无论哪种语言都支持http协议。如果你是对外开放API，例如开放平台，外部的编程语言多种多样，你无法拒绝对每种语言的支持，现在开源中间件，基本最先支持的几个协议都包含RESTful。
+
+2、RPC 框架作为架构微服务化的基础组件，它能大大降低架构微服务化的成本，提高调用方与服务提供方的研发效率，屏蔽跨进程调用函数（服务）的各类复杂细节。让调用方感觉就像调用本地函数一样调用远端函数、让服务提供方感觉就像实现一个本地函数一样来实现服务。
+
+**4. 进程隔离**
+
+单体架构中，整个系统运行在同一个进程中，当应用进行部署时，必须停掉当前正在运行的应用，部署完成后再重启进程，无法做到独立部署。
+
+有时候我们会将重复的代码抽取出来封装成组件，在单块架构中，组件通常的形态叫做共享库（如 jar 包或者 DLL），但是当程序运行时，所有组件最终也会被加载到同一进程中运行。
+
+在微服务架构中，应用程序由多个服务组成，每个服务都是高度自治的独立业务实体，可以运行在独立的进程中，不同的服务能非常容易地部署到不同的主机上。
+
+理论上所有服务可以部署在同一个服务器节点，但是并不推荐这么做，因为微服务架构的主旨就是高度自治和高度隔离。
+
+### 微服务的本质
+
+**1. 服务作为组件**
+
+微服务也可以被认为是一种组件，但是跟传统组件的区别在于它可以独立部署，因此它的一个显著的优势。另外一个优点是，它在组件与组件之间定义了清晰的、语言无关、平台无关的规范接口，耦合度低，灵活性非常高。但它的不足之处是，分布式调用严重依赖于网络的可靠性和稳定性。
+
+**2. 围绕业务组织团队**
+
+在单块架构中，企业一般会根据技能划分团队，在这种组织架构下，即便是简单的需求变更都有可能需要跨团队协作，沟通成本很高。而在微服务架构中，它提倡以业务为核心，按照业务能力来组织团队，团队中的成员具有多样性的技能。
+
+**3. 关注产品而非项目**
+
+在单块架构中，应用基本上是基于“项目模式”构建的，即项目启动时从不同技能资源池中抽取相关资源组成团队，项目结束后释放所有资源。这种情况下团队成员缺乏主人翁意识和产品成就感。
+
+在微服务架构中，提倡采用“产品模式”构建，即更倾向于让团队负责整个服务的生命周期，以便提供更优质的服务。
+
+**4. 技术多样性**
+
+微服务架构中，提倡针对不同的业务特征选择合适的技术方案，有针对性的解决具体业务问题，而不是像单块架构中采用统一的平台或技术来解决所有问题。
+
+**5. 业务数据独立**
+
+随着业务的发展，可以方便地选择更合的工具管理或者迁移业务数据。
+
+**6. 基础设施自动化**
+
+微服务架构提供自主管理其相关的业务数据，这样可以随着业务的发展提供数据接口集成，而不是以数据库的方式同其他服务集成。另外，在微服务架构的实践过程中，对持续交付和部署流水线的要求很高，将促进企业不断寻找更高效的方式完成基础设施的自动化及 DevOps 运维能力的提升。
+
+### 微服务的优缺点
+
+优点：
+
+- 边界清晰，开发测试维护简单：每个服务职责清晰，只关注于一个业务功能
+- 技术栈灵活：每个服务开发语言可不同，只需要把服务注册到注册中心，统一协议
+- 松耦合：各个服务间不像单体架构一样通过方法调用
+- 可用性：单个服务宕机，不影响其他服务访问，可能影响业务，如果有关联
+- 按需扩展：某个服务需要做硬件升级，比如集群，硬件升级等，不影响其他服务
+
+缺点：
+
+- 分布式带来的复杂性：网络延迟、容错性、消息序列化、数据一致性、异步机制、版本化、差异化等
+- 运维开销成本增加：整体应用可能只需部署至一小片应用服务区集群，而微服务架构可能变成需要构建/测试/部署/运行数十个独立的服务，并可能需要支持多种语言和环境。
+- 服务版本问题：当某个服务接口版本升级，其他调用的单体服务可能都要进行升级
+
+### 服务架构的落地是存在很多挑战的
+
+**1. 分布式系统的复杂性**
+
+微服务架构是基于分布式的系统，而构建分布式系统必然会带来额外的开销。
+
+- 性能： 分布式系统是跨进程、跨网络的调用，受网络延迟和带宽的影响。
+- 可靠性： 由于高度依赖于网络状况，任何一次的远程调用都有可能失败，随着服务的增多还会出现更多的潜在故障点。因此，如何提高系统的可靠性、降低因网络引起的故障率，是系统构建的一大挑战。
+- 异步： 异步通信大大增加了功能实现的复杂度，并且伴随着定位难、调试难等问题。
+- 数据一致性： 要保证分布式系统的数据强一致性，成本是非常高的，需要在 C（一致性）A（可用性）P（分区容错性） 三者之间做出权衡。
+
+**2. 运维成本**
+
+运维主要包括配置、部署、监控与告警和日志收集四大方面。微服务架构中，每个服务都需要独立地配置、部署、监控和收集日志，成本呈指数级增长。
+
+**3. 自动化部署**
+
+在微服务架构中，每个服务都独立部署，交付周期短且频率高，人工部署已经无法适应业务的快速变化。因此如何有效地构建自动化部署体系，是微服务面临的另一个挑战。
+
+**4. DevOps 与组织架构**
+
+在微服务架构的实施过程中，开发人员和运维人员的角色发生了变化，开发者将承担起整个服务的生命周期的责任，包括部署和监控；而运维则更倾向于顾问式的角色，尽早考虑服务如何部署。因此，按需调整组织架构、构建全功能的团队，也是一个不小的挑战。
+
+**5. 服务间的依赖测试**
+
+单块架构中，通常使用集成测试来验证依赖是否正常。而在微服务架构中，服务数量众多，每个服务都是独立的业务单元，服务主要通过接口进行交互，如何保证依赖的正常，是测试面临的主要挑战。
+
+**6. 服务间的依赖管理**
+
+微服务架构中，服务数量众多，如何清晰有效地展示服务间的依赖关系也是个不小的挑战。
+
+### 微服务与SOA
+
+![](https://mmbiz.qpic.cn/mmbiz_png/eZzl4LXykQzla0DNH3icbhib5JlicjqfFLPaTfia6vjBBZORmiahOpU7qyGgXDPKdtmlsKeTm7WhybicLeDsDInTh2GQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+
+微服务是SOA发展出来的产物，它是一种比较现代化的细粒度的SOA实现方式。
+
+SOA（Service-Oriented Architecture 面向服务的架构）是一个组件模型，它将应用程序的不同功能单元（称为服务）进行拆分，并通过这些服务之间定义良好的接口和契约联系起来。接口是采用中立的方式进行定义的，它应该独立于实现服务的硬件平台、操作系统和编程语言。这使得构建在各种各样的系统中的服务可以以一种统一和通用的方式进行交互。
+
 ## Spring Cloud
+
+### 什么是SpringCloud
+
+Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、熔断器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。Spring并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过Spring Boot风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。
+
+### SpringCloud与SpringBoot的关系
+
+Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 快速开发单个微服务，Spring Cloud是一个基于Spring Boot实现的云应用开发工具；Spring Boot专注于快速、方便集成的单个微服务个体，Spring Cloud关注全局的服务治理框架；Spring Boot使用了默认大于配置的理念，很多集成方案已经帮你选择好了，能不配置就
+不配置，Spring Cloud很大的一部分是基于Spring Boot来实现，可以不基于Spring Boot吗？不可以。
+
+Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud离不开Spring Boot，属于依赖的关系。
+
+### SpringCloud主要框架
+
+1. 服务注册——Netflix Eureka
+2. 服务调用——Netflix Feign
+3. 熔断器——Netflix Hystrix
+4. 服务网关——Netflix Zuul
+5. 分布式配置——Spring Cloud Config
+6. 消息总线 —— Spring Cloud Bus
+
+### Spring Cloud和Dubbo对比
+
+或许很多人会说Spring Cloud和Dubbo的对比有点不公平，Dubbo只是实现了服务治理，而Spring Cloud下面有17个子项目（可能还会新增）分别覆盖了微服务架构下的方方面面，服务治理只是其中的一个方面，一定程度来说，Dubbo只是Spring Cloud Netflix中的一个子集。
+
+|              | Dubbo     | Spring Cloud                 |
+| ------------ | --------- | ---------------------------- |
+| 服务注册中心 | Zookeeper | Spring Cloud Netflix Eureka  |
+| 服务调用方式 | RPC       | REST API                     |
+| 服务网关     | 无        | Spring Cloud Netflix Zuul    |
+| 熔断器       | 不完善    | Spring Cloud Netflix Hystrix |
+| 分布式配置   | 无        | Spring Cloud Config          |
+| 服务跟踪     | 无        | Spring Cloud Sleuth          |
+| 消息总线     | 无        | Spring Cloud Bus             |
+| 数据流       | 无        | Spring Cloud Stream          |
+| 批量任务     | 无        | Spring Cloud Task            |
+| ……           | ……        | ……                           |
 
 ### 跨域处理
 
@@ -8865,6 +9556,284 @@ CORS(Cross-Origin Resource Sharing, 跨源资源共享)是W3C出的一个标准�
 ![](https://i.loli.net/2019/03/23/5c95e7bf10592.jpg)
 
 默认情况下41bit的时间戳可以支持该算法使用到2082年，10bit的工作机器id可以支持1024台机器，序列号支持1毫秒产生4096个自增序列id . SnowFlake的优点是，整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞(由数据中心ID和机器ID作区分)，并且效率较高，经测试，SnowFlake每秒能够产生26万ID左右。
+
+### 常见的认证机制
+
+#### HTTP Basic Auth
+
+HTTP Basic Auth简单点说明就是每次请求API时都提供用户的username和password，简言之，Basic Auth是配合RESTful API 使用的最简单的认证方式，只需提供用户名密码即可，但由于有把用户名密码暴露给第三方客户端的风险，在生产环境下被使用的越来越少。因此，在开发对外开放的RESTful API时，尽量避免采用HTTP Basic
+Auth
+
+#### Cookie Auth
+
+Cookie认证机制就是为一次请求认证在服务端创建一个Session对象，同时在客户端的浏览器端创建了一个Cookie对象；通过客户端带上来Cookie对象来与服务器端的session对象匹配来实现状态管理的。默认的，当我们关闭浏览器的时候，cookie会被删除。但可以通过修改cookie 的expire time使cookie在一定时间内有效；
+
+![](https://i.loli.net/2019/03/24/5c972786c2906.jpg)
+
+#### OAuth
+
+OAuth（开放授权）是一个开放的授权标准，允许用户让第三方应用访问该用户在某一web服务上存储的私密的资源（如照片，视频，联系人列表），而无需将用户名和密码提供给第三方应用。
+
+OAuth允许用户提供一个令牌，而不是用户名和密码来访问他们存放在特定服务提供者的数据。每一个令牌授权一个特定的第三方系统（例如，视频编辑网站)在特定的时段（例如，接下来的2小时内）内访问特定的资源（例如仅仅是某一相册中的视频）。这样，OAuth让用户可以授权第三方网站访问他们存储在另外服务提供者的某些特定信
+息，而非所有内容
+
+下面是OAuth2.0的流程：
+
+![](https://i.loli.net/2019/03/24/5c9727dbcf37f.jpg)
+
+这种基于OAuth的认证机制适用于个人消费者类的互联网产品，如社交类APP等应用，但是不太适合拥有自有认证权限管理的企业应用。
+
+#### Token Auth
+
+使用基于 Token 的身份验证方法，在服务端不需要存储用户的登录记录。大概的流程是这样的：
+
+1. 客户端使用用户名跟密码请求登录
+2. 服务端收到请求，去验证用户名与密码
+3. 验证成功后，服务端会签发一个 Token，再把这个 Token 发送给客户端
+4. 客户端收到 Token 以后可以把它存储起来，比如放在 Cookie 里
+5. 客户端每次向服务端请求资源的时候需要带着服务端签发的 Token
+6. 服务端收到请求，然后去验证客户端请求里面带着的 Token，如果验证成功，就向客户端返回请求的数据
+
+![](https://i.loli.net/2019/03/24/5c97281e3f4f4.jpg)
+
+##### Token Auth的优点
+
+Token机制相对于Cookie机制又有什么好处呢？
+
+- 支持跨域访问: Cookie是不允许垮域访问的，这一点对Token机制是不存在的，前提是传输的用户认证信息通过HTTP头传输.
+- 无状态(也称：服务端可扩展行):Token机制在服务端不需要存储session信息，因为Token 自身包含了所有登录用户的信息，只需要在客户端的cookie或本地介质存储状态信息.
+- 更适用CDN: 可以通过内容分发网络请求你服务端的所有资料（如：javascript，HTML,图片等），而你的服务端只要提供API即可.
+- 去耦: 不需要绑定到一个特定的身份验证方案。Token可以在任何地方生成，只要在你的API被调用的时候，你可以进行Token生成调用即可.
+- 更适用于移动应用: 当你的客户端是一个原生平台（iOS, Android，Windows 8等）时，Cookie是不被支持的（你需要通过Cookie容器进行处理），这时采用Token认证机制就会简单得多。
+- CSRF:因为不再依赖于Cookie，所以你就不需要考虑对CSRF（跨站请求伪造）的防范。
+- 性能: 一次网络往返时间（通过数据库查询session信息）总比做一次HMACSHA256计算 的Token验证和解析要费时得多.
+- 不需要为登录页面做特殊处理: 如果你使用Protractor 做功能测试的时候，不再需要为登录页面做特殊处理.
+
+- 基于标准化:你的API可以采用标准化的 JSON Web Token (JWT). 这个标准已经存在多个后端库（.NET, Ruby, Java,Python, PHP）和多家公司的支持（如：Firebase,Google, Microsoft）.
+
+##### 基于JWT的Token认证机制实现
+
+###### 什么是JWT
+
+JSON Web Token（JWT）是一个非常轻巧的规范。这个规范允许我们使用JWT在用户和服务器之间传递安全可靠的信息。
+
+###### JWT组成
+
+一个JWT实际上就是一个字符串，它由三部分组成，头部、载荷与签名。
+
+头部（Header）
+
+头部用于描述关于该JWT的最基本的信息，例如其类型以及签名所用的算法等。这也可以被表示成一个JSON对象。
+
+```json
+{"typ":"JWT","alg":"HS256"}
+```
+
+在头部指明了签名算法是HS256算法。 我们进行BASE64编码http://base64.xpcha.com/，编码后的字符串如下：
+
+> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+
+小知识：Base64是一种基于64个可打印字符来表示二进制数据的表示方法。由于2的6次方等于64，所以每6个比特为一个单元，对应某个可打印字符。三个字节有24个比特，对应于4个Base64单元，即3个字节需要用4个可打印字符来表示。JDK 中提供了非常方便的 BASE64Encoder 和 BASE64Decoder，用它们可以非常方便的完成基于 BASE64 的编码和解码.
+
+载荷（playload）
+
+载荷就是存放有效信息的地方。这个名字像是特指飞机上承载的货品，这些有效信息包含三个部分
+
+（1）标准中注册的声明（建议但不强制使用）
+
+```yaml
+iss: jwt签发者
+sub: jwt所面向的用户
+aud: 接收jwt的一方
+exp: jwt的过期时间，这个过期时间必须要大于签发时间
+nbf: 定义在什么时间之前，该jwt都是不可用的.
+iat: jwt的签发时间
+jti: jwt的唯一身份标识，主要用来作为一次性token,从而回避重放攻击。
+```
+
+（2）公共的声明
+公共的声明可以添加任何的信息，一般添加用户的相关信息或其他业务需要的必要信息.但不建议添加敏感信息，因为该部分在客户端可解密.
+（3）私有的声明
+私有声明是提供者和消费者所共同定义的声明，一般不建议存放敏感信息，因为base64是对称解密的，意味着该部分信息可以归类为明文信息。这个指的就是自定义的claim。比如前面那个结构举例中的admin和name都属于自定的claim。这些claim跟JWT标准规定的claim区别在于：JWT规定的claim，JWT的接收方在拿到JWT之后，都知道怎么对这些标准的claim进行验证(还不知道是否能够验证)；而private claims不会验证，除非明确告诉接收方要对这些claim进行验证以及规则才行。
+
+定义一个payload:
+
+```json
+{"sub":"1234567890","name":"John Doe","admin":true}
+```
+
+然后将其进行base64编码，得到Jwt的第二部分。
+
+> eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9
+
+签证（signature）
+
+jwt的第三部分是一个签证信息，这个签证信息由三部分组成：
+
+1. header (base64后的)
+2. payload (base64后的)
+3. secret
+
+这个部分需要base64加密后的header和base64加密后的payload使用.连接组成的字符串，然后通过header中声明的加密方式进行加盐secret组合加密，然后就构成了jwt的第三部分。
+
+> TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+将这三部分用.连接成一个完整的字符串,构成了最终的jwt:
+
+> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+注意：secret是保存在服务器端的，jwt的签发生成也是在服务器端的，secret就是用来进行jwt的签发和jwt的验证，所以，它就是你服务端的私钥，在任何场景都不应该流露出去。一旦客户端得知这个secret, 那就意味着客户端是可以自我签发jwt了。
+
+##### Java的JJWT实现JWT
+
+###### 什么是JJWT
+
+JJWT是一个提供端到端的JWT创建和验证的Java库。永远免费和开源(Apache License，版本2.0)，JJWT很容易使用和理解。它被设计成一个以建筑为中心的流畅界面，隐藏了它的大部分复杂性。
+
+###### JJWT快速入门
+
+**token的创建**
+
+（1）创建maven工程，引入依赖
+
+```xml
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.6.0</version>
+</dependency>
+```
+
+（2）创建类CreateJwtTest，用于生成token
+
+```java
+public class CreateJwtTest {
+    public static void main(String[] args) {
+        JwtBuilder builder= Jwts.builder().setId("888")
+                .setSubject("小白")
+                .setIssuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS256,"itcast");
+        System.out.println( builder.compact() );
+    }
+}
+```
+
+setIssuedAt用于设置签发时间, signWith用于设置签名秘钥
+
+（3）测试运行，输出如下:
+
+> eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTM0NTh9.gq0J‐cOM_qCNqU_s‐d_IrRytaNenesPmqAIhQpYXHZk
+
+再次运行，会发现每次运行的结果是不一样的，因为我们的载荷中包含了时间。
+
+**token的解析**
+
+我们刚才已经创建了token ，在web应用中这个操作是由服务端进行然后发给客户端，客户端在下次向服务端发送请求时需要携带这个token（这就好像是拿着一张门票一样），那服务端接到这个token 应该解析出token中的信息（例如用户id）,根据这些信息查询数据库返回相应的结果。
+
+创建ParseJwtTest
+
+```JAVA
+public class ParseJwtTest {
+    public static void main(String[] args) {
+        String token = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTM0NTh9.gq0J‐cOM_qCNqU_s‐d_IrRytaNenesPmqAIhQpYXHZk";
+        Claims claims = Jwts.parser().setSigningKey("itcast").parseClaimsJws(token).getBody();
+        System.out.println("id:"+claims.getId());
+        System.out.println("subject:"+claims.getSubject());
+        System.out.println("IssuedAt:"+claims.getIssuedAt());
+    }
+}
+```
+
+试着将token或签名秘钥篡改一下，会发现运行时就会报错，所以解析token也就是验证token
+
+**token过期校验**
+
+有很多时候，我们并不希望签发的token是永久生效的，所以我们可以为token添加一个过期时间。
+
+创建CreateJwtTest2
+
+```java
+public class CreateJwtTest2 {
+    public static void main(String[] args) {
+        //为了方便测试，我们将过期时间设置为1分钟
+        long now = System.currentTimeMillis();//当前时间
+        long exp = now + 1000*60;//过期时间为1分钟
+        JwtBuilder builder= Jwts.builder().setId("888")
+                .setSubject("小白")
+                .setIssuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS256,"itcast")
+           .setExpiration(new Date(exp));      
+        System.out.println( builder.compact() );
+    }
+}
+```
+
+setExpiration 方法用于设置过期时间
+
+修改ParseJwtTest
+
+```java
+public class ParseJwtTest {
+    public static void main(String[] args) {
+        String compactJws="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTY1NjksImV4cCI6MTUyMzQxNjYyOX0.Tk91b6mvyjpKcldkic8DgXz0zsPFFnRgTgkgcAsa9cc";
+        Claims claims =
+Jwts.parser().setSigningKey("itcast").parseClaimsJws(compactJws).getBody();
+        System.out.println("id:"+claims.getId());
+        System.out.println("subject:"+claims.getSubject());
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy‐MM‐dd hh:mm:ss");
+        System.out.println("签发时间:"+sdf.format(claims.getIssuedAt()));
+        System.out.println("过期时间:"+sdf.format(claims.getExpiration()));
+        System.out.println("当前时间:"+sdf.format(new Date()) );
+    }
+}
+```
+
+测试运行，当未过期时可以正常读取，当过期时会引发io.jsonwebtoken.ExpiredJwtException异常。
+
+**自定义claims**
+
+我们刚才的例子只是存储了id和subject两个信息，如果你想存储更多的信息（例如角色）可以定义自定义claims 
+
+创建CreateJwtTest3
+
+```java
+public class CreateJwtTest3 {
+    public static void main(String[] args) {
+        //为了方便测试，我们将过期时间设置为1分钟
+        long now = System.currentTimeMillis();//当前时间
+        long exp = now + 1000*60;//过期时间为1分钟
+        JwtBuilder builder= Jwts.builder().setId("888")
+                .setSubject("小白")
+                .setIssuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS256,"itcast")
+                .setExpiration(new Date(exp))
+                .claim("roles","admin")
+                .claim("logo","logo.png");
+        System.out.println( builder.compact() );
+    }
+}
+```
+
+修改ParseJwtTest
+
+```java
+public class ParseJwtTest {
+    public static void main(String[] args) {
+        String
+compactJws="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTczMjMsImV4cCI6MTUyMzQxNzM4Mywicm9sZXMiOiJhZG1pbiIsImxvZ28iOiJsb2dvLnBuZyJ9.b11p4g4rE94rqFhcfzdJTPCORikqP_1zJ1MP8KihYTQ";
+        Claims claims =
+Jwts.parser().setSigningKey("itcast").parseClaimsJws(compactJws).getBody();
+        System.out.println("id:"+claims.getId());
+        System.out.println("subject:"+claims.getSubject());
+        System.out.println("roles:"+claims.get("roles"));
+        System.out.println("logo:"+claims.get("logo"));
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy‐MM‐dd hh:mm:ss");
+        System.out.println("签发时间:"+sdf.format(claims.getIssuedAt()));
+        System.out.println("过期时间:"+sdf.format(claims.getExpiration()));
+        System.out.println("当前时间:"+sdf.format(new Date()) );
+    }
+}
+```
 
 ## MongoDB
 
@@ -9153,3 +10122,848 @@ Head插件可以实现基本信息的查看，rest请求的模拟，数据的检
 ### IK分词器
 
 IK分词是一款国人开发的相对简单的中文分词器。虽然开发者自2012年之后就不在维护了，但在工程应用中IK算是比较流行的一款！
+
+## 项目整理
+
+### 应用世界
+
+#### Hacker News排名算法
+
+> [排名算法](https://libo9527.github.io/2019/01/05/Study-Notes-of-Algorithm/)
+
+![img](https://i.loli.net/2018/12/12/5c10c01fd8f48.png)
+
+P：表示帖子的得票数，减去1是为了忽略发帖人的投票。
+
+T：表示距离发帖的时间（单位为小时），加上2是为了防止最新的帖子导致分母过小（之所以选择2，可能是因为从原始文章出现在其他网站，到转贴至Hacker News，平均需要两个小时）。
+
+G：表示”重力因子”（gravityth power），即将帖子排名往下拉的力量，默认值为1.8
+
+结论：
+
+1. 得票越多，排名越高。
+2. 发帖时间越新，排名越高。或者说，帖子的排名会随着时间不断下降。（经过24小时之后，所有帖子的得分基本上都小于1）
+3. **重力因子G**数值大小决定了排名随时间下降的速度。G值越大，排名下降得越快。
+
+缺点：用户只能投赞成票，不允许用户投反对票
+
+项目中的代码
+
+```java
+public class RankingUtil {
+
+    /**
+     * 排名算法，分数越大越靠前
+     *
+     * @param p 阅读数/点击数
+     * @param h 小时数
+     * @param t 小时偏移量
+     * @param g 重力因子
+     * @return
+     */
+    public static Integer score(Integer p, Integer h, Integer t, double g) {
+        int score = (int) (((p - 1) / Math.pow(h + t, g)));
+        return score <= 0 ? 0 : score;
+    }
+}
+```
+
+应用：应用世界中的应用排名。后期需求要求可以手动排名，加了排序数字段。将距离应用上架时间和重力因子作为动态配置参数，通过sprint boot的actuator的自动监听实现在不重启服务器的情况下[自动刷新配置](https://blog.csdn.net/xtayfjpk/article/details/81334704)。
+
+#### Shiro
+
+##### 概念解释
+
+1. SecurityManager
+
+   这个类是shiro的核心，shiro的所有功能（登录校验、授权）都是通过这个类实现的。但是他其实什么都不做，他只是一个平台，就像淘宝一样，自己啥也不卖，而是让别人卖 。securityManager是通过它内部的属性来实现的各种功能的，其中最主要的就是Reaml。
+
+2. Realm
+
+   realm有“域”的意思，引申为“来源”，也就是说某些东西原来是在哪的，在shiro判断某个用户能不能登录或者是能不能做什么事的时候，他需要知道之前程序对该用户的信息（比如用户名，密码，角色，权限）的存储放在哪里，这个“哪里”就是realm，我们在实际开发中只有一个域，那就是关系型数据库中的User表，但是有的情况下可能有多个域，比如某些网站允许你使用qq号登陆，也允许你使用自己注册的账号登陆，那就有两个域。简单一句话，域就是存储用户信息的地方，这个很好理解。在以后shiro的登录校验和权限管理的时候都是需要这个接口的，因为他存储了所有的信息。他的实现类有AuthenticationRealm，用来处理登录，AuthorizingRealm，用来处理访问权限。Realm就是提供AuthorizationInfo（权限认证结果）和AuthenticationInfo（登录认证结果）这两个对象的地方。
+
+3. AuthenticationToken
+
+   校验的标签，这个类使用在用户登录的时候，用户填写了用户名+密码，然后我们将其封装在这个类中，用来和数据库中的比较，然后得出结果，返回的结果就是下一个类。
+
+4. AuthenticationInfo
+
+   校验的信息，这个类是在校验完了用户登录之后产生的，校验的结果有很多种，比如根本不存在这个用户或者有用户但是密码不对或者当前用于由于多次输入错误密码而被锁定或者当前用户没有激活（有的情况下可能需要用邮箱激活）或者是重复登录等等，完全可以定义自己的校验失败的情况。在校验成功之后，我们就要返回一个AuthenticationInfo，里面包含了这个用户的很多标示符Principal（不仅仅是用户名）和密码（Credential）。
+
+5. Principal
+
+   是主体（subject）进行身份认证的标识，标识必须具有唯一性，如用户名、手机号、邮箱地址等，一个主体可以有多个身份，但是必须有一个主身份（Primary Principal）。
+
+6. subject
+
+   就是用户，user。只不过这里的user并不一定是一个人，而是任何可能会访问我们应用的请求，比如定期调度的工作。
+
+#### 策略模式实现多模式上架应用
+
+上架应用时可以指定应用的模式：
+
+1. 默认模式：什么都不做
+2. 过期时间模式：到达指定时间够自动下架应用
+3. 用户数模式：当有指定数量的用户点击过该应用后自动下架
+4. 点击数模式：当有指定数量的点击数后自动下架应用
+
+用户的每次点击操作都会触发模式处理。用户点击后先找到对应应用的模式ID根据模式ID返回不用的模式处理器进行相应处理。
+
+策略模式和工厂模式在结构上很像，但工厂是创建型模式,它的作用就是创建对象； 而策略是行为型模式,它的作用是让一个对象在许多行为中选择一种行为;
+
+#### 腾讯云OSS对象存储
+
+结合腾讯云的官方文档和SDK实现即可。上传图片就是先把图片上传到服务器，然后再上传到腾讯云，得到图片链接地址后存到数据库，再将服务器上的图片文件删除即可。
+
+#### Beetl
+
+Beetl（“bi tou”）对java语言的良好支持和很好的性能。官网说性能是Freemarker的6倍。它的语法官方文档上全都有很方便，而且都是中文。
+
+那么为什么要用模板引擎呢？很简单的原因，实际应用场景中文本的格式是固定的，但是内容有所不同。如果是不复杂的内容我们可以直接用代码生成需要的文本。但是当文本变得复杂的时候，我们用java生成文本的性能就会下降，同时也不利于维护。解决办法是将数据和格式进行分离，将一个文本分成模板和数据。模板中有固定的格式，需要动态变化的数据一般用占位符代替。这样我们想改模板格式的时候不需要去更改代码，只需要去改模板就可以了。同时模板引擎渲染文本的效率也会更高。
+
+##### 页面静态化
+
+应用世界中将应用的介绍页面使用Beetl生成静态化的HTML页面放入腾讯云的OSS中。适合静态化的页面是哪些很少变动，访问量又大的页面。
+
+通过GroupTemplate 来生成页面：
+
+```java
+public void BeetlString() throws Exception {
+    //new一个模板资源加载器
+    StringTemplateResourceLoader resourceLoader = new StringTemplateResourceLoader();
+    /* 使用Beetl默认的配置。
+         * Beetl可以使用配置文件的方式去配置，但由于此处是直接上手的例子，
+         * 我们不去管配置的问题，只需要基本的默认配置就可以了。
+        */
+    Configuration config = Configuration.defaultConfiguration();
+    //Beetl的核心GroupTemplate
+    GroupTemplate groupTemplate = new GroupTemplate(resourceLoader, config);
+    //我们自定义的模板，其中${title}就Beetl默认的占位符
+    String testTemplate="<html>\n" +
+        "<head>\n" +
+        "\t<title>${title}</title>\n" +
+        "</head>\n" +
+        "<body>\n" +
+        "\t<h1>${name}</h1>\n" +
+        "</body>\n" +
+        "</html>";
+    Template template = groupTemplate.getTemplate(testTemplate);
+    template.binding("title","This is a test template Email.");
+    template.binding("name", "beetl");
+    //渲染字符串
+    String str = template.render();
+    System.out.println(str);
+}
+```
+
+> 结果：
+>
+> ```html
+> <html>
+> <head>
+> <title>This is a test template Email.</title>
+> </head>
+> <body>
+> <h1>beetl</h1>
+> </body>
+> </html>
+> ```
+
+### THNews资讯分享平台
+
+#### 分布式 ID 生成器
+
+由于分布式下的分库分表（太难了，不是我做的）需要保证全局唯一的ID，故需要分布式 ID 生成器来生成 ID。使用最多的是Twitter公司的SnowFlake算法，就是著名的《**雪花算法**》。
+
+##### SnowFlake原理
+
+SnowFlake产生的ID是一个64位的整型，结构如下（每一部分用“-”符号分隔）：
+
+> 0 - 0000000000 0000000000 0000000000 0000000000 0 - 00000 - 00000 - 000000000000
+
+1. 1位：标识，在java中由于long的最高位是符号位，正数是0，负数是1，一般生成的ID为正数，所以为0；
+
+2. 41位：时间戳部分，这个是毫秒级的时间，一般实现上不会存储当前的时间戳，而是时间戳的差值（当前时间-固定的开始时间），这样可以使产生的ID从更小值开始；41位的时间戳可以使用69年，(1L << 41) / (1000L * 60 * 60 * 24 * 365) = 69年；
+
+3. 10位：节点部分，Twitter实现中使用前5位作为数据中心标识，后5位作为机器标识，可以部署1024个节点；
+
+4. 12位：序列号部分，支持同一毫秒内同一个节点可以生成4096个ID；
+
+SnowFlake算法生成的ID大致上是按照时间递增的，用在分布式系统中时，需要注意数据中心标识和机器标识必须唯一，这样就能保证每个节点生成的ID都是唯一的！
+
+#### 有状态（SESSION）和无状态（JWT）登录验证
+
+> [从有状态应用（Session）到无状态应用（JWT），以及 SSO 和 OAuth2](https://blog.csdn.net/kikajack/article/details/80293328)
+
+有状态的登录验证就是将会话信息存放在服务器中。而无状态的登录验证就是服务器不存会话信息。
+
+|          | 有状态                                         | 无状态                                          |
+| -------- | ---------------------------------------------- | ----------------------------------------------- |
+| 数据同步 | 需要同步                                       | 无需同步                                        |
+| 资源消耗 | 消耗内存资源保存数据<br />消耗带宽进行数据同步 | 无内存消耗<br />无带宽消耗<br />耗费CPU计算资源 |
+
+由于HTTP 协议是无状态的，要保存用户状态需要额外的机制。一般有两种方式，Session和JWT，session是有状态的，jwt是无状态的。
+
+##### Session 原理
+
+最传统的用户认证方式。用户首次访问应用服务器后建立会话，服务器可以使用 Set-Cookie 这个 HTTP Header，将会话的 SessionID 写入在用户端保存的 Cookie 中。下次用户再次向这个域名发请求时会携带所有 Cookie 信息，包括这个 SessionID。
+
+Session 信息保存在服务器端，而用于唯一标识这个 Session 的 SessionID 则保存在对应客户端的 Cookie 中。SessionID 这个会话标识符本质上是一个随机字符串，每个用户的 SessionID 都不一样。
+
+Session 中可以保存很多信息。例如设置一个 IsLogin 字段，用户通过账号密码登录后，将这个字段设置为 TRUE。这样，在 Session 的有效期内（比如 2 小时），即使用户关闭网页，再次打开后仍会保持登录状态（除非用户清理了 Cookie，导致其访问服务器时没有携带 SessionID 字段）。对于其他的常用字段（如 userID、userName等）也可以添加到 Session 中，以减少数据库的访问压力，但注意不要太大，因为所有用户的会话信息都是保存在服务器的内存中的。
+
+##### JWT 原理
+
+JWT（JSON web token）是一种认证协议，可以发布接入令牌（Access Token，保持在客户端）并对发布的签名接入令牌进行验证。令牌（Token）本身包含一系列声明，应用程序可以根据这些声明限制用户对资源的访问。
+
+JWT 由三段信息构成的：header、payload、signature
+
+##### JWT 工作流程
+
+用户通过账号密码发起登录请求服务器验证通过后，设置 header 和 payload，并得到加密后的签名，然后将这三部分作为 Token 发送给用户，客户端保存 Token，并在每个请求中附加这个 Token。如果请求携带了 Token，服务器会验证这个 Token 并根据验证结果进行不同处理。
+
+发送请求时，Token 放在请求的 HTTP Header 中。另外，如果发生跨域，例如 www.xx.com 下发出到 api.xx.com 的请求，需要在服务端开启 CORS（Cross-Origin Resource Sharing 跨域资源共享），只需要在controller类上添加注解`@CrossOrigin` 即可！
+
+##### 基于JWT的Token认证机制
+
+###### 什么是JWT
+
+JSON Web Token（JWT）是一个非常轻巧的规范。这个规范允许我们使用JWT在用户和服务器之间传递安全可靠的信息。
+
+###### JWT组成
+
+一个JWT实际上就是一个字符串，它由三部分组成，头部、载荷与签名。
+
+头部（Header）
+
+头部用于描述关于该JWT的最基本的信息，例如其类型以及签名所用的算法等。这也可以被表示成一个JSON对象。
+
+```json
+{"typ":"JWT","alg":"HS256"}
+```
+
+在头部指明了签名算法是HS256算法。 我们进行BASE64编码http://base64.xpcha.com/，编码后的字符串如下：
+
+> eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
+
+小知识：Base64是一种基于64个可打印字符来表示二进制数据的表示方法。由于2的6次方等于64，所以每6个比特为一个单元，对应某个可打印字符。三个字节有24个比特，对应于4个Base64单元，即3个字节需要用4个可打印字符来表示。JDK 中提供了非常方便的 BASE64Encoder 和 BASE64Decoder，用它们可以非常方便的完成基于 BASE64 的编码和解码.
+
+载荷（playload）
+
+载荷就是存放有效信息的地方。这个名字像是特指飞机上承载的货品，这些有效信息包含三个部分
+
+（1）标准中注册的声明（建议但不强制使用）
+
+```yaml
+iss: jwt签发者
+sub: jwt所面向的用户
+aud: 接收jwt的一方
+exp: jwt的过期时间，这个过期时间必须要大于签发时间
+nbf: 定义在什么时间之前，该jwt都是不可用的.
+iat: jwt的签发时间
+jti: jwt的唯一身份标识，主要用来作为一次性token,从而回避重放攻击。
+```
+
+（2）公共的声明
+公共的声明可以添加任何的信息，一般添加用户的相关信息或其他业务需要的必要信息.但不建议添加敏感信息，因为该部分在客户端可解密.
+（3）私有的声明
+私有声明是提供者和消费者所共同定义的声明，一般不建议存放敏感信息，因为base64是对称解密的，意味着该部分信息可以归类为明文信息。这个指的就是自定义的claim。比如前面那个结构举例中的admin和name都属于自定的claim。这些claim跟JWT标准规定的claim区别在于：JWT规定的claim，JWT的接收方在拿到JWT之后，都知道怎么对这些标准的claim进行验证(还不知道是否能够验证)；而private claims不会验证，除非明确告诉接收方要对这些claim进行验证以及规则才行。
+
+定义一个payload:
+
+```json
+{"sub":"1234567890","name":"John Doe","admin":true}
+```
+
+然后将其进行base64编码，得到Jwt的第二部分。
+
+> eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9
+
+签证（signature）
+
+jwt的第三部分是一个签证信息，这个签证信息由三部分组成：
+
+1. header (base64后的)
+2. payload (base64后的)
+3. secret
+
+这个部分需要base64加密后的header和base64加密后的payload使用`.`连接组成的字符串，然后通过header中声明的加密方式进行加盐secret组合加密，然后就构成了jwt的第三部分。
+
+> TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+将这三部分用`.`连接成一个完整的字符串,构成了最终的jwt:
+
+> eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+
+注意：secret是保存在服务器端的，jwt的签发生成也是在服务器端的，secret就是用来进行jwt的签发和jwt的验证，所以，它就是你服务端的私钥，在任何场景都不应该流露出去。一旦客户端得知这个secret, 那就意味着客户端是可以自我签发jwt了。
+
+###### Java的JJWT实现JWT
+
+###### 什么是JJWT
+
+JJWT是一个提供端到端的JWT创建和验证的Java库。永远免费和开源(Apache License，版本2.0)，JJWT很容易使用和理解。它被设计成一个以建筑为中心的流畅界面，隐藏了它的大部分复杂性。
+
+###### JJWT快速入门
+
+**token的创建**
+
+（1）创建maven工程，引入依赖
+
+```xml
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt</artifactId>
+    <version>0.6.0</version>
+</dependency>
+```
+
+（2）创建类CreateJwtTest，用于生成token
+
+```java
+public class CreateJwtTest {
+    public static void main(String[] args) {
+        JwtBuilder builder= Jwts.builder().setId("888")
+                .setSubject("小白")
+                .setIssuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS256,"itcast");
+        System.out.println( builder.compact() );
+    }
+}
+```
+
+setIssuedAt用于设置签发时间, signWith用于设置签名秘钥
+
+（3）测试运行，输出如下:
+
+> eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTM0NTh9.gq0J‐cOM_qCNqU_s‐d_IrRytaNenesPmqAIhQpYXHZk
+
+再次运行，会发现每次运行的结果是不一样的，因为我们的载荷中包含了时间。
+
+**token的解析**
+
+我们刚才已经创建了token ，在web应用中这个操作是由服务端进行然后发给客户端，客户端在下次向服务端发送请求时需要携带这个token（这就好像是拿着一张门票一样），那服务端接到这个token 应该解析出token中的信息（例如用户id）,根据这些信息查询数据库返回相应的结果。
+
+创建ParseJwtTest
+
+```JAVA
+public class ParseJwtTest {
+    public static void main(String[] args) {
+        String token = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTM0NTh9.gq0J‐cOM_qCNqU_s‐d_IrRytaNenesPmqAIhQpYXHZk";
+        Claims claims = Jwts.parser().setSigningKey("itcast").parseClaimsJws(token).getBody();
+        System.out.println("id:"+claims.getId());
+        System.out.println("subject:"+claims.getSubject());
+        System.out.println("IssuedAt:"+claims.getIssuedAt());
+    }
+}
+```
+
+试着将token或签名秘钥篡改一下，会发现运行时就会报错，所以解析token也就是验证token
+
+**token过期校验**
+
+有很多时候，我们并不希望签发的token是永久生效的，所以我们可以为token添加一个过期时间。
+
+创建CreateJwtTest2
+
+```java
+public class CreateJwtTest2 {
+    public static void main(String[] args) {
+        //为了方便测试，我们将过期时间设置为1分钟
+        long now = System.currentTimeMillis();//当前时间
+        long exp = now + 1000*60;//过期时间为1分钟
+        JwtBuilder builder= Jwts.builder().setId("888")
+                .setSubject("小白")
+                .setIssuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS256,"itcast")
+           .setExpiration(new Date(exp));      
+        System.out.println( builder.compact() );
+    }
+}
+```
+
+setExpiration 方法用于设置过期时间
+
+修改ParseJwtTest
+
+```java
+public class ParseJwtTest {
+    public static void main(String[] args) {
+        String compactJws="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTY1NjksImV4cCI6MTUyMzQxNjYyOX0.Tk91b6mvyjpKcldkic8DgXz0zsPFFnRgTgkgcAsa9cc";
+        Claims claims =
+Jwts.parser().setSigningKey("itcast").parseClaimsJws(compactJws).getBody();
+        System.out.println("id:"+claims.getId());
+        System.out.println("subject:"+claims.getSubject());
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy‐MM‐dd hh:mm:ss");
+        System.out.println("签发时间:"+sdf.format(claims.getIssuedAt()));
+        System.out.println("过期时间:"+sdf.format(claims.getExpiration()));
+        System.out.println("当前时间:"+sdf.format(new Date()) );
+    }
+}
+```
+
+测试运行，当未过期时可以正常读取，当过期时会引发io.jsonwebtoken.ExpiredJwtException异常。
+
+**自定义claims**
+
+我们刚才的例子只是存储了id和subject两个信息，如果你想存储更多的信息（例如角色）可以定义自定义claims 
+
+创建CreateJwtTest3
+
+```java
+public class CreateJwtTest3 {
+    public static void main(String[] args) {
+        //为了方便测试，我们将过期时间设置为1分钟
+        long now = System.currentTimeMillis();//当前时间
+        long exp = now + 1000*60;//过期时间为1分钟
+        JwtBuilder builder= Jwts.builder().setId("888")
+                .setSubject("小白")
+                .setIssuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS256,"itcast")
+                .setExpiration(new Date(exp))
+                .claim("roles","admin")
+                .claim("logo","logo.png");
+        System.out.println( builder.compact() );
+    }
+}
+```
+
+修改ParseJwtTest
+
+```java
+public class ParseJwtTest {
+    public static void main(String[] args) {
+        String
+compactJws="eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4ODgiLCJzdWIiOiLlsI_nmb0iLCJpYXQiOjE1MjM0MTczMjMsImV4cCI6MTUyMzQxNzM4Mywicm9sZXMiOiJhZG1pbiIsImxvZ28iOiJsb2dvLnBuZyJ9.b11p4g4rE94rqFhcfzdJTPCORikqP_1zJ1MP8KihYTQ";
+        Claims claims =
+Jwts.parser().setSigningKey("itcast").parseClaimsJws(compactJws).getBody();
+        System.out.println("id:"+claims.getId());
+        System.out.println("subject:"+claims.getSubject());
+        System.out.println("roles:"+claims.get("roles"));
+        System.out.println("logo:"+claims.get("logo"));
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy‐MM‐dd hh:mm:ss");
+        System.out.println("签发时间:"+sdf.format(claims.getIssuedAt()));
+        System.out.println("过期时间:"+sdf.format(claims.getExpiration()));
+        System.out.println("当前时间:"+sdf.format(new Date()) );
+    }
+}
+```
+
+#### MongoDB
+
+吐槽和评论两项功能存在以下特点：
+（1）数据量大
+（2）写入操作频繁
+（3）价值较低
+对于这样的数据，我们更适合使用MongoDB来实现数据的存储
+
+##### 什么是MongoDB
+
+MongoDB 是一个跨平台的，面向文档的数据库，它介于关系数据库和非关系数据库之间，是非关系数据库当中功能最丰富，最像关系数据库的产品。它支持的数据结构非常松散，是类似 JSON 的 BSON 格式，因此可以存储比较复杂的数据类型。
+
+MongoDB 最大的特点是他支持的查询语言非常强大，其语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引。它是一个面向集合的,模式自由的文档型数据库。
+
+MongoDB 的逻辑结构是一种层次结构。主要由：
+文档(document)、集合(collection)、数据库(database)这三部分组成的。
+（1）MongoDB 的文档（document），相当于关系数据库中的一行记录。
+（2）多个文档组成一个集合（collection），相当于关系数据库的表。
+（3）多个集合（collection），逻辑上组织在一起，就是数据库（database）。
+（4）一个 MongoDB 实例支持多个数据库（database）
+
+##### 基本数据类型
+
+1. null：用于表示空值或者不存在的字段，{“x”:null}
+2. 布尔型：布尔类型有两个值true和false，{“x”:true}
+3. 数值：shell默认使用64为浮点型数值。{“x”：3.14}或{“x”：3}。对于整型值，可以使用 NumberInt（4字节符号整数）或NumberLong（8字节符号整数），{“x”:NumberInt(“3”)}{“x”:NumberLong(“3”)}
+4. 字符串：UTF-8字符串都可以表示为字符串类型的数据，{“x”：“呵呵”}
+5. 日期：日期被存储为自新纪元依赖经过的毫秒数，不存储时区，{“x”:new Date()}
+6. 正则表达式：查询时，使用正则表达式作为限定条件，语法与JavaScript的正则表达式相同，{“x”:/[abc]/}
+7. 数组：数据列表或数据集可以表示为数组，{“x”： [“a“，“b”,”c”]}
+8. 内嵌文档：文档可以嵌套其他文档，被嵌套的文档作为值来处理，{“x”:{“y”:3 }}
+9. 对象Id：对象id是一个12字节的字符串，是文档的唯一标识，{“x”: objectId() }
+10. 二进制数据：二进制数据是一个任意字节的字符串。它不能直接在shell中使用。如果要将非utf-字符保存到数据库中，二进制数据是唯一的方式。
+11. 代码：查询和文档中可以包括任何JavaScript代码，{“x”:function(){/…/}}
+
+##### Java操作MongoDB
+
+mongodb-driver是mongo官方推出的java连接mongoDB的驱动包，相当于JDBC驱动。
+
+SpringDataMongoDB是SpringData家族成员之一，用于操作MongoDb的持久层框架，封装了底层的mongodb-
+driver
+
+```java
+/**
+ * 吐槽数据访问层
+ */
+public interface SpitDao extends MongoRepository<Spit, String>{
+   
+}
+```
+
+```java
+@Service
+public class SpitService {
+    @Autowired    
+    private SpitDao spitDao;    
+
+    @Autowired    
+    private IdWorker idWorker;    
+  
+    public List<Spit> findAll(){    
+        return spitDao.findAll();                
+    }    
+   
+    public Spit findById(String id){    
+        Spit spit = spitDao.findById(id).get();        
+        return spit;        
+    }    
+  
+    public void add(Spit spit) {    
+        spit.set_id(idWorker.nextId()+""); //主键值        
+        spitDao.save(spit);        
+    }    
+
+    public void update(Spit spit) {    
+        spitDao.save(spit);        
+    }    
+
+    public void deleteById(String id) {    
+        spitDao.deleteById(id);        
+    }    
+}
+```
+
+#### Redis
+
+文章模块将文章放在缓存中
+
+```java
+@Autowired    
+private RedisTemplate redisTemplate;    
+/**    
+ * 根据ID查询实体 
+ */    
+public Article findById(String id) {    
+    //从缓存中提取        
+    Article article=
+        (Article)redisTemplate.opsForValue().get("article_"+id);
+
+    // 如果缓存没有则到数据库查询并放入缓存        
+    if(article==null) {        
+        article = articleDao.findById(id).get();            
+        redisTemplate.opsForValue().set("article_" + id, article);   
+        //添加缓存过期时间
+        //redisTemplate.opsForValue().set("article_" + id, article,10,TimeUnit.SECONDS);
+    }        
+    return article;        
+}
+
+/**    
+ * 修改    
+ */    
+public void update(Article article) {    
+    redisTemplate.delete( "article_" + article.getId() );//删除缓存        
+    articleDao.save(article);        
+}    
+/**    
+ * 删除      
+ */    
+public void deleteById(String id) {    
+    redisTemplate.delete( "article_" + id );//删除缓存        
+    articleDao.deleteById(id);        
+}
+```
+
+##### Spring Cache的使用
+
+> [使用 Spring Cache + Redis 作为缓存](https://www.jianshu.com/p/931484bb3fdc)
+
+活动详情的缓存采用Spring Cache实现
+
+使用Spring Cache只需要记住三个主机即可：
+
+1. @EnableCaching：加在启动类上开启缓存支持。
+2. @Cacheable：使用这个注解的方法在执行后会缓存其返回结果。
+3. @CacheEvict：使用这个注解的方法在其执行前或执行后移除Spring Cache中的某些元素。
+
+```java
+/**    
+ * 根据ID查询实体    
+ * @param id    
+ * @return    
+ */    
+@Cacheable(value="gathering",key="#id")    
+public Gathering findById(String id) {    
+    return gatheringDao.findById(id).get();        
+} 
+/**    
+ * 修改    
+ * @param gathering    
+ */    
+@CacheEvict(value="gathering",key="#gathering.id")    
+public void update(Gathering gathering) {    
+    gatheringDao.save(gathering);        
+}    
+/**    
+ * 删除    
+ * @param id    
+ */    
+@CacheEvict(value="gathering",key="#id")    
+public void deleteById(String id) {    
+    gatheringDao.deleteById(id);        
+} 
+```
+
+#### RabbitMQ
+
+ActiveMQ没有交换机的概念，直接将消息发送到队列中。
+
+交换器（Exchange）连接队列（Queue）的方式常用的有三种：直接模式、分列模式、主题模式。
+
+- 直连模式就是通过默认的交换器（默认的交换器名字为一个空字符串`""`）将消息转发到队列中。
+
+- 分列模式通过交换器与队列的绑定（Binding），交换器会将消息转发到所有绑定的队列中。
+
+- 主题模式也需要绑定交换器与队列，但每个队列都只关心部分消息，即交换器只会将队列关心的消息转发到对应的队列中。
+
+项目中的短信验证码用到了RabbitMQ和Redis来实现。
+
+1. 用户注册后将手机号作为key，验证码作为value，存放在缓存中，设置过期时间为五分钟。
+
+2. 将手机号和验证码放到map中，然后发送到以“sms”为名字的队列中（使用的是直连模式）。
+
+   ```JAVA
+   @Autowired    
+   private RedisTemplate redisTemplate;    
+   @Autowired    
+   private RabbitTemplate rabbitTemplate;    
+   /**    
+    * 发送短信验证码    
+    * @param mobile 手机号    
+    */    
+   public void sendSms(String mobile){    
+       //1.生成6位短信验证码        
+       Random random=new Random();        
+       int max=999999;//最大数        
+       int min=100000;//最小数        
+       int code = random.nextInt(max);//随机生成        
+       if(code<min){        
+           code=code+min;            
+       }        
+       System.out.println("给"+mobile+"发送的验证码是："+code);        
+       //2.将验证码放入redis        
+       redisTemplate.opsForValue().set("smscode_"+mobile, code+"" ,5,
+                                       TimeUnit.MINUTES );//五分钟过期
+   
+       //3.将验证码和手机号发动到rabbitMQ中        
+       Map<String,String> map=new HashMap();        
+       map.put("mobile",mobile);        
+       map.put("code",code+"");        
+       rabbitTemplate.convertAndSend("sms",map);        
+   } 
+   ```
+
+3. 短信模块中添加消息监听器处理消息
+
+   ```java
+   /**
+    * 短信监听类
+    */
+   @Component
+   @RabbitListener(queues = "sms")
+   public class SmsListener {
+       @Autowired
+       private  SmsUtil smsUtil;
+       @Value("${aliyun.sms.template_code}")
+       private String template_code;//模板编号
+       @Value("${aliyun.sms.sign_name}")
+       private String sign_name;//签名
+       
+       @RabbitHandler
+       public void sendSms(Map<String,String> map){
+           System.out.println("手机号："+map.get("mobile"));
+           System.out.println("验证码："+map.get("code"));
+           try {
+               smsUtil.sendSms(map.get("mobile"),template_code,sign_name,"{\"number\":\""+ map.get("code") +"\"}");
+           } catch (ClientException e) {
+               e.printStackTrace();
+           }
+       }
+   }
+   ```
+
+#### Elasticsearch
+
+> [全文搜索引擎 Elasticsearch 入门教程](http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html)
+
+##### 什么是ElasticSearch
+
+Elasticsearch是一个实时的分布式搜索和分析引擎。它可以帮助你用前所未有的速度去处理大规模数据。ElasticSearch是一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。Elasticsearch是用Java开发的，并作为Apache许可条款下的开放源码发布，是当前流行的企业级搜索引擎。设计用于云计算中，能够达到实时搜索，稳定，可靠，快速，安装使用方便。
+
+##### ElasticSearch体系结构
+
+| Elasticsearch  | 关系型数据库Mysql |
+| -------------- | ----------------- |
+| 索引(index)    | 数据库(databases) |
+| 类型(type)     | 表(table)         |
+| 文档(document) | 行(row)           |
+
+默认情况下，Elastic 只允许本机访问，不允许跨域调用，如果需要远程访问，可以修改 Elastic 安装目录的`config/elasticsearch.yml`文件，增加以下两句命令：
+
+```yaml
+http.cors.enabled: true
+http.cors.allow‐origin: "*"
+```
+
+##### 基本概念
+
+1. Node 与 Cluster
+
+   Elastic 本质上是一个分布式数据库，允许多台服务器协同工作，每台服务器可以运行多个 Elastic 实例。
+
+   单个 Elastic 实例称为一个节点（node）。一组节点构成一个集群（cluster）。
+
+2. Index
+
+   Elastic 会索引所有字段，经过处理后写入一个反向索引（Inverted Index）。查找数据的时候，直接查找该索引。所以，Elastic 数据管理的顶层单位就叫做 Index（索引）。它是单个数据库的同义词。每个 Index （即数据库）的名字必须是小写。
+
+3. Document
+
+   Index 里面单条的记录称为 Document（文档）。许多条 Document 构成了一个 Index。
+
+   Document 使用 JSON 格式表示，下面是一个例子。
+
+   ```json
+   {
+     "user": "张三",
+     "title": "工程师",
+     "desc": "数据库管理"
+   }
+   ```
+
+   同一个 Index 里面的 Document，不要求有相同的结构（scheme），但是最好保持相同，这样有利于提高搜索效率。
+
+4. Type
+
+   Document 可以分组，比如`weather`这个 Index 里面，可以按城市分组（北京和上海），也可以按气候分组（晴天和雨天）。这种分组就叫做 Type，它是虚拟的逻辑分组，用来过滤 Document。
+
+   不同的 Type 应该有相似的结构（schema），举例来说，`id`字段不能在这个组是字符串，在另一个组是数值。这是与关系型数据库的表的[一个区别](https://www.elastic.co/guide/en/elasticsearch/guide/current/mapping.html)。性质完全不同的数据（比如`products`和`logs`）应该存成两个 Index，而不是一个 Index 里面的两个 Type（虽然可以做到）。
+
+   根据[规划](https://www.elastic.co/blog/index-type-parent-child-join-now-future-in-elasticsearch)，Elastic 6.x 版只允许每个 Index 包含一个 Type，7.x 版将会彻底移除 Type。
+
+##### Head插件
+
+一般使用图形化界面来实现Elasticsearch的日常管理，最常用的就是Head插件。
+
+##### IK分词器
+
+ES默认的中文分词是将每个字看成一个词，这显然是不符合要求的，所以我们需要安装中文分词器来解决这个问题。
+
+IK分词是一款国人开发的相对简单的中文分词器。虽然开发者自2012年之后就不在维护了，但在工程应用中IK算是比较流行的一款！
+
+##### 搜索模块的开发
+
+1. 加依赖写配置
+
+   ```yaml
+   spring:
+     data:
+       elasticsearch:
+         cluster‐nodes: 127.0.0.1:9300
+   ```
+
+2. 创建文章实体类
+
+   ```java
+   /**
+    * 文章实体类
+    */
+   @Document(indexName="tensquare",type="article")
+   public class Article implements Serializable{
+       @Id
+       private String id;//ID
+    
+       @Field(index= true,analyzer="ik_max_word",searchAnalyzer="ik_max_word")
+       private String title;//标题
+       
+       @Field(index= true,analyzer="ik_max_word",searchAnalyzer="ik_max_word")
+       private String content;//文章正文
+     
+       private String state;//审核状态
+    
+   }
+   ```
+
+3. 创建数据访问接口（DAO）
+
+   ```java
+   /**
+    * 文章数据访问层接口
+    */
+   public interface ArticleSearchDao extends ElasticsearchRepository<Article,String> {
+      
+       /**
+        * 检索
+        * @param
+        * @return
+        */
+       public Page<Article> findByTitleOrContentLike(String title, String content, Pageable pageable);
+   
+   }
+   ```
+
+##### elasticsearch与MySQL数据同步
+
+Logstash是一款轻量级的日志搜集处理框架，可以方便的把分散的、多样化的日志搜集起来，并进行自定义的处理，然后传输到指定的位置，比如某个服务器或者文件。
+
+MySQL数据导入Elasticsearch
+
+1. 在logstash-5.6.8安装目录下创建文件夹mysqletc （名称随意）
+
+2. 文件夹下创建mysql.conf （名称随意） ，内容如下：
+
+```shell
+input {
+  jdbc {
+    # mysql jdbc connection string to our backup databse  后面的test
+对应mysql中的test数据库
+    jdbc_connection_string =>
+"jdbc:mysql://127.0.0.1:3306/tensquare_article?characterEncoding=UTF8"
+    # the user we wish to excute our statement as
+    jdbc_user => "root"
+    jdbc_password => "123456"
+    # the path to our downloaded jdbc driver  
+    jdbc_driver_library => "D:/logstash‐5.6.8/mysqletc/mysql‐
+connector‐java‐5.1.46.jar"
+    # the name of the driver class for mysql
+    jdbc_driver_class => "com.mysql.jdbc.Driver"
+    jdbc_paging_enabled => "true"
+    jdbc_page_size => "50000"
+    #以下对应着要执行的sql的绝对路径。
+    statement => "select id,title,content from tb_article"
+    #定时字段 各字段含义（由左至右）分、时、天、月、年，全部为*默认含义为
+每分钟都更新
+      schedule => "* * * * *"
+  }
+}
+output {
+  elasticsearch {
+    #ESIP地址与端口
+    hosts => "localhost:9200" 
+    #ES索引名称（自己定义的）
+    index => "tensquare"
+    #自增ID编号
+    document_id => "%{id}"
+    document_type => "article"
+  }
+  stdout {
+      #以JSON格式输出
+      codec => json_lines
+  }
+}
+```
+
+3. 将mysql驱动包mysql-connector-java-5.1.46.jar拷贝至D:/logstash-5.6.8/mysqletc/ 下 。D:/logstash-5.6.8是你的安装目录
+4. 每间隔1分钟就执行一次sql查询。
+
+
+
