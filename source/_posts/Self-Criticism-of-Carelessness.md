@@ -27,7 +27,6 @@ I think I made the following mistakes in this incident:
 
 - Carelessness: Not reading the information carefully enough.
 - Flighty and Impetuous: Eager to celebrate without scrutinizing the information.
-
 - Self Conjecture: Misunderstanding that I thought I was been asked to take the document to the company in my first day.
 
 This lesson taught me the following points:
