@@ -1,0 +1,62 @@
+dist: trusty
+sudo: required # 需要 sudo 权限
+
+# addons：插件
+addons:
+  # 高级打包工具（英語：Advanced Packaging Tools，缩写为APT）是Debian及其衍生的Linux软件包管理器。
+  apt:
+    packages:
+      - nasm # Netwide Assembler （简称 NASM）是一款基于英特尔 x86 架构的汇编与反汇编工具。
+
+# 环境变量
+env:
+  global:
+    - TZ=Asia/Shanghai
+#    - TZ=Asia/Tokyo # Tokyo：东京，Asia/Tokyo：日本标准时区
+
+language: node_js
+node_js: node # node: 指定 Node.js 版本为 latest stable Node.js release
+
+# 只监测 source 分支
+branches:
+  only:
+    - source
+
+git:
+  depth: false # 克隆深度
+  submodules: false # Travis CI 默认情况下会克隆Git子模块
+
+cache:
+  apt: true # 缓存 apt 依赖
+  directories:
+    - node_modules # 缓存 node_modules 目录
+
+before_install:
+  # Git Config
+  # 将 Git 子模块中的字符串 'git@github.com:' 替换为 'https://github.com/'
+  # https://man.linuxde.net/sed
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  # 配置 Git 用户名
+  - git config --global user.name "gzhennaxia"
+  # 配置 Git 邮件
+  - git config --global user.email "gzhennaxia@163.com"
+
+  # Restore last modified time
+  - "git ls-files -z | while read -d '' path; do touch -d \"$(git log -1 --format=\"@%ct\" \"$path\")\" \"$path\"; done"
+
+  # Submodules
+  - git submodule update --recursive --remote --init
+
+  # Deploy history
+  # 将上次发布的内容(master 分支的 top commit)克隆到 .deploy_git
+  - git clone --branch=master --single-branch YOUR-BLOG-REPO .deploy_git
+
+secure: "tld2zgHNMhBnWR0NaNms3jP0jVGxMWvs23Mrv4/k0nrphEQ0m1jjgfLhew3M1o/xrdSAMCCMf7ugBt3r+4ubebjqvisu2ZhJ8AIOPBGeIv2NKiISENZozCQBKcS0M9Fu+GcLivPLNXqjcpEGYcPkXqE3RGrarXJShspVFrb/7SR86c1yE4Yhb+OeDK2RNhqP9csy6debNMET14kz+56OxnNVZs0sZ17w46fkXUL6K6HWjGymbBXJneFFSwlNprMcSpvrdRQWv4j7JPyoRSkbRsUXJbougOnfs6zelhYBGPkQXUEMxYRxu9XCflq1ra/UFf7kZga/7ccZQKY99YgEwpl5mRgqa869jbCFnUXQFdELpDfg9RPFZDR5dozIYkUMWvVq1YrV776v2Fg6nqweC/SDsc3PvZ/YPsMMM9VYYvtNLiNlUWlh+jfbykdlzIyDrVynqY07hUpFoqIRTY/GHmIMTLQQgMx+y5vONdeoa5A3b86jmcP/kG9xjElgk98lbTtMjh9mqxUH8ZauCrp/vYlCBrypSE0IB3C2fG8HCuy3r6A0+D3UqvIpdagxZYIEvTGaTu3SotskIkuinvksSdjM/K0cpCy54GIcDqxxNPrnFOzadYZyUQAXK9l3EoQL5Ek+uFe8RJeNEWtYQLNc4jawI9pM4xV5MQJNBfIjU+s="
+
+install: npm install
+
+before_script:
+
+script:
+  - hexo clean
+  - hexo g -d
