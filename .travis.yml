@@ -49,7 +49,7 @@ before_install:
 
   # Deploy history
   # 将上次发布的内容(master 分支的 top commit)克隆到 .deploy_git
-  - git clone --branch=master --single-branch YOUR-BLOG-REPO .deploy_git
+  - git clone --branch=master --single-branch https://github.com/Gzhennaxia/Gzhennaxia.github.io.git .deploy_git
 
   # SSH Setup
   - openssl aes-256-cbc -K $encrypted_693585a97b8c_key -iv $encrypted_693585a97b8c_iv -in deploy_key.enc -out deploy_key -d
