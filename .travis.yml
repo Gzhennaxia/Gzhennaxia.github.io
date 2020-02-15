@@ -11,8 +11,8 @@ addons:
 # 环境变量
 env:
   global:
-    - TZ=Asia/Shanghai
-#    - TZ=Asia/Tokyo # Tokyo：东京，Asia/Tokyo：日本标准时区
+  - TZ=Asia/Shanghai
+  - secure: ibxJCapDQGoYZq3CnK9F4uER2vYNg6+VAYwW3YAum0AdZN+LNFIrS9BI1waGr/gz/8qPrALMraAkHYsNGCdydeDqxJLCg77tPPGnxogJMdM4zTWMW1Ce3PhtXh1qGNJlsPbLvZTrCsirJigkHXjDxku/lpVBtWd0sJGxLYbz7QPVFGWUj/mFC+sVbWg+Jf8Jw4u9qrCn/vpL/NtMRjzYbYkzn0deimUZtotHl5vhmNPj0/snbTLfSiTJX7nj9eJ9G69JybF4XRMG8FZC5WqiwUFdR2PKogjo5hEG8I+3+RqfJtaDFMyqH/xMc1J7G6yU+dhU34QFh0znp1viq9hb4wN8zT5QhGFvG6KWdS7hDjvc8kUa6vM1g3UN2fK/kPU9ELIS9vThFPYvxc2J8v1Gx843mYjg3MWAahUmJgrAycnwp963SKJ5OZD5juJXCOoaeBuh9/Fc7+y1bHcQ7VpMy/CJ+UboShIsnqenAAX/9hr26Tca4DC6ian5PiogzDeKlBt9/MGlapv4ByF43hrPZRkGTaM3EObzL/ILQuxHCphHUP5dsugrFqZ8LTx6wd42B0/f2ExEamGiqU8XqrRFlZTznkHbapUbTSaQqE2rKllXGjrTPg3oJMDfdNNicJekw+02ccSuSN4XE5jMGQxWwDVuXTZZS551HlmF7q5G0VQ=
 
 language: node_js
 node_js: node # node: 指定 Node.js 版本为 latest stable Node.js release
@@ -20,7 +20,7 @@ node_js: node # node: 指定 Node.js 版本为 latest stable Node.js release
 # 只监测 source 分支
 branches:
   only:
-    - source
+  - source
 
 git:
   depth: false # 克隆深度
@@ -37,31 +37,30 @@ before_install:
   # https://man.linuxde.net/sed
 #  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   # 配置 Git 用户名
-  - git config --global user.name "gzhennaxia"
+- git config --global user.name "gzhennaxia"
   # 配置 Git 邮件
-  - git config --global user.email "gzhennaxia@163.com"
+- git config --global user.email "gzhennaxia@163.com"
 
   # Restore last modified time
-  - "git ls-files -z | while read -d '' path; do touch -d \"$(git log -1 --format=\"@%ct\" \"$path\")\" \"$path\"; done"
+- git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct"
+  "$path")" "$path"; done
 
   # Submodules
-  - git submodule update --recursive --remote --init
-
-  # Deploy history
-  # 将上次发布的内容(master 分支的 top commit)克隆到 .deploy_git
-  - git clone --branch=master --single-branch https://github.com/Gzhennaxia/Gzhennaxia.github.io.git .deploy_git
+- git submodule update --recursive --remote --init
+- git clone --branch=master --single-branch https://github.com/Gzhennaxia/Gzhennaxia.github.io.git
+  .deploy_git
 
   # SSH Setup
-  - openssl aes-256-cbc -K $encrypted_693585a97b8c_key -iv $encrypted_693585a97b8c_iv -in deploy_key.enc -out deploy_key -d
-  - eval "$(ssh-agent -s)"
-  - chmod 600 ./deploy_key
-  - ssh-add ./deploy_key
+#  - openssl aes-256-cbc -K $encrypted_693585a97b8c_key -iv $encrypted_693585a97b8c_iv -in deploy_key.enc -out deploy_key -d
+#  - eval "$(ssh-agent -s)"
+#  - chmod 600 ./deploy_key
+#  - ssh-add ./deploy_key
 #secure: "tld2zgHNMhBnWR0NaNms3jP0jVGxMWvs23Mrv4/k0nrphEQ0m1jjgfLhew3M1o/xrdSAMCCMf7ugBt3r+4ubebjqvisu2ZhJ8AIOPBGeIv2NKiISENZozCQBKcS0M9Fu+GcLivPLNXqjcpEGYcPkXqE3RGrarXJShspVFrb/7SR86c1yE4Yhb+OeDK2RNhqP9csy6debNMET14kz+56OxnNVZs0sZ17w46fkXUL6K6HWjGymbBXJneFFSwlNprMcSpvrdRQWv4j7JPyoRSkbRsUXJbougOnfs6zelhYBGPkQXUEMxYRxu9XCflq1ra/UFf7kZga/7ccZQKY99YgEwpl5mRgqa869jbCFnUXQFdELpDfg9RPFZDR5dozIYkUMWvVq1YrV776v2Fg6nqweC/SDsc3PvZ/YPsMMM9VYYvtNLiNlUWlh+jfbykdlzIyDrVynqY07hUpFoqIRTY/GHmIMTLQQgMx+y5vONdeoa5A3b86jmcP/kG9xjElgk98lbTtMjh9mqxUH8ZauCrp/vYlCBrypSE0IB3C2fG8HCuy3r6A0+D3UqvIpdagxZYIEvTGaTu3SotskIkuinvksSdjM/K0cpCy54GIcDqxxNPrnFOzadYZyUQAXK9l3EoQL5Ek+uFe8RJeNEWtYQLNc4jawI9pM4xV5MQJNBfIjU+s="
 
 install: npm install
 
-before_script:
+before_script: 
 
 script:
-  - hexo clean
-  - hexo g -d
+- hexo clean
+- hexo g -d
