@@ -901,6 +901,38 @@ note:
 3. `git add 主题目录`
 4. `git push`
 
+### 命令 `hexo d` 无反应
+
+原因：站点配置文件中关于部署的部分没有配置
+
+```yaml _config.yml
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: ''
+```
+
+解决方法：补充相关配置
+
+```yaml _config.yml
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: https://github.com/Gzhennaxia/Gzhennaxia.github.io.git
+  branch: master
+```
+
+### 命令 `hexo d` 报错：`ERROR Deployer not found: git`
+
+原因：没安装`hexo-deployer-git`插件
+
+解决方法：安装`hexo-deployer-git`插件
+
+```shell
+npm install hexo-deployer-git --save
+```
+
 ## 写作
 
 ### 布局

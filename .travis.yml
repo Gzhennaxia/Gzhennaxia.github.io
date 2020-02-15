@@ -12,7 +12,7 @@ addons:
 env:
   global:
   - TZ=Asia/Shanghai
-  - secure: ibxJCapDQGoYZq3CnK9F4uER2vYNg6+VAYwW3YAum0AdZN+LNFIrS9BI1waGr/gz/8qPrALMraAkHYsNGCdydeDqxJLCg77tPPGnxogJMdM4zTWMW1Ce3PhtXh1qGNJlsPbLvZTrCsirJigkHXjDxku/lpVBtWd0sJGxLYbz7QPVFGWUj/mFC+sVbWg+Jf8Jw4u9qrCn/vpL/NtMRjzYbYkzn0deimUZtotHl5vhmNPj0/snbTLfSiTJX7nj9eJ9G69JybF4XRMG8FZC5WqiwUFdR2PKogjo5hEG8I+3+RqfJtaDFMyqH/xMc1J7G6yU+dhU34QFh0znp1viq9hb4wN8zT5QhGFvG6KWdS7hDjvc8kUa6vM1g3UN2fK/kPU9ELIS9vThFPYvxc2J8v1Gx843mYjg3MWAahUmJgrAycnwp963SKJ5OZD5juJXCOoaeBuh9/Fc7+y1bHcQ7VpMy/CJ+UboShIsnqenAAX/9hr26Tca4DC6ian5PiogzDeKlBt9/MGlapv4ByF43hrPZRkGTaM3EObzL/ILQuxHCphHUP5dsugrFqZ8LTx6wd42B0/f2ExEamGiqU8XqrRFlZTznkHbapUbTSaQqE2rKllXGjrTPg3oJMDfdNNicJekw+02ccSuSN4XE5jMGQxWwDVuXTZZS551HlmF7q5G0VQ=
+#  - secure: ibxJCapDQGoYZq3CnK9F4uER2vYNg6+VAYwW3YAum0AdZN+LNFIrS9BI1waGr/gz/8qPrALMraAkHYsNGCdydeDqxJLCg77tPPGnxogJMdM4zTWMW1Ce3PhtXh1qGNJlsPbLvZTrCsirJigkHXjDxku/lpVBtWd0sJGxLYbz7QPVFGWUj/mFC+sVbWg+Jf8Jw4u9qrCn/vpL/NtMRjzYbYkzn0deimUZtotHl5vhmNPj0/snbTLfSiTJX7nj9eJ9G69JybF4XRMG8FZC5WqiwUFdR2PKogjo5hEG8I+3+RqfJtaDFMyqH/xMc1J7G6yU+dhU34QFh0znp1viq9hb4wN8zT5QhGFvG6KWdS7hDjvc8kUa6vM1g3UN2fK/kPU9ELIS9vThFPYvxc2J8v1Gx843mYjg3MWAahUmJgrAycnwp963SKJ5OZD5juJXCOoaeBuh9/Fc7+y1bHcQ7VpMy/CJ+UboShIsnqenAAX/9hr26Tca4DC6ian5PiogzDeKlBt9/MGlapv4ByF43hrPZRkGTaM3EObzL/ILQuxHCphHUP5dsugrFqZ8LTx6wd42B0/f2ExEamGiqU8XqrRFlZTznkHbapUbTSaQqE2rKllXGjrTPg3oJMDfdNNicJekw+02ccSuSN4XE5jMGQxWwDVuXTZZS551HlmF7q5G0VQ=
 
 language: node_js
 node_js: node # node: 指定 Node.js 版本为 latest stable Node.js release
@@ -63,4 +63,14 @@ before_script:
 
 script:
 - hexo clean
-- hexo g -d
+- hexo g
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
+  local-dir: public # 要发布到 GitHub Pages 的目录
+  target_branch: master
