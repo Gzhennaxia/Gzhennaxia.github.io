@@ -71,6 +71,6 @@ deploy:
   github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
   keep_history: true
   on:
-    branch: master
+    branch: source
   local-dir: public # 要发布到 GitHub Pages 的目录
   target_branch: master
