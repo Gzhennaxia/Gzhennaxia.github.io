@@ -1,12 +1,12 @@
-dist: trusty
+#dist: trusty
 #sudo: required # 需要 sudo 权限
 
 # addons：插件
-addons:
+#addons:
   # 高级打包工具（英語：Advanced Packaging Tools，缩写为APT）是Debian及其衍生的Linux软件包管理器。
-  apt:
-    packages:
-      - nasm # Netwide Assembler （简称 NASM）是一款基于英特尔 x86 架构的汇编与反汇编工具。
+#  apt:
+#    packages:
+#      - nasm # Netwide Assembler （简称 NASM）是一款基于英特尔 x86 架构的汇编与反汇编工具。
 
 # 环境变量
 env:
@@ -22,12 +22,12 @@ branches:
   only:
   - source
 
-git:
-  depth: false # 克隆深度
-  submodules: false # Travis CI 默认情况下会克隆Git子模块
+#git:
+#  depth: false # 克隆深度
+#  submodules: false # Travis CI 默认情况下会克隆Git子模块
 
 cache:
-  apt: true # 缓存 apt 依赖
+#  apt: true # 缓存 apt 依赖
   directories:
     - node_modules # 缓存 node_modules 目录
 
@@ -37,25 +37,20 @@ before_install:
   # https://man.linuxde.net/sed
 #  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   # 配置 Git 用户名
-- git config --global user.name "gzhennaxia"
+#- git config --global user.name "gzhennaxia"
   # 配置 Git 邮件
-- git config --global user.email "gzhennaxia@163.com"
+#- git config --global user.email "gzhennaxia@163.com"
 
   # Restore last modified time
-- git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct"
-  "$path")" "$path"; done
+#- git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct"
+#  "$path")" "$path"; done
 
   # Submodules
-- git submodule update --recursive --remote --init
-- git clone --branch=master --single-branch https://github.com/Gzhennaxia/Gzhennaxia.github.io.git
-  .deploy_git
+#- git submodule update --recursive --remote --init
 
-  # SSH Setup
-#  - openssl aes-256-cbc -K $encrypted_693585a97b8c_key -iv $encrypted_693585a97b8c_iv -in deploy_key.enc -out deploy_key -d
-#  - eval "$(ssh-agent -s)"
-#  - chmod 600 ./deploy_key
-#  - ssh-add ./deploy_key
-#secure: "tld2zgHNMhBnWR0NaNms3jP0jVGxMWvs23Mrv4/k0nrphEQ0m1jjgfLhew3M1o/xrdSAMCCMf7ugBt3r+4ubebjqvisu2ZhJ8AIOPBGeIv2NKiISENZozCQBKcS0M9Fu+GcLivPLNXqjcpEGYcPkXqE3RGrarXJShspVFrb/7SR86c1yE4Yhb+OeDK2RNhqP9csy6debNMET14kz+56OxnNVZs0sZ17w46fkXUL6K6HWjGymbBXJneFFSwlNprMcSpvrdRQWv4j7JPyoRSkbRsUXJbougOnfs6zelhYBGPkQXUEMxYRxu9XCflq1ra/UFf7kZga/7ccZQKY99YgEwpl5mRgqa869jbCFnUXQFdELpDfg9RPFZDR5dozIYkUMWvVq1YrV776v2Fg6nqweC/SDsc3PvZ/YPsMMM9VYYvtNLiNlUWlh+jfbykdlzIyDrVynqY07hUpFoqIRTY/GHmIMTLQQgMx+y5vONdeoa5A3b86jmcP/kG9xjElgk98lbTtMjh9mqxUH8ZauCrp/vYlCBrypSE0IB3C2fG8HCuy3r6A0+D3UqvIpdagxZYIEvTGaTu3SotskIkuinvksSdjM/K0cpCy54GIcDqxxNPrnFOzadYZyUQAXK9l3EoQL5Ek+uFe8RJeNEWtYQLNc4jawI9pM4xV5MQJNBfIjU+s="
+  # Deploy history
+  # 将上次部署的内容(master 分支的 top commit)克隆到 .deploy_git
+  - git clone --branch=master --single-branch https://github.com/Gzhennaxia/Gzhennaxia.github.io.git .last_deployed_backup
 
 install: npm install
 

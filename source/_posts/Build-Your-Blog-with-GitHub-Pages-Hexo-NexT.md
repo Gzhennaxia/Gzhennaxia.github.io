@@ -91,13 +91,100 @@ npm install
 
 <!-- tab NextT 7.7.1 -->
 
+> 
+
+**Travis-CI 的配置文件`.travis.yml`**
+
+{% tabs travis.yml %}
+
+<!-- tab 我的 -->
+
+```yaml .travis.yml
+dist: trusty
+#sudo: required # 需要 sudo 权限
+
+# addons：插件
+addons:
+  # 高级打包工具（英語：Advanced Packaging Tools，缩写为APT）是Debian及其衍生的Linux软件包管理器。
+  apt:
+    packages:
+      - nasm # Netwide Assembler （简称 NASM）是一款基于英特尔 x86 架构的汇编与反汇编工具。
+
+# 环境变量
+env:
+  global:
+  - TZ=Asia/Shanghai
+
+language: node_js
+node_js: node # node: 指定 Node.js 版本为 latest stable Node.js release
+
+# 只监测 source 分支
+branches:
+  only:
+  - source
+
+git:
+  depth: false # 克隆深度
+  submodules: false # Travis CI 默认情况下会克隆Git子模块
+
+cache:
+  apt: true # 缓存 apt 依赖
+  directories:
+    - node_modules # 缓存 node_modules 目录
+
+before_install:
+  # Git Config
+  # 将 Git 子模块中的字符串 'git@github.com:' 替换为 'https://github.com/'
+  # https://man.linuxde.net/sed
+#  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  # 配置 Git 用户名
+- git config --global user.name "gzhennaxia"
+  # 配置 Git 邮件
+- git config --global user.email "gzhennaxia@163.com"
+
+  # Restore last modified time
+- git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct"
+  "$path")" "$path"; done
+
+  # Submodules
+- git submodule update --recursive --remote --init
+- git clone --branch=master --single-branch https://github.com/Gzhennaxia/Gzhennaxia.github.io.git
+  .deploy_git
+
+
+install: npm install
+
+before_script: 
+
+script:
+- hexo clean
+- hexo g
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: source
+  local-dir: public # 要发布到 GitHub Pages 的目录
+  target_branch: master
+```
+
+<!-- endtab -->
+
+<!-- tab NexT 的 -->
+
 > [Continuous-Integration | NexT](https://theme-next.org/docs/getting-started/deployment#Continuous-Integration)
 
-**Travis-CI的配置文件`.travis.yml`**
+{% note info %}
+
+根据 NexT 的配置没能成功，所以只是将过程中了解到的配置含义标注了一下
+
+{% endnote %}
 
 ```yaml
-# Ubuntu 版本代号 https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8
-dist: trusty
+dist: trusty # Ubuntu 版本代号 https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8
 sudo: required # 需要 sudo 权限
 
 # addons：插件
@@ -150,7 +237,7 @@ before_install:
  - git submodule update --recursive --remote --init
 
  # Deploy history
- # 将上次发布的内容(master 分支的 top commit)克隆到 .deploy_git
+ # 将上次部署的内容(master 分支的 top commit)克隆到 .deploy_git
  - git clone --branch=master --single-branch YOUR-BLOG-REPO .deploy_git
 
  # SSH Setup
@@ -166,36 +253,11 @@ before_script:
 script:
  - hexo clean
  - hexo g -d
-
-
-
-
-
-## 开始构建
-before_install:
-  - export TZ='Asia/Shanghai'  #统一构建环境和博客配置的时区, 防止文章时间错误
-  
-install:
-  - npm install  #配置Hexo环境
-
-script:
-  - hexo cl  #清除
-  - hexo g  #生成
-
-after_script:
-  - git clone https://${GH_REF} .deploy_git
-  - cd .deploy_git
-  - git checkout master
-  - cd ../
-  - mv .deploy_git/.git/ ./public/
-  - cd ./public
-  - git config user.name "username"  #github用户名
-  - git config user.email "email@xxx.com"  #邮箱
-  - git add .
-  - git commit -m "Travis CI Auto Builder at `date +"%Y-%m-%d %H:%M"`"  #提交时的说明
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master  #GH_TOKEN是在Travis中配置Token的名称
-## 结束构建
 ```
+
+<!-- endtab -->
+
+{% endtabs %}
 
 <!-- endtab -->
 
