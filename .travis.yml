@@ -1,5 +1,5 @@
 dist: trusty
-sudo: required # 需要 sudo 权限
+#sudo: required # 需要 sudo 权限
 
 # addons：插件
 addons:
@@ -51,7 +51,12 @@ before_install:
   # 将上次发布的内容(master 分支的 top commit)克隆到 .deploy_git
   - git clone --branch=master --single-branch YOUR-BLOG-REPO .deploy_git
 
-secure: "tld2zgHNMhBnWR0NaNms3jP0jVGxMWvs23Mrv4/k0nrphEQ0m1jjgfLhew3M1o/xrdSAMCCMf7ugBt3r+4ubebjqvisu2ZhJ8AIOPBGeIv2NKiISENZozCQBKcS0M9Fu+GcLivPLNXqjcpEGYcPkXqE3RGrarXJShspVFrb/7SR86c1yE4Yhb+OeDK2RNhqP9csy6debNMET14kz+56OxnNVZs0sZ17w46fkXUL6K6HWjGymbBXJneFFSwlNprMcSpvrdRQWv4j7JPyoRSkbRsUXJbougOnfs6zelhYBGPkQXUEMxYRxu9XCflq1ra/UFf7kZga/7ccZQKY99YgEwpl5mRgqa869jbCFnUXQFdELpDfg9RPFZDR5dozIYkUMWvVq1YrV776v2Fg6nqweC/SDsc3PvZ/YPsMMM9VYYvtNLiNlUWlh+jfbykdlzIyDrVynqY07hUpFoqIRTY/GHmIMTLQQgMx+y5vONdeoa5A3b86jmcP/kG9xjElgk98lbTtMjh9mqxUH8ZauCrp/vYlCBrypSE0IB3C2fG8HCuy3r6A0+D3UqvIpdagxZYIEvTGaTu3SotskIkuinvksSdjM/K0cpCy54GIcDqxxNPrnFOzadYZyUQAXK9l3EoQL5Ek+uFe8RJeNEWtYQLNc4jawI9pM4xV5MQJNBfIjU+s="
+  # SSH Setup
+  - openssl aes-256-cbc -K $encrypted_693585a97b8c_key -iv $encrypted_693585a97b8c_iv -in deploy_key.enc -out deploy_key -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 ./deploy_key
+  - ssh-add ./deploy_key
+#secure: "tld2zgHNMhBnWR0NaNms3jP0jVGxMWvs23Mrv4/k0nrphEQ0m1jjgfLhew3M1o/xrdSAMCCMf7ugBt3r+4ubebjqvisu2ZhJ8AIOPBGeIv2NKiISENZozCQBKcS0M9Fu+GcLivPLNXqjcpEGYcPkXqE3RGrarXJShspVFrb/7SR86c1yE4Yhb+OeDK2RNhqP9csy6debNMET14kz+56OxnNVZs0sZ17w46fkXUL6K6HWjGymbBXJneFFSwlNprMcSpvrdRQWv4j7JPyoRSkbRsUXJbougOnfs6zelhYBGPkQXUEMxYRxu9XCflq1ra/UFf7kZga/7ccZQKY99YgEwpl5mRgqa869jbCFnUXQFdELpDfg9RPFZDR5dozIYkUMWvVq1YrV776v2Fg6nqweC/SDsc3PvZ/YPsMMM9VYYvtNLiNlUWlh+jfbykdlzIyDrVynqY07hUpFoqIRTY/GHmIMTLQQgMx+y5vONdeoa5A3b86jmcP/kG9xjElgk98lbTtMjh9mqxUH8ZauCrp/vYlCBrypSE0IB3C2fG8HCuy3r6A0+D3UqvIpdagxZYIEvTGaTu3SotskIkuinvksSdjM/K0cpCy54GIcDqxxNPrnFOzadYZyUQAXK9l3EoQL5Ek+uFe8RJeNEWtYQLNc4jawI9pM4xV5MQJNBfIjU+s="
 
 install: npm install
 
