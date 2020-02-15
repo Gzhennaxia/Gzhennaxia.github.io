@@ -61,8 +61,8 @@ npm是Node.js的包管理工具
 
 ### 安装Hexo
 
-```
-copynpm install -g hexo
+```shell
+npm install -g hexo
 ```
 
 #### 初始化
@@ -71,14 +71,14 @@ copynpm install -g hexo
 
 执行命令（需要注意的是该命令必须在空目录下执行）：
 
-```
-copyhexo init
+```shell
+hexo init
 ```
 
 安装依赖：
 
-```
-copynpm install
+```shell
+npm install
 ```
 
 ## 自动发布
@@ -135,7 +135,7 @@ cache:
 
 before_install:
  # Git Config
- # 将 Git 子模块中的字符串 'git@github.com:' 替换为 'https://github.com/'
+ # 将 Git 子模块文件中的字符串 'git@github.com:' 替换为 'https://github.com/'
  # https://man.linuxde.net/sed
  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
  # 配置 Git 用户名
@@ -205,29 +205,29 @@ after_script:
 
 1. 将远程仓库clone到本地
 
-   ```
-   copygit clone https://github.com/username/username.github.io.git
+   ```shell
+   git clone https://github.com/username/username.github.io.git
    ```
 
 2. 创建本地分支hexo并切换到该分支
 
-   ```
-   copygit checkout -b hexo
+   ```shell
+   git checkout -b hexo
    ```
 
 3. 将本地仓库里的文件清空（除了`.git`文件），替换为hexo源码文件（即`hexo init`生成的那些文件）。
 
 4. 添加并提交到本地仓库
 
-   ```
-   copygit add .
+   ```shell
+   git add .
    git commit -m "提交信息"
    ```
 
 5. 创建并提交到远程hexo分支
 
-   ```
-   copygit push --set-upstream origin hexo
+   ```shell
+   git push --set-upstream origin hexo
    ```
 
 **GitHub生成Access Token**
@@ -252,8 +252,8 @@ after_script:
 
 **hexo源码仓库中添加Travis-CI的配置文件`.travis.yml`**
 
-```
-copylanguage: node_js  #设置语言
+```yaml
+language: node_js  #设置语言
 
 node_js: stable  #设置相应的版本
 
@@ -351,8 +351,8 @@ avatar:
 
 修改`/themes/next/source/css/_common/components/sidebar/sidebar-author.styl`如下：
 
-```
-copy.site-author-image {
+```css
+.site-author-image {
   display: block;
   margin: 0 auto;
   padding: $site-author-image-padding;
@@ -430,8 +430,8 @@ if hexo-config('avatar.rotated') {
 
 1. 关闭**主体配置文件**中的`Automatically Excerpt`
 
-   ```
-   copy# Automatically excerpt description in homepage as preamble text.
+   ```shell
+   # Automatically excerpt description in homepage as preamble text.
    excerpt_description: false
    
    # Automatically Excerpt. Not recommend.
@@ -443,8 +443,8 @@ if hexo-config('avatar.rotated') {
 
 2. 在`手动截断标签`上只放一张图片即可
 
-   ```
-   copy![NexT](https://i.loli.net/2018/12/26/5c231d3ac8a4c.jpg)
+   ```shell
+   ![NexT](https://i.loli.net/2018/12/26/5c231d3ac8a4c.jpg)
    <!-- more -->
    ```
 
@@ -516,8 +516,8 @@ if hexo-config('avatar.rotated') {
 <!-- tab NexT 5 -->
 修改`themes\next\source\css\_common\components\post\post-meta.styl`如下：
 
-```
-copy// before
+```css
+// before
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   ...
@@ -536,8 +536,8 @@ copy// before
 
 修改`themes\next\source\css\_common\components\post\post-meta.styl`如下：
 
-```
-copy// before
+```css
+// before
 .posts-expand .post-meta {
   margin: 3px 0 60px 0;
   ...
@@ -580,16 +580,16 @@ copy// before
 
 修改主题配置文件的
 
-```
-copypost_meta:
+```yaml
+post_meta:
   updated_at: 
     enabled: true
 ```
 
 要想具体显示到时分秒,则修改站点配置文件的
 
-```
-copydate_format: YYYY-MM-DD HH:mm:ss
+```yaml
+date_format: YYYY-MM-DD HH:mm:ss
 ```
 
 ### 复制代码按钮
@@ -612,8 +612,8 @@ copydate_format: YYYY-MM-DD HH:mm:ss
 
 注意实在**站点配置文件**中添加
 
-```
-copy# Security
+```yaml
+# Security
 ##
 encrypt:
     enable: true
@@ -621,8 +621,8 @@ encrypt:
 
 #### 给文章添加密码：
 
-```
-copy---
+```yaml
+---
 title: hello world
 date: 2016-03-30 21:18:02
 tags:
@@ -650,8 +650,8 @@ message: Welcome to my blog, enter password to read.
 
 2. **站点配置文件**中添加如下配置：
 
-   ```
-   copysearch:
+   ```yaml
+   search:
      path: search.xml
      field: post
      format: html
@@ -660,8 +660,8 @@ message: Welcome to my blog, enter password to read.
 
 3. **主题配置文件**中打开如下配置：
 
-   ```
-   copy# Local search
+   ```yaml
+   # Local search
    # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
    local_search:
      enable: true
@@ -675,8 +675,8 @@ message: Welcome to my blog, enter password to read.
 
 1. 使用插件[hexo-generator-index-pin-top](https://github.com/netcan/hexo-generator-index-pin-top)
 
-   ```
-   copy$ npm uninstall hexo-generator-index --save
+   ```yaml
+   $ npm uninstall hexo-generator-index --save
    $ npm install hexo-generator-index-pin-top --save
    ```
 
@@ -684,8 +684,8 @@ message: Welcome to my blog, enter password to read.
 
 3. `/blog/themes/next/layout/_macro` 目录下的`post.swig`文件，定位到``标签下，做如下修改：
 
-   ```
-   copy<div class="post-meta">
+   ```html
+   <div class="post-meta">
              <span class="post-time">
    
                {% set date_diff = date(post.date) != date(post.updated) %}
@@ -710,8 +710,8 @@ message: Welcome to my blog, enter password to read.
 
 1. 修改**主题配置文件**中如下配置：
 
-   ```
-   \source\_datacopy# Creative Commons 4.0 International License.
+   ```yaml \source\_data
+   # Creative Commons 4.0 International License.
    # https://creativecommons.org/share-your-work/licensing-types-examples
    # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
    creative_commons:
@@ -722,8 +722,8 @@ message: Welcome to my blog, enter password to read.
 
 2. 修改**站点配置文件**中如下配置：
 
-   ```
-   _config.ymlcopy# URL
+   ```yaml _config.yml
+   # URL
    ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
    url: http://username.github.io
    ```
@@ -734,8 +734,8 @@ message: Welcome to my blog, enter password to read.
 
 1. 对主题 index.swig 文件做如下修改
 
-   ```
-   Hexo\themes\next\layoutcopy{% for post in page.posts %}
+   ```swift Hexo\themes\next\layout
+   {% for post in page.posts %}
    	{# 首页隐藏指定文章 #}
    	{% if post.hidden != true %}
            {{ post_template.render(post, true) }}
@@ -754,21 +754,21 @@ message: Welcome to my blog, enter password to read.
 
 1. 替换渲染器
 
-   ```
-   copynpm un hexo-renderer-marked --save
+   ```shell
+   npm un hexo-renderer-marked --save
    npm i hexo-renderer-markdown-it --save
    ```
 
 2. 安装`markdown-it-emoji`插件
 
-   ```
-   copynpm i markdown-it-emoji --save
+   ```shell
+   npm i markdown-it-emoji --save
    ```
 
 3. 站点配置文件添加 markdown-it 配置
 
-   ```
-   _config.ymlcopy## hexo-renderer-markdown-it
+   ```yaml _config.yml
+   ## hexo-renderer-markdown-it
    ## Markdown-it config
    ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
    markdown:
@@ -919,8 +919,8 @@ Hexo 有三种默认布局：`post`、`page` 和 `draft`，它们分别对应不
 
 Hexo 的一种特殊布局：`draft`，这种布局在建立文章时会被保存到 `source/_drafts` 文件夹，您可通过 `publish` 命令将草稿移动到 `source/_posts` 文件夹。
 
-```
-copy$ hexo publish [layout] <filename>
+```shell
+$ hexo publish [layout] <filename>
 ```
 
 注意：
@@ -929,13 +929,11 @@ copy$ hexo publish [layout] <filename>
 
    eg：
 
-   ```
-   copy$ hexo new "GitHub Pages+Hexo+NexT"
+   ```shell
+   $ hexo new "GitHub Pages+Hexo+NexT"
    INFO  Created: E:\xxx\Hexo\source\_posts\GitHub-Pages-Hexo-NexT.md
    ```
 
-```
-copy
 2. 在使用`publish`命令发布草稿时需要用**文件名**，而不是文章标题
 
    eg：
@@ -943,17 +941,17 @@ copy
    ```shell
    $ hexo publish post GitHub-Pages-Hexo-NexT # post可以省略，因为layout默认就是post
    INFO  Published: E:\Github\Hexo\source\_posts\GitHub-Pages-Hexo-NexT.md
-```
+   ```
 
 1. 文件名为空时默认发布第一篇草稿
 
    eg：
 
-   ```
-   copy$ hexo publish post .
-   # 或者
-   $ hexo publish post ""
-   ```
+    ```shell
+    $ hexo publish post .
+    # 或者
+    $ hexo publish post ""
+    ```
 
 ### 代码块
 
@@ -963,8 +961,8 @@ copy
 
    代码：
 
-   ```
-   copy{% codeblock lang:java title http://www.baidu.com link test %}
+   ```swift
+   {% codeblock lang:java title http://www.baidu.com link test %}
    public static void main(String[] args) {
    	...
    }
@@ -979,12 +977,10 @@ copy
 
    代码：
 
-   ```
-   copy``` java title http://www.baidu.com link test
+   ```java title http://www.baidu.com link test
    public static void main(String[] args) {
    	...
    }
-   
    ```
 
    样式：
@@ -997,9 +993,9 @@ copy
 
 #### 语法：
 
-```
-copy{% post_link slug [title] %}
-```
+   ```swift
+{% post_link slug [title] %}
+   ```
 
 - slug
 
@@ -1011,8 +1007,8 @@ copy{% post_link slug [title] %}
 
 #### eg：
 
-```
-copy{% post_link Comments 留言板 %}
+```swift
+{% post_link Comments 留言板 %}
 ```
 
 #### 效果：
@@ -1022,3 +1018,7 @@ copy{% post_link Comments 留言板 %}
 ## 底层原理
 
 > [next主题的模板引擎swig语法介绍](https://www.jianshu.com/p/c5d333e6353c)
+
+```
+
+```
