@@ -35,7 +35,7 @@ before_install:
   # Git Config
   # 将 Git 子模块中的字符串 'git@github.com:' 替换为 'https://github.com/'
   # https://man.linuxde.net/sed
-  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+#  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   # 配置 Git 用户名
   - git config --global user.name "gzhennaxia"
   # 配置 Git 邮件
