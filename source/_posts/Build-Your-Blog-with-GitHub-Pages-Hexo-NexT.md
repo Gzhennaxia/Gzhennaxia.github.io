@@ -19,9 +19,9 @@ tags: Blog
 >
 > npm 6.5.0
 
-## GitHub创建Github Pages项目
+## GitHub 创建 Github Pages 项目
 
-创建一个名称为`username.github.io`的新仓库。username为你的GitHub账号用户名。
+创建一个名称为`username.github.io`的新仓库。username 为你的 GitHub 用户名。
 
 ## 搭建Hexo环境
 
@@ -363,6 +363,34 @@ cache:
 <!-- endtab -->
 
 {% endtabs %}
+
+## 主题升级
+
+> 为了更平滑的升级 NexT 主题，推荐使用 [Hexo-Way](https://theme-next.org/docs/getting-started/data-files)
+
+{%  note info %}
+
+如果使用 `Hexo-Way` 方式，那关于 `favicon` `avatar` 等配置在本地环境中会失效(因为路径问题)，但不影响线上效果。
+
+{% endnote %}
+
+1. 确保不存在 `/source/_data/next.yml` 文件
+2. 站点配置文件中添加 `theme_config` 属性
+3. 将需要的配置从主题配置文件中 Copy 到该属性下。
+  ```yaml _config.yml
+theme_config:
+    # Sidebar Avatar
+    avatar:
+      # Replace the default image and set the url here.
+      #  url: #/images/avatar.gif
+      url: /images/avatar.jpg
+      # If true, the avatar will be dispalyed in circle.
+      rounded: true
+      # If true, the avatar will be rotated with the cursor.
+      rotated: true
+  ```
+
+想要升级时，只需在终端里切到 `themes/next` 目录下，执行 `git pull` 命令，并将需要改动的配置 Copy 到站点配置文件中即可。
 
 ## 主题优化
 
