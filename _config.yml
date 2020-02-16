@@ -5,7 +5,7 @@
 # Site
 title: Blog in life
 subtitle: ''
-description: '大法师打发时间'
+description: '即便痛苦，也要仰起高昂的头颅'
 keywords:
 author: Gzhennaxia
 language: en
@@ -102,3 +102,10 @@ deploy:
   type: git
   repo: https://github.com/Gzhennaxia/Gzhennaxia.github.io.git
   branch: master
+
+# Local search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

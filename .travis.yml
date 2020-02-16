@@ -1,18 +1,7 @@
-#dist: trusty
-#sudo: required # 需要 sudo 权限
-
-# addons：插件
-#addons:
-  # 高级打包工具（英語：Advanced Packaging Tools，缩写为APT）是Debian及其衍生的Linux软件包管理器。
-#  apt:
-#    packages:
-#      - nasm # Netwide Assembler （简称 NASM）是一款基于英特尔 x86 架构的汇编与反汇编工具。
-
 # 环境变量
 env:
   global:
   - TZ=Asia/Shanghai
-#  - secure: ibxJCapDQGoYZq3CnK9F4uER2vYNg6+VAYwW3YAum0AdZN+LNFIrS9BI1waGr/gz/8qPrALMraAkHYsNGCdydeDqxJLCg77tPPGnxogJMdM4zTWMW1Ce3PhtXh1qGNJlsPbLvZTrCsirJigkHXjDxku/lpVBtWd0sJGxLYbz7QPVFGWUj/mFC+sVbWg+Jf8Jw4u9qrCn/vpL/NtMRjzYbYkzn0deimUZtotHl5vhmNPj0/snbTLfSiTJX7nj9eJ9G69JybF4XRMG8FZC5WqiwUFdR2PKogjo5hEG8I+3+RqfJtaDFMyqH/xMc1J7G6yU+dhU34QFh0znp1viq9hb4wN8zT5QhGFvG6KWdS7hDjvc8kUa6vM1g3UN2fK/kPU9ELIS9vThFPYvxc2J8v1Gx843mYjg3MWAahUmJgrAycnwp963SKJ5OZD5juJXCOoaeBuh9/Fc7+y1bHcQ7VpMy/CJ+UboShIsnqenAAX/9hr26Tca4DC6ian5PiogzDeKlBt9/MGlapv4ByF43hrPZRkGTaM3EObzL/ILQuxHCphHUP5dsugrFqZ8LTx6wd42B0/f2ExEamGiqU8XqrRFlZTznkHbapUbTSaQqE2rKllXGjrTPg3oJMDfdNNicJekw+02ccSuSN4XE5jMGQxWwDVuXTZZS551HlmF7q5G0VQ=
 
 language: node_js
 node_js: node # node: 指定 Node.js 版本为 latest stable Node.js release
@@ -22,32 +11,12 @@ branches:
   only:
   - source
 
-#git:
-#  depth: false # 克隆深度
-#  submodules: false # Travis CI 默认情况下会克隆Git子模块
-
 cache:
 #  apt: true # 缓存 apt 依赖
   directories:
     - node_modules # 缓存 node_modules 目录
 
 before_install:
-  # Git Config
-  # 将 Git 子模块中的字符串 'git@github.com:' 替换为 'https://github.com/'
-  # https://man.linuxde.net/sed
-#  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-  # 配置 Git 用户名
-#- git config --global user.name "gzhennaxia"
-  # 配置 Git 邮件
-#- git config --global user.email "gzhennaxia@163.com"
-
-  # Restore last modified time
-#- git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct"
-#  "$path")" "$path"; done
-
-  # Submodules
-#- git submodule update --recursive --remote --init
-
   # Deploy history
   # 将上次部署的内容(master 分支的 top commit)克隆到 .deploy_git
   - git clone --branch=master --single-branch https://github.com/Gzhennaxia/Gzhennaxia.github.io.git .last_deployed_backup
