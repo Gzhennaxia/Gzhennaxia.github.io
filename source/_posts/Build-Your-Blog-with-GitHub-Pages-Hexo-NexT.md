@@ -12,11 +12,8 @@ tags: Blog
 <!-- more -->
 
 > 环境：
->
 > Windows 10，x64
->
 > node.js v10.14.2
->
 > npm 6.5.0
 
 ## GitHub 创建 Github Pages 项目
@@ -368,6 +365,22 @@ cache:
 
 > 为了更平滑的升级 NexT 主题，推荐使用 [Hexo-Way](https://theme-next.org/docs/getting-started/data-files)
 
+{% tabs upgrade-theme %}
+
+<!-- tab Developer-Way -->
+
+{% note %}
+
+使用 `Hexo-Way` 的话，每次对站点配置文件的改动，需要重新执行 `Hexo s` 才能预览结果。但 NexT 是有热部署的，启动后直接刷新即可。但是采用 `NexT-Way` 的话，更新主题时，关于自定义的改动（除了主题配置文件以外的文件的改动）还是需要解决合并冲突的。所以还不如就全部通过合并冲突来解决。
+
+{% endnote %}
+
+直接在主题目录下执行 `git pull`，在 `WebStrom` 等 IDE 中解决冲突即可。IDE 对合并冲突都有很好的支持。
+
+<!-- endtab -->
+
+<!-- tab Hexo-Way -->
+
 {%  note info %}
 
 如果使用 `Hexo-Way` 方式，那关于 `favicon` `avatar` 等配置在本地环境中会失效(因为路径问题)，但不影响线上效果。
@@ -375,22 +388,35 @@ cache:
 {% endnote %}
 
 1. 确保不存在 `/source/_data/next.yml` 文件
+
 2. 站点配置文件中添加 `theme_config` 属性
+
 3. 将需要的配置从主题配置文件中 Copy 到该属性下。
-  ```yaml _config.yml
-theme_config:
-    # Sidebar Avatar
-    avatar:
-      # Replace the default image and set the url here.
-      #  url: #/images/avatar.gif
-      url: /images/avatar.jpg
-      # If true, the avatar will be dispalyed in circle.
-      rounded: true
-      # If true, the avatar will be rotated with the cursor.
-      rotated: true
-  ```
+
+   ```yaml _config.yml
+   theme_config:
+     # Sidebar Avatar
+     avatar:
+       # Replace the default image and set the url here.
+       #  url: #/images/avatar.gif
+       url: /images/avatar.jpg
+       # If true, the avatar will be dispalyed in circle.
+       rounded: true
+       # If true, the avatar will be rotated with the cursor.
+       rotated: true
+   ```
 
 想要升级时，只需在终端里切到 `themes/next` 目录下，执行 `git pull` 命令，并将需要改动的配置 Copy 到站点配置文件中即可。
+
+<!-- endtab -->
+
+<!-- endtab NexT-Way -->
+
+> [Date File](https://theme-next.org/docs/getting-started/data-files)
+
+<!-- endtab -->
+
+{% endtabs %}
 
 ## 主题优化
 
@@ -798,6 +824,16 @@ message: Welcome to my blog, enter password to read.
 
 > [“知识共享”（CC协议）简单介绍](https://zhuanlan.zhihu.com/p/20641764)
 
+{% tabs creative-commons %}
+
+<!-- tab NetT 7.7.1 -->
+
+> [Creative Commons | NexT](https://theme-next.org/docs/theme-settings/#Creative-Commons)
+
+<!-- endtab -->
+
+<!-- tab NetT 5 -->
+
 1. 修改**主题配置文件**中如下配置：
 
    ```yaml \source\_data
@@ -817,6 +853,10 @@ message: Welcome to my blog, enter password to read.
    ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
    url: http://username.github.io
    ```
+
+<!-- endtab -->
+
+{% endtabs %}
 
 ### 首页隐藏指定文章
 
