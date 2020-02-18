@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Software and Tools</title>
-    <url>/2020/02/16/Software%20and%20Tools/</url>
+    <url>/2020/02/18/Software%20and%20Tools/</url>
     <content><![CDATA[<img src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
 
 <a id="more"></a>
@@ -65,7 +65,7 @@
   </entry>
   <entry>
     <title>Windows</title>
-    <url>/2020/02/16/Windows/</url>
+    <url>/2020/02/18/Windows/</url>
     <content><![CDATA[<img src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
 
 <a id="more"></a>
@@ -108,7 +108,7 @@
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/2020/02/16/hello-world/</url>
+    <url>/2020/02/18/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
@@ -126,7 +126,7 @@
   </entry>
   <entry>
     <title>Git</title>
-    <url>/2020/02/16/Git/</url>
+    <url>/2020/02/18/Git/</url>
     <content><![CDATA[<img src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <a id="more"></a>
@@ -166,7 +166,7 @@
   </entry>
   <entry>
     <title>GitHub Pages+Hexo+NexT</title>
-    <url>/2020/02/16/GitHub%20Pages+Hexo+NexT/</url>
+    <url>/2020/02/18/GitHub%20Pages+Hexo+NexT/</url>
     <content><![CDATA[<blockquote>
 <p>环境：</p>
 <p>node.js    10.14.2</p>
@@ -359,7 +359,7 @@
   </entry>
   <entry>
     <title>Prepare-for-spring-travel</title>
-    <url>/2020/02/16/Prepare-for-spring-travel/</url>
+    <url>/2020/02/18/Prepare-for-spring-travel/</url>
     <content><![CDATA[<img src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <a id="more"></a>
@@ -8733,10 +8733,7 @@
 <a id="more"></a>
 
 <blockquote>
-<p>环境：</p>
-<p>Windows 10，x64</p>
-<p>node.js v10.14.2</p>
-<p>npm 6.5.0</p>
+<p>环境：<br>Windows 10，x64<br>node.js v10.14.2<br>npm 6.5.0</p>
 </blockquote>
 <h2 id="GitHub-创建-Github-Pages-项目"><a href="#GitHub-创建-Github-Pages-项目" class="headerlink" title="GitHub 创建 Github Pages 项目"></a>GitHub 创建 Github Pages 项目</h2><p>创建一个名称为<code>username.github.io</code>的新仓库。username 为你的 GitHub 用户名。</p>
 <h2 id="搭建Hexo环境"><a href="#搭建Hexo环境" class="headerlink" title="搭建Hexo环境"></a>搭建Hexo环境</h2><h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><blockquote>
@@ -8816,18 +8813,28 @@
 <h2 id="主题升级"><a href="#主题升级" class="headerlink" title="主题升级"></a>主题升级</h2><blockquote>
 <p>为了更平滑的升级 NexT 主题，推荐使用 <a href="https://theme-next.org/docs/getting-started/data-files" target="_blank" rel="noopener">Hexo-Way</a></p>
 </blockquote>
-<div class="note info">
+<div class="tabs" id="upgrade-theme"><ul class="nav-tabs"><li class="tab active"><a href="#upgrade-theme-1">Developer-Way</a></li><li class="tab"><a href="#upgrade-theme-2">Hexo-Way</a></li><li class="tab"><a href="#upgrade-theme-3">NexT-Way</a></li></ul><div class="tab-content"><div class="tab-pane active" id="upgrade-theme-1"><div class="note ">
+            <p>使用 <code>Hexo-Way</code> 的话，每次对站点配置文件的改动，需要重新执行 <code>Hexo s</code> 才能预览结果。但 NexT 是有热部署的，启动后直接刷新即可。但是采用 <code>NexT-Way</code> 的话，更新主题时，关于自定义的改动（除了主题配置文件以外的文件的改动）还是需要解决合并冲突的。所以还不如就全部通过合并冲突来解决。</p>
+          </div>
+
+<p>直接在主题目录下执行 <code>git pull</code>，在 <code>WebStrom</code> 等 IDE 中解决冲突即可。IDE 对合并冲突都有很好的支持。</p></div><div class="tab-pane" id="upgrade-theme-2"><div class="note info">
             <p>如果使用 <code>Hexo-Way</code> 方式，那关于 <code>favicon</code> <code>avatar</code> 等配置在本地环境中会失效(因为路径问题)，但不影响线上效果。</p>
           </div>
 
 <ol>
-<li>确保不存在 <code>/source/_data/next.yml</code> 文件</li>
-<li>站点配置文件中添加 <code>theme_config</code> 属性</li>
-<li>将需要的配置从主题配置文件中 Copy 到该属性下。<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">theme_config:</span></span><br><span class="line">    <span class="comment"># Sidebar Avatar</span></span><br><span class="line">    <span class="attr">avatar:</span></span><br><span class="line">      <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">      <span class="comment">#  url: #/images/avatar.gif</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">/images/avatar.jpg</span></span><br><span class="line">      <span class="comment"># If true, the avatar will be dispalyed in circle.</span></span><br><span class="line">      <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">      <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">      <span class="attr">rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<li><p>确保不存在 <code>/source/_data/next.yml</code> 文件</p>
+</li>
+<li><p>站点配置文件中添加 <code>theme_config</code> 属性</p>
+</li>
+<li><p>将需要的配置从主题配置文件中 Copy 到该属性下。</p>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">theme_config:</span></span><br><span class="line">  <span class="comment"># Sidebar Avatar</span></span><br><span class="line">  <span class="attr">avatar:</span></span><br><span class="line">    <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">    <span class="comment">#  url: #/images/avatar.gif</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/images/avatar.jpg</span></span><br><span class="line">    <span class="comment"># If true, the avatar will be dispalyed in circle.</span></span><br><span class="line">    <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">    <span class="attr">rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<p>想要升级时，只需在终端里切到 <code>themes/next</code> 目录下，执行 <code>git pull</code> 命令，并将需要改动的配置 Copy 到站点配置文件中即可。</p>
+<p>想要升级时，只需在终端里切到 <code>themes/next</code> 目录下，执行 <code>git pull</code> 命令，并将需要改动的配置 Copy 到站点配置文件中即可。</p></div><div class="tab-pane" id="upgrade-theme-3"><blockquote>
+<p><a href="https://theme-next.org/docs/getting-started/data-files" target="_blank" rel="noopener">Date File</a></p>
+</blockquote></div></div></div>
+
 <h2 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h2><blockquote>
 <p><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT使用文档</a></p>
 </blockquote>
@@ -8964,7 +8971,9 @@
 <h3 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h3><blockquote>
 <p><a href="https://zhuanlan.zhihu.com/p/20641764" target="_blank" rel="noopener">“知识共享”（CC协议）简单介绍</a></p>
 </blockquote>
-<ol>
+<div class="tabs" id="creative-commons"><ul class="nav-tabs"><li class="tab active"><a href="#creative-commons-1">NetT 7.7.1</a></li><li class="tab"><a href="#creative-commons-2">NetT 5</a></li></ul><div class="tab-content"><div class="tab-pane active" id="creative-commons-1"><blockquote>
+<p><a href="https://theme-next.org/docs/theme-settings/#Creative-Commons" target="_blank" rel="noopener">Creative Commons | NexT</a></p>
+</blockquote></div><div class="tab-pane" id="creative-commons-2"><ol>
 <li><p>修改<strong>主题配置文件</strong>中如下配置：</p>
 <figure class="highlight yaml"><figcaption><span>\source\_data</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Creative Commons 4.0 International License.</span></span><br><span class="line"><span class="comment"># https://creativecommons.org/share-your-work/licensing-types-examples</span></span><br><span class="line"><span class="comment"># Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero</span></span><br><span class="line"><span class="attr">creative_commons:</span></span><br><span class="line">  <span class="attr">license:</span> <span class="string">by-nc-sa</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">post:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -8972,7 +8981,8 @@
 <figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">http://username.github.io</span></span><br></pre></td></tr></table></figure>
 
 </li>
-</ol>
+</ol></div></div></div>
+
 <h3 id="首页隐藏指定文章"><a href="#首页隐藏指定文章" class="headerlink" title="首页隐藏指定文章"></a>首页隐藏指定文章</h3><blockquote>
 <p><a href="https://blog.csdn.net/m0_37323771/article/details/80672271" target="_blank" rel="noopener">Hexo 设置首页隐藏指定文章</a></p>
 </blockquote>
