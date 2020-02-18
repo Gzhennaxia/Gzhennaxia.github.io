@@ -410,7 +410,7 @@ cache:
 
 <!-- endtab -->
 
-<!-- endtab NexT-Way -->
+<!-- tab NexT-Way -->
 
 > [Date File](https://theme-next.org/docs/getting-started/data-files)
 
