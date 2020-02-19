@@ -12,6 +12,18 @@ tags: Writing
 
 ## 图片
 
+### 引用
+
+#### 本地图片
+
+> [Hexo博客搭建之在文章中插入图片](https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/)
+
+将图片统一放在 `source/post_image` 文件夹中，通过以下地址引用。
+
+```markdown
+![](source/post_image/xxx.jpg)
+```
+
 ### 缩放、截取
 
 {% note %}
@@ -35,7 +47,8 @@ tags: Writing
   作用：控制缩放，尽量等比数列缩放
 
   取值：[x 坐标，y 坐标]
-  	![](https://img-blog.csdn.net/20160404205217572)
+
+  ![](/post_image/background-size-x-y.jpg)
 
 - background-position
 
@@ -52,3 +65,4 @@ tags: Writing
 {% endnote %}
 
 > https://blog.csdn.net/HaHa_Sir/article/details/78667659
+> 
