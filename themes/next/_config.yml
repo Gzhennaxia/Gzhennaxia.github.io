@@ -50,17 +50,17 @@ favicon:
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
-  #since: 2015
+  since: 2017
 
   # Icon between year and copyright info.
   icon:
     # Icon name in Font Awesome. See: https://fontawesome.com/v4.7.0/icons/
     # `heart` is recommended with animation in red (#ff0000).
-    name: user
+    name: wpexplorer
     # If you want to animate the icon, set it to true.
-    animated: false
+    animated: true
     # Change the color of icon, using Hex Code.
-    color: "#808080"
+    color: "#000"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright:
@@ -182,20 +182,20 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
-  #Weibo: https://weibo.com/yourname || weibo
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
-  #Skype: skype:yourname?call|chat || skype
+  GitHub: https://github.com/gzhennaxia || github
+  E-Mail: mailto:gzhennaxia@163.com || envelope
+#  Weibo: https://weibo.com/u/5290501848 || weibo
+#  Google: https://plus.google.com/gzhennaxia || google
+#  Twitter: https://twitter.com/yourname || twitter
+#  FB Page: https://www.facebook.com/yourname || facebook
+#  StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+#  YouTube: https://youtube.com/yourname || youtube
+#  Instagram: https://instagram.com/yourname || instagram
+#  Skype: skype:yourname?call|chat || skype
 
 social_icons:
   enable: true
-  icons_only: false
+  icons_only: true
   transition: false
 
 # Blog rolls
@@ -376,9 +376,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -418,7 +418,7 @@ github_banner:
 # ---------------------------------------------------------------
 
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host, e.g. //fonts.googleapis.com (Default).
   host:
@@ -437,19 +437,19 @@ font:
   # Font settings for site title (.site-title).
   title:
     external: true
-    family:
+    family: Pacifico
     size:
 
   # Font settings for headlines (<h1> to <h6>).
   headings:
     external: true
-    family:
-    size:
+    family: Ma Shan Zheng
+    size: 2
 
   # Font settings for posts (.post-body).
   posts:
     external: true
-    family:
+    family: #Noto Sans SC
 
   # Font settings for <code> and code blocks.
   codes:
