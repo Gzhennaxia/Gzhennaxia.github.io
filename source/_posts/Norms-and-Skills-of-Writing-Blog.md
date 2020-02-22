@@ -1,9 +1,13 @@
 ---
-title: Writing Norms and Skills of Blog
-description: 博客中的写作规范与技巧
+title: Norms and Skills of Writing Blog
+description: 博客写作的规范与技巧
 date: 2020-02-16 11:31:57
-categories: Writing
-tags: Writing
+categories: 
+- Norms and Skills
+- Blog Writing
+tags:
+- Blog Writing
+- Norms and Skills
 ---
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIMyfLJHWfokz5hrXfdFZMpwxNe39khM5R4U99ZQqesqZi-uIT" width="100%"/>

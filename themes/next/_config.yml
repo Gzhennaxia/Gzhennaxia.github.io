@@ -123,8 +123,8 @@ scheme: Gemini
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
+  tags: /tags/ || tags
+  categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
@@ -321,7 +321,7 @@ post_navigation: left
 tagcloud:
   # All values below are same as default, change them by yourself.
   min: 12 # Minimun font size in px
-  max: 30 # Maxium font size in px
+  max: 25 # Maxium font size in px
   start: "#ccc" # Start color (hex, rgba, hsla or color keywords)
   end: "#111" # End color (hex, rgba, hsla or color keywords)
   amount: 200 # Amount of tags, change it if you have more than 200 tags
@@ -329,8 +329,10 @@ tagcloud:
 # Google Calendar
 # Share your recent schedule to others via calendar page.
 calendar:
-  calendar_id: <required> # Your Google account E-Mail
-  api_key: <required>
+#  calendar_id: fine-effect-268903 # Your Google account E-Mail
+#  calendar_id: v1jaqlrcd9he0iigov4uvsnbj4@group.calendar.google.com # Your Google account E-Mail
+#  api_key: <required>
+#  api_key: 317262885956-0v9qvdsdspbginp9fi1588oqkpvtckjl.apps.googleusercontent.com
   orderBy: startTime
   offsetMax: 24 # Time Range
   offsetMin: 4 # Time Range
