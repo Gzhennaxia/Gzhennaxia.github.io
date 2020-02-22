@@ -8,6 +8,9 @@ categories:
 tags:
 - Norms and Skills
 - G Suite
+reward_settings:
+  enable: false
+  comment: Donate comment here.
 ---
 
 <img src="https://meticul.com/blog/assets/g_suite-small-1.png" width="100%"/>
