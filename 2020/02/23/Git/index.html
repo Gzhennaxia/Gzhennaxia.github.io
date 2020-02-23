@@ -30,8 +30,8 @@
 <meta property="og:description" content="Git是目前世界上最先进的分布式版本控制系统">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://git-scm.com/images/logos/2color-lightbg@2x.png">
-<meta property="article:published_time" content="2020-02-23T02:37:58.708Z">
-<meta property="article:modified_time" content="2020-02-23T02:37:58.708Z">
+<meta property="article:published_time" content="2020-02-23T08:39:42.668Z">
+<meta property="article:modified_time" content="2020-02-23T08:39:42.668Z">
 <meta property="article:author" content="Gzhennaxia">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -217,7 +217,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2020-02-23 10:37:58" itemprop="dateCreated datePublished" datetime="2020-02-23T10:37:58+08:00">2020-02-23</time>
+              <time title="Created: 2020-02-23 16:39:42" itemprop="dateCreated datePublished" datetime="2020-02-23T16:39:42+08:00">2020-02-23</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -387,8 +387,8 @@
       <i class="fa fa-chevron-left"></i> GitHub Pages+Hexo+NexT
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/02/23/Software%20and%20Tools/" rel="next" title="Software and Tools">
-      Software and Tools <i class="fa fa-chevron-right"></i>
+    <a href="/2020/02/23/hello-world/" rel="next" title="Hello World">
+      Hello World <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -541,12 +541,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">330k</span>
+    <span title="Symbols count total">331k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">9:10</span>
+    <span title="Reading time total">9:12</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>
@@ -720,8 +720,40 @@
 
 
 
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
 
 
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
   

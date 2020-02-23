@@ -1,67 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Windows</title>
-    <url>/2020/02/23/Windows/</url>
-    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
-
-<a id="more"></a>
-
-<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
-<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
-</blockquote>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
-<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
-<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>control.exe</code></li>
-<li>回车</li>
-</ol>
-<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>sysdm.cpl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>cacl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>services.msc</code></li>
-<li>回车</li>
-</ol>
-<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
-<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
-<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/02/23/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Software and Tools</title>
     <url>/2020/02/23/Software%20and%20Tools/</url>
     <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
@@ -123,6 +62,97 @@
         <tag>Software</tag>
         <tag>Tools</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Windows</title>
+    <url>/2020/02/23/Windows/</url>
+    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
+
+<a id="more"></a>
+
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
+<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
+</blockquote>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
+<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
+<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>control.exe</code></li>
+<li>回车</li>
+</ol>
+<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>sysdm.cpl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>cacl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>services.msc</code></li>
+<li>回车</li>
+</ol>
+<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
+<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
+<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/02/23/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<div class="pdf" target="README.pdf" height=""></div>
+
+
+
+<pre class="mermaid" style="text-align: center;">
+            graph TD
+            A[Christmas] -->|Get money| B(Go shopping)
+B --> C{Let me thinksssss<br>ssssssssssssssssssssss<br>sssssssssssssssssssssssssss}
+C -->|One| D[Laptop]
+C -->|Two| E[iPhone]
+C -->|Three| F[Car]
+          </pre>
+
+
+<table>
+<tr>
+    <td><pre>
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+    </pre></td>
+    <td align="center">
+        <img data-src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png" />
+    </td>
+</tr>
+</table>
+
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>Git</title>
@@ -426,10 +456,57 @@
   <entry>
     <title>Norms and Skills of Writing Blog</title>
     <url>/2020/02/16/Norms-and-Skills-of-Writing-Blog/</url>
-    <content><![CDATA[<img data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIMyfLJHWfokz5hrXfdFZMpwxNe39khM5R4U99ZQqesqZi-uIT" width="100%"/>
+    <content><![CDATA[<img data-src="https://blog.hubspot.com/hubfs/blog-writing-for-SEO.jpg" width="100%"/>
 
 <a id="more"></a>
 
+<h2 id="文字"><a href="#文字" class="headerlink" title="文字"></a>文字</h2><h3 id="纯色背景填充"><a href="#纯色背景填充" class="headerlink" title="纯色背景填充"></a>纯色背景填充</h3><blockquote>
+<p><a href="https://theme-next.org/docs/tag-plugins/label" target="_blank" rel="noopener">Label | NexT</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>{ % label @示例 1 % }</td>
+<td><span class="label default">示例 1</span></td>
+</tr>
+<tr>
+<td>{ % label default@示例 2 % }</td>
+<td><span class="label default">示例 2</span></td>
+</tr>
+<tr>
+<td>{ % label primary@示例 3 % }</td>
+<td><span class="label primary">示例 3</span></td>
+</tr>
+<tr>
+<td>{ % label success@示例 4 % }</td>
+<td><span class="label success">示例 4</span></td>
+</tr>
+<tr>
+<td>{ % label info@示例 5 % }</td>
+<td><span class="label info">示例 5</span></td>
+</tr>
+<tr>
+<td>{ % label warning@示例 6 % }</td>
+<td><span class="label warning">示例 6</span></td>
+</tr>
+<tr>
+<td>{ % label danger@示例 7 % }</td>
+<td><span class="label danger">示例 7</span></td>
+</tr>
+<tr>
+<td>~~{ % label default @示例8 % }~~</td>
+<td><del><span class="label default">示例8</span></del></td>
+</tr>
+<tr>
+<td>&lt;mark&gt;esse&lt;/mark&gt;</td>
+<td><mark>esse</mark></td>
+</tr>
+</tbody></table>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="本地图片"><a href="#本地图片" class="headerlink" title="本地图片"></a>本地图片</h4><blockquote>
 <p><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" target="_blank" rel="noopener">Hexo博客搭建之在文章中插入图片</a></p>
 </blockquote>
@@ -461,6 +538,91 @@
 <blockquote>
 <p><a href="https://blog.csdn.net/HaHa_Sir/article/details/78667659" target="_blank" rel="noopener">https://blog.csdn.net/HaHa_Sir/article/details/78667659</a></p>
 </blockquote>
+<h2 id="PDF"><a href="#PDF" class="headerlink" title="PDF"></a>PDF</h2><blockquote>
+<p><a href="https://theme-next.org/docs/tag-plugins/pdf" target="_blank" rel="noopener">PDF | NexT</a></p>
+</blockquote>
+<ol>
+<li><p>将 pdf 文件统一放在 <code>source/pdf</code> 目录中</p>
+</li>
+<li><p>文章里使用如下方式引用</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">&#123;% pdf xxx.pdf %&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><div class="note success no-icon">
+            <p>在写博客搭建的文章时，不知道如何能够更好的表现需要配置内容和配置后的效果。一次偶然看到 <a href="https://github.com/mermaid-js/mermaid" target="_blank" rel="noopener">mermaid|GitHub</a> 的README 得到启发，使用 table 布局就可以了。</p>
+          </div>
+
+<table>
+<tr>
+    <td><pre>
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]</pre></td>
+    <td align="center">
+        <img data-src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png" />
+    </td>
+</tr>
+</table>
+
+<h2 id="Mermaid"><a href="#Mermaid" class="headerlink" title="Mermaid"></a>Mermaid</h2><blockquote>
+<p><a href="https://github.com/mermaid-js/mermaid" target="_blank" rel="noopener">mermaid|GitHub</a></p>
+</blockquote>
+<blockquote class="blockquote-center"><p>Generation of diagram and flowchart from text in a similar manner as markdown.</p>
+</blockquote>
+
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><h2 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h2><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>{ % video url % }</td>
+<td><video src="https://example.com/sample.mp4" preload="metadata" controls playsinline poster="">Sorry, your browser does not support the video tag.</video></td>
+</tr>
+</tbody></table>
+<h2 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h2><blockquote>
+<p><a href="https://theme-next.org/docs/tag-plugins/button" target="_blank" rel="noopener">Button | NexT</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% button url, text, icon [class], [title] %&#125;</span><br><span class="line">&lt;!-- Tag Alias --&gt;</span><br><span class="line">&#123;% btn url, text, icon [class], [title] %&#125;</span><br><span class="line"></span><br><span class="line">url     : Absolute or relative path to URL.</span><br><span class="line">text    : Button text. Required if no icon specified.</span><br><span class="line">icon    : FontAwesome icon name (without &#39;fa-&#39; at the begining). Required if no text specified.</span><br><span class="line">[class] : FontAwesome class(es): fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x</span><br><span class="line">          Optional parameter.</span><br><span class="line">[title] : Tooltip at mouseover.</span><br><span class="line">          Optional parameter.</span><br></pre></td></tr></table></figure>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>{ % button #, 按钮文字 % }</td>
+<td><a class="btn" href="#">按钮文字</a></td>
+</tr>
+<tr>
+<td>{ % button #, 带图标的按钮, home % }</td>
+<td><a class="btn" href="#"><i class="fa fa-home"></i>带图标的按钮</a></td>
+</tr>
+<tr>
+<td>{ % button #, 带间隙的图标按钮, home fa-fw % }</td>
+<td><a class="btn" href="#"><i class="fa fa-home fa-fw"></i>带间隙的图标按钮</a></td>
+</tr>
+<tr>
+<td>{ % button #, 带标题的按钮, , 标题 % }</td>
+<td><a class="btn" href="#" title="标题">带标题的按钮</a></td>
+</tr>
+<tr>
+<td>文字文字{ % button #, 文字围绕的按钮 % }文字文字</td>
+<td>文字文字<a class="btn" href="#">文字围绕的按钮</a>文字文字</td>
+</tr>
+<tr>
+<td>{ % note info no-icon % }<br/>{ % btn #, 嵌入note中的按钮 % }<br/>{ % endnote % }</td>
+<td><div class="note info no-icon">
+            <p><a class="btn" href="#">嵌入note中的按钮</a>    </p>
+          </div></td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>Norms and Skills</category>
