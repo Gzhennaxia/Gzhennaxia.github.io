@@ -10,9 +10,28 @@ tags:
 - Norms and Skills
 ---
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTIMyfLJHWfokz5hrXfdFZMpwxNe39khM5R4U99ZQqesqZi-uIT" width="100%"/>
+<img src="https://blog.hubspot.com/hubfs/blog-writing-for-SEO.jpg" width="100%"/>
 
 <!-- more -->
+
+## 文字
+
+### 纯色背景填充
+
+> [Label | NexT](https://theme-next.org/docs/tag-plugins/label)
+
+| Code                               | Result                         |
+| ---------------------------------- | ------------------------------ |
+| { % label @示例 1 % } |      {% label @示例 1 %} |
+| { % label default@示例 2 % }      |{% label default@示例 2 %} |
+| { % label primary@示例 3 % }      |{% label primary@示例 3 %} |
+| { % label success@示例 4 % }      |{% label success@示例 4 %} |
+| { % label info@示例 5 % }   |   {% label info@示例 5 %} |
+| { % label warning@示例 6 % }      |{% label warning@示例 6 %} |
+| { % label danger@示例 7 % }     | {% label danger@示例 7 %} |
+| \~\~{ % label default @示例8 % }\~\~ | ~~{% label default @示例8 %}~~ |
+| \<mark\>esse\</mark\> | <mark>esse</mark> |
+
 
 ## 图片
 
@@ -70,3 +89,86 @@ tags:
 
 > https://blog.csdn.net/HaHa_Sir/article/details/78667659
 > 
+
+## PDF
+
+> [PDF | NexT](https://theme-next.org/docs/tag-plugins/pdf)
+
+1. 将 pdf 文件统一放在 `source/pdf` 目录中
+
+2. 文章里使用如下方式引用
+
+   ```swift
+   {% pdf xxx.pdf %}
+   ```
+
+## 效果展示
+
+{% note success no-icon %}
+
+在写博客搭建的文章时，不知道如何能够更好的表现需要配置内容和配置后的效果。一次偶然看到 [mermaid|GitHub](https://github.com/mermaid-js/mermaid) 的README 得到启发，使用 table 布局就可以了。
+
+{% endnote %}
+
+<table>
+<tr>
+    <td><pre>
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]</pre></td>
+    <td align="center">
+        <img src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png" />
+    </td>
+</tr>
+</table>
+
+## Mermaid
+
+> [mermaid|GitHub](https://github.com/mermaid-js/mermaid)
+
+{% cq %}
+
+Generation of diagram and flowchart from text in a similar manner as markdown.
+
+{% endcq %}
+
+### 流程图
+
+
+
+## 视频
+
+| Code              | Result                                     |
+| ----------------- | ------------------------------------------ |
+| { % video url % } | {% video https://example.com/sample.mp4 %} |
+
+## 按钮
+
+> [Button | NexT](https://theme-next.org/docs/tag-plugins/button)
+>
+> ```
+> {% button url, text, icon [class], [title] %}
+> <!-- Tag Alias -->
+> {% btn url, text, icon [class], [title] %}
+> 
+> url     : Absolute or relative path to URL.
+> text    : Button text. Required if no icon specified.
+> icon    : FontAwesome icon name (without 'fa-' at the begining). Required if no text specified.
+> [class] : FontAwesome class(es): fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5x
+>           Optional parameter.
+> [title] : Tooltip at mouseover.
+>           Optional parameter.
+> ```
+
+| Code                             | Result                          |
+| -------------------------------- | ------------------------------- |
+| { % button #, 按钮文字 % }       | {% button #, 按钮文字 %}        |
+| { % button #, 带图标的按钮, home % } | {% button #, 带图标的按钮, home %} |
+| { % button #, 带间隙的图标按钮, home fa-fw % } | {% button #, 带间隙的图标按钮, home fa-fw %} |
+| { % button #, 带标题的按钮, , 标题 % } | {% button #, 带标题的按钮, , 标题 %} |
+| 文字文字{ % button #, 文字围绕的按钮 % }文字文字 | 文字文字{% button #, 文字围绕的按钮 %}文字文字 |
+| { % note info no-icon % }<br/>{ % btn #, 嵌入note中的按钮 % }<br/>{ % endnote % } |{% note info no-icon %}	{% btn #, 嵌入note中的按钮 %}	{% endnote %} |
+
+
