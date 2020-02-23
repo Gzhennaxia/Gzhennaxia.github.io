@@ -109,3 +109,11 @@ search:
   field: post
   format: html
   limit: 10000
+
+# Read Times
+leancloud_counter_security:
+  enable_sync: true
+  app_id: eVUj7cd3MyiEwfcYhXhBLmnh-gzGzoHsz
+  app_key: IfKchdp9FY0HDE1drNF3FDln
+  username: Gzhennaxia # Will be asked while deploying if is left blank
+  password: Geizhennaxia.123 # Recommmended to be left blank. Will be asked while deploying if is left blank
