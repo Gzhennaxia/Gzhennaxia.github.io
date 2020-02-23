@@ -8,6 +8,11 @@ categories:
 tags:
 - Blog Writing
 - Norms and Skills
+#password: 12345
+#abstract: Here's something encrypted, password is required to continue reading.
+#message: Hey, password is required here.
+#wrong_pass_message: Oh, this is an invalid password. Check and try again, please.
+#wrong_hash_message: Oh, these decrypted content cannot be verified, but you can still have a look.
 ---
 
 <img src="https://blog.hubspot.com/hubfs/blog-writing-for-SEO.jpg" width="100%"/>
@@ -32,7 +37,6 @@ tags:
 | \~\~{ % label default @示例8 % }\~\~ | ~~{% label default @示例8 %}~~ |
 | \<mark\>esse\</mark\> | <mark>esse</mark> |
 
-
 ## 图片
 
 ### 引用
@@ -44,7 +48,7 @@ tags:
 将图片统一放在 `source/post_image` 文件夹中，通过以下地址引用。
 
 ```markdown
-![](source/post_image/xxx.jpg)
+![](/post_image/xxx.jpg)
 ```
 
 ### 缩放、截取
@@ -89,6 +93,54 @@ tags:
 
 > https://blog.csdn.net/HaHa_Sir/article/details/78667659
 > 
+
+### 分组
+
+> [Group Pictures | NexT](https://theme-next.org/docs/tag-plugins/group-pictures)
+>
+> ```
+> {% grouppicture [group]-[layout] %}{% endgrouppicture %}
+> {% gp [group]-[layout] %}{% endgp %}
+> 
+> [group]  : Total number of pictures to add in the group.
+> [layout] : Default picture under the group to show.
+> ```
+
+**例如**
+
+{% tabs group-pictures %}
+
+<!-- tab Code -->
+
+```swift
+{% grouppicture 5-3 %}
+  ![](/post_image/background-size-x-y.jpg)
+  ![](/post_image/background-size-x-y.jpg)
+  ![](/post_image/background-size-x-y.jpg)
+  ![](/post_image/background-size-x-y.jpg)
+  ![](/post_image/background-size-x-y.jpg)		
+{% endgrouppicture %}
+```
+
+
+
+<!-- endtab -->
+
+<!-- tab Result -->
+
+{% grouppicture 5-3 %}
+![](/post_image/background-size-x-y.jpg)
+![](/post_image/background-size-x-y.jpg)
+![](/post_image/background-size-x-y.jpg)
+![](/post_image/background-size-x-y.jpg)
+![](/post_image/background-size-x-y.jpg)
+{% endgrouppicture %}
+
+
+
+<!-- endtab -->
+
+{% endtabs %}
 
 ## PDF
 
