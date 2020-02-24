@@ -2,13 +2,13 @@
 title: {{ title }}
 description: 一句话描述这篇文章
 date: {{ date }}
-categories:
-tags:
-comments: false
-top: false
-reward_settings:
-  enable: false
-  comment: 
+categories: 
+tags: 
+password: 
+abstract: 
+message: 
+wrong_pass_message: 
+wrong_hash_message:
 ---
 
 <img src="cover" width="100%"/>
