@@ -1,8 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Software and Tools</title>
+    <url>/2020/02/24/Software%20and%20Tools/</url>
+    <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
+
+<a id="more"></a>
+
+<h2 id="Listary"><a href="#Listary" class="headerlink" title="Listary"></a>Listary</h2><blockquote>
+<p>一款非常强大的搜索软件</p>
+</blockquote>
+<h3 id="配置百度翻译"><a href="#配置百度翻译" class="headerlink" title="配置百度翻译"></a>配置百度翻译</h3><p>设置&gt;关键字&gt;+</p>
+<p><img data-src="https://i.loli.net/2018/12/23/5c1efe97bccec.jpg" alt=""></p>
+<p><img data-src="https://i.loli.net/2018/12/23/5c1efec5efec9.jpg" alt=""></p>
+<h2 id="GUN-Wget"><a href="#GUN-Wget" class="headerlink" title="GUN Wget"></a>GUN Wget</h2><blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/28826000" target="_blank" rel="noopener">Wget for windows——优雅地实现批量下载</a></p>
+</blockquote>
+<h2 id="在线验证-yaml-格式"><a href="#在线验证-yaml-格式" class="headerlink" title="在线验证 yaml 格式"></a>在线验证 yaml 格式</h2><p><a href="http://www.yamllint.com/" target="_blank" rel="noopener">YAML Lint</a></p>
+<h2 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h2><blockquote>
+<p><a href="https://www.52pojie.cn/thread-801613-1-1.html" target="_blank" rel="noopener">VMware Workstation 15 Pro+Key</a></p>
+</blockquote>
+<h2 id="MySQL图形化工具"><a href="#MySQL图形化工具" class="headerlink" title="MySQL图形化工具"></a>MySQL图形化工具</h2><blockquote>
+<p><a href="https://www.52pojie.cn/thread-710976-1-1.html" target="_blank" rel="noopener">Webyog Sqlyog Ultimate_12.5.1官方最新版附注册码</a></p>
+</blockquote>
+<h2 id="XShell"><a href="#XShell" class="headerlink" title="XShell"></a>XShell</h2><blockquote>
+<p><a href="https://www.jb51.net/softs/595166.html#downintro2" target="_blank" rel="noopener">Xshell 6 (SSH远程终端工具) 6.0 绿色中文注册授权激活版</a></p>
+<p><a href="http://www.xshellcn.com/" target="_blank" rel="noopener">中文官网</a></p>
+</blockquote>
+<h2 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h2><blockquote>
+<p><a href="https://blog.csdn.net/cs4380/article/details/79158268" target="_blank" rel="noopener">maven下载和安装</a></p>
+</blockquote>
+<h2 id="Lombok"><a href="#Lombok" class="headerlink" title="Lombok"></a>Lombok</h2><blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/32779910" target="_blank" rel="noopener">Lombok 看这篇就够了</a></p>
+</blockquote>
+<h2 id="PDF-阅读器"><a href="#PDF-阅读器" class="headerlink" title="PDF 阅读器"></a>PDF 阅读器</h2><blockquote>
+<p><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html" target="_blank" rel="noopener">sumatrapdf</a></p>
+</blockquote>
+<h2 id="PotPlayer"><a href="#PotPlayer" class="headerlink" title="PotPlayer"></a>PotPlayer</h2><blockquote>
+<p><a href="https://blog.csdn.net/u014015972/article/details/47264371" target="_blank" rel="noopener">Potplayer 快捷键</a></p>
+</blockquote>
+<p>视频播放器。强大的内置解码器，强大的定制能力和个性化功能。</p>
+<h2 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h2><h3 id="Clear-Cache"><a href="#Clear-Cache" class="headerlink" title="Clear Cache"></a>Clear Cache</h3><p>Clear your cache and browsing data with a single click of a button.</p>
+<h3 id="SMMS"><a href="#SMMS" class="headerlink" title="SMMS"></a>SMMS</h3><blockquote>
+<p>一个简单实用的图床插件</p>
+</blockquote>
+<h3 id="Vimium"><a href="#Vimium" class="headerlink" title="Vimium"></a>Vimium</h3><blockquote>
+<p><a href="https://blog.csdn.net/WPwalter/article/details/80933068" target="_blank" rel="noopener">像黑客一样！Chrome 完全键盘操作指南（原生快捷键 + Vimium 插件）</a></p>
+</blockquote>
+<h3 id="Octotree"><a href="#Octotree" class="headerlink" title="Octotree"></a>Octotree</h3><blockquote>
+<p><a href="http://yifeng.studio/2017/09/06/recommended-extension-tools-about-github/" target="_blank" rel="noopener">强力推荐！那些你不能错过的 GitHub 插件和工具</a></p>
+</blockquote>
+<h3 id="Save-to-Pocket"><a href="#Save-to-Pocket" class="headerlink" title="Save to Pocket"></a>Save to Pocket</h3><blockquote>
+<p>The best way to save articles, videos and more</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Software</category>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Software</tag>
+        <tag>Tools</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows</title>
+    <url>/2020/02/24/Windows/</url>
+    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
+
+<a id="more"></a>
+
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
+<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
+</blockquote>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
+<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
+<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>control.exe</code></li>
+<li>回车</li>
+</ol>
+<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>sysdm.cpl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>cacl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>services.msc</code></li>
+<li>回车</li>
+</ol>
+<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
+<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
+<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/02/24/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<div class="pdf" target="README.pdf" height=""></div>
+
+
+
+<pre class="mermaid" style="text-align: center;">
+            graph TD
+            A[Christmas] -->|Get money| B(Go shopping)
+B --> C{Let me thinksssss<br>ssssssssssssssssssssss<br>sssssssssssssssssssssssssss}
+C -->|One| D[Laptop]
+C -->|Two| E[iPhone]
+C -->|Three| F[Car]
+          </pre>
+
+
+<table>
+<tr>
+    <td><pre>
+graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+    </pre></td>
+    <td align="center">
+        <img data-src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png" />
+    </td>
+</tr>
+</table>
+
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Git</title>
-    <url>/2020/02/23/Git/</url>
+    <url>/2020/02/24/Git/</url>
     <content><![CDATA[<img data-src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <a id="more"></a>
@@ -58,7 +212,7 @@
   </entry>
   <entry>
     <title>GitHub Pages+Hexo+NexT</title>
-    <url>/2020/02/23/GitHub%20Pages+Hexo+NexT/</url>
+    <url>/2020/02/24/GitHub%20Pages+Hexo+NexT/</url>
     <content><![CDATA[<blockquote>
 <p>环境：</p>
 <p>node.js    10.14.2</p>
@@ -251,7 +405,7 @@
   </entry>
   <entry>
     <title>Prepare-for-spring-travel</title>
-    <url>/2020/02/23/Prepare-for-spring-travel/</url>
+    <url>/2020/02/24/Prepare-for-spring-travel/</url>
     <content><![CDATA[<img data-src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <a id="more"></a>
@@ -259,158 +413,43 @@
 <h2 id="衣"><a href="#衣" class="headerlink" title="衣"></a>衣</h2><h2 id="食"><a href="#食" class="headerlink" title="食"></a>食</h2><h2 id="住"><a href="#住" class="headerlink" title="住"></a>住</h2><h2 id="行"><a href="#行" class="headerlink" title="行"></a>行</h2>]]></content>
   </entry>
   <entry>
-    <title>Software and Tools</title>
-    <url>/2020/02/23/Software%20and%20Tools/</url>
-    <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
-
-<a id="more"></a>
-
-<h2 id="Listary"><a href="#Listary" class="headerlink" title="Listary"></a>Listary</h2><blockquote>
-<p>一款非常强大的搜索软件</p>
-</blockquote>
-<h3 id="配置百度翻译"><a href="#配置百度翻译" class="headerlink" title="配置百度翻译"></a>配置百度翻译</h3><p>设置&gt;关键字&gt;+</p>
-<p><img data-src="https://i.loli.net/2018/12/23/5c1efe97bccec.jpg" alt=""></p>
-<p><img data-src="https://i.loli.net/2018/12/23/5c1efec5efec9.jpg" alt=""></p>
-<h2 id="GUN-Wget"><a href="#GUN-Wget" class="headerlink" title="GUN Wget"></a>GUN Wget</h2><blockquote>
-<p><a href="https://zhuanlan.zhihu.com/p/28826000" target="_blank" rel="noopener">Wget for windows——优雅地实现批量下载</a></p>
-</blockquote>
-<h2 id="在线验证-yaml-格式"><a href="#在线验证-yaml-格式" class="headerlink" title="在线验证 yaml 格式"></a>在线验证 yaml 格式</h2><p><a href="http://www.yamllint.com/" target="_blank" rel="noopener">YAML Lint</a></p>
-<h2 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h2><blockquote>
-<p><a href="https://www.52pojie.cn/thread-801613-1-1.html" target="_blank" rel="noopener">VMware Workstation 15 Pro+Key</a></p>
-</blockquote>
-<h2 id="MySQL图形化工具"><a href="#MySQL图形化工具" class="headerlink" title="MySQL图形化工具"></a>MySQL图形化工具</h2><blockquote>
-<p><a href="https://www.52pojie.cn/thread-710976-1-1.html" target="_blank" rel="noopener">Webyog Sqlyog Ultimate_12.5.1官方最新版附注册码</a></p>
-</blockquote>
-<h2 id="XShell"><a href="#XShell" class="headerlink" title="XShell"></a>XShell</h2><blockquote>
-<p><a href="https://www.jb51.net/softs/595166.html#downintro2" target="_blank" rel="noopener">Xshell 6 (SSH远程终端工具) 6.0 绿色中文注册授权激活版</a></p>
-<p><a href="http://www.xshellcn.com/" target="_blank" rel="noopener">中文官网</a></p>
-</blockquote>
-<h2 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h2><blockquote>
-<p><a href="https://blog.csdn.net/cs4380/article/details/79158268" target="_blank" rel="noopener">maven下载和安装</a></p>
-</blockquote>
-<h2 id="Lombok"><a href="#Lombok" class="headerlink" title="Lombok"></a>Lombok</h2><blockquote>
-<p><a href="https://zhuanlan.zhihu.com/p/32779910" target="_blank" rel="noopener">Lombok 看这篇就够了</a></p>
-</blockquote>
-<h2 id="PDF-阅读器"><a href="#PDF-阅读器" class="headerlink" title="PDF 阅读器"></a>PDF 阅读器</h2><blockquote>
-<p><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html" target="_blank" rel="noopener">sumatrapdf</a></p>
-</blockquote>
-<h2 id="PotPlayer"><a href="#PotPlayer" class="headerlink" title="PotPlayer"></a>PotPlayer</h2><blockquote>
-<p><a href="https://blog.csdn.net/u014015972/article/details/47264371" target="_blank" rel="noopener">Potplayer 快捷键</a></p>
-</blockquote>
-<p>视频播放器。强大的内置解码器，强大的定制能力和个性化功能。</p>
-<h2 id="Chrome插件"><a href="#Chrome插件" class="headerlink" title="Chrome插件"></a>Chrome插件</h2><h3 id="Clear-Cache"><a href="#Clear-Cache" class="headerlink" title="Clear Cache"></a>Clear Cache</h3><p>Clear your cache and browsing data with a single click of a button.</p>
-<h3 id="SMMS"><a href="#SMMS" class="headerlink" title="SMMS"></a>SMMS</h3><blockquote>
-<p>一个简单实用的图床插件</p>
-</blockquote>
-<h3 id="Vimium"><a href="#Vimium" class="headerlink" title="Vimium"></a>Vimium</h3><blockquote>
-<p><a href="https://blog.csdn.net/WPwalter/article/details/80933068" target="_blank" rel="noopener">像黑客一样！Chrome 完全键盘操作指南（原生快捷键 + Vimium 插件）</a></p>
-</blockquote>
-<h3 id="Octotree"><a href="#Octotree" class="headerlink" title="Octotree"></a>Octotree</h3><blockquote>
-<p><a href="http://yifeng.studio/2017/09/06/recommended-extension-tools-about-github/" target="_blank" rel="noopener">强力推荐！那些你不能错过的 GitHub 插件和工具</a></p>
-</blockquote>
-<h3 id="Save-to-Pocket"><a href="#Save-to-Pocket" class="headerlink" title="Save to Pocket"></a>Save to Pocket</h3><blockquote>
-<p>The best way to save articles, videos and more</p>
-</blockquote>
-]]></content>
+    <title>Score</title>
+    <url>/2020/02/24/Score/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Third warning: This content is personal, please skip it." data-whm="Fourth warning: This content is personal, please skip it."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Warning again: This content is personal, please skip it." /><label>Warning again: This content is personal, please skip it.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="33a923bf89a26f7c9d444db3ad115ecbd1cbcdbaa2bd5f39f349a218ce613bfd">83c4f8ea343e795ea5cda9331adf7dc0ce4a134270323f562a9b86b9a0674133e3ec8c45f486404f28391e06f5a3f54421f9f785ac09675e45991f451b02bb62154c46e776f17e852f876bf48db898c831191d19a0a4cc5bda4cadcd60075c2791efa0c018b416ad4da9fde09feb412753693ad9586760a2ec9a2752654116fc50e4349f2d02ab621b2448767e7411eec5857173f8cf206c498e1d4f336deb8a6354a681c7505a572ed001e5a90d72f28af1c094c9c6fee3de3aa7184f9d0b8bfe3fed9788a7fce7e447d8e73b611ad4e4cc61489276c4b4a565d1630626765cb79374bf94bd4dbde9428b19acf19ba8badd0057d03e39b233468ac0788e06d58e1fd3544754c74780b692bcce53d19a26b7f1a04efd64dc0491116518f572f3de578206c4db08f071d92dd9c1266df6aeb6d7ad789dfe3c58d075b07207dd3d53399201e6cb7c1b67c998f173387438dcaed5c1dcfceacc3b6fd45696a8ce88e360440e10accd375a8c43999b6dd9002ec570fbf039dd1ae1c6449a0b3e972e4bb0c6123c2282e4738d25aeb93d5c282feb70c13a8cf31ebd9ed8d8e9967701b3e30f933610d288313cdb7905c6c448088c66e5cd2ae1445df794568e8dd67da09dbb23a9615e45862df7190d0b947bb62539b684ec192389f56a12b4f7e9c923a43927b5c99369e244721f45a5d9da5de51b0bb94dad36614bcf98911c22d5ea53612484ae3d095525f86196e86ba0bdd3c6c64878666301147e02372099c007edc97326fc01f21bbc50e166bcd8288b3d1bae22ee646ba1c298f11ed7a8a146dc9f2c3e5e7ace1dcbc79219b69bffb0636e0e7dc2af72ffe4a2291a639b28a9bb431a26e4d35f215ffd0cb7de56e401ae9a44ab4cc7f4adc8ac6a9b2abe7c6627b59ceb1320fcfd6f93737aeb2a83bbf0649456b9d4b4f6af9330e35d64e416bfa34a5a13aa381743fbd8df71cdb854d91c0656832f3108ccb72b4384cc521ef84b7dfd2b5128354086e2fb639a2b5d76ea682498bdfc01816a637e727ac29728473bf5f894e707c6ae243ae2cc1254f875a22bcbe6dd14639b555350b63ab4a5503aba36c85128eb9f9c8ecb29c72b7e56bf8f09aa7d174e786daa4bcb280d970be8c3f46d3dfdab48fc4469240bde1c930bfae8a9cef28f8004dc5621beac7a64d880cdbbf391f0dc63c0fb383afd743699387c27111da103b00b50763c5684b5ec2d4b4cce8d89faf072d28ed0b2beb0b935eac5ab20ee7618b6eabf87a1a326863506bc0348a58b408dcc02d88cf0e4d568fb9d0124287ad9b8252015691039d4cadd80aa93d12436815fab56903462bd18bc5889fd058f2dcde9038ca09a26d010cea3a4e03867797828cd4dfde1e24e522fbe084eda0bec9496b80ff9716b896b2b8887cc4529b077f622632632183c1da2b05e8cf8a349ff19dc609c2881d516e2ec34024f109081d86def9c8bb063e80febf7861706bcbb36950ad9a759088500aea68a68f910f5e72ca1cb0a715273c5291f6553c6a26a548e0e28a152b063b323187bed9ef0d7d1645957a5ffefa4eab3b06290a509590f732176d016f0e30145abe0b1fa737d5e06f93bdfb36d430bd5854d1bccc6612ee025b3c6216ff49e2150d099bb4cc6a4e467c1e968372c1fe5391dad79c5f78a44d054f6c43f88c76e3ac0296f194c8b62e68d08ad3fc097f1eda2534f3069f462827d4cad95545376626af1bb0335a4382453879bf6a9693f1d2b36242f0b29a706ede06c4d4d6437c5253e9e2971725113c1c537d3b975a17ce999ceb90d9f6d2ed78c48a44201f6dcdb9e8ecc8b4567ace575ca3b30fb917c2ee8c5da91e0412d3c5e2e2fdb5b09adaa5321b614fee73100e9cd958b338e114461126651af64fec6fde8fc4a4f7b9a8a36371bb09cad1ffbd1ea24f94499b80271df0af1d4a21690de3f016736a4d5e69c05cb6fd3d46640ea4ff1afc59e3e3379df9a5437684bc9a9756f2101bf01eb912429430af3e466165abf2cc96631042f2e11f10c5cfb1ef4dfdc87358d2e75ad80753c05423b3bd7ae6e80ea9f3d6570b3b1bf638270462993c6fafd2941b1b7db9bed2689c4b5234fddaa9c390ea4cfae956416dfa1166b5091ec49d85e9a379a96bfbdabf8434a0cfeb5342e68cf31d235f7913ccd16a6c6be81980e7558485dad60550ef9c8cfa53efacdcb5d1991db73e57ffd80aaffe1222548b2e05bbf7d565937c11e00c8411d56850acd0ab20f16867c1ab543083cfb09128f0e0bcc604cdd245c287b5ec50481b9101c4c22d9216e3ba0185ece347662a495b6db3d2eff50a770557c8b0ea858f77edc9010ee5276a471863949f55dd842633d305461dd18fcaac3025ee79f3e7bdd758384f23468e33ccab939110fcd7e31f2b0e33b5836b91481e57dd46f7f47df7203dc7866f709cd950c879b5820c832bf772b0f9db8fa47573795ca686311a45fb6b795c00b2ca34e0bc60e2b45b5925e709c759eacb301aebeea1ebfbd0a29831f3b898a2f7b5ba9a3a18f32e8cd769e608d95ac95c31c67e14a5253e397775a403edfe09685023ee36bfc085b163ea61ea65b0ccd750c203b8aaace0f9c14cf66bc6e7c8770c350803a4708f87ad6dbf456a29a3fd92e03</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>Software</category>
-        <category>Tools</category>
+        <category>Encrypt</category>
+        <category>Conclusion</category>
       </categories>
-      <tags>
-        <tag>Software</tag>
-        <tag>Tools</tag>
-      </tags>
   </entry>
   <entry>
-    <title>Windows</title>
-    <url>/2020/02/23/Windows/</url>
-    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
-
-<a id="more"></a>
-
-<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
-<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
-</blockquote>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
-<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
-<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>control.exe</code></li>
-<li>回车</li>
-</ol>
-<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>sysdm.cpl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>cacl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>services.msc</code></li>
-<li>回车</li>
-</ol>
-<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
-<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
-<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
-]]></content>
+    <title>Get Up Early</title>
+    <url>/2020/02/24/Get-Up-Early/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Third warning: This content is personal, please skip it." data-whm="Fourth warning: This content is personal, please skip it."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Warning again: This content is personal, please skip it." /><label>Warning again: This content is personal, please skip it.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="e162e72e6bd220c07c018c1a2b0684fe6deb8ee391ca86d9a7c53dccb305ea5d">27e85e64ed1f3b7733f279ff1798cfd5ca234ca308c1332d7e89c60eb597d5cf8694d9490e0f740cc56da4341244c4e4356eb62cb379667e1fd95b37afb1a28c93e2ff5f5a3bce75b5a07a46775e602fd8f4b8c96e628e46c851425887255d313258a050671e3325b4cf7a82772a4887303b3c7cbfe0dc29f4cf29d74fb8e4cd166a28141be12ea335611a22fb319af7723c967f54b59b394c36433f31d634fd87b7ff161108bd2c9ff797e75b8d149902cedaf38743e71aa96f9fe60f681ba21b1c7cea09678a50dc477674cfb3247b0093be71fa6de11861ba206f5ab7e15cfbed1abce2bd37a63d7edfd608519c506dd079f19a06ef3e817fa369d21e62935b4aa44aa44eb7e5b8a62bd12c3de3e938434292af701b98e32a9f04d50a58a83f7892d802c75a8e0b7a92d0233a5e544397892a4fb3a965398fb8165a6f74b2570d90200e13cf5f695b4cdf1d87ea7c8be863cfb6a1f55b29a188ad7843856d0783910aa62a47a8e179a0092922fb61462d01e6ed7e874972395d98d3375dcd1585f2644ecd03c8d8b50fc1a7cb7bec057d20d9640f264348f74d96cdf4d90b1e65a6d4d47a0046e600d0ef0c0e4e69f324539b223fad7dbbe60fa69065240a36ea8b51320f92a96464239bf2b630b4d79b6018a2629c23718264dca60ad0d6a5c14d479ddc2145d33dee190d41b63858d4818fed29e57b64a8e1baae7684868d68f393aa7dd4757d94c1c8ea963a9df8fad224a058dab36ae343b9079a7a47ebfc747a884a00a7c4f0bede36fdd0ecb48bd668fa8775bbc4da4926edfa545760000058df5cff2e5e1c55e06c526889275f7380a06d8303e0a234f0ceb00f3d512cd3c95cffd9be14c9683f1905fd27b1eb13070aac418ad72803b886d9967222ec0c9903b0c29a3aedd3c91e6332bd94f063e9dd6b8a6dec33226103b45e3b80cd0c290044cb6eb3218dcd1fffc3ad801c8a24f65ee7cfd88c1510fff52295e99372e7335e082bebd6ea3841a07183cde8b1f3d3ddab6b4d185784e479116407f13cedbd7653c8ea2d43f42ecd4265aff98b011cc42a1b8ca4e4328b6ceb430f369f8f9cfb3b9a047cd549188253d776879a03a94c199f8522de8697e6e0ac46f61c5f81dfd24a6d08aac6385dd494b30cdcaf79753c818bbe209ff0b7492129dcf3a087fd729dc28b019c0a329040e814aa10fdcf5284b16d141a8e50a43e54eacbe2c82d28d92276b00f71b02b49c81a6045960f1111b333a7b2f32eb467b0a8ce77d61474ef48f85418f02f73b09177832b2c5df6ec93ea836e79bb887f50f80004c83a13b4c5c23144f3352b8a5a1b0f102428bcd38fbdba33ffca30194e2f21e967f6f9e444d12b27f88b4cee71bb967faa7bfd2d4ffdc3cede9bf50e083379e6a3abcb9fc44b8a0097d27a765efcec6141d99037247b485a70ab8abefa199232798bebc13d015d66454a1da6680293f497bde89d249ca2c4a80af5fc79bca8edd33192b20a6927d5b7eccc7e92dee68e7bf9d13b1736756b611f4b426c62a2a0f21f08513e3a0e122035b4dd7bc2605391869dd280aa02b8e96280361519531526411beb9c6e6dee8a677810f65a163294a6b7831656a993ec8fc5a8589970004c8963f3d8e2dbc32fee800ea72812b02c6117e411edf9fb75c081f814010f38ed095d932100b126fd2091a5a5dee6dc219c2c6bcbd0dfaf705ee567f81dbb2fd6a7f14dd75f2468fc409402a77210d85815a5eb13f41c582cd0b9e393e306b100c3eac6b1c9e5099242e6d784cb62dc2145e4ff7b503022bb3c3e101403ccb9810de58d792cf730bc57de5f58755e39436c0e4483170fea9e50f3b1b15962102a900560a28e260daa1c682d9bfbf8d0815b5492429df301778124ae27b70e6270160236a9f98b3438e06b7fd9e80d397656ecb116c6a71b8f8c2479ada935da279b4cc70241599c8bfc7dc7bb14ceb8619b012b1b93adb6cd59439e600c28d91a14edabf165ae94b11e506ccb54cd6f3a326bae0cc2db87c67026bbc010701ddab49706353234f399810b2c7152bdb22061e7befaa084d91f1b7cbf43bdcda577f1c2e7a8b22c69f7524b45951015b7d3fc4e28ce3a81582e0b37f46a5044a1cf7823ddcc499951b279044e68bf1cd05ff9e5559a96f0a65b71988b16c8bdacfdf851d98e5dcd711af7c3ee69834e0b1ec7bba4c7d531cd03050d9ebd9732521516dabfd7f53e3467d780cbb123e45c3e71194a54a1fe99aa0285fada0cbb3dc94c069d6cc63cf91e7a10e18b3954bffef173295acea1620ef2f29731d136322d2bb6622270ffd9ab2bef00ef50d511faed761e4ad57abd44d3277ad7c0409cd4f3f9c8d225b5ef3efbe0ca7c3a537cfa5b9d29af6be07191fb597678780b707126681db3a7a55b1b1af8bdb3343f271be31c6b5d18c2b0f7e5629d0a0c277bbfc38a88a51e49ec09d24e9dc556a1560d26cd229d621538cc1d23ee4edafb12dde2a5f01ab599958ac1d26601467dcba72139ff25ac797a42f151ce603435f883459b326adcc1622f23005ed5206738b7a6c284027a890b322b2a35a9ec5c24c4dfc33a2695417853a0173b9339ef03cb20e8a8c1c34a8a50cad77c97abdcc881def3f172028ac0cbe4f5426ba8a95abb1435dce74795753f19cb9d7822e91730f0470b7ef2e14da60cb300fbbd3e813a6eab1f53ffa716a831b21f2948c412f0d0d21c6481fb11c992d2f0499c715e2de775f1decf21b2dfdae28dbb07880e0a7bfd60148114928576a2bf66a3580a6b90c6d71e07832aae916412fe65e5d8905c640133f38dd9845a383e1cd5c3079c66f0ecd511179af8a152c6afcdaa74231b47fb9e23653dffb7e281ab85ad4a2ad76ea328340ba33546288a0ef7611d488b7065451305761556eddaae61776d5dc5de1801965f63eaa93feceb147d8a8cffa577d8f6c1a259ce783c1c69df28dab1224c2e0b325b50e4a55db2e5c7cc1be37599994c0540923ab3a85727144f5e19c43ee1bf560f93a6b3033bd1f4adf37ccec5a9c795299dd58767763cbad05ef86451d62a94ff792677d7bbf9d3a22370556dd80cc3f23cbe80a4d3128f7e8df1cad537286f3caddd2a8efcd049196d7374347755d4c8ea8e3dde20fe426d29daffb69ae50a9ed2f348d814c3b38581ae4e0ad5aaf6e72e6bdb19dfb27f469c1cb96f9875f71625f968ce7d9ee20ccba7e34491a21b0c1f3461024edc44174c051a82b3b141590017aba88a98fe20e578dd8a414b9b89301b32e43a6b2de24c0ccc9e0adaed61a6feb47d3c1b2ffa3457aec20eed22664241d0b977e1c338e0aed0dbb696eb5cdbe46456d081715efae4176237e5397958d064ef3613448c23e10687eb4bf9618483eeb1cbd6d073848ef1bb2c1311e6edc9e442f761826c3c95252aee2e143bf828af4f48e53e42f528903adb7080668486147af9ee9535a70fcd9273be8cec38ead861af5a6862ae2b14382b39873dc81adc32224c9ac7be8c443a7e8a6a240d977c3c59e5171c528c118dc1eeee9d28d419a72174c642170bd737f9d8c408856b80c6b4207be5e8d019482b2463380e28faced12c2dd26d4bf3515bdab4284e8163785fb610029484f81acc029d706f9b698715748435e83a3473105c652b9033d01a78aa8e7e0df0775b295eabaa834a1f685054f5a1711a19f8b000938fa242a67ce08d1412b4df704151db314ab94a18f8144bce24fdd0e41d31fb2b68586442af05d3f73de4e5f9e88ad2314544d1776540c16282bdc2d6ae61a405c8e10aaf03e025994de33949ee6b58dbe7a7204dab9b0726a8c65233bcb5829fa3daf9d4e5995a2afdd9691e2a2fd4cb8351d0a56bf1feb75b5ebf979907669c78622944d7715725ac62b4e5932b32f66e2df35acbb4a3b6fc3e79b84c6490f865dac6a41166ec6ec4d06689dce75924e74d85804e6261fce9637a213ef52fa1bd17fdcf6f51afeeda4f6b0e4273fbb124546bdd5b3ca744dcbc37f29b2e418401eb8c816b19a02c119a7af263f489e3bbdb854b722fe61f42aa1a14eba8fffe96349fd34e032593caac124b08552318706bbf41ac2f1a3872e283f48897eef83ab0f1a12b710a8d76dff4b2d4103aa5857f54c892e832e2172a7ee8101c64abd7732446dd47696c5268c6f8211d923b14078948fd67f99faad210c930c80b24a08133eb2255fd3d125f594a8f21b9bdba19db40b4437ef945ae92818e2d248ec5322a6c03603ff873382f38352e863516beebd90b</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>Windows</category>
+        <category>Encrypt</category>
+        <category>Good Habits</category>
+        <category>Get Up Early</category>
       </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/02/23/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<div class="pdf" target="README.pdf" height=""></div>
-
-
-
-<pre class="mermaid" style="text-align: center;">
-            graph TD
-            A[Christmas] -->|Get money| B(Go shopping)
-B --> C{Let me thinksssss<br>ssssssssssssssssssssss<br>sssssssssssssssssssssssssss}
-C -->|One| D[Laptop]
-C -->|Two| E[iPhone]
-C -->|Three| F[Car]
-          </pre>
-
-
-<table>
-<tr>
-    <td><pre>
-graph TD
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-    </pre></td>
-    <td align="center">
-        <img data-src="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png" />
-    </td>
-</tr>
-</table>
-
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
+    <title>Bath</title>
+    <url>/2020/02/23/Bath/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Third warning: This content is personal, please skip it." data-whm="Fourth warning: This content is personal, please skip it."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Warning again: This content is personal, please skip it." /><label>Warning again: This content is personal, please skip it.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="5655269080d7a3487e4657e8de16f5698f4e688502027b50db1900b1c806faa3">584a38899169f1fa8f2a81f6311dcde5a22a81e97cc358eda02c635ef74a90dca68287dafd891385a187d215f21af552ca71209eea5ffc742094255d55a99fe15978e2f9d8e39d643eb0f0a8fdbc9d83bf06ef23f600c2da88f53122f1cccdadfae19461451da688b124c9b12b08b7b3e400f8f975c2bff63c0863c6087bf551328e9de21876a6524b24d93775d90f36488be9c2e38e65723a5cce6869274a5f8c5230cde5a882e02b669b6e73d74ecdf871b5231bafe39010867ed5ce3af51d9d88c6d328a3a0e14b53ea904d9b9ca331ff07bebbe75451fe0d8e80ddb9665e885db8a5235b445dc5c7c8468be83c232671273d26fd287939532ba3e4d0d3d9b33b1d385f4cc4d608d0bafd6349a7348ea2f5996476cd66114505175d98207c475d5e6180f19e88ae44f589e961c27b307e19441becc3a440cd2edf0144711112e465dc2a4760dcb68aa55696940eeb0fc3cd03e044bbd8529fa019f02db1ff685023477cc3e33dc68ce747864deb350de604f1efa6c7daa262ac02976f647ca87972e1f46c811f95ccb65f2d1c027684ef2ce7be452f3c9c29d6a058aba7f35288b7908119558c238be9ebc693812dccb3f1abe690d1c15e6531d4cad6cb2761fced03a44b2591c2f8e99f92c2ffbf4e81bb99bb0295c7a988a39d879bca248beef23c2f6f3e877b71a8184f720274c8aa8db724a03e44028d72d822f646650084407700abaa73fd2ea796c68e5f38133d90895509f96d2a842997dacfe17550f69624a17a5ab23b53cc7db009d3daf159be37ff13fd30a621a4ca7613a380619a0e5b9b9d9fd6fde302e180883e690da4ce65b2209d0c08900dfa2b2a390ee57dbb91856aaf55eeb9a1fde5ffbbcc015471a33e555468c7fd653b00fa2281039297b25952304987094cadae2acfc46ea13d7424d8d59de1a9bac9a3a50018e5435084bc69a90e8e0ae40bc815770ae33988d5d3aaf0443b402f30a7b2c9fef8c619b8c28543950470be1dcde7fb49c925a7cef110322ef40acbd90e214a5fab7e6a62a3b5deb5d62b7c1f55cf1fffb90c1cf8404a4a9bb8fa48540a2540779c085570af866c83ad1905fd3e95fc6b19bf11b6ac2eb07b8b2439a535fe33f3b9ed97f22b508814154d0ff7e0d0e5f9c6a5dab5133acafb3f5ed37e99dd653219dc82250d8d9e2ae20d510027b9cd824c4d90c6dc7bc00f6532660d78e2fa1ef7f2301ca2dd133e1f0dffe313d331b6144bf32397bf56fe90c66a606fb0364722cd9479abe78b86ea0df2f222a12e9cfb714cc60172a0e976af25fbc8e7d04d335f887bc03493b10f45c28712ddd760d692acd529e5d51be4d4d7fccc02b865ed436bce149862358d9b56cd079921f3e839fde48a91c571462582870e3339ad4a12639f428c0d5048d34ea325dbd5d04f93f4349f99c58020c1dd5a99a917945123db14898a76776b127321bf28f67d4da47ed6b953bf4e1949cb5292cdffe1834e45fa8fad366d9c3d1c7a7e07d2ff8c1012843b942a063ddb00a2064493c01ce54fc6c719a7b86e9e86d0522aba9280c2f339b3357acbe1989b5af9f9d4aa821ea3ac5747498c7216f8df13baba4f85a96f1fb10a96895f4be7912fbc178a3278b9b6c9b5d9aaf43ff8fc2762d242ba038a0d481ce2efe68212c4901fd5c512c58f9386d0a0d5ee5c2ebc4339f21b4a2efa0a2fd2d7d3a8bfafd03bef81ed2a248be7c1c23e8f781b1b4ff133b6aaa73dc7b86e6403cdb6f91d0211d3fc6d6b80d3e610d5b0c09ad3ed3ec04ed0c74c50089f1c6367786646a7216bb81c125bfabfa4dc04fd373170c78f65553395011da232b7829fec035cda7687e1e682b87b8ba09433c1ef4709fed6b878a0eddb708675a086ce818f67bb3407f1ba3b80175820f5f41de8127340382a947920aa05430182a6d9531ec0f5967563e5f5590e553190fdcff71f01deb4a19a3a5d7e99c13091a4e36b2e5868be9a22d67170ec5bb1a2c4793c4de82683b704fce78f3acaba717a229f79f8a3334eff4b8fb5f7f5c5254888d398a1bdc0a9f476620ad011223c46de16b55ddc0af77dc51b82f68050dfbc4d1591a437d4792937fa02e34e4f9cce4d1d3f9d7fa85edc4ffa7872fbb6550b95f681bf058d6546b3418e48a6172b99dd44c7369f897f8cbdd36cbad0976c6dc7921c02367e90b2f0a3ef37c1d83b8d44fac7f52df2631b29879f0f944c4b22d3ce22bf6157ee40ef9e446f90cd26709a37a6452952a770dd072422542c5d61cd8d6ffb430108c33ae22f3e946e0ce950937391ab0377eb0e7b9916dd37fa956bb760b9a22b193bc12be09f9fbfc57c2ef51cfec723bbf727d024bbf4ab7340b78485d0f43940921ffc1daba59e5ab1596bda4d84910b96fe5af4b9b9fd974f38b6fd9ca90d0becf500a3475d5b6c32517c0b33f0a00c7f47901879864882834441ca0efa869689da6f53ce1f72348af9f05e74632c8cf03b903f4957d00d84bb2d4f3fd5239f33aaa205a713fb4b6b9840fb611e6f1a346be2d76e5293c186f1b2c8fa01d9bf709dcfc35edd143681b62401d5b1ca1a4e4c75c26c8b6e8c870069918cea9ca78ac9be717a001b801b3f5938a54287ae097bab3d568a4cf96410d6e50f9ee6f42f9fa9141b7e041c2a1e6cbf0a02606c7b6e81f68d468ee97de9152d9528b69b88a40829cb7c81f5959c5362b251d2b2fc039d0cc107a2fa784ca03fe0dfb00c42ca7e1e40a0c48012b9293a4ecfabdd5f0825a66323a365aaf95bc60740eacec07b46065a26b592ebf4cc91082a3e1dbb4949d36505367d2acf395b50e8b3a74c9112d53464840f5bf102dfe6399d4bdcebf5169165314efd81960e4e4b8933c563520623bfa81b0a0ff4909254f9ec428431d3049c39134b5380661e396b323967877c6ef795066cc4afec60a5f549fadc332c9be4d2494ba3990691ea56f22401b05b20f1b8807139d239a6073fdc48b0dd0d2e8c38ce91259909cc8941f08e71d2ad2856b4bda01ff72a0dcb2c50e2aabaea47df02c65105814f8877f02060649d3a5cb1f8286d03ce857fde6d90d8603b79aae7a665054417fc8516a3c96c4748357add1c55e8bdc1212d17d2bc5822a3f696848401efd5aa9bafd3a79295e6157a81e5fff94afca4f9df0a5ef39736719653ee3959a3832d094e751733c3b91b1bc6e7029c02e6a61c93e989db59590a01eabef6f2726ba8889f0f6c2835269c553aca72728e3b28de8ae8c395423dd4bf96d90f74c17f71b5e0a1b7fc8c53eda348ea4609bc0b692eafbf33b509aa2902afa4e5d0d8cb786987951922f6bff49301c772266894947c584b6d9e9fc72403a434f58b3886fa64459751ac4b7358f57cf2d047aa5b6588ea4b10d0d31f907c6bddbde1038d42ef263549f7384147cfab516c260b3262b2fee986cc06d121352a6a5e6a9a250263792da82007f3fe8398ab04d0aa468476ced246fdaf4bae0346c384041b440a4d51f10b7d3e1ad712423595aca4c975df1e2daf46c5da5c14887127ed45ec0e4b3804861df722a0656265bf7b9b7f60ecaed9fd47a4c909748d4f5e4d01f991a7eccab5f2809fbd81e1ad67c0e42885080b825f96bfdea9dcefde215b3a136574cb7e1cf0a78d3c76de88bff78119189608b7b4f322e1a43d49d2661e462efd9168dc55b0e7269c7e95d8d8a219e96fa2ffdcf903df348f4894e5d171afd8409ca9727972642c7f22943447e6106a59fab7770521300cb28d1eae3ff90c864db5accb473ccc2ba9d6d83ba7fdd9185ded63a46bb71d7216cf5d6bbe8ff02f1ef2b7b1104ba9bf47d6278d639e6703b2837f51eeedb7b3627ad909892bd2f6edbef1afce99cde79f861a3995b494c9434bb1ea523bc2be898196aca55baf6fad5870056248dce8bc06382e9b8cf022b2a00ceb2d57ca1b4ecd9c51ef8a34fb3e0403219ca3981272d12a9d3d217a9181b37018b4b063d83633f69f51a5f66ce09523be711e38c441ab4b37ff000b23ac100e799ada5b3bdc446d1195d7fde2ffb0628b4340cb1bfd256329c867ca15aa9e323a7e946fc259ca7b3137dc96e999f56bd8fb904048bd5418a23835776199b808da01847a243cec8f0853e8002e84a576dd23cfae793bc54c8f257c5adda5abd9498e4dbb72bb4f6e83824c8fe02f23757fa74fab2a771bbd506cd2599f3ad901bf6f5c85c179bb3c1de9f3cad8d0a79342cf87626b303751e6ca2164e5a2ad7c66b5eafac9022b3f8734a676abd2ebb4dcad83f23f2247a51ccbff450ea750a8b536dbd611eefc1549f5d3061f16b824d7303c9bce3f350df8347930ec1a958f6723b36141e7c6e38b27f9d876f2040befe97c29b2d5f323a5c8287272fea69f5e788fa54ffd3898d64e96359838e42b0bea099ea3ee61c46f9429600bcd6f9148fbe872b451449bf2f62a6940ba8a03649fd381fb28fe05b36bcd8816b98e4d793dd0a334f4d09b4d1e0b821d5de78368875bbd637dba59a3ee88b4c67ea8d7cb88d0fb1ba41bfc705b7051720102c293c9d6ea5d1af7b8b9ffe04005eb7a554a1f5dbe43c5a445a6d7cab526954cd1b0ef1ae7a851156663881690683721c1374059d025404a514e5add222a39d0c95a33194c806219692d8e1dea87199151a747937fc0b49a93ab4f98632bd8888c8d27f322404e5649152f18f5e511455c72b6bfdf8a730d10aa531d564764f522c9d6cdb21de5c38506b3cc6a0a74046cd4c2d71fbb73c86a4d754297cacd156127ed0842d4536efcc2876e066ec4485b4d7e3c194e52111d35dec7f5f1e2f4571240ffd89a9ab5c18c8155c3f210936f18937d2a544f3ec108fbad60c3c7bd0acaa332284ac5918bd284f2860c2a17b6880b67db5f7c327f6683e64b17ab23b5997e066bfcdbd9600ace5c4839d075301ec64e4a711c</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Encrypt</category>
+        <category>Good Habits</category>
+        <category>Bath</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Exercise</title>
+    <url>/2020/02/23/Exercise/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Third warning: This content is personal, please skip it." data-whm="Fourth warning: This content is personal, please skip it."><div class="hbe-input-container"><input type="password" id="hbePass" placeholder="Warning again: This content is personal, please skip it." /><label>Warning again: This content is personal, please skip it.</label><div class="bottom-line"></div></div><script id="hbeData" type="hbeData" data-hmacdigest="c8d97bbeb3e57fc9463ddf152fced6d86aa9e6af30b80915d365a2f239765464">6b218a509ba08e6ec04160b9b6a8a44eaca8e30b287080893ae71251ada00022bcd7e4772d3c4bfeb2baa8e194742958adfd60541c3bb5cd0ea7334df66ef5145b50d09d51fb7655751bd6c0c85d450f3e85ee1466a0eeffe4dbc7004f3d483583b2bf16bf642c3d585eedc6bc9ab507b5ff5fa2e24c8277a7bca9c24786334b5c2b54edde270e81cdc5eb9df79607cbdd7b5f65b9deae962c223297e44bf6164b5ed78d1ec42f68cc9c6f5811dad7dc7b760b7e63d30410ec3c34ce9d1c44240260d5abbc4b381a559f73c0b8a894cb257f493fbded64a947968b254d034c6c965554f7fc329d642fa2352d193d5ddd4908d98727cc4f3c8a3e9cbfe82ed517d1a9edeb34343b27bcec25c5c6d4b4b205e27bf5a3caae3925182a518503101e89b9cf5dd17a44794b5f66decc8862621739aa3a1cda8864af1c7b6ba26c323b6598fc09f24706372258726aabee80298e0d0c2bc3b3fdcc047c34b3dd21f8fe14ee1af41e54e482100534e8888e12847cbca273cfae7ce0887d98ee1449d1ce4f7eaaeca36743f10cbe4a30c55511c36ea46d9f5d62dd18fd41459d742746c2a4f773c7fb0190c302f1aa05c0db1f9f5f68b9faae0465035ee52f137a94baabaacfbe01f2bdb5ea0e0774d84a4fa0cbfecb9e6a15b011158f03f7aad26fc72a0cbb175ef5c07b72aecd98747f672bcdbfa16d0bcaa80680e83c2ab42daf6bd9f361d5619b28eb97515fd9b5d38e65dc73f5fdc082542814ca99d76ae11a6204a6aef4193c466e052a4f4670e9ad7e94535be8881234531595be1a14056749ff3650893d97ae5eb3b70062f65103fd9cb8a7f345cec05e96740a4ce41db2854305f7acff3ff95ac9b37be6217e6fa4e25617fcb06447593334ee8bbb566409d16647cd816b50f206187f6b6bbebc23505268788ae20d60906635f599eeeb28e10f74ba03012d46b93bb816b0c06e05c94064bdda417debf0f7675deb4e4b32ea479dc2412454d1665609b102bd61fd9696d66a3fafdd11a9dffeed0a9dfba51fdd63a5f5a781b5646f7cf33944ee4ecebda8b25c0e26347670dbdfa1a85ebae1ccfabc6b43b78d00ed7b034bc3fa6b567f8961ff95150a2948b5bc268673df60f81a531556a7b5e717370726aa79ce8c7bcf8f2fc198c130c1258d63f92703e15b109c78241c534bb18b93a2afd05734d1207d01bf98aca783e1461ff2db2474968dce7b6cdea9b4fa15c4e382955b1b00b60647090250077446988b4ae97de19ba6e4ceaa734b0a55317cceb168c08bf2723783217c12a81ea9e0fe1737054451af3fc6ae8724d2efa15b11fc8dcc1c0fbd6d7bb8e8a943c85d8412ba2077c4c2d160166af3d34337d4862c3a4af6b117e472f274fd56b4b7a59e23c5387703ae4bb210cbc886f37ee28a28ac908aee63ffe739265b2b6af21cacd63d51a3d43f9128ba760d583ac609f13250d7c1a2e94d1802066c2ed3ceb0d551fcb98f7be33b18ad344d8cec4f043fe2daebc8ec70b818fd8854e589dfc79724ad668a73f16e8b33e8dbdad6281b3e9d32b048ab9e48afc7e74b60c86e37d433dc7d90469cbba4a9e2a6f0c6728493a724a74049b416a133758f7f1fc984c048c3d9e47cfe42ba76cd2092962334fc87160953acd60482966c1ed6e39c911152e2510c644e035a8b0a299d6c7dd0f9ff16ffb889e885c0318efb1ee12e64c6497371467829d38811bff6bd6534225b6727cd35ecde0de390e597c36295bed670d58b098827ab44bc01bceccf0e4ca6bdf6def4b56023b814ccef059a09d8a19a6f6ffcfdb7151c2f1fce3cbe7a8fdfedb6009e0b4fcdcefddbdb7db584ab35766deae5123a1121da8a3ec6d361c0c4ce52b711bfa207de9560f20ca6560a89bd0ff76411b192bb6a84730405e63c544e13f205fdfe4ecd0045249e92610b0e8c32eccfdbc503cb1b3853b017880c7e7270b2cec1a291bd9800b2b853402d10130f0b34c99661d31554b05abd70ce4b10e4b167ecb9c79e4d5f5904ba89c24c99e5bffee284cea39e98d28e39fe673f06c17d03c1e1200fb30e40abbd5814c78b5d45fe4b18d7580d4c6bf4ae4ee94db8f29514b2a8472a757e169c8ab27f6f529001599ae1b289a8ab95215ee622fdf32146c53322207505253957df6caf3aabe4dcfef59d5c9fa66d247910e738b58af824b0863a32372dd532864fa3638ed56801e6687c1fda973753be023bbf81eed11e7c10f968a41d8961b294da664cfcc7ea08a59b7cb79aee99b3960bc2fbc8aeb88226eb21a543fa2d7e8ecbe150da674aeb80847636a10ed80b8779e0f76b45e25e8dbfe32189c8635b9036f5d5d49afc315792e8b2ddc4b20cf7d5cebc5e6a48ec53e0a35e1fff80220368100efab2a8e5fd1d99789dd96c686c9989dc050ee01f2c511d878791a3924109c7aac134bc47b2fd2ecdc39a9e9fe530f6973d12a26d59e0c5921a7f5155a0d659af1cb083855ad464bd4cad8cfa10666aa88ce62c2d4b49cfe9218331f3607259a76e647dd4b058b7048479ec87d2041badcfdc69ab2ae2e82439d1b4d38b95a67f86906d61a9b4f0173cac93e1f5df6209fcb15db4cc165f2bd151c2860d6bad1d7021a49e8fd17ccf3b2cace6996f4c4279d085f0ba5fed8fa4640fb8bd48ceaae3f3a0d59b6ea6276bfc1dc28f6bcdc2ea3b88633012a971d2761db844173d63f2271edeb9e454ff0dd7b4f665ea2669e06a8cbe522df4c3ed6ad08fd1e6e61370fea9f1b0d1a6a88071d640308eb41c2c14fb1d98817bfd30064e55c5899100332589fe907a56e3ab9ceb104a5978213fd3c01954d79078d6c0429144fac605fd1ce42e48ca565a76512ad63628c281dd92eb88ca141ff7b317a48f8529aac6c1f2a715ef2e6d8495efe6b5ca26c76c59bd09e048e55c2b4b257b9cd9a56c595394a4731079879dc2677db43f131e336c52fa57a311b2894048576aeaf7753def826a76d00f6c04d9500951fa38308410549be8f15d3395b69222e988594f2a95c63f0d147d4c0c4de677db4c96f98bae6e313ec7b25102b02c81cd5f6739db3a2739786a39812f1e19572b8aee4894a16794fe0b8c3a8031a99b4ef24184156605cfb7313f993582ea5eb5d9bdff2d4a5f0de0a4f0609077a26a218a6f15976db7aa561eb20338f3733db0624bf6fe5d8da7390d8082049dc97be290e653ba93f55734adc294db481c6a6f9479dadcfc36dfda5dcb12663185b2b60f1e4bc3d37fb6d17ba1664b58d189713e66b11997582480e95db985d415571effb1dbb41a7435a416b180d63ada433b48e914b09316027af291cc0ddec53bb37e1d43da6ce3a73b2124e48f507ffc84bf09f244e04941b9be99ccb51bc21833b7ebbbdb6070b5dc403b7d92dd2aecc5b98002b2440e150077cb2ee20e74fecaf531688ad4118da2cba242d220cc64a60a2524c2126f15336fb52d4db74b12df2c8d71820ff956c1b3c8c68a8ea5be3444e5745fb06039ce44096f7d893fa2f721bb92c9d18ab0a9b8d0aff30dad0731ad19ed9946bfe977e475850c8c08437f416cc93d5eff0f414a0747891a8c5b259ef2b7a4d693700dabce035023723ffbda11f2f6fba050e8aafb83d9f4301ff380f4f3e3bcc83cfa8bf8af456fc1f43d87cf6d8ec55162a0ae09e01bd92fc534a741ffb9fa7a18e3a165f9f0fb62ef923d826ae018245a8324d774a3f1183c9b1496e477fac26dc9e7922031d06a65b2bafd600e54f0d679702abf5d7dda198df86fb8cde99707413213b432c6bba6fdf23d62a3b6ab5380b69c89c6c72c676a70d0bd782e2c342b652d06136b26f8fac0edef079d504b0ce222a928f3cba6a1130d5ae6f6eeede3e8447f09bdc9aeb4bbb025e5ba7188f7aa776cd9928f786c7cd85c10a89f7455954868d4a8cdd62215b01c76179c52cb3f919b40fc9765e082a31ab63aea8fd912b822af90cbbb36131281e142590889687527c24c3209bfae54180fef2fd841f19ba519c6f58072943114d3936f3d109451807ffee78469ae19a67f649b220bbae8683d43109fa95c95ed3d2f41ea36930410c458dfdcc7c7e80615d28bda56e4fbf24bbb60707fe252a16b149b116a4d2749e01e8a8e6597c214512ba43d6f9d1c3c3c989d660ab10d6af10a94708f74616cab2a95952125c5ad74b2866c3c84a4c8abcfe781c60dfc1123b12764eee76cb28fdc063d9ca59f2e9e6e8cb12a79427c8216b5982540336c20a20292026f701c3b91701cd43d0c98c2cb33fe9dc60ff7501b98483de168eb2d767d147cb45e7cf6ac8d5303d36de310c7db0279bb97fe035d36a28d5d4f00b771e6bfb72c4c452bd78846eb830250d3d39a901c285e71203bc776a8dd2bab43816ffad277ac646a16ba5db53954c0639e3030f81120d7b0b17850c62e829ba09a1f8044e48083a1b7ad33e194fa13580aa9ef2dab33cda9226254a92ae664850d4350a6e65b1da36a798280293b73038104f7732fe21715911578fb4bac513c4019363e0dc17876a39d0f2f6fcfacddbe857cedddcdb80030924b644a6d153b8ff09b02f2fe6e5fe96075dd6cb535e9a7f2d64dd0c0af070ffc76e928c4cc74bb4de11801eeaeccedf8c03d047230550588cec54f</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>Encrypt</category>
+        <category>Good Habits</category>
+        <category>Exercise</category>
+      </categories>
   </entry>
   <entry>
     <title>Encrypting Blog Article</title>
