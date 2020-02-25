@@ -22,15 +22,16 @@ wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 ## 总分
 
 <div style="height: 100px; line-height: 100px;font-weight: bolder; font-size: 50px;text-align: center;font-family: 'Ma Shan Zheng';color: lightgreen">
-    +0.2
+    +0.46
 </div>
+
 
 ## 每日得分
 
-| 日期       | 早起 | 锻炼 | 日报 | 明日计划 | 总分 |
-| ---------- | ---- | ---- | ---- | -------- | ---- |
-| 2020-02-23 | -0.1 | +0.1 | +0.1 | +0.1     | 0.2  |
-| 2020-02-24 | -0.2 |      |      |          |      |
+| 日期       | 早起 | 锻炼 | 日报 | 明日计划 |其他| 总分 |
+| ---------- | ---- | ---- | ---- | -------- | ---- | ---- |
+| 2020-02-23 | -0.1 | +0.1 | +0.1 | +0.08   | 0 |0.18|
+| 2020-02-24 | -0.2 | +0.1 | +0.1 | +0.1     | 0.04+0.05+0.09=0.18 |0.28|
 
 ## 奖惩制度
 
