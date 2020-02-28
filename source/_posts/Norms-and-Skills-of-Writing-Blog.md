@@ -223,4 +223,7 @@ Generation of diagram and flowchart from text in a similar manner as markdown.
 | 文字文字{ % button #, 文字围绕的按钮 % }文字文字 | 文字文字{% button #, 文字围绕的按钮 %}文字文字 |
 | { % note info no-icon % }<br/>{ % btn #, 嵌入note中的按钮 % }<br/>{ % endnote % } |{% note info no-icon %}	{% btn #, 嵌入note中的按钮 %}	{% endnote %} |
 
+## 数学公式
+
+需要在博文的 [Front-matter](https://hexo.io/zh-cn/docs/front-matter#JSON-Front-matter) 中开启 `mathjax`
 

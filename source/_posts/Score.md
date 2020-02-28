@@ -2,6 +2,7 @@
 title: Score
 description: 得分情况
 date: 2020-02-24 07:53:23
+mathjax: true
 categories:
 - Encrypt
 - Conclusion
@@ -54,3 +55,18 @@ wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 #### 规则一
 
 如果中断一次则扣除当天应增加的金额，并将奖励金额和惩罚金额同时重置为 0.1元/天，连续中断，则每日惩罚金额以 2 的指数次幂增长。
+
+### 被迫中断规则
+
+#### 规则一
+
+1. 连续天数归零
+2. 根据被迫程度(百分比)扣除相应罚金。
+
+##### 罚金公式
+
+$ p*(1-f) $
+
+- p：punish，当日罚金
+- f：force，被迫程度(百分比)
+
