@@ -2,8 +2,10 @@
 title: Reports
 description: 报告
 date: 2020-02-28 20:27:32
-categories:
-tags:
+hidden: true
+categories: 
+- Reports
+tags: Reports
 password: reports
 abstract: 'Warning: This content is personal, please skip it.'
 message: 'Warning again: This content is personal, please skip it.'
@@ -34,3 +36,5 @@ wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 <!-- endtab -->
 
 {% endtabs %}
+
+特特

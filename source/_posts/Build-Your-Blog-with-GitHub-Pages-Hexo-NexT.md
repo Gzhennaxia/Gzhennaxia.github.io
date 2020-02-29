@@ -860,6 +860,20 @@ message: Welcome to my blog, enter password to read.
 
 ### 首页隐藏指定文章
 
+{% tabs hide %}
+
+<!-- tab 使用 hexo-hide-posts 插件 -->
+
+> [为 Hexo 博客添加隐藏文章功能](https://printempw.github.io/hexo-plugin-to-make-posts-sage-unlisted/)
+>
+> [如何优雅的隐藏 Hexo 博客文章](https://vanchchen.github.io/p/7587.html)
+
+
+
+<!-- endtab -->
+
+<!-- tab 修改 index.swig 文件 -->
+
 > [Hexo 设置首页隐藏指定文章](https://blog.csdn.net/m0_37323771/article/details/80672271)
 
 1. 对主题 index.swig 文件做如下修改
@@ -875,6 +889,10 @@ message: Welcome to my blog, enter password to read.
    ```
 
 2. 在需要首页隐藏的文章 front-matter 中添加 `hidden: true`
+
+<!-- endtab -->
+
+{% endtabs %}
 
 ### Emoji 表情
 
