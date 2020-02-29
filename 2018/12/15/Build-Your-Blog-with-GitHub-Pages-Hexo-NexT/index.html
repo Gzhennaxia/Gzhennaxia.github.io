@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://i.loli.net/2019/01/04/5c2ec9c02da97.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/01/04/5c2ec9c02da97.jpg">
 <meta property="article:published_time" content="2018-12-15T04:56:23.000Z">
-<meta property="article:modified_time" content="2020-02-28T15:21:31.781Z">
+<meta property="article:modified_time" content="2020-02-29T12:15:39.224Z">
 <meta property="article:author" content="Gzhennaxia">
 <meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary">
@@ -233,7 +233,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-28 23:21:31" itemprop="dateModified" datetime="2020-02-28T23:21:31+08:00">2020-02-28</time>
+                <time title="Modified: 2020-02-29 20:15:39" itemprop="dateModified" datetime="2020-02-29T20:15:39+08:00">2020-02-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -549,16 +549,20 @@
 </li>
 </ol></div></div></div>
 
-<h3 id="首页隐藏指定文章"><a href="#首页隐藏指定文章" class="headerlink" title="首页隐藏指定文章"></a>首页隐藏指定文章</h3><blockquote>
+<h3 id="首页隐藏指定文章"><a href="#首页隐藏指定文章" class="headerlink" title="首页隐藏指定文章"></a>首页隐藏指定文章</h3><div class="tabs" id="hide"><ul class="nav-tabs"><li class="tab active"><a href="#hide-1">使用 hexo-hide-posts 插件</a></li><li class="tab"><a href="#hide-2">修改 index.swig 文件</a></li></ul><div class="tab-content"><div class="tab-pane active" id="hide-1"><blockquote>
+<p><a href="https://printempw.github.io/hexo-plugin-to-make-posts-sage-unlisted/" target="_blank" rel="noopener">为 Hexo 博客添加隐藏文章功能</a></p>
+<p><a href="https://vanchchen.github.io/p/7587.html" target="_blank" rel="noopener">如何优雅的隐藏 Hexo 博客文章</a></p>
+</blockquote></div><div class="tab-pane" id="hide-2"><blockquote>
 <p><a href="https://blog.csdn.net/m0_37323771/article/details/80672271" target="_blank" rel="noopener">Hexo 设置首页隐藏指定文章</a></p>
 </blockquote>
 <ol>
 <li><p>对主题 index.swig 文件做如下修改</p>
-<figure class="highlight swift"><figcaption><span>Hexo\themes\next\layout</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">for</span> post <span class="keyword">in</span> page.posts %&#125;</span><br><span class="line">	&#123;# 首页隐藏指定文章 #&#125;</span><br><span class="line">	&#123;% <span class="keyword">if</span> post.hidden != <span class="literal">true</span> %&#125;</span><br><span class="line">        &#123;&#123; post_template.render(post, <span class="literal">true</span>) &#125;&#125;</span><br><span class="line">	&#123;% endif %&#125;</span><br><span class="line">	&#123;# 首页隐藏指定文章 #&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><figcaption><span>Hexo\themes\next\layout</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">for</span> post <span class="keyword">in</span> page.posts %&#125;</span><br><span class="line">    &#123;# 首页隐藏指定文章 #&#125;</span><br><span class="line">    &#123;% <span class="keyword">if</span> post.hidden != <span class="literal">true</span> %&#125;</span><br><span class="line">        &#123;&#123; post_template.render(post, <span class="literal">true</span>) &#125;&#125;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">    &#123;# 首页隐藏指定文章 #&#125;</span><br><span class="line">&#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在需要首页隐藏的文章 front-matter 中添加 <code>hidden: true</code></p>
 </li>
-</ol>
+</ol></div></div></div>
+
 <h3 id="Emoji-表情"><a href="#Emoji-表情" class="headerlink" title="Emoji 表情"></a>Emoji 表情</h3><blockquote>
 <p><a href="https://chaxiaoniu.oschina.io/2017/07/10/HexoAddEmoji/" target="_blank" rel="noopener">Hexo中添加emoji表情</a></p>
 <p>Hexo默认采用 <a href="https://github.com/hexojs/hexo-renderer-marked" target="_blank" rel="noopener">hexo-renderer-marked</a> 这个渲染器，但其不支持插件扩展。还有一个支持插件扩展的是 <a href="https://github.com/hexojs/hexo-renderer-markdown-it" target="_blank" rel="noopener">hexo-renderer-markdown-it</a>，可以使用 <a href="https://github.com/markdown-it/markdown-it-emoji" target="_blank" rel="noopener">markdwon-it-emoji</a> 插件来支持 emoji。</p>
@@ -847,7 +851,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
