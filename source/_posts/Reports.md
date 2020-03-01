@@ -37,4 +37,3 @@ wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 
 {% endtabs %}
 
-特特

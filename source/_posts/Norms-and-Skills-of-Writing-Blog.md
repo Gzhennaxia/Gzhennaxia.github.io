@@ -225,5 +225,6 @@ Generation of diagram and flowchart from text in a similar manner as markdown.
 
 ## 数学公式
 
-需要在博文的 [Front-matter](https://hexo.io/zh-cn/docs/front-matter#JSON-Front-matter) 中开启 `mathjax`
+- 需要在博文的 [Front-matter](https://hexo.io/zh-cn/docs/front-matter#JSON-Front-matter) 中开启 `mathjax`
+- 公式里的运算符号两侧尽量加上空格，否则可能会导致渲染失败的情况
 

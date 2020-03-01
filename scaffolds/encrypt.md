@@ -5,10 +5,10 @@ date: {{ date }}
 categories: 
 tags: 
 password: 
-abstract: 
-message: 
-wrong_pass_message: 
-wrong_hash_message:
+abstract: 'Warning: This content is personal, please skip it.'
+message: 'Warning again: This content is personal, please skip it.'
+wrong_pass_message: 'Third warning: This content is personal, please skip it.'
+wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 ---
 
 <img src="cover" width="100%"/>
