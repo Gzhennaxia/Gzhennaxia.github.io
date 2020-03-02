@@ -1,18 +1,10 @@
 ---
-title: {{ title }}
-description: 一句话描述这篇文章
+title: 2020 年 {{ title }} 月月报
 date: {{ date }}
-categories: 
-tags: 
 hidden: true
-password: 
+password: 2020{{ title }}
 abstract: 'Warning: This content is personal, please skip it.'
 message: 'Warning again: This content is personal, please skip it.'
 wrong_pass_message: 'Third warning: This content is personal, please skip it.'
 wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 ---
-
-<img src="cover" width="100%"/>
-
-<!-- more -->
-

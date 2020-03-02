@@ -37,6 +37,32 @@ tags:
 | \~\~{ % label default @示例8 % }\~\~ | ~~{% label default @示例8 %}~~ |
 | \<mark\>esse\</mark\> | <mark>esse</mark> |
 
+### 中心引用
+
+> [Centered Quote ｜ NexT](https://theme-next.org/docs/tag-plugins/#Centered-Quote)
+
+#### 格式
+
+```
+{% centerquote %}文字{% endcenterquote %}
+<!-- Tag Alias -->
+{% cq %}文字{% endcq %}
+```
+
+#### 效果
+
+{% cq %}文字{% endcq %}
+
+### 页面内跳转链接
+
+1. 页面内定义一个锚，及要跳转到的位置
+
+   `<span id="1">XXX</span>`
+
+2. 使用如下格式定义链接即可
+
+   `[跳转到XXX](#1)`
+
 ## 图片
 
 ### 引用
