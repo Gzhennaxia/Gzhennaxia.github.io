@@ -30,7 +30,9 @@ wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 
 ## 人生目标
 
+> [How to Discover Your Life Purpose in About 20 Minutes | Steve Pavlina](https://www.stevepavlina.com/blog/2005/01/how-to-discover-your-life-purpose-in-about-20-minutes/)
 
+> **人生的目标并不是可以用一个头衔或者一个数字可以代表的，人生的终极目标应该归于一种感觉**。
 
 ## 我喜欢的书
 
@@ -38,6 +40,9 @@ wrong_hash_message: 'Fourth warning: This content is personal, please skip it.'
 
 ## 令我感到特别快乐的事情
 
+## 印象深刻的事
+
 ### 鱼塘捞鱼
 
 小时候有一次在外婆家附近的一个废弃鱼塘里捞鱼，这是至今为止最令我开心的一次经历，记忆犹新。
+
