@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Windows</title>
+    <url>/2020/03/09/Windows/</url>
+    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
+
+<a id="more"></a>
+
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
+<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
+</blockquote>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
+<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
+<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>control.exe</code></li>
+<li>回车</li>
+</ol>
+<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>sysdm.cpl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>cacl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>services.msc</code></li>
+<li>回车</li>
+</ol>
+<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
+<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
+<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Software and Tools</title>
-    <url>/2020/03/08/Software%20and%20Tools/</url>
+    <url>/2020/03/09/Software%20and%20Tools/</url>
     <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
 
 <a id="more"></a>
@@ -64,51 +107,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows</title>
-    <url>/2020/03/08/Windows/</url>
-    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
-
-<a id="more"></a>
-
-<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
-<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
-</blockquote>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
-<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
-<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>control.exe</code></li>
-<li>回车</li>
-</ol>
-<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>sysdm.cpl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>cacl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>services.msc</code></li>
-<li>回车</li>
-</ol>
-<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
-<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
-<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git</title>
-    <url>/2020/03/08/Git/</url>
+    <url>/2020/03/09/Git/</url>
     <content><![CDATA[<img data-src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <a id="more"></a>
@@ -164,7 +164,7 @@
   </entry>
   <entry>
     <title>GitHub Pages+Hexo+NexT</title>
-    <url>/2020/03/08/GitHub%20Pages+Hexo+NexT/</url>
+    <url>/2020/03/09/GitHub%20Pages+Hexo+NexT/</url>
     <content><![CDATA[<blockquote>
 <p>环境：</p>
 <p>node.js    10.14.2</p>
@@ -357,7 +357,7 @@
   </entry>
   <entry>
     <title>Prepare-for-spring-travel</title>
-    <url>/2020/03/08/Prepare-for-spring-travel/</url>
+    <url>/2020/03/09/Prepare-for-spring-travel/</url>
     <content><![CDATA[<img data-src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <a id="more"></a>
@@ -414,7 +414,7 @@
 <td>INTEGER</td>
 <td></td>
 <td></td>
-<td></td>
+<td>是不是下划线(iBook中下划线表示重点)</td>
 </tr>
 <tr>
 <td>ZANNOTATIONSTYLE</td>
@@ -491,35 +491,35 @@
 <td>VARCHAR</td>
 <td></td>
 <td></td>
-<td></td>
+<td>笔记</td>
 </tr>
 <tr>
 <td>ZANNOTATIONREPRESENTATIVETEXT</td>
 <td>VARCHAR</td>
 <td></td>
 <td></td>
-<td></td>
+<td>笔记所代表的文本</td>
 </tr>
 <tr>
 <td>ZANNOTATIONSELECTEDTEXT</td>
 <td>VARCHAR</td>
 <td></td>
 <td></td>
-<td></td>
+<td>笔记所选中的文本</td>
 </tr>
 <tr>
 <td>ZANNOTATIONUUID</td>
 <td>VARCHAR</td>
 <td></td>
 <td></td>
-<td></td>
+<td>标记的UUID</td>
 </tr>
 <tr>
 <td>ZFUTUREPROOFING1</td>
 <td>VARCHAR</td>
 <td></td>
 <td></td>
-<td></td>
+<td>未来验证</td>
 </tr>
 <tr>
 <td>ZFUTUREPROOFING10</td>
@@ -603,14 +603,14 @@
 <td>VARCHAR</td>
 <td></td>
 <td></td>
-<td></td>
+<td>存储器UUID</td>
 </tr>
 <tr>
 <td>ZPLUSERDATA</td>
 <td>BLOB</td>
 <td></td>
 <td></td>
-<td></td>
+<td>用户数据</td>
 </tr>
 </tbody></table>
 ]]></content>
@@ -618,7 +618,7 @@
   <entry>
     <title>How to Discover Your Life Purpose in About 20 Minutes</title>
     <url>/2020/03/05/How-to-Discover-Your-Life-Purpose-in-About-20-Minutes/</url>
-    <content><![CDATA[<img data-src="cover" width="100%"/>
+    <content><![CDATA[<img data-src="https://vernenciso.com/wp-content/uploads/2018/10/maxresdefault.jpg" width="100%"/>
 
 <a id="more"></a>
 
@@ -638,6 +638,19 @@
 <li>重复第三步，直到写出能让你哭出来的答案为止，这就是你的人生目标。</li>
 </ol>
 <p>就是这样。不管你是顾问、工程师还是健美运动员。对一些人来说，这个练习非常有意义，对其他人来说，这可能看起来非常愚蠢。通常情况下，需要大概15～20分钟的时间理清你头脑里那些杂七杂八的东西和你认为的人生目标是什么的社会条件。从头脑和记忆中来的答案都是错误的，当正确答案最终来的时候，你会感觉它是从一个完全不同的地方来的。</p>
+<p>对于那些深陷低意识生活的人来说，会花费更多的时间把所有错误答案写完，可能得一个多小时。不过只要你坚持，写完100个或者200个甚至是500个之后，你会被那个让你激动不已的答案所打动，那个让你崩溃的答案。如果你从未这样做过，你可能会觉得很傻。傻就傻吧，无论如何都要去做。</p>
+<p>在你写的过程中，可能某些答案会非常相似。你甚至可能列出以前写过的答案。也可能在切到一个新的话题后写出10-20个答案。没关系，你可以列出你脑海中出现的任何答案，接着写就好了。</p>
+<p>在这个过程中的某个时刻(通常在50-100个答案之后)，你可能想要退出，因为思维太发散了。你可能会有起身找借口做其他事情的冲动。这很正常。克服这种阻力，继续写，抗拒的感觉最终会过去的。</p>
+<p>You may also discover a few answers that seem to give you a mini-surge of emotion, but they don’t quite make you cry — they’re just a bit off. Highlight those answers as you go along, so you can come back to them to generate new permutations. Each reflects a piece of your purpose, but individually they aren’t complete. When you start getting these kinds of answers, it just means you’re getting warm. Keep going.</p>
+<p>It’s important to do this alone and with no interruptions. If you’re a nihilist, then feel free to start with the answer, “I don’t have a purpose,” or “Life is meaningless,” and take it from there. If you keep at it, you’ll still eventually converge.</p>
+<p>When I did this exercise, it took me about 25 minutes, and I reached my final answer at step 106. Partial pieces of the answer (mini-surges) appeared at steps 17, 39, and 53, and then the bulk of it fell into place and was refined through steps 100-106. I felt the feeling of resistance (wanting to get up and do something else, expecting the process to fail, feeling very impatient and even irritated) around steps 55-60. At step 80 I took a 2-minute break to close my eyes, relax, clear my mind, and to focus on the intention for the answer to come to me — this was helpful as the answers I received after this break began to have greater clarity.</p>
+<p>Here was my final answer: <em>to live consciously and courageously, to resonate with love and compassion, to awaken the great spirits within others, and to leave this world in peace.</em></p>
+<p>When you find your own unique answer to the question of why you’re here, you will feel it resonate with you deeply. The words will seem to have a special energy to you, and you will feel that energy whenever you read them.</p>
+<p>Discovering your purpose is the easy part. The hard part is keeping it with you on a daily basis and working on yourself to the point where you become that purpose.</p>
+<p>If you’re inclined to ask why this little process works, just put that question aside until after you’ve successfully completed it. Once you’ve done that, you’ll probably have your own answer to why it works. Most likely if you ask 10 different people why this works (people who’ve successfully completed it), you’ll get 10 different answers, all filtered through their individual belief systems, and each will contain its own reflection of truth.</p>
+<p>Obviously, this process won’t work if you quit before convergence. I’d guesstimate that 80-90% of people should achieve convergence in less than an hour. If you’re really entrenched in your beliefs and resistant to the process, maybe it will take you 5 sessions and 3 hours, but I suspect that such people will simply quit early (like within the first 15 minutes) or won’t even attempt it at all. But if you’re drawn to read this blog (and haven’t been inclined to ban it from your life yet), then it’s doubtful you fall into this group.</p>
+<p>Give it a shot! At the very least, you’ll learn one of two things: your true purpose in life -or- that you should unsubscribe from this blog. 😉</p>
+<p><em>Update 8/8/06: Be sure to read the follow-up to this article, especially if you’re having trouble with this particular approach (there’s an alternative method you can use):</em> <a href="https://www.stevepavlina.com/blog/2005/06/the-meaning-of-life-discover-your-purpose/" target="_blank" rel="noopener"><em>The Meaning of Life: Discover Your Purpose</em></a><em>.</em></p>
 ]]></content>
   </entry>
   <entry>
@@ -649,7 +662,7 @@
 
 <h2 id="作者"><a href="#作者" class="headerlink" title="作者"></a>作者</h2><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h3 id="小狗钱钱1"><a href="#小狗钱钱1" class="headerlink" title="小狗钱钱1"></a>小狗钱钱1</h3><h4 id="第七章-在金先生家"><a href="#第七章-在金先生家" class="headerlink" title="第七章　在金先生家"></a>第七章　在金先生家</h4><div style="display: flex;justify-content:space-between;padding: 0 15px;">
   <div>2020年2月27日 上午 6:09 </div>
-  <div title="第 181 页">181</div>
+  <div title="epubcfi(/6/30[id145]!/4/86/1,:48,:100)" style="margin: 5 0;background-color: black">POS</div>
 </div>
 
 <div class="note warning no-icon">
@@ -1011,6 +1024,10 @@ C -->|Two| E[Result 2]</pre></td>
 <li>需要在博文的 <a href="https://hexo.io/zh-cn/docs/front-matter#JSON-Front-matter" target="_blank" rel="noopener">Front-matter</a> 中开启 <code>mathjax</code></li>
 <li>公式里的运算符号两侧尽量加上空格，否则可能会导致渲染失败的情况</li>
 </ul>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><h3 id="Error-expected-end-of-comment-got-end-of-file"><a href="#Error-expected-end-of-comment-got-end-of-file" class="headerlink" title="Error: expected end of comment, got end of file"></a>Error: expected end of comment, got end of file</h3><h4 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Unhandled rejection Template render error: (unknown path)</span><br><span class="line">  Error: expected end of comment, got end of file</span><br><span class="line">    at Object._prettifyError (&#x2F;Users&#x2F;gzhennaxia&#x2F;Documents&#x2F;GitHub&#x2F;libo9527.github.io&#x2F;node_modules&#x2F;nunjucks&#x2F;src&#x2F;lib.js:36:11)</span><br><span class="line">    at Template.render (&#x2F;Users&#x2F;gzhennaxia&#x2F;Documents&#x2F;GitHub&#x2F;libo9527.github.io&#x2F;node_modules&#x2F;nunjucks&#x2F;src&#x2F;environment.js:542:21)</span><br></pre></td></tr></table></figure>
+
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>博文中出现 <code>{</code> 和 <code>#</code> 连在一起时报这个错。</p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p>用 <code>&lt;span&gt;</code> 标签将其分开即可，即 <code>&lt;span&gt;{&lt;/span&gt;&lt;span&gt;#&lt;/span&gt;</code>。</p>
 ]]></content>
       <categories>
         <category>Norms and Skills</category>
@@ -9411,6 +9428,7 @@ C -->|Two| E[Result 2]</pre></td>
 
 <h3 id="头像旋转"><a href="#头像旋转" class="headerlink" title="头像旋转"></a>头像旋转</h3><div class="tabs" id="avatar"><ul class="nav-tabs"><li class="tab active"><a href="#avatar-1">NexT 7.7.1</a></li><li class="tab"><a href="#avatar-2">NexT 5</a></li></ul><div class="tab-content"><div class="tab-pane active" id="avatar-1"><blockquote>
 <p><a href="https://theme-next.org/docs/getting-started/#Configuring-Avatar" target="_blank" rel="noopener">Configuring-Avatar | NexT</a></p>
+<p><a href="https://favicon.io/" target="_blank" rel="noopener">The ultimate favicon generator</a></p>
 </blockquote>
 <figure class="highlight yaml"><figcaption><span>themes/next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be dispalyed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="avatar-2"><blockquote>
 <p><a href="http://www.iooeo.com/2017/07/20/Hexo-Next-头像圆形并旋转/" target="_blank" rel="noopener">Hexo Next 头像圆形并旋转</a></p>

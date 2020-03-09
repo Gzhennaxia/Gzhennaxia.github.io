@@ -38,7 +38,7 @@
 <meta property="og:image" content="http://yoursite.com/post_image/background-size-x-y.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/mermaid-js/mermaid/master/img/gray-flow.png">
 <meta property="article:published_time" content="2020-02-16T03:31:57.000Z">
-<meta property="article:modified_time" content="2020-03-08T15:40:31.643Z">
+<meta property="article:modified_time" content="2020-03-09T12:49:42.340Z">
 <meta property="article:author" content="Gzhennaxia">
 <meta property="article:tag" content="Norms and Skills">
 <meta property="article:tag" content="Blog Writing">
@@ -232,7 +232,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-08 23:40:31" itemprop="dateModified" datetime="2020-03-08T23:40:31+08:00">2020-03-08</time>
+                <time title="Modified: 2020-03-09 20:49:42" itemprop="dateModified" datetime="2020-03-09T20:49:42+08:00">2020-03-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -279,14 +279,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.6k</span>
+              <span>3.2k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>4 mins.</span>
+              <span>5 mins.</span>
             </span>
             <div class="post-description">博客写作的规范与技巧</div>
 
@@ -493,6 +493,10 @@ C -->|Two| E[Result 2]</pre></td>
 <li>需要在博文的 <a href="https://hexo.io/zh-cn/docs/front-matter#JSON-Front-matter" target="_blank" rel="noopener">Front-matter</a> 中开启 <code>mathjax</code></li>
 <li>公式里的运算符号两侧尽量加上空格，否则可能会导致渲染失败的情况</li>
 </ul>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><h3 id="Error-expected-end-of-comment-got-end-of-file"><a href="#Error-expected-end-of-comment-got-end-of-file" class="headerlink" title="Error: expected end of comment, got end of file"></a>Error: expected end of comment, got end of file</h3><h4 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Unhandled rejection Template render error: (unknown path)</span><br><span class="line">  Error: expected end of comment, got end of file</span><br><span class="line">    at Object._prettifyError (&#x2F;Users&#x2F;gzhennaxia&#x2F;Documents&#x2F;GitHub&#x2F;libo9527.github.io&#x2F;node_modules&#x2F;nunjucks&#x2F;src&#x2F;lib.js:36:11)</span><br><span class="line">    at Template.render (&#x2F;Users&#x2F;gzhennaxia&#x2F;Documents&#x2F;GitHub&#x2F;libo9527.github.io&#x2F;node_modules&#x2F;nunjucks&#x2F;src&#x2F;environment.js:542:21)</span><br></pre></td></tr></table></figure>
+
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>博文中出现 <code>{</code> 和 <code>#</code> 连在一起时报这个错。</p>
+<h4 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h4><p>用 <code>&lt;span&gt;</code> 标签将其分开即可，即 <code>&lt;span&gt;{&lt;/span&gt;&lt;span&gt;#&lt;/span&gt;</code>。</p>
 
     </div>
 
@@ -614,7 +618,7 @@ C -->|Two| E[Result 2]</pre></td>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">1.</span> <span class="nav-text">文字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#纯色背景填充"><span class="nav-number">1.1.</span> <span class="nav-text">纯色背景填充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中心引用"><span class="nav-number">1.2.</span> <span class="nav-text">中心引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#格式"><span class="nav-number">1.2.1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果"><span class="nav-number">1.2.2.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面内跳转链接"><span class="nav-number">1.3.</span> <span class="nav-text">页面内跳转链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">2.</span> <span class="nav-text">图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.1.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本地图片"><span class="nav-number">2.1.1.</span> <span class="nav-text">本地图片</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缩放、截取"><span class="nav-number">2.2.</span> <span class="nav-text">缩放、截取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认图片"><span class="nav-number">2.3.</span> <span class="nav-text">默认图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组"><span class="nav-number">2.4.</span> <span class="nav-text">分组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF"><span class="nav-number">3.</span> <span class="nav-text">PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果展示"><span class="nav-number">4.</span> <span class="nav-text">效果展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mermaid"><span class="nav-number">5.</span> <span class="nav-text">Mermaid</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程图"><span class="nav-number">5.1.</span> <span class="nav-text">流程图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频"><span class="nav-number">6.</span> <span class="nav-text">视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按钮"><span class="nav-number">7.</span> <span class="nav-text">按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学公式"><span class="nav-number">8.</span> <span class="nav-text">数学公式</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文字"><span class="nav-number">1.</span> <span class="nav-text">文字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#纯色背景填充"><span class="nav-number">1.1.</span> <span class="nav-text">纯色背景填充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中心引用"><span class="nav-number">1.2.</span> <span class="nav-text">中心引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#格式"><span class="nav-number">1.2.1.</span> <span class="nav-text">格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#效果"><span class="nav-number">1.2.2.</span> <span class="nav-text">效果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面内跳转链接"><span class="nav-number">1.3.</span> <span class="nav-text">页面内跳转链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片"><span class="nav-number">2.</span> <span class="nav-text">图片</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引用"><span class="nav-number">2.1.</span> <span class="nav-text">引用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本地图片"><span class="nav-number">2.1.1.</span> <span class="nav-text">本地图片</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缩放、截取"><span class="nav-number">2.2.</span> <span class="nav-text">缩放、截取</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#默认图片"><span class="nav-number">2.3.</span> <span class="nav-text">默认图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组"><span class="nav-number">2.4.</span> <span class="nav-text">分组</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF"><span class="nav-number">3.</span> <span class="nav-text">PDF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果展示"><span class="nav-number">4.</span> <span class="nav-text">效果展示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mermaid"><span class="nav-number">5.</span> <span class="nav-text">Mermaid</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程图"><span class="nav-number">5.1.</span> <span class="nav-text">流程图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频"><span class="nav-number">6.</span> <span class="nav-text">视频</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按钮"><span class="nav-number">7.</span> <span class="nav-text">按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学公式"><span class="nav-number">8.</span> <span class="nav-text">数学公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错"><span class="nav-number">9.</span> <span class="nav-text">报错</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-expected-end-of-comment-got-end-of-file"><span class="nav-number">9.1.</span> <span class="nav-text">Error: expected end of comment, got end of file</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#日志"><span class="nav-number">9.1.1.</span> <span class="nav-text">日志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原因"><span class="nav-number">9.1.2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决"><span class="nav-number">9.1.3.</span> <span class="nav-text">解决</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -692,12 +696,12 @@ C -->|Two| E[Result 2]</pre></td>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">338k</span>
+    <span title="Symbols count total">342k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">9:24</span>
+    <span title="Reading time total">9:30</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
   </div>
