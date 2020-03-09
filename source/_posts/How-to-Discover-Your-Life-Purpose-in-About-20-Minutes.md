@@ -1,6 +1,6 @@
 ---
 title: How to Discover Your Life Purpose in About 20 Minutes
-description: 一句话描述这篇文章
+description: 如何在 20 分钟内找到你的人生目标？
 comments: false
 top: false
 reward_settings:
@@ -11,7 +11,7 @@ categories:
 tags:
 ---
 
-<img src="cover" width="100%"/>
+<img src="https://vernenciso.com/wp-content/uploads/2018/10/maxresdefault.jpg" width="100%"/>
 
 <!-- more -->
 
@@ -35,3 +35,29 @@ tags:
 4. 重复第三步，直到写出能让你哭出来的答案为止，这就是你的人生目标。
 
 就是这样。不管你是顾问、工程师还是健美运动员。对一些人来说，这个练习非常有意义，对其他人来说，这可能看起来非常愚蠢。通常情况下，需要大概15～20分钟的时间理清你头脑里那些杂七杂八的东西和你认为的人生目标是什么的社会条件。从头脑和记忆中来的答案都是错误的，当正确答案最终来的时候，你会感觉它是从一个完全不同的地方来的。
+
+对于那些深陷低意识生活的人来说，会花费更多的时间把所有错误答案写完，可能得一个多小时。不过只要你坚持，写完100个或者200个甚至是500个之后，你会被那个让你激动不已的答案所打动，那个让你崩溃的答案。如果你从未这样做过，你可能会觉得很傻。傻就傻吧，无论如何都要去做。
+
+在你写的过程中，可能某些答案会非常相似。你甚至可能列出以前写过的答案。也可能在切到一个新的话题后写出10-20个答案。没关系，你可以列出你脑海中出现的任何答案，接着写就好了。
+
+在这个过程中的某个时刻(通常在50-100个答案之后)，你可能想要退出，因为思维太发散了。你可能会有起身找借口做其他事情的冲动。这很正常。克服这种阻力，继续写，抗拒的感觉最终会过去的。
+
+You may also discover a few answers that seem to give you a mini-surge of emotion, but they don’t quite make you cry — they’re just a bit off. Highlight those answers as you go along, so you can come back to them to generate new permutations. Each reflects a piece of your purpose, but individually they aren’t complete. When you start getting these kinds of answers, it just means you’re getting warm. Keep going.
+
+It’s important to do this alone and with no interruptions. If you’re a nihilist, then feel free to start with the answer, “I don’t have a purpose,” or “Life is meaningless,” and take it from there. If you keep at it, you’ll still eventually converge.
+
+When I did this exercise, it took me about 25 minutes, and I reached my final answer at step 106. Partial pieces of the answer (mini-surges) appeared at steps 17, 39, and 53, and then the bulk of it fell into place and was refined through steps 100-106. I felt the feeling of resistance (wanting to get up and do something else, expecting the process to fail, feeling very impatient and even irritated) around steps 55-60. At step 80 I took a 2-minute break to close my eyes, relax, clear my mind, and to focus on the intention for the answer to come to me — this was helpful as the answers I received after this break began to have greater clarity.
+
+Here was my final answer: *to live consciously and courageously, to resonate with love and compassion, to awaken the great spirits within others, and to leave this world in peace.*
+
+When you find your own unique answer to the question of why you’re here, you will feel it resonate with you deeply. The words will seem to have a special energy to you, and you will feel that energy whenever you read them.
+
+Discovering your purpose is the easy part. The hard part is keeping it with you on a daily basis and working on yourself to the point where you become that purpose.
+
+If you’re inclined to ask why this little process works, just put that question aside until after you’ve successfully completed it. Once you’ve done that, you’ll probably have your own answer to why it works. Most likely if you ask 10 different people why this works (people who’ve successfully completed it), you’ll get 10 different answers, all filtered through their individual belief systems, and each will contain its own reflection of truth.
+
+Obviously, this process won’t work if you quit before convergence. I’d guesstimate that 80-90% of people should achieve convergence in less than an hour. If you’re really entrenched in your beliefs and resistant to the process, maybe it will take you 5 sessions and 3 hours, but I suspect that such people will simply quit early (like within the first 15 minutes) or won’t even attempt it at all. But if you’re drawn to read this blog (and haven’t been inclined to ban it from your life yet), then it’s doubtful you fall into this group.
+
+Give it a shot! At the very least, you’ll learn one of two things: your true purpose in life -or- that you should unsubscribe from this blog. 😉
+
+*Update 8/8/06: Be sure to read the follow-up to this article, especially if you’re having trouble with this particular approach (there’s an alternative method you can use):* [*The Meaning of Life: Discover Your Purpose*](https://www.stevepavlina.com/blog/2005/06/the-meaning-of-life-discover-your-purpose/)*.*

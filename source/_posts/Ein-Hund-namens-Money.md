@@ -24,7 +24,7 @@ tags:
 
 <div style="display: flex;justify-content:space-between;padding: 0 15px;">
   <div>2020年2月27日 上午 6:09 </div>
-  <div title="第 181 页">181</div>
+  <div title="epubcfi(/6/30[id145]!/4/86/1,:48,:100)" style="margin: 5 0;background-color: black">POS</div>
 </div>
 
 {% note warning no-icon %}

@@ -443,6 +443,8 @@ favicon:
 <!-- tab NexT 7.7.1 -->
 
 > [Configuring-Avatar | NexT](https://theme-next.org/docs/getting-started/#Configuring-Avatar)
+>
+> [The ultimate favicon generator](https://favicon.io/)
 
 ```yaml themes/next/_config.yml
 # Sidebar Avatar

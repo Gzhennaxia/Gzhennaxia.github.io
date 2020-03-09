@@ -254,3 +254,24 @@ Generation of diagram and flowchart from text in a similar manner as markdown.
 - 需要在博文的 [Front-matter](https://hexo.io/zh-cn/docs/front-matter#JSON-Front-matter) 中开启 `mathjax`
 - 公式里的运算符号两侧尽量加上空格，否则可能会导致渲染失败的情况
 
+## 报错
+
+### Error: expected end of comment, got end of file
+
+#### 日志
+
+```
+Unhandled rejection Template render error: (unknown path)
+  Error: expected end of comment, got end of file
+    at Object._prettifyError (/Users/gzhennaxia/Documents/GitHub/libo9527.github.io/node_modules/nunjucks/src/lib.js:36:11)
+    at Template.render (/Users/gzhennaxia/Documents/GitHub/libo9527.github.io/node_modules/nunjucks/src/environment.js:542:21)
+```
+
+#### 原因
+
+博文中出现 `{` 和 `#` 连在一起时报这个错。
+
+#### 解决
+
+用 `<span>` 标签将其分开即可，即 `<span>{</span><span>#</span>`。
+
