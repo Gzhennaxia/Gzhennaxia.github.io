@@ -42,11 +42,13 @@ tags:
 
 在这个过程中的某个时刻(通常在50-100个答案之后)，你可能想要退出，因为思维太发散了。你可能会有起身找借口做其他事情的冲动。这很正常。克服这种阻力，继续写，抗拒的感觉最终会过去的。
 
-You may also discover a few answers that seem to give you a mini-surge of emotion, but they don’t quite make you cry — they’re just a bit off. Highlight those answers as you go along, so you can come back to them to generate new permutations. Each reflects a piece of your purpose, but individually they aren’t complete. When you start getting these kinds of answers, it just means you’re getting warm. Keep going.
+你可能会找到一些让你情绪短暂激动但又没到让你哭出来的程度的答案，这些答案只是有一点点跑题了，遇到这些答案的时候立马圈出它们，这样之后可以快速回到这里，然后从这里继续延伸。它们每个都只是你人生目标的一部分，单个来说并不完整。当你写下这些答案的时候表明你已经开始变得热情了，Keep going！
 
-It’s important to do this alone and with no interruptions. If you’re a nihilist, then feel free to start with the answer, “I don’t have a purpose,” or “Life is meaningless,” and take it from there. If you keep at it, you’ll still eventually converge.
+连续地、不间断地进行这个过程是十分关键的。如果你是一个空想家，则可以从“我没有目标”或者“生活没有意义”的答案开始，然后写下心的答案，就这样坚持下去，最终一定可以找到那个答案的！
 
-When I did this exercise, it took me about 25 minutes, and I reached my final answer at step 106. Partial pieces of the answer (mini-surges) appeared at steps 17, 39, and 53, and then the bulk of it fell into place and was refined through steps 100-106. I felt the feeling of resistance (wanting to get up and do something else, expecting the process to fail, feeling very impatient and even irritated) around steps 55-60. At step 80 I took a 2-minute break to close my eyes, relax, clear my mind, and to focus on the intention for the answer to come to me — this was helpful as the answers I received after this break began to have greater clarity.
+我用了大概 25 分钟完成的这个练习，终极答案是第 106 个。有小触动的答案出现在第 17、39 和 第53 个，然后在第 100-106 的时候开始渐渐清晰并重新定义了终极答案。大概在写到第 55-60 个答案的时候出现了一些抗拒感和抵触情绪(想要站起来做点别的事情、希望这个过程失败、心绪很不耐烦甚至有点烦躁)。写到第 80 个时，我休息了 2 分钟，闭上眼睛，放松放松，清理了下我的大脑，专注于我下面要写答案，这很有帮助，因为我的终极答案在这个休息之后开始有了更大的清晰度。
+
+
 
 Here was my final answer: *to live consciously and courageously, to resonate with love and compassion, to awaken the great spirits within others, and to leave this world in peace.*
 

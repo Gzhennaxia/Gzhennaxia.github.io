@@ -58,3 +58,5 @@ tags:
 |ZPLUSERDATA | BLOB| | | 用户数据 |
 
 
+
+将内联样式提取出来，结合 NexT 自定义样式，添加到 Post 页面 Body 中。
