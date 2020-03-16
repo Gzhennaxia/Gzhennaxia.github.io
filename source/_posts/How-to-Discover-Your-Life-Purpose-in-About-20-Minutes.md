@@ -48,18 +48,19 @@ tags:
 
 我用了大概 25 分钟完成的这个练习，终极答案是第 106 个。有小触动的答案出现在第 17、39 和 第53 个，然后在第 100-106 的时候开始渐渐清晰并重新定义了终极答案。大概在写到第 55-60 个答案的时候出现了一些抗拒感和抵触情绪(想要站起来做点别的事情、希望这个过程失败、心绪很不耐烦甚至有点烦躁)。写到第 80 个时，我休息了 2 分钟，闭上眼睛，放松放松，清理了下我的大脑，专注于我下面要写答案，这很有帮助，因为我的终极答案在这个休息之后开始有了更大的清晰度。
 
+这是我的终极答案：
 
+- 有意识地勇敢的生活
+- 与爱和同情产生共鸣
+- 唤起他人内在的伟大精神
+- 与这个世界和平相处
 
-Here was my final answer: *to live consciously and courageously, to resonate with love and compassion, to awaken the great spirits within others, and to leave this world in peace.*
+当你找到独属于你自己的答案时，你会觉得它与你产生了深刻的共鸣。这些词语似乎能给你带来特殊的能量，无论什么时候读到它们，你都能感受到那份能量。
 
-When you find your own unique answer to the question of why you’re here, you will feel it resonate with you deeply. The words will seem to have a special energy to you, and you will feel that energy whenever you read them.
+找到目标并不是最难的，难的是日常生活中牢记它，并朝着这个目标不断努力。
 
-Discovering your purpose is the easy part. The hard part is keeping it with you on a daily basis and working on yourself to the point where you become that purpose.
+如果你想知道为什么这个小练习有用，那就先把这个问题放到一边，直到你成功完成了再说。一旦你完成了，你可能就知道了它为什么有效了。每个人有每个人自己的答案，因为每个人都有自己的信仰和自己对真理的思索。
 
-If you’re inclined to ask why this little process works, just put that question aside until after you’ve successfully completed it. Once you’ve done that, you’ll probably have your own answer to why it works. Most likely if you ask 10 different people why this works (people who’ve successfully completed it), you’ll get 10 different answers, all filtered through their individual belief systems, and each will contain its own reflection of truth.
+显然，如果你中途停下了那肯定找不到人生目标。我猜大概80-90%的人应该用不了一个小时就能完成。如果你真的十分固执己见，抵触这种过程，可能要做5组，花上3个小时左右，但我怀疑这样的人会早早的就放弃了(比如坚持不到15分钟)，甚至根本不会去尝试。不过如果你被这篇博文所吸引(而且并没有想把它从你的生活中屏蔽掉)，那你是不是这种人就很值得怀疑了。
 
-Obviously, this process won’t work if you quit before convergence. I’d guesstimate that 80-90% of people should achieve convergence in less than an hour. If you’re really entrenched in your beliefs and resistant to the process, maybe it will take you 5 sessions and 3 hours, but I suspect that such people will simply quit early (like within the first 15 minutes) or won’t even attempt it at all. But if you’re drawn to read this blog (and haven’t been inclined to ban it from your life yet), then it’s doubtful you fall into this group.
-
-Give it a shot! At the very least, you’ll learn one of two things: your true purpose in life -or- that you should unsubscribe from this blog. 😉
-
-*Update 8/8/06: Be sure to read the follow-up to this article, especially if you’re having trouble with this particular approach (there’s an alternative method you can use):* [*The Meaning of Life: Discover Your Purpose*](https://www.stevepavlina.com/blog/2005/06/the-meaning-of-life-discover-your-purpose/)*.*
+试一试！至少你能了解到以下两点之一：你真正的人生目标——或者——你应该退订此博客。 😉
