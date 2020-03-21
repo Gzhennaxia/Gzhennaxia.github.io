@@ -1,51 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Windows</title>
-    <url>/2020/03/16/Windows/</url>
-    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
-
-<a id="more"></a>
-
-<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
-<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
-</blockquote>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
-<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
-<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>control.exe</code></li>
-<li>回车</li>
-</ol>
-<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
-<li><code>Win + R</code></li>
-<li>输入<code>sysdm.cpl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>cacl</code></li>
-<li>回车</li>
-</ol>
-<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
-<li>Win + R`</li>
-<li>输入<code>services.msc</code></li>
-<li>回车</li>
-</ol>
-<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
-<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
-<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Software and Tools</title>
-    <url>/2020/03/16/Software%20and%20Tools/</url>
+    <url>/2020/03/21/Software%20and%20Tools/</url>
     <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
 
 <a id="more"></a>
@@ -107,8 +64,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows</title>
+    <url>/2020/03/21/Windows/</url>
+    <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
+
+<a id="more"></a>
+
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><blockquote>
+<p><a href="https://blog.csdn.net/AinUser/article/details/79247841" target="_blank" rel="noopener">win10专业版激活方法——亲测可行！！！</a></p>
+</blockquote>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><strong>Win + L</strong>：锁屏</p>
+<p><strong>Shift + F10</strong>：相当于鼠标右键</p>
+<h2 id="快速打开"><a href="#快速打开" class="headerlink" title="快速打开"></a>快速打开</h2><h3 id="控制面板"><a href="#控制面板" class="headerlink" title="控制面板"></a>控制面板</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>control.exe</code></li>
+<li>回车</li>
+</ol>
+<h3 id="系统属性"><a href="#系统属性" class="headerlink" title="系统属性"></a>系统属性</h3><ol>
+<li><code>Win + R</code></li>
+<li>输入<code>sysdm.cpl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="计算器"><a href="#计算器" class="headerlink" title="计算器"></a>计算器</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>cacl</code></li>
+<li>回车</li>
+</ol>
+<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><ol>
+<li>Win + R`</li>
+<li>输入<code>services.msc</code></li>
+<li>回车</li>
+</ol>
+<h2 id="当前目录下打开控制台"><a href="#当前目录下打开控制台" class="headerlink" title="当前目录下打开控制台"></a>当前目录下打开控制台</h2><p>直接在当前目录栏中输入<code>cmd</code>，然后回车即可。</p>
+<h2 id="自动隐藏任务栏"><a href="#自动隐藏任务栏" class="headerlink" title="自动隐藏任务栏"></a>自动隐藏任务栏</h2><p>设置&gt;任务栏&gt;勾选自动隐藏任务栏</p>
+<p><img data-src="https://i.loli.net/2018/12/23/5c1f24bb8cc78.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git</title>
-    <url>/2020/03/16/Git/</url>
+    <url>/2020/03/21/Git/</url>
     <content><![CDATA[<img data-src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <a id="more"></a>
@@ -164,7 +164,7 @@
   </entry>
   <entry>
     <title>GitHub Pages+Hexo+NexT</title>
-    <url>/2020/03/16/GitHub%20Pages+Hexo+NexT/</url>
+    <url>/2020/03/21/GitHub%20Pages+Hexo+NexT/</url>
     <content><![CDATA[<blockquote>
 <p>环境：</p>
 <p>node.js    10.14.2</p>
@@ -357,12 +357,55 @@
   </entry>
   <entry>
     <title>Prepare-for-spring-travel</title>
-    <url>/2020/03/16/Prepare-for-spring-travel/</url>
+    <url>/2020/03/21/Prepare-for-spring-travel/</url>
     <content><![CDATA[<img data-src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <a id="more"></a>
 
 <h2 id="衣"><a href="#衣" class="headerlink" title="衣"></a>衣</h2><h2 id="食"><a href="#食" class="headerlink" title="食"></a>食</h2><h2 id="住"><a href="#住" class="headerlink" title="住"></a>住</h2><h2 id="行"><a href="#行" class="headerlink" title="行"></a>行</h2>]]></content>
+  </entry>
+  <entry>
+    <title>Why BiliBili and YouTube Attract you</title>
+    <url>/2020/03/18/Why-BiliBili-and-YouTube-Attract-you/</url>
+    <content><![CDATA[<img data-src="https://ib11.go2yd.com/image.php?url=0LQrZAhRZy" width="100%"/>
+
+<a id="more"></a>
+
+<h2 id="特点分析"><a href="#特点分析" class="headerlink" title="特点分析"></a>特点分析</h2><h3 id="BiliBili"><a href="#BiliBili" class="headerlink" title="BiliBili"></a>BiliBili</h3><blockquote>
+<p><a href="https://www.zhihu.com/question/39269323" target="_blank" rel="noopener">为什么b站会受这么多人喜欢？？ - 知乎</a></p>
+<p><a href="https://36kr.com/p/5272775" target="_blank" rel="noopener">你复制不了B站的社区氛围_详细解读_最新资讯_热点事件_36氪</a></p>
+</blockquote>
+<ul>
+<li><p>相关视频推荐</p>
+<p>这个是几乎每个视频网站都有。每个视频播放页面的右侧都是推荐视频的列表，加上标题党的影响，本身就是根据你的喜好推荐的，所以很容易会被这些内容吸引，进而沉迷其中。</p>
+</li>
+<li><p>没有广告</p>
+<p>没人愿意看个视频先看个几十秒甚至100多秒的广告，看到精彩的时候插入十几秒广告。</p>
+</li>
+<li><p>弹幕多、质量高</p>
+<p>虽然有很多撕X的，但是类比起其他网站，B站的弹幕至少还有科普类、预警系列、吐槽类、字幕类的弹幕。</p>
+</li>
+<li><p>社区氛围好</p>
+<p>B站的答题机制、监管力度，保证了在B站发声的人确实发自内心想要融入社区来表达自我。</p>
+</li>
+</ul>
+<h2 id="如何克制"><a href="#如何克制" class="headerlink" title="如何克制"></a>如何克制</h2><blockquote>
+<p>娱乐要适度，要尽量克制自己不要沉迷。</p>
+</blockquote>
+<ul>
+<li><p>避免推荐视频的诱惑</p>
+<ul>
+<li>在选中一个要观看的视频后直接全屏观看</li>
+<li>在快结束的时候直接快捷键关闭当前页</li>
+</ul>
+</li>
+<li><p>吃饭时不要看</p>
+<p>吃饭时是比较放松的时候，放松的状态下最容易沉迷。</p>
+</li>
+<li><p>安排一定的时间用来娱乐放松</p>
+</li>
+</ul>
+]]></content>
   </entry>
   <entry>
     <title>MBTI Report</title>
@@ -371,23 +414,89 @@
 
 <a id="more"></a>
 
-<blockquote>
-<p><a href="http://www.welefen.com/lab/mbti/" target="_blank" rel="noopener">MBTI职业性格测试– 在线版</a></p>
+<h2 id="MBTI"><a href="#MBTI" class="headerlink" title="MBTI"></a>MBTI</h2><blockquote>
+<p><strong>迈尔斯-布里格斯性格分类指标</strong>（英语：Myers-Briggs Type Indicator，简称<strong>MBTI</strong>）是<a href="https://zh.wikipedia.org/w/index.php?title=性格分類&action=edit&redlink=1" target="_blank" rel="noopener">性格分类</a>理论模型的一种，其基本理论是根据<a href="https://zh.wikipedia.org/wiki/瑞士" target="_blank" rel="noopener">瑞士</a>心理分析家<a href="https://zh.wikipedia.org/wiki/卡尔·荣格" target="_blank" rel="noopener">卡尔·荣格</a>于1921年所出版的书籍《<a href="https://zh.wikipedia.org/w/index.php?title=心理類型&action=edit&redlink=1" target="_blank" rel="noopener">心理类型</a>》。最先的研究者是美国心理学家<a href="https://zh.wikipedia.org/w/index.php?title=凯瑟琳·布里格斯&action=edit&redlink=1" target="_blank" rel="noopener">凯瑟琳·布里格斯</a>及其女儿<a href="https://zh.wikipedia.org/w/index.php?title=伊莎贝尔·迈尔斯&action=edit&redlink=1" target="_blank" rel="noopener">伊莎贝尔·迈尔斯</a>。</p>
 </blockquote>
-<h2 id="23题版报告"><a href="#23题版报告" class="headerlink" title="23题版报告"></a><a href="https://www.apesk.com/mbti/submit_email_date.asp?code=223.73.241.5&user=25875471" target="_blank" rel="noopener">23题版报告</a></h2><h3 id="INFP-哲学家型——生活在自己的理想世界"><a href="#INFP-哲学家型——生活在自己的理想世界" class="headerlink" title="INFP 哲学家型——生活在自己的理想世界"></a>INFP 哲学家型——生活在自己的理想世界</h3><p><strong>日期:</strong>  2020/3/16</p>
-<h4 id="一、你的MBTI图形"><a href="#一、你的MBTI图形" class="headerlink" title="一、你的MBTI图形"></a>一、你的MBTI图形</h4><p><img data-src="/pdf/images/image-20200316193106608.png" alt="image-20200316193106608"></p>
-<h4 id="二、基本描述"><a href="#二、基本描述" class="headerlink" title="二、基本描述"></a>二、基本描述</h4><p><img data-src="https://www.apesk.com/mensa/img/famous/INFP.jpg" alt="img"></p>
-<p>INFP (Introverted Feeling with Intuition)代表人物：卢梭 哲学家</p>
-<p>语录：虽然我的心既傲慢又温柔，我的性格柔弱，然而，我是不可战胜的。</p>
-<p>才储分析：</p>
+<p>MBTI人格理论的基础是著名心理学家<strong>卡尔·荣格</strong>先生(弗洛伊德的正宗门徒)关于心理类型的划分，后经一对母女Katharine Briggs(凯瑟琳·布里格斯)与Isabel Myers(伊莎贝尔·迈尔斯)研究并加以发展。MBTI中的M和B就是Myers和Briggs。</p>
+<p>MBTI人格模型分为四个维度，每个维度有两个方向，共计八个方面，即共有八种人格特点：</p>
 <ul>
-<li><p>您的性格类型倾向为“ INFP ”(内向 直觉 情感 知觉)</p>
+<li><p>我们的能量来源</p>
+<ul>
+<li><p>外向Extraversion (E)</p>
+<p>关注自己如何影响外部环境：将心理能量和注意力聚集于外部世界和与他人的交往上。</p>
+<p>例如：聚会、讨论、聊天</p>
 </li>
-<li><p><strong>倾向度：</strong> I-57 N-100 F-86 P-57</p>
-</li>
-<li><p>不假思索指数：8</p>
+<li><p>内向Introversion (I)</p>
+<p>关注外部环境的变化对自己的影响：将心理能量和注意力聚集于内部世界，注重自己的内心体验。</p>
+<p>例如：独立思考，看书，避免成为注意的中心，听的比说的多</p>
 </li>
 </ul>
+</li>
+<li><p>我们获取信息的主要方式</p>
+<ul>
+<li><p>感觉Sensing (S)</p>
+<p>关注由感觉器官获取的具体信息：看到的、听到的、闻到的、尝到的、触摸到的事物</p>
+<p>例如：关注细节、喜欢描述、喜欢使用和琢磨已知的技能</p>
+</li>
+<li><p>直觉iNtuition (N)</p>
+<p>关注事物的整体和发展变化趋势：灵感、预测、暗示，重视推理</p>
+<p>例如：重视想象力和独创力，喜欢学习新技能，但容易厌倦、喜欢使用比喻，跳跃性地展现事实</p>
+</li>
+</ul>
+</li>
+<li><p>我们的决策方式</p>
+<ul>
+<li><p>思考Thinking (T)</p>
+<p>重视事物之间的逻辑关系，喜欢通过客观分析作决定评价。</p>
+<p>例如：理智、客观、公正、认为圆通比坦率更重要</p>
+</li>
+<li><p>情感Feeling (F)</p>
+<p>以自己和他人的感受为重，将价值观作为判定标准</p>
+<p>例如：有同情心、善良、和睦、善解人意，考虑行为对他人情感的影响，认为圆通和坦率同样重要</p>
+</li>
+</ul>
+</li>
+<li><p>我们的做事方式</p>
+<ul>
+<li><p>判断Judging (J)</p>
+<p>喜欢做计划和决定，愿意进行管理和控制，希望生活井然有序</p>
+<p>例如：重视结果(重点在于完成任务)、按部就班、有条理、尊重时间期限、喜欢做决定</p>
+</li>
+<li><p>知觉Perceiving (P)</p>
+<p>灵活、试图去理解、适应环境、倾向于留有余地，喜欢宽松自由的生活方式</p>
+<p>例如：重视过程、随信息的变化不断调整目标，喜欢有多种选择。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="MBTI职业性格测试–-在线版"><a href="#MBTI职业性格测试–-在线版" class="headerlink" title="MBTI职业性格测试– 在线版"></a><a href="http://www.welefen.com/lab/mbti/" target="_blank" rel="noopener">MBTI职业性格测试– 在线版</a></h2><div class="tabs" id="mbti-reports"><ul class="nav-tabs"><li class="tab active"><a href="#mbti-reports-1">23题版报告</a></li><li class="tab"><a href="#mbti-reports-2">93题版报告</a></li></ul><div class="tab-content"><div class="tab-pane active" id="mbti-reports-1"><blockquote>
+<p><a href="https://www.apesk.com/mbti/submit_email_date.asp?code=223.73.241.5&user=25875471" target="_blank" rel="noopener">23题版报告</a></p>
+</blockquote>
+<h3 id="INFP-哲学家型——生活在自己的理想世界"><a href="#INFP-哲学家型——生活在自己的理想世界" class="headerlink" title="INFP 哲学家型——生活在自己的理想世界"></a>INFP 哲学家型——生活在自己的理想世界</h3><p><strong>日期:</strong>  2020/3/16</p>
+<h4 id="一、你的MBTI图形"><a href="#一、你的MBTI图形" class="headerlink" title="一、你的MBTI图形"></a>一、你的MBTI图形</h4><p><img data-src="/pdf/images/image-20200316193106608.png" alt="image-20200316193106608"></p>
+<h4 id="二、基本描述"><a href="#二、基本描述" class="headerlink" title="二、基本描述"></a>二、基本描述</h4><p><img data-src="https://www.apesk.com/mensa/img/famous/INFP.jpg" alt="img"></p>
+<div style="text-align: center">INFP (Introverted Feeling with Intuition)代表人物：卢梭 哲学家</div>
+
+<blockquote class="blockquote-center"><p>虽然我的心既傲慢又温柔，我的性格柔弱，然而，我是不可战胜的。</p>
+</blockquote>
+
+<p>才储分析：</p>
+<ul>
+<li>您的性格类型倾向为“ INFP ”(内向 直觉 情感 知觉)</li>
+<li><strong>倾向度：</strong> I-57 N-100 F-86 P-57</li>
+<li>不假思索指数：8</li>
+</ul></div><div class="tab-pane" id="mbti-reports-2"><blockquote>
+<p><a href="https://www.apesk.com/mbti/submit_email_date.asp?code=223.73.241.5&user=25887502" target="_blank" rel="noopener">93题版报告</a></p>
+</blockquote>
+<h3 id="INFP-哲学家型——生活在自己的理想世界"><a href="#INFP-哲学家型——生活在自己的理想世界" class="headerlink" title="INFP 哲学家型——生活在自己的理想世界"></a>INFP 哲学家型——生活在自己的理想世界</h3><p><strong>日期:</strong> 2020/3/17</p>
+<h4 id="一、你的MBTI图形"><a href="#一、你的MBTI图形" class="headerlink" title="一、你的MBTI图形"></a>一、你的MBTI图形</h4><p><img data-src="/pdf/images/image-20200317141841624.png" alt="image-20200317141841624"></p>
+<h4 id="二、基本描述"><a href="#二、基本描述" class="headerlink" title="二、基本描述"></a>二、基本描述</h4><p>才储分析：</p>
+<ul>
+<li>您的性格类型倾向为“ INFP ”(内向 直觉 情感 知觉)</li>
+<li><strong>倾向度：</strong> I50 N60 F78 P52 </li>
+<li>不假思索指数：8</li>
+</ul></div></div></div>
+
 <p>理想主义者，忠于自己的价值观及自己所重视的人。外在的生活与内在的价值观配合，有好奇心，很快看到事情的可能与否，能够加速对理念的实践。试图了解别人、协助别人发展潜能。适应力强，有弹性；<mark>如果和他们的价值观没有抵触，往往能包容他人。</mark></p>
 <p>INFP把内在的和谐视为高于其他一切。他们敏感、理想化、忠诚，对于个人价值具有一种强烈的荣誉感。他们个人信仰坚定，有为自认为有价值的事业献身的精神。 INFP型的人对于已知事物之外的可能性很感兴趣，精力集中于他们的梦想和想象。他们思维开阔、有好奇心和洞察力，常常具有出色的长远眼光。在日常事务中，他们通常灵活多变、具有<mark>忍耐力和适应性</mark>，但是他们非常坚定地对待内心的忠诚，<mark>为自己设定了事实上几乎是不可能的标准。</mark> INFP型的人具有许多使他们忙碌的理想和忠诚。他们十分坚定地完成自己所选择的事情，他们往往承担得太多，但不管怎样总要完成每件事。虽然对外部世界他们显得冷淡缄默，但INFP型的人很关心内在。他们富有同情心、理解力，<mark>对于别人的情感很敏感</mark>。除了他们的价值观受到威胁外，他们<mark>总是避免冲突</mark>，没有兴趣强迫或支配别人。INFP型的人<mark>常常喜欢通过书写而不是口头来表达自己的感情</mark>。当INFP型的人劝说别人相信他们的想法的重要性时，可能是最有说服力的。INFP<mark>很少显露强烈的感情，常常显得沉默而冷静</mark>。然而，一旦他们与你认识了，就会变得热情友好，但<mark>往往会避免浮浅的交往</mark>。他们珍视那些花费时间去思考目标与价值的人。</p>
 <p>您适合的领域有：创作性、艺术类 教育、研究、咨询类等</p>
@@ -421,7 +530,202 @@
 <p>———— 佐罗.大卫</p>
 </blockquote>
 
- <iframe width="100%" height="555px" frameborder="0" scrolling="no" src="https://www.apesk.com/mbti/dati28N.asp"></iframe>]]></content>
+<h3 id="MBTI第二步报告"><a href="#MBTI第二步报告" class="headerlink" title="MBTI第二步报告"></a>MBTI第二步报告</h3><h4 id="基本报告"><a href="#基本报告" class="headerlink" title="基本报告"></a>基本报告</h4><blockquote>
+<p>source/pdf/XX - MBTI基本分析报告.pdf</p>
+<p><a href="https://www.apesk.com/mbti_step2/common2report/mbti1_report_admin_get_id.asp?id=188790&amp;grhr=gr&amp;pdf=yes#report_zhuti" target="_blank" rel="noopener">https://www.apesk.com/mbti_step2/common2report/mbti1_report_admin_get_id.asp?id=188790&amp;grhr=gr&amp;pdf=yes#report_zhuti</a></p>
+</blockquote>
+<h5 id="被隐藏的实质"><a href="#被隐藏的实质" class="headerlink" title="被隐藏的实质"></a>被隐藏的实质</h5><p>也许你也有过相似的经历，经过几年的分离，再见老朋友的感觉总是 令人忍不住的兴奋。起初，你可能不停的想他变成什么样子了。不过，很快你就会高兴的发现站在你面前的这个半陌生半熟悉的人还是你认识的那个老朋友。没变的那部分最本质的核心也就是心理学家口中的<strong>人格</strong>。</p>
+<h5 id="人格心理学——你有人格吗？"><a href="#人格心理学——你有人格吗？" class="headerlink" title="人格心理学——你有人格吗？"></a>人格心理学——你有人格吗？</h5><p>心理学认为，人格是一个人独特的思维、情感和行为模式。换句话说，一个人过去是什么样的人，现在和将来还是什么样的人，这种一贯性就是由其人格所决定的。</p>
+<h5 id="人格特质"><a href="#人格特质" class="headerlink" title="人格特质"></a>人格特质</h5><p>心理学家把人的特殊的、稳定的个性品质称为“人格特质”。</p>
+<h5 id="人格模板是什么时候形成的？"><a href="#人格模板是什么时候形成的？" class="headerlink" title="人格模板是什么时候形成的？"></a>人格模板是什么时候形成的？</h5><p>人格特质通常非常稳定。</p>
+<p>一般人到了二十岁之后，人格就很难再改变了。到了30岁，人格彻底稳定下来，你30岁怎样，到了60岁还差不多是这样。</p>
+<h5 id="你的MBTI图形"><a href="#你的MBTI图形" class="headerlink" title="你的MBTI图形"></a>你的MBTI图形</h5><p><img data-src="/pdf/images/image-20200318150159516.png" alt="image-20200318150159516"></p>
+<h5 id="个性特征描述"><a href="#个性特征描述" class="headerlink" title="个性特征描述"></a>个性特征描述</h5><p><img data-src="https://www.apesk.com/mensa/img/famous/ISFJ-F.jpg" alt="img"></p>
+<div style="text-align: center">ISFJ (Introverted Sensation with Feeling)代表人物：戴安娜王妃 慈善家</div>
+
+<blockquote class="blockquote-center"><p>爱始于家。重点不在于我们做了多少，而在于我们倾注了多少爱。</p>
+</blockquote>
+
+<p>测试显示你的类型为：<strong>ISFJ</strong>（内倾、感觉、情感和判断）——值得信赖和依靠。亦被称为<strong>照顾者型</strong></p>
+<p>你具有友善、负责、认真、忠于职守的特点，只要你认为应该做的事，不管有多少麻烦都要去做，但却<mark>厌烦去做你认为毫无意义的事情</mark>。</p>
+<p>你务实、实事求是，追求具体和明确的事情，喜欢做实际的考虑。善于单独思考、收集和考察丰富的外在信息。不喜欢逻辑的思考和理论的应用，拥有对细节很强的记忆力，诸如声音的音色或面部表情。</p>
+<p>你与人交往时较为敏感，谦逊而少言、善良、有同情心，喜欢关心他人并提供实际的帮助，你们对朋友忠实友好，有奉献精神。虽然在很多情况下你有很强烈的反应，但通常不愿意将个人情感表现出来。</p>
+<p>你做事有很强的原则性，尊重约定，维护传统。工作时严谨而有条理，愿意承担责任，你依据明晰的评估和收集的信息来做决定，充分发挥自己客观的判断和敏锐的洞察力。</p>
+<p>ISFJ型的人忠减、有奉献精神和同情心他们意志清醒而有责任心，乐于为人,理解别人的感受。ISFJ型的人十分务实，他们喜欢平和谦逊的人，他们喜欢利用大量的事实情况，对于细节则有很强的记忆力。他们耐心地对待任务的整个阶段，喜欢事情能够清晰明确。</p>
+<p>因为他们具有强烈的职业道德，所以他们如果知道自己的行为真正有用时，会对需要完成之事承担责任。他们准确系统地完成任务。他们具有传统的价值观，十分保守。他们利用符合实际的判断标准做决定，通过出色的注重实际的态度增加了稳定性。</p>
+<p>ISFJ型的人平和谦虚、勤奋严肃。他们温和、圆通，支持朋友和同伴。他们乐于协助别人，喜欢实际可行地帮助他人。他们利用个人热情与人交往，在困难中与他人和睦相处。ISFJ型的人不喜欢表达个人情感，但实际上对于大多数的情况和事件都具有强烈的个人反应。他们关心保护朋友，愿意为朋友献身，他们有为他人服务的意识，愿意完成他们的责任和义务。</p>
+<h5 id="可能存在的盲点"><a href="#可能存在的盲点" class="headerlink" title="可能存在的盲点"></a>可能存在的盲点</h5><p>你有高度的责任心，会陷入日常事务的细节中去，以至于没完没了的工作。每件事情你都会从头做到尾，这总是让你过度劳累，压力很大时，你会过度紧张，甚至产生消极情绪。</p>
+<p>由于你的现实、细致，有时<mark>容易忽略事情的全局和发展变化趋势，难以预见存在的可能性</mark>。建议你周到考虑解决问题的不同方法和可能性，<mark>需要增强对远景的关注</mark>。</p>
+<p>你总是替别人着想，以至于<mark>让人感觉“关心过度”，你需要学会给别人空间</mark>。在工作中，你过多的承受和忍耐，不太习惯表达，<mark>却</mark>将情绪在家庭和生活中发泄出来。</p>
+<p>你不停地制订计划并保证完成，以致于经常花费更多的时间和投入更多的精力来完成工作，建议你给自己安排必要的娱乐和放松的活动，不要总是“低头拉车”，需要考虑“抬头看路”。</p>
+<p>ISFJ型的人生活在完全现实的生活中，他们很难全面地观察问题，也很难预见情形的可能性结果，尤其是当他们不熟悉情形之时。他们需要看得更远些，想象如果以不同方式做事可能会产生怎样的后果。</p>
+<p>ISFJ型的人为了自己和那些对其应负责的人，每天陷入了劳累和无终止的劳作中。他们常常过多地工作，亲自去做某件事以确保能够一丝不苟地完成。因为他们<mark>天生并不是过分自信或意志坚强</mark>，所以他们有被别人利用的危险。他们必须表达不断被各种事物缠绕的怨恨之情，所以他们没有发现自己已成为一种帮助的角色。而且他们还必须让其他人知道他们的需求和成就。</p>
+<p>ISFJ型的人经常需要额外的时间以掌握技术性的内容。他们<mark>往往过多地计划</mark>，所以必须制定有助于重新调整他们那耗费过多、令人担心的精力的计划。ISFJ型的人必须寻找能够得到他们应得的、更多的快乐和放松的方法。</p>
+<h5 id="功能运用"><a href="#功能运用" class="headerlink" title="功能运用"></a>功能运用</h5><p>外向与内向是指我们心理能量的作用方向，判断与知觉是我们做事的两种方式。心理学称之为“<strong>态度</strong>”。</p>
+<p>感觉与直觉是我们获取信息的方式，思考和情感是做决定的方式，心理学称之为“<strong>功能</strong>”，功能是人格理论的精髓、核心。</p>
+<p>每一个人在都会用到四种功能，但对功能应用的喜好程度不一样。等级中第一位的称为“主导功能”，第二位的称为“辅助功能”。每个人都需要运用到这两个过程。</p>
+<h5 id="有效地使用你的类型：-ISFJ"><a href="#有效地使用你的类型：-ISFJ" class="headerlink" title="有效地使用你的类型：(ISFJ)"></a>有效地使用你的类型：(ISFJ)</h5><p>ISFJ型的人主导功能是感觉（关注细节），辅助功能是情感。他们倾向于：</p>
+<p>注意细节、重视实际、能记住琐碎细节、耐得住烦闷的工作、有耐性、细心有系统。</p>
+<p>体谅他人感受、了解他人的需要、喜欢和谐的人际关系、易表露情感、喜去说服他人。</p>
+<p>ISFJ型的人比较少地使用他们的第三、第四功能——思考和直觉。即使在需要这些功能的场合，他们仍然无法有效使用。</p>
+<p>作为一个ISFJ型的人：</p>
+<p>如果你过多的使用感觉和情感功能，你可能会失去整体的概念、想不出各种可能解决的途径、不相信直觉、不求创新、无法应付太复杂的工作、不喜欢预测未来。</p>
+<h5 id="问题解决方式"><a href="#问题解决方式" class="headerlink" title="问题解决方式"></a>问题解决方式</h5><p>每个人都会用自己的方式进行决策，决策通常来自于你的主导功能，并且完全忽视你的第四功能。</p>
+<p>你的功能运用如下：主导功能感觉——辅助功能情感——第三功能思考——第四功能直觉</p>
+<p>人格中的每一种功能对解决问题都具有关键和重要作用，忽视任何一个都将导致做出有缺陷的决定，<mark>理想化的问题解决功能流程如下</mark>：</p>
+<p><img data-src="https://www.apesk.com/mbti2/images/favchengshi_isfj.jpg" alt="img"></p>
+<p><mark>一个好的决策通常来自于四个功能的合理运用。</mark>当你尝试去解决问题时，你可以利用上表指导这个过程，但在整个的执行过程是非常困难的，因为每个人都不愿意用他不喜欢的功能去解决问题。就算你有意识地努力运用所有这些功能，你也不可能会在“真实生活”中以这种顺序运用它们。关键是要利用它们提醒自己，完善决策，就算你不按这种方式行事。</p>
+<p>工作中选择符合你的主导功能和辅助功能的岗位是非常重要的。第三功能要经过发展锻炼才能合适运用，第四功能可能永远不会在你的职业生涯中起到关键作用，因此你应当避免那种要求长期使用它的工作。</p>
+<h5 id="工作中的优势"><a href="#工作中的优势" class="headerlink" title="工作中的优势"></a>工作中的优势</h5><p>●能够很好地集中、关注焦点</p>
+<p>●很强的工作伦理，工作努力而且很负责任</p>
+<p>●良好的协作技巧，能和别人建立起和谐友好的关系</p>
+<p>●讲求实效的工作态度，办事方法现实可行</p>
+<p>●十分关注细节，能够准确地把握事实</p>
+<p>●乐于助人，给同事和下属职员的工作提供支持和帮助</p>
+<p>●了解公司（或组织）的经历，能够很好地维护公司（或组织）的传统</p>
+<p>●杰出的组织才能</p>
+<p>●愿意在传统的机构中工作，而且兢兢业业、不遗余力</p>
+<p>●能够连续地工作，对相同的工作任务不会感到厌倦</p>
+<p>●非常强的责任意识；别人可以信任你去实现自己的诺言</p>
+<p>●喜欢运用固定的办事程序；尊重别人的地位和能力</p>
+<p>●通情达理，视角现实</p>
+<h5 id="工作中的劣势"><a href="#工作中的劣势" class="headerlink" title="工作中的劣势"></a>工作中的劣势</h5><p>●可能<mark>低估自己的能力</mark>，难以坚决地维护自己的需要和利益</p>
+<p>●不愿意尝试、接受新的和未经考验的观点和想法</p>
+<p>●<mark>对反对意见过于敏感</mark>；在紧张的工作环境里感到很受压抑</p>
+<p>●可能只关注细节和眼前之事，而对整体和将来重视不够</p>
+<p>●倾向于同时投入到过多的任务之中</p>
+<p>●难以适应新环境，或者在不同工作任务之间来回切换时会有困难</p>
+<p>●易于被需要同时解决的太多的工作项目或任务弄得晕头转向、无所适从</p>
+<p>●如果自己<mark>得不到充分的重视和赞赏，可能会感到灰心丧气</mark></p>
+<p>●一经做出决定，就<mark>不愿意从头考虑同一个问题</mark></p>
+<h5 id="适合的岗位特质"><a href="#适合的岗位特质" class="headerlink" title="适合的岗位特质"></a>适合的岗位特质</h5><p>下面的条目从各个侧面上认证了您怎样才能感受到真正的职业满足，看完这些条目之后，我们建议您根据它们对您的重要程度进行排序，排序的时候，回想一下您过去的学习、工作经历以及当前学习环境和工作感受，并思考：“哪一些是令你感到特别满意，有哪些令你极其不高兴”。试着寻找贯穿这些经历的主题。</p>
+<p><strong>你的岗位特质：</strong></p>
+<p>在规范、传统、稳定的环境下工作，可以给他人提供服务或帮助</p>
+<p>适合在责任清晰，有一定私人空间、人际关系和谐的氛围中工作</p>
+<p>要求细致、精确，能够发挥你出色的观察力和对细节的关注能力</p>
+<p>工作能够让你集中精力，关注一件事情或一个人，而不是平行开展多项工作</p>
+<p>通过工作，你能够得到同事和上级的认可、欣赏和鼓励</p>
+<p>按照标准化的工作流程和规范开展工作，不要在事先没有准备的情况下把你的工作展示给别人</p>
+<p><strong>用第一人称描述如下：</strong></p>
+<p>1、要求仔细观察、一丝不苟和准确无误，因此我能充分发挥记忆事实和分析细节的能力。</p>
+<p>2、能让我致力于有形的、现实的项目任务，并以此为别人提供帮助和服务；通常需要对细节问题非常关注，对精确性的要求也非常高。</p>
+<p>3、使我通过默默无闻的努力工作，表达自己对别人的同情与对工作的热忱；同时我做出的贡献也受到重视和赞赏。</p>
+<p>4、工作在一个传统、稳定、有序和制度化的环境中，并且能为别人提供使用价值非常高的服务。</p>
+<p>5、要求遵循标准化的工作程序，运用现实的判断力，并且仔细、有条不紊地坚持到底。</p>
+<p>6、每次都全身心地投入到一个项目任务或一个人身上，并且做出的产品或提供的服务能够带来可观的结果。</p>
+<p>7、能让我有一个独立的工作空间，这样我就能连续地集中注意力，受到最小限度的干扰和打断。</p>
+<p>8、不论是帮助别人也好，还是与志同道合的人打交道也好，大多数时候都只需要我关注一个对象，而不是同时为好几个人工作或提供服务。</p>
+<p>9、在完成工作任务的过程中，要求我条理清晰并且效率很高。</p>
+<p>10、把工作成果向别人展示之前，能让我事先有充分的时间来准备。</p>
+<h5 id="职业类型——您适合的职业"><a href="#职业类型——您适合的职业" class="headerlink" title="职业类型——您适合的职业"></a>职业类型——您适合的职业</h5><p><strong>你适合的职业</strong></p>
+<p>你喜欢通过具体的方法亲自、单独的与他人打交道，运用技术给他们带来直接的影响。<br>例如：营养学者、外科医生、<strong>宠物医生</strong>、牙医、生物/植物学者、护士、矫形师等。</p>
+<p>教育和研究类的工作特别受到和你特点相同的人的青睐，他们可以自主的工作，可以帮助别人，并能看到成果，可以为社会做出贡献。<br>例如：幼儿/小学教师、社会工作者、健康保健人员、指导顾问、历史学者、运动培训师、园艺人员等。</p>
+<p>还有一些直接的和他人单独打交道的工作，这些工作要求你具有较广的知识面、技能和交际才能来给别人支持。<br>例如：秘书、行政/人事管理人员、电脑维护者、信贷顾问、顾客服务等。</p>
+<p>那些对工作细节非常关注，满足客户要求，与他们友好相处的实实在在的工作也是你需要考虑的。<br>例如：艺术人员、室内设计师、商品规划师、营销、房地产代理或经纪人、酒店管理人员等。</p>
+<p><strong>视野拓展：</strong></p>
+<p>我们要警告您：每种职业中都有各种性格类型的成功人士；即使是相同的工作，不同公司的要求也不尽相同。这份报告上列举的工作种类不是限制了你的选择，而是告诉你，面对新工作的选择或机会时，应该从哪些因素来分析这些工作对你的适合程度。</p>
+<p><strong>健康护理部分：</strong>牙医/家庭运动医生/护士/医务技术专家/理疗法专家/医疗设备推销/提供健康护理人员/饮食专家/营养学家/眼科大夫/医务记录管理人员/药剂师/药剂技术人员/放射专家/呼吸系统专家/<strong>兽医</strong>/有执照行医护士/初级保健大夫/家庭保健助理/医务/牙科助理</p>
+<p>这些职业允许ISFJ型的人在这样一种环境下工作，在这里他们的贡献通过对别人施加的个人的、直接的影响表现出来。那些职业中的很大一部分要求同客户和患者进行亲身的、一对一的交往。ISFJ型的人<mark>喜欢用一种真实的方法帮助别人</mark>。那些职位也允许ISFJ型的人在一种传统的，组织化的文化中相对独立地工作。医务领域充分利用了ISFJ型的入学习和实践技术的能力，为他们提供了同别人建立个人联系的机会。</p>
+<p><strong>社会服务部门：</strong>教育部门/学前教育/初级学校教师/图书馆员/建筑师/教育管理人员/社会福利工作人员/咨询服务人员/个人咨询人员/宗教教育者/言语病理学家/家庭健康社会服务人员/儿童福利咨询人员/戒酒和戒毒咨询人员/小学教师/图书管理员/档案保管员/特殊教育老师/(博物馆、美术馆、图书馆等的)馆长/家谱学家/教育行政人员/咨询服务人员/社会工作者(老年服务)/神学教育者/(博物馆、图书馆、美术馆等的)馆长/社会工作人员(老年和儿童每日看护问题)</p>
+<p>由于教育部门能为ISFJ型的人提供<mark>帮助他人，服务社会</mark>的机会，所以很吸引这种类型的人。ISFJ型的人经常喜欢教初中生，由于这可以同学生进行个人交往和发挥他们善长教基本技巧的能力。许多ISFJ型的人喜欢教育管理类的职业。尤其当他们对特定范围(例如特殊教育)或相对小的服务范围(一个小镇而非大城市)负责时更是这样。ISFJ型的人喜欢在组织内独立工作，这种组织必须是认可他们的成绩，使他们明白职业目标的那种。</p>
+<p>研究领域为ISFJ型人提供满足感是因为它们提供了独立工作和调查具体任务的机会。馆员们要求创造性并保持完整而准确的记录，这使他们能利用自己的组织能力和回忆事实的特长。尽管经常面临挑战，社会福利工作仍给予ISFJ型的人获得职业满足的机会。因为通过同客户的交往，ISFJ型的人能对别人的生活给予切实的提高，因此，他们发现贡献是有价值的，这些工作提供了同样的一对一交往和独立工作的环境，这对于ISFJ型的人都具有吸引力。</p>
+<p>商业/秘书/员工监督人/顾客服务代表/人事管理人员/计算机操作者/记帐员/信用顾问/律师的专职助手/家用保健品推销</p>
+<p>这些职业要求大量的<mark>在一对一基础上同别人交往的机会</mark>，因此常为ISFJ型的人所喜欢。这些职业中许多都不是独立完成的工作，这能使ISFJ型的人使用组织方面和深入细节的能力。尤其当他们同受他们尊敬和钦佩的人一块工作时。这些职业同样要求知识及技术和交流技巧以帮助别人获取信息或帮助他们满足需求。</p>
+<p>创造性/技术性/内部装饰人员/电工/零售商/旅店老板/艺术家/音乐家/优先顾客销售代理人/商业计划者/不动产经纪人</p>
+<p>这些职业彼此未必有关联但它们有一些共同的特征和要求。每种都要求<mark>与同日常生活有关的实际东西打交道</mark>。作为一个内部装饰人员，ISFJ型的人运用他或她的审美感给予客户以合适的装潢。这种工作要求注重细节以及同别人合作向满足客户对他或她室内装饰的需要和愿望迈进的能力。ISFJ型的人<mark>很注重自己房间的装饰</mark>，因此，他们容易理解客户装饰出使他们舒服的居室的愿望。</p>
+<p>一个电工要求技术准确性和坚持标准程序和代码。ISFJ型的人<mark>喜欢注意那些要求亲自动手的工作</mark>，也喜欢使用他们掌握的技术。如果ISFJ型的人感到他或她的贡献是有价值的并为人欣赏，如果他或她赢得了同顾客、同伙、同事的有质量的交往，那么电工的工作也是令人满意的。</p>
+<p>零售推销和商业是经常为ISFJ型所喜欢的职业，尤其当他们在小专卖店或大商场的一个部门工作时。ISFJ型的人常可以成为小商店的好老板。他们对诸如商店形象之类细节的关注以对顾客的“感觉”经常为他们赢得长期稳定的买卖。他们喜欢一定时间内同一名顾客交流，寻找合适的装饰品与顾客们已有的相配套。他们喜欢长期维持与顾客的关系，对待顾客十分友好和诚实可信。</p>
+<h5 id="对组织的贡献"><a href="#对组织的贡献" class="headerlink" title="对组织的贡献"></a>对组织的贡献</h5><p>●重视人的实际需要；</p>
+<p>●在贯彻执行组织目标中，采用强的执行技巧；</p>
+<p>●关心细节，遵从规范，埋头苦干，有责任心；</p>
+<p>●乐意为他人服务；</p>
+<p>●安排事情井井有条。</p>
+<h5 id="领导风格"><a href="#领导风格" class="headerlink" title="领导风格"></a>领导风格</h5><p>●不刻意追求领导角色，但在必要时能毅然承担重任；</p>
+<p>●期望他人和自己都遵从组织的需求、规范和等级；</p>
+<p>●运用表面现象背后的个人影响；</p>
+<p>●认真、谨慎地遵守传统作法和规章；</p>
+<p>●在细节上动脑筋以取得实际结果。</p>
+<h5 id="潜在缺陷"><a href="#潜在缺陷" class="headerlink" title="潜在缺陷"></a>潜在缺陷</h5><p>●<mark>对未来过分悲观</mark>；</p>
+<p>●在对人表达其观点时被视为<mark>不够强硬</mark>；</p>
+<p>●僵化、不太灵活；</p>
+<p>●由于总是<mark>避免出风头，其作用被低估</mark>。</p>
+<h5 id="适合的工作环境"><a href="#适合的工作环境" class="headerlink" title="适合的工作环境"></a>适合的工作环境</h5><p><strong>你对组织的社会性要求分析：</strong></p>
+<p>组织的社会性：这是什么含义？</p>
+<p>一些人天生果断、活跃、他们喜欢大集体生活，经常是社交圈中的中心人物。在工作安排方面喜欢尽快完成。另一些人则完全不同，他们较为保守，不愿与人过多交往，通常只有几个亲密的朋友。很少超前，也不愿意和有野心的交往。同样的，有些企业的企业文化更倾向于积极进取，快速高效的完成工作，对事情结果的关注大于对人的关注。开会和交流不被认为是和工作相抵触的事情，在很大程度上他们本身就是工作。</p>
+<p>另一些企业较为保守和独立。工作往往是关起门来完成的，活泼和有野心的行为不被这种企业的文化接受。社会和商业的关系网被认为是需要避免的杂事，而不是必要和增加工作趣味的一部分。</p>
+<p>组织的社会性：如何判断？</p>
+<p>这个组织是否喜欢用各种方式吸引有野心的人</p>
+<p>办公室的设计是否允许职工有一定的私人空间</p>
+<p>在这种文化中，成功在多大程度上取决于人际关系网</p>
+<p>单独工作和与人合作的比率</p>
+<p>在这种文化中事事去”压”在成功中占多大比重</p>
+<p>在这种文化中有多少愉悦的氛围</p>
+<p>对比花在分析和思考的时间与花在讨论与说服的时间</p>
+<p>成功在多大程度上取决于职业的培训和专业</p>
+<p><strong>你对组织的社会性要求不高</strong></p>
+<p><strong>这表明你较为保守，喜欢在工作中拥有个人的空间。你喜欢这样的企业，他们尊重和强调个人的素质，并且奖励个人取得的成就，而不是只去建立社会关系网。<mark>你不愿把自己看作一个有野心的人，所以也不会喜欢那些鼓励员工有野心的企业</mark>。</strong></p>
+<p><strong>你对组织的结构和细节关注度分析：</strong></p>
+<p>组织的结构和细节关注度：这是什么含义?</p>
+<p>一些人工作风格为非常有秩序的谨慎作风、系统地进行计划、关注细节。另一些人则工作风格随意，不喜欢计划、系统，也不太关注工作的最终质量。</p>
+<p>类似的，一些组织/公司注重员工有严谨系统的工作作风，并关注工作细节。这种文化体现在成熟的工作程序、系统和工作计划。公司注重为最大化完善工作所做出的努力，而非”80-20”规则。多种行业里都拥有这种企业文化，更为突出的是在科学领域和工程工作中，或一些领域的管理阶层（例如：工厂的库存管理中”just in time”原则，机场运输等）。</p>
+<p>另一些公司则不太关注细枝末节，也不太强调部门分工和按程序办事。他们更愿意追随感觉和人们之间的相互说服或影响，而不去力求追求完美。这种企业文化要求快速的反应，尽管所获信息可能还很有限（例如，贸易）。强调创新，（例如，广告公司）。</p>
+<p>组织及对细节的关注度：如何判断？</p>
+<p>在这种文化中你是否经常不得不去”粉饰”你的工作</p>
+<p>“恰如其分”在这种文化中是否重要</p>
+<p>有多少工作是在紧张的难以预料的工作期限下完成的</p>
+<p>在多大程度上你能自主的制定适合自己的工作时间表和工作速度</p>
+<p>是否经常需要在很短的时间里作决定和行动</p>
+<p>企业是否提前计划和准备好应付各种不同的商业状况</p>
+<p>工作环境是否整洁有序</p>
+<p><strong>你对组织及对细节的关注度要求非常高</strong></p>
+<p><strong>这表明你<mark>非常喜欢有序、组织性、纪律性强的企业文化</mark>。这种企业是以取得成绩为驱动力的“getting it right”。在这种高标准、严要求的文化中你会更快乐或者说更容易成功。这种企业往往不断的采用最好的做法，以便它的产品服务的质量与众不同。你会为成为一个行业领先企业中的一员而骄傲。</strong></p>
+<p><strong>对组织的开放性和想象力</strong></p>
+<p>含义：有些人天生富于想象力和好奇心，他们总是乐于接受新的观念和新的方法。另一些人则更为实际和朴实。同样的，有些企业的文化崇尚尝试各种新方法新方式。这种文化认为创新来源于错误的不断积累。</p>
+<p>这类人敢于冒险，但往往没有一个清晰的计划去完成他们的目标。另一些企业宁愿花费更多的时间事先去理解和花费时间考验，不犯错误是他们的第一目标。把事情做好并且在基础领域能够展现你的能力是通往成功的关键。这些企业的文化特征是稳定和一成不变。</p>
+<p>对组织的开放性和想象力：如何判断？</p>
+<p>新想法和创造力是否在企业中受到重视和奖励</p>
+<p>对于那些已经成功的事情在这个企业里是否还是不断的持续正常的发展</p>
+<p>工作中是否有很多的变化</p>
+<p>企业通常如何看待和平衡尝试新鲜事务中的得失和成败</p>
+<p>企业是否愿意接受不循规蹈矩和具有创造力的职员</p>
+<p>不论职工在企业中的位置如何，他们是否都愿意说出他们的想法</p>
+<p><strong>你对组织的开放性和想象力要求不高。</strong></p>
+<p><strong>表明你更倾向于那些忙碌的、注重实际操作的企业文化，用现有经过检验的方法处理事务。你崇尚经过时间检验的能力的有效性和可预测性。你<mark>不会从事风险极大的事情</mark>。你更欣赏按照传统方法按规定做事，不计时间代价的企业。你喜欢企业有明确目标、清晰的商业战略，并且能够尽可能有效和始终如一执行这些策略的企业文化。</strong></p>
+<p><strong>你对组织的合作性和和谐性要求分析：</strong></p>
+<p>对组织的合作性和和谐性： 这是什么意思？</p>
+<p>一些人喜欢没有个人冲突和竞争的企业环境。在这种环境里友好、诚信、互相帮助是最基本的。这些个体通常有非常强烈的利他主义，他们认为他们的产品和服务社会价值更为重要。另一些人，喜欢竞争并把它看作一种美德，认为竞争是人的天性。</p>
+<p>同样的，一些企业文化强调合作、关心他人、并且认为人性本善。这些企业往往通过要求大家一致的手段避免内部的冲突和竞争。另一些企业崇尚竞争精神，并且鼓励有利于企业发展的意见。他们鼓励你用怀疑和审视的眼光评论企业所做出的决定。在这种企业生存的人一般能够允许和接受人与人之间的不同意见。</p>
+<p>对组织的合作性和和谐性：如何判断？</p>
+<p>员工在这种企业文化里彼此了解的程度如何</p>
+<p>优胜劣汰在这种企业文化里是否被崇尚</p>
+<p>当你在路上遇到同事时大家是否都非常友好的打招呼，你是否感到温暖</p>
+<p>大家看起来是真正的关心对方吗</p>
+<p>内部竞争机制在多大程度上影响员工的成功与失败</p>
+<p><strong>你对组织的合作性和和谐性要求非常高</strong></p>
+<p><strong>这表明你很喜欢那种能培养友好、合作和“温暖”工作氛围的企业文化。办公室对你来说既是一个商业场合也是一个交朋友的地方。你有<mark>很强的利他主义情感</mark>，并且期望大多数同事有着此种情感或价值观。你倾向于没有冲突和争论，并鼓励相互尊重、支持的企业文化。那种崇尚内部竞争和敢闯敢干的企业肯定不是你成功的地方。</strong></p>
+<p><strong>简而言之，如下情形的工作环境，会让你感觉更加如鱼得水：</strong></p>
+<p>●在良好建构的任务上工作认真勤勉的人；</p>
+<p>●提供安全感；</p>
+<p>●工作结构清晰；</p>
+<p>●安静平和；</p>
+<p>●讲效率；</p>
+<p>●考虑<mark>隐私权</mark>；</p>
+<p>●服务导向。</p>
+<h5 id="个人发展建议"><a href="#个人发展建议" class="headerlink" title="个人发展建议"></a>个人发展建议</h5><p>现在你对自己的人格类型和动力已经有了一个比较清楚的了解，但这还不够。“如何通过这些信息使你在这份工作上取得更大的成功”，这是关键所在。运用你的能力非常容易，你成功的秘诀在于：</p>
+<p>●清楚地表达自己；●考虑尚不存在的可能之事；●设法更加灵活随和，表现自然一些。</p>
+<p>个人发展建议是我们咨询师多年测评职业咨询和职业生涯规划的心得体会和经验总结，我们意识到以下的建议中有很多是难以完全照办的，但只要你花时间认真思考，一定会对你有极大的帮助和改变：</p>
+<p>发展建议：</p>
+<p>●在寻求未来工作上需要以积极、全局的态度处之；</p>
+<p>●需要发展其决断性和直截了当；</p>
+<p>●需要学会<mark>积极面对外界</mark>；</p>
+<p>●需要<mark>以更加开放的态度对待其它的做事方式</mark>。</p>
+<h4 id="解释性报告"><a href="#解释性报告" class="headerlink" title="解释性报告"></a>解释性报告</h4><blockquote>
+<p><a href="https://www.apesk.com/mbti_step2/common2report/mbti2_report_admin_get.asp?id=188790&amp;grhr=gr&amp;pdf=yes" target="_blank" rel="noopener">https://www.apesk.com/mbti_step2/common2report/mbti2_report_admin_get.asp?id=188790&amp;grhr=gr&amp;pdf=yes</a></p>
+</blockquote>
+<h4 id="爱情报告"><a href="#爱情报告" class="headerlink" title="爱情报告"></a>爱情报告</h4><blockquote>
+<p><a href="https://www.apesk.com/mbti_step2/common2report/mbti1_report_love.asp?id=188790&amp;grhr=gr" target="_blank" rel="noopener">https://www.apesk.com/mbti_step2/common2report/mbti1_report_love.asp?id=188790&amp;grhr=gr</a></p>
+</blockquote>
+]]></content>
   </entry>
   <entry>
     <title>Career Planning</title>
@@ -437,6 +741,64 @@
 <h2 id="认识行业"><a href="#认识行业" class="headerlink" title="认识行业"></a>认识行业</h2><h2 id="认知职业类型"><a href="#认知职业类型" class="headerlink" title="认知职业类型"></a>认知职业类型</h2><h2 id="选择行业和职业"><a href="#选择行业和职业" class="headerlink" title="选择行业和职业"></a>选择行业和职业</h2><h2 id="确定并拆分职业目标"><a href="#确定并拆分职业目标" class="headerlink" title="确定并拆分职业目标"></a>确定并拆分职业目标</h2><h2 id="梳理计划并执行"><a href="#梳理计划并执行" class="headerlink" title="梳理计划并执行"></a>梳理计划并执行</h2><blockquote>
 <p><a href="https://www.bpteach.com/2019-08-05-career-planting/" target="_blank" rel="noopener">普通人如何做好职业规划？职业规划的5大步骤（职场必备） - 半 …</a></p>
 </blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Entertainment Video</title>
+    <url>/2020/03/16/Entertainment-Video/</url>
+    <content><![CDATA[<img data-src="https://bmcreations.com/wp-content/uploads/2014/10/bmcreations_homepage.jpg" width="100%"/>
+
+<a id="more"></a>
+
+<p>一直以来会过度观看一些综艺、电影、电视剧等娱乐视频，觉着适当的娱乐无可厚非，但是过度沉迷，或者花费太多时间就会造成很大的自责感、愧疚感。想试图分析分析原因，找一找如何克制自己过度娱乐的方法。</p>
+<p>希望能将娱乐时间的比例控制在一定的范围内，能够做到“适当”。</p>
+<h2 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h2><h3 id="舒适圈"><a href="#舒适圈" class="headerlink" title="舒适圈"></a>舒适圈</h3><blockquote>
+<p><a href="https://www.jianshu.com/p/d053ced4894c" target="_blank" rel="noopener">看电视剧、综艺节目上瘾——根据人性谈学习</a></p>
+</blockquote>
+<p>因为在看娱乐视频的时候我们处于<strong>舒适圈</strong>里！</p>
+<p>在这种舒适圈里，我们的情绪随着情节而浮动，我们能够专心致志的观看，其他事物很难影响我们的主要思绪，我们会沉浸在这样的世界中。</p>
+<p>为什么舒服？</p>
+<p>处于舒适圈，意味着我们是<strong>被动</strong>的，大脑、情绪围绕剧情而动。舒服是因为不需要主动花费精力，只需被动接受。</p>
+<h3 id="跌宕起伏"><a href="#跌宕起伏" class="headerlink" title="跌宕起伏"></a>跌宕起伏</h3><blockquote>
+<p><a href="https://www.zhihu.com/question/20215906" target="_blank" rel="noopener">人们为什么喜欢看电影？ - 知乎</a></p>
+<p>是为了报仇，向平庸的生活报仇 。——韩松落</p>
+<p>因为生活本身实在是太乏善可陈了，大家伙忙着生忙着死，渴望不凡却生而平凡，庸庸碌碌一辈子，拢共能经历几次挑动泪腺肾上腺的大开大合大起大落？而电影，用两小时串联起一个人一辈子最起承转合的时刻，用镜头隔离出一个让你沉浸其中的虚拟世界，这个虚拟世界中的人物，可以不凡地活着，有属于自己的故事和传奇，闯着你想闯却不敢闯的祸，爱着你想爱却不敢爱的人，他们展现着最浓烈的爱恨，或善或恶，亦正亦邪。就像罗素说的那样，参差多态才是幸福的本源。</p>
+<p>杨德昌《一一》里面的台词 “电影的发明使我们的人生延长了三倍。 因为我们在里面获得了至少两倍不同的人生经验。”</p>
+</blockquote>
+<p>因为生活太平淡了，在电影中能够体会到情绪的跌宕起伏。</p>
+<h3 id="寂寞"><a href="#寂寞" class="headerlink" title="寂寞"></a>寂寞</h3><blockquote>
+<p>以前我也跟其他人说的一样，可以知道不一样的人生。后来《看电影》有一封读者来信，才知道，<br>其实就是寂寞。</p>
+<p>攻壳机动队里面的台词：<br>“我当然不会说那是个糟糕电影。不过，基本上无论什么娱乐都只是一时的，而且也应该如此，像这种没有开始也没有结束，只是一味迷住观众使其无法离开的电影，不管它是多了不起的东西，只是有害无益”<br>“哦，很严厉的批评呢……在这里的观众中，也有人一回到现实就会遭到不幸。如果你把那些观众的梦想夺走，你承担得起责任吗？”<br>“承担不起啊。正是在现实生活中拼搏，梦想才有意义…….<strong>只是把自己投射到别人的梦想里的话，跟死又有什么两样？</strong>！”<br>“真是一个现实主义者啊。”<br>“如果你把逃避现实叫做浪漫的话。”</p>
+</blockquote>
+<h2 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h2><h3 id="如何让自己活的更舒服？"><a href="#如何让自己活的更舒服？" class="headerlink" title="如何让自己活的更舒服？"></a>如何让自己活的更舒服？</h3><ul>
+<li>一张舒服的床</li>
+<li>一张舒服的椅子</li>
+<li>一张宽敞的书桌</li>
+<li>一架完备的书架</li>
+<li>一只可爱的宠物狗</li>
+</ul>
+<h3 id="如何让生活更精彩？"><a href="#如何让生活更精彩？" class="headerlink" title="如何让生活更精彩？"></a>如何让生活更精彩？</h3><h3 id="如何不寂寞？"><a href="#如何不寂寞？" class="headerlink" title="如何不寂寞？"></a>如何不寂寞？</h3><blockquote>
+<p><a href="https://www.zhihu.com/question/22055804" target="_blank" rel="noopener">单身，不谈恋爱，怎么才能不寂寞？ - 知乎</a></p>
+<p>一个人在单身时觉得孤独，多半是闲的！</p>
+<p>一个人只有将自己的生活安排好了，才有可能将快乐和充实带给另一方。而不是需要对方来完整自己。</p>
+</blockquote>
+<ul>
+<li><p>建立自己的社交圈。</p>
+<p>可多参加一些群体活动：打球，聚餐，旅游，唱K，马拉松…</p>
+</li>
+<li><p>培养适合一个人参与的兴趣爱好。</p>
+<p>例如：一项健身活动，可以是一周跑步三次。或者学习一项能带给你快乐的技能：游泳，舞蹈，摄影，烹饪…</p>
+</li>
+<li><p>不断学习，充实自己的大脑。</p>
+<p>例如：对工作有用的专业知识和技能，能够充实灵魂帮助你领悟人生的书籍…</p>
+</li>
+<li><p>有三两个可以谈谈心事的知心朋友。</p>
+<p>生活的不快，工作的压力，积压久了，人就会累。倾诉可以适当缓解这种压力。可能这项对女生比较管用。男生貌似比较倾向自己消化情绪和承担心事。</p>
+</li>
+<li><p>平时多和亲友及父母沟通。</p>
+<p>多和亲人联系能够排遣内心的被孤立感。因为家人是永远关心和支持你的，也是很多在外打拼的游子动力和温暖的来源。</p>
+</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
@@ -918,7 +1280,7 @@
 </div>
 
 <div class="note no-icon">
-            <p><span style="color: #FECF0B">虽说钱也许不是生活中最要紧的东西，可是在缺钱花的时候它又非常重要。没钱，生活的各个方面都会受到影响，你会整天愁眉苦脸，跟周围的人吵架，还会觉得自己很悲惨，很没用。</span></p>
+            <p>虽说<span style="color: #FECF0B">钱也许不是生活中最要紧的东西，可是在缺钱花的时候它又非常重要</span>。没钱，生活的各个方面都会受到影响，你会整天愁眉苦脸，跟周围的人吵架，还会觉得自己很悲惨，很没用。</p>
           </div>
 
 <div class="annotation-label-wapper">
@@ -930,13 +1292,13 @@
             <p>他用一种恳切的目光望着我，说：“<span style="color: #FECF0B">我生命中出现了最美好的东西，是因为我做了原本不敢做的事。</span>”</p>
           </div>
 
-<div class="annotation-label-wapper">
+<h4 id="第十三章-巨大的危机"><a href="#第十三章-巨大的危机" class="headerlink" title="第十三章　巨大的危机"></a>第十三章　巨大的危机</h4><div class="annotation-label-wapper">
     <div>2020年02月28日 06:48</div>
     <div title="epubcfi(/6/42[id139]!/4/70/1,:36,:62)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p><span style="color: #FECF0B">困难、犯错误和丢面子引起的恐惧已经破坏了无数人的生活</span>。”</p>
+            <p>“可是还有一点，你不能在困难面前逃跑。<span style="color: #FECF0B">困难、犯错误和丢面子引起的恐惧已经破坏了无数人的生活</span>。”</p>
           </div>
 
 <div class="annotation-label-wapper">
@@ -945,19 +1307,13 @@
 </div>
 
 <div class="note no-icon">
-            <p>“<span style="color: #FECF0B">每当你觉得有些事情不好办的时候，你可以做一件事</span>，”等我歇了口气后，钱钱说，“只要翻一翻成功日记，你就会从过去的事情中找到证据，相信自己未来也有能力完成任何事情。”</p>
+            <p>“<span style="color: #FECF0B">每当你觉得有些事情不好办的时候，你可以做一件事</span>，”等我歇了口气后，钱钱说，“<span style="color: #FECF0B">只要翻一翻成功日记，你就会从过去的事情中找到证据，相信自己未来也有能力完成任何事情。</span>”</p>
           </div>
 
-<div class="annotation-label-wapper">
-    <div>2020年02月28日 06:49</div>
-    <div title="epubcfi(/6/42[id139]!/4/82/1,:39,:81)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>“每当你觉得有些事情不好办的时候，你可以做一件事，”等我歇了口气后，钱钱说，“<span style="color: #FECF0B">只要翻一翻成功日记，你就会从过去的事情中找到证据，相信自己未来也有能力完成任何事情。</span>”</p>
-          </div>
-
-<div class="annotation-label-wapper">
+<p>有所学校邀请吉雅做场演讲，吉雅海怕她做不到，钱钱建议她翻一翻成功日记来鼓舞自己。</p>
+<p>工作和生活中经常会遇到一些机遇和挑战，此时我们经常会心存顾忌，担心自己没有足够的能力应对。在这种时候我们应该尽量放平心态，仔细分析面对这个机遇和挑战究竟需要哪些能力，而这些能力是否在我以前的人生经历中处理其他问题时用到过，如果用到过，说明我们是可以成功应对的。</p>
+<p>在分析现在和回顾过往的过程中找回信心和勇气。</p>
+<h4 id="第十四章-投资俱乐部"><a href="#第十四章-投资俱乐部" class="headerlink" title="第十四章　投资俱乐部"></a>第十四章　投资俱乐部</h4><div class="annotation-label-wapper">
     <div>2020年02月29日 07:25</div>
     <div title="epubcfi(/6/44[id138]!/4/142/1,:1,:30)" class="annotation-label-pos">POS</div>
 </div>
@@ -966,16 +1322,17 @@
             <p>“<span style="color: #FECF0B">决定一件东西价值多少的唯一因素就是，你愿意为它支付多少钱。</span>”</p>
           </div>
 
-<div class="annotation-label-wapper">
+<p>这里的价值应该是对我们来说的价值。在日常购物时，尽量客观的找一找资料、数据，分析价格和价值是否对等，不要盲目、冲动的消费。</p>
+<h4 id="第十五章-演-讲"><a href="#第十五章-演-讲" class="headerlink" title="第十五章　演　讲"></a>第十五章　演　讲</h4><div class="annotation-label-wapper">
     <div>2020年02月29日 07:44</div>
     <div title="epubcfi(/6/46[id137]!/4/66/1,:54,:84)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p><span style="color: #FECF0B">一个人觉得最引以为自豪的事情，往往是那些做起来最艰难的事情。</span></p>
+            <p>如果你没有做今天这件事情，你就永远不会知道，给自己一些压力之后，你能够做到些什么。<span style="color: #FECF0B">一个人觉得最引以为自豪的事情，往往是那些做起来最艰难的事情。</span></p>
           </div>
 
-<div class="annotation-label-wapper">
+<h4 id="第十七章-爷爷奶奶害怕风险"><a href="#第十七章-爷爷奶奶害怕风险" class="headerlink" title="第十七章　爷爷奶奶害怕风险"></a>第十七章　爷爷奶奶害怕风险</h4><div class="annotation-label-wapper">
     <div>2020年02月29日 08:20</div>
     <div title="epubcfi(/6/50[id135]!/4/160/1,:66,:95)" class="annotation-label-pos">POS</div>
 </div>
@@ -984,13 +1341,13 @@
             <p><span style="color: #FECF0B">我意识到，在一个我一看就喜欢上的人那里开户，是多么重要啊。</span></p>
           </div>
 
-<div class="annotation-label-wapper">
+<h4 id="第十八章-大冒险的结局"><a href="#第十八章-大冒险的结局" class="headerlink" title="第十八章　大冒险的结局"></a>第十八章　大冒险的结局</h4><div class="annotation-label-wapper">
     <div>2020年03月01日 06:14</div>
     <div title="epubcfi(/6/52[id134]!/4/8/1,:126,:183)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p><span style="color: #FECF0B">以前他曾经怀疑自己究竟适不适合独立创业，但现在他知道，只要学会把某些自己不喜欢做而又不擅长做的事情交给别人就行了。</span></p>
+            <p>以前他曾经怀疑自己究竟适不适合独立创业，但现在他知道，只<span style="color: #FECF0B">要学会把某些自己不喜欢做而又不擅长做的事情交给别人</span>就行了。</p>
           </div>
 
 <div class="annotation-label-wapper">
@@ -1002,7 +1359,7 @@
             <p>这时，我想起了金先生对我说过的一句话：<span style="color: #FECF0B">不要为失去的东西而忧伤，而要对拥有它的时光心存感激。</span></p>
           </div>
 
-<div class="annotation-label-wapper">
+<h4 id="自力更生——写给成年人的后记"><a href="#自力更生——写给成年人的后记" class="headerlink" title="自力更生——写给成年人的后记"></a>自力更生——写给成年人的后记</h4><div class="annotation-label-wapper">
     <div>2020年03月01日 06:26</div>
     <div title="epubcfi(/6/54[id133]!/4/6/2/2/1,:2,:4)" class="annotation-label-pos">POS</div>
 </div>
@@ -1011,6 +1368,7 @@
             <p>打破<span style="color: #33D42D">桎梏</span>，开阔视野</p>
           </div>
 
+<p>桎梏 [zhìgù]：脚镣和手铐；比喻束缚人或阻碍事物发展的东西。</p>
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:27</div>
     <div title="epubcfi(/6/54[id133]!/4/10/1,:19,:43)" class="annotation-label-pos">POS</div>
@@ -1020,6 +1378,9 @@
             <p>《大与小》杂志的一篇评论文章认为，自从<span style="color: #3CA3FF">德国人弗里德里希·福禄贝尔创办世界上第一家幼儿园</span>以来，200年间，他的追随者们把儿童从做童工受剥削的恐惧中解放出来之后，又把他们束缚在培养乖孩子的游戏之中。</p>
           </div>
 
+<blockquote>
+<p>弗里德里希·威廉·奥古斯特·福禄贝尔（德语：Friedrich Wilhelm August Fröbel，1782年4月21日－1852年6月2日），德国教育家，被公认为是19世纪欧洲最重要的几个教育家之一，现代<strong>学前教育的鼻祖</strong>。他不仅创办了第一所称为“幼稚园”的学前教育机构，他的教育思想迄今仍在主导着学前教育理论的基本方向。当时来说，能让孩子上其教育课程者均为有钱有权之父母。——<a href="https://zh.wikipedia.org/zh-hans/弗里德里希·福禄贝尔" target="_blank" rel="noopener">弗里德里希·福禄贝尔- 维基百科，自由的百科全书 - 維基百科</a></p>
+</blockquote>
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:30</div>
     <div title="epubcfi(/6/54[id133]!/4/22/1,:27,:31)" class="annotation-label-pos">POS</div>
@@ -1029,13 +1390,16 @@
             <p>我们应该保护弱者，不能歧视少数群体，不要对不如自己的人<span style="color: #33D42D">颐指气使</span>，不要追逐凌驾于众人之上的权力。</p>
           </div>
 
+<p>颐指气使 [yí zhǐ qì shǐ]：意思是指不说话，只用面部表情来示意。形容有权势者指挥别人的<a href="https://baike.baidu.com/item/傲慢/7238397" target="_blank" rel="noopener">傲慢</a>神气。出自唐·<a href="https://baike.baidu.com/item/元稹/207525" target="_blank" rel="noopener">元稹</a>《追封李逊母崔氏博陵郡太君》</p>
+<p>【近义词】<a href="https://baike.baidu.com/item/盛气凌人/1662522" target="_blank" rel="noopener">盛气凌人</a>、趾高气扬、神气活现</p>
+<p>【反义词】唯唯诺诺、低三下四、奴颜婢膝</p>
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:32</div>
     <div title="epubcfi(/6/54[id133]!/4,/26/1:0,/27:0)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p><span style="color: #FECF0B">我们推崇一种聪明的、简朴的生活方式。也就是说，宁愿购买一件一流产品，也不要不停地买许多的二流产品。而且，不要仅仅因为一件产品的外观不再时髦而新产品正在流行，就不断追逐新鲜的东西。<br></span></p>
+            <p>我们推崇一种<span style="color: #FECF0B">聪明的、简朴的生活方式</span>。也就是说，<span style="color: #FECF0B">宁愿购买一件一流产品，也不要不停地买许多的二流产品</span>。而且，不要仅仅因为一件产品的外观不再时髦而新产品正在流行，就不断追逐新鲜的东西。</p>
           </div>
 
 <div class="annotation-label-wapper">
@@ -1044,18 +1408,24 @@
 </div>
 
 <div class="note no-icon">
-            <p><span style="color: #FECF0B">生活质量不是由越来越多的高科技产品堆砌而成的，而体现在一些别的方面，比如悠闲地享受一下生活，增进邻里关系，表达感情或者从事艺术性和创造性的活动。</span></p>
+            <p><span style="color: #FECF0B">生活质量不是由越来越多的高科技产品堆砌而成的</span>，而体现在一些别的方面，比如悠闲地享受一下生活，增进邻里关系，表达感情或者从事艺术性和创造性的活动。</p>
           </div>
+
+<h3 id="小狗钱钱2"><a href="#小狗钱钱2" class="headerlink" title="小狗钱钱2"></a>小狗钱钱2</h3><h4 id="童话与理财"><a href="#童话与理财" class="headerlink" title="童话与理财"></a>童话与理财</h4><blockquote class="blockquote-center"><p>坐在屋子里<br>看墙上的风景画<br>在画框里</p>
+<p>坐在窗户旁<br>看外面的风景<br>在窗框里</p>
+<p>走下楼去<br>想看一看原野<br>高楼和烟囱<br>横在风景上</p>
+<p>想看一幅风景<br>没有画框的风景<br>我知道<br>我还要走很远很远</p>
+</blockquote>
 
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:48</div>
     <div title="epubcfi(/6/70[id125]!/4/22/2/1,:3,:5)" class="annotation-label-pos">POS</div>
 </div>
-
 <div class="note no-icon">
             <p>高楼和<span style="color: #33D42D">烟囱</span></p>
           </div>
 
+<p>烟囱 [cōng]</p>
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:51</div>
     <div title="epubcfi(/6/70[id125]!/4/34/1,:13,:66)" class="annotation-label-pos">POS</div>
@@ -1071,28 +1441,10 @@
 </div>
 
 <div class="note no-icon">
-            <p>关键在于你的心态，<span style="color: #FECF0B">在你的心里究竟还有多少框框？<br>——“名人”的框框、习惯的框框、观念的框框……</span></p>
+            <p>关键在于你的心态，<span style="color: #FECF0B">在你的心里究竟还有多少框框？——“名人”的框框、习惯的框框、观念的框框……</span></p><p>当然，对于框框我们不可能也不可以视而不见，但最重要的是<span style="color: #FECF0B">在看见框框的同时，你是否也看见了里面的风景。</span>这需要勇气和信心，而<span style="color: #FECF0B">真正的勇敢是在感到最恐惧的时候，你依然在往前走。</span></p>
           </div>
 
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 06:52</div>
-    <div title="epubcfi(/6/70[id125]!/4/48/1,:27,:49)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>当然，对于框框我们不可能也不可以视而不见，但最重要的是<span style="color: #FECF0B">在看见框框的同时，你是否也看见了里面的风景。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 06:52</div>
-    <div title="epubcfi(/6/70[id125]!/4/48/1,:59,:83)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>这需要勇气和信心，而<span style="color: #FECF0B">真正的勇敢是在感到最恐惧的时候，你依然在往前走。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
+<h4 id="第二章-白色石头"><a href="#第二章-白色石头" class="headerlink" title="第二章　白色石头"></a>第二章　白色石头</h4><div class="annotation-label-wapper">
     <div>2020年03月01日 20:00</div>
     <div title="epubcfi(/6/74[id123]!/4/26/1,:41,:60)" class="annotation-label-pos">POS</div>
 </div>
@@ -1116,34 +1468,16 @@
 </div>
 
 <div class="note no-icon">
-            <p><span style="color: #FECF0B">当你把目光都集中在别人的错误和缺点上时，就自然会忽略他们身上闪光的一面。</span></p>
+            <p><span style="color: #FECF0B">当你把目光都集中在别人的错误和缺点上时，就自然会忽略他们身上闪光的一面</span>。而<span style="color: #FECF0B">一个人只有具备了审视美好事物的能力，世界对他来说才会变得更加美好。</span></p>
           </div>
 
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 20:03</div>
-    <div title="epubcfi(/6/74[id123]!/4/50/1,:66,:99)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>而<span style="color: #FECF0B">一个人只有具备了审视美好事物的能力，世界对他来说才会变得更加美好。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 20:06</div>
-    <div title="epubcfi(/6/74[id123]!/4/74/1,:137,:159)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>不过金先生倒是给了她一个很好的解释，他总是说：“<span style="color: #FECF0B">正因为你是那么喜欢狗，你所做的工作才有价值。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
+<h4 id="第三章-放大镜"><a href="#第三章-放大镜" class="headerlink" title="第三章　放大镜"></a>第三章　放大镜</h4><div class="annotation-label-wapper">
     <div>2020年03月01日 20:36</div>
     <div title="epubcfi(/6/76[id122]!/4/154/1,:13,:49)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p>老妇人继续耐心地解释道：“<span style="color: #FECF0B">人们通常并不把自己已经理解的事情看作是奇迹。但是每一次的帮助却都是奇迹。</span></p>
+            <p>老妇人继续耐心地解释道：“<span style="color: #FECF0B">人们通常并不把自己已经理解的事情看作是奇迹。但是每一次的帮助却都是奇迹。</span>“唯有依靠这些帮助，我们才能完成本来一个人无法完成的事。“</p>
           </div>
 
 <div class="annotation-label-wapper">
@@ -1155,7 +1489,7 @@
             <p><span style="color: #FECF0B">无论在什么情况下都要试着去发现那些积极的东西。</span>”</p>
           </div>
 
-<div class="annotation-label-wapper">
+<h4 id="第四章-论文"><a href="#第四章-论文" class="headerlink" title="第四章　论文"></a>第四章　论文</h4><div class="annotation-label-wapper">
     <div>2020年03月01日 20:42</div>
     <div title="epubcfi(/6/78[id121]!/4/8/1,:51,:94)" class="annotation-label-pos">POS</div>
 </div>
@@ -1173,15 +1507,34 @@
             <p>这下子吉娅终于看清楚了，是“<span style="color: #33D42D">马可·奥勒留</span>”。</p>
           </div>
 
+<blockquote>
+<p><img data-src="https://pic2.zhimg.com/80/v2-468c109bebe337f81174574fcae831cd_1440w.jpg" alt=""></p>
+<div align="center">意大利50欧分: **卡比托利欧广场中央**的马可•奥勒留骑马像</div>
+
+<p><a href="https://baike.baidu.com/item/马可·奥勒留/6720350" target="_blank" rel="noopener">马可·奥勒留</a>（公元121 年4月26日－180年3月17日），全名为马尔克·奥列里乌斯·安东尼·奥古斯都（Marcus Aurelius Antoninus Augustus）。拥有<strong>凯撒称号</strong>（Imperator Caesar）的他是<a href="https://baike.baidu.com/item/罗马帝国/3059" target="_blank" rel="noopener">罗马帝国</a>五贤帝时代最后一个皇帝。</p>
+</blockquote>
+<h4 id="第七章-好老师"><a href="#第七章-好老师" class="headerlink" title="第七章　好老师"></a>第七章　好老师</h4><div class="annotation-label-wapper">
+    <div>2020年03月02日 20:25</div>
+    <div title="epubcfi(/6/84[id118]!/4/78/1,:2,:6)" class="annotation-label-pos">POS</div>
+</div>
+
+<div class="note no-icon">
+            <p><span style="color: #FECF0B">勇于承担</span></p>
+          </div>
+
+<p>这里指的是勇于承担自己的职责。</p>
+<p>这个世界本身就是不公平的，在遇到不公平的事情时，专注于自身的优势，勇于承担自己的职责(尽可能的想办法充分利用自己的优势)</p>
 <div class="annotation-label-wapper">
     <div>2020年03月02日 20:20</div>
     <div title="epubcfi(/6/84[id118]!/4/102/1,:9,:106)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p>好老师笑了，他说：<span style="color: #FECF0B">“你在把责任推脱给别人的同时，也把权利转让给了他。‘答案’这个词就隐藏在‘职责’当中。（“职责”的德文为Verantwortung，“答案”的德文为Antwort，这是一个文字游戏。——译者注）</span>我们有一个例子能说明这个意思。”</p>
+            <p>好老师笑了，他说：<span style="color: #FECF0B">“你在把责任推脱给别人的同时，也把权利转让给了他</span>。<span style="color: #33D42D">‘答案’这个词就隐藏在‘职责’当中。（“职责”的德文为Verantwortung，“答案”的德文为Antwort，这是一个文字游戏。——译者注）</span>”</p>
           </div>
 
+<p>责任对应‘职责’，权利对应‘答案’。即“把责任(职责-Ver<span style="color: #3CA3FF">antwort</span>ung)推脱给别人的同时，也把权利(答案-Antwort)转让给了他”。</p>
+<p>牵强的解释：吉雅把她害怕参加演讲比赛的原因归咎于胡伯特认为她英语不好，即把她的责任(克服恐惧参加演讲比赛)推脱给了别人，所以她也把她的权利(决定自己是否参加比赛)转让给了别人。</p>
 <div class="annotation-label-wapper">
     <div>2020年03月02日 20:22</div>
     <div title="epubcfi(/6/84[id118]!/4/116/1,:38,:123)" class="annotation-label-pos">POS</div>
@@ -1191,16 +1544,8 @@
             <p>可以这么说，<span style="color: #FECF0B">橘子本身并不在乎你怎么做，它总是提供给你橘子汁。它的答案就是橘子汁。它总是按照自己的意愿给出答案，无论人们怎么做都一样。它绝不会说：‘因为有人敲打我，所以这次榨出的是水。</span>’”</p>
           </div>
 
-<div class="annotation-label-wapper">
-    <div>2020年03月02日 20:25</div>
-    <div title="epubcfi(/6/84[id118]!/4/78/1,:2,:6)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">勇于承担</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
+<p>橘子只会承担它自己的责任(给予人橘子汁)</p>
+<h4 id="第九章-好老师的秘密"><a href="#第九章-好老师的秘密" class="headerlink" title="第九章　好老师的秘密"></a>第九章　好老师的秘密</h4><div class="annotation-label-wapper">
     <div>2020年03月02日 20:56</div>
     <div title="epubcfi(/6/88[id116]!/4/148/1,:19,:89)" class="annotation-label-pos">POS</div>
 </div>
@@ -1209,6 +1554,7 @@
             <p>菲利普老师并不认同吉娅的辩解，他说：“<span style="color: #FECF0B">你必须学会勇于承担自己的职责。也就是说，你要将注意力更多地集中在自己的能力上。与因他人的成绩感到灰心丧气相比，你更应该想办法改进自己的成绩。</span>”</p>
           </div>
 
+<p>不要抱怨，勇于承担自身应尽的责任——改变自己！</p>
 <div class="annotation-label-wapper">
     <div>2020年03月03日 06:18</div>
     <div title="epubcfi(/6/88[id116]!/4/190/1,:112,:147)" class="annotation-label-pos">POS</div>
@@ -1236,13 +1582,13 @@
             <p><span style="color: #FECF0B">勇于承担<br>●　遇事我能自我抉择。我能自行判断对某种情况应该作何反应。<br>●　我不受不公平之事的影响，而是将注意力集中在我能做的事情、我知道的知识和我拥有的东西之上。<br>●　我把责任推托给别人的同时，也把相应的权利转交给了对方。</span></p>
           </div>
 
-<div class="annotation-label-wapper">
+<h4 id="第十章-7条准则"><a href="#第十章-7条准则" class="headerlink" title="第十章　7条准则"></a>第十章　7条准则</h4><div class="annotation-label-wapper">
     <div>2020年03月03日 06:48</div>
     <div title="epubcfi(/6/90[id115]!/4/206/1,:65,:99)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p>有位音乐家曾说过：‘<span style="color: #FECF0B">如果有一天你不再相信自己可以进步，从此以后你演奏的就只是同一首乐曲。</span>’</p>
+            <p>有位音乐家曾说过：‘<span style="color: #FECF0B">如果有一天你不再相信自己可以进步，从此以后你演奏的就只是同一首乐曲。</span>’这句话的意思是：只要能坚持不懈地学习，生活就总是多姿多彩的。</p>
           </div>
 
 <div class="annotation-label-wapper">
@@ -1254,7 +1600,7 @@
             <p><span style="color: #FECF0B">值得信赖<br>●　我能否成功总是取决于自身培养出的习惯。<br>●　如果我是一个非常自律的人，我就能比那些虽有天赋但却懒惰散漫的人获得更多的成功。<br>●　我总是很守时。我信守为他人作出的承诺。<br></span></p>
           </div>
 
-<div class="annotation-label-wapper">
+<h4 id="第十二章-事件"><a href="#第十二章-事件" class="headerlink" title="第十二章　事件"></a>第十二章　事件</h4><div class="annotation-label-wapper">
     <div>2020年03月03日 20:10</div>
     <div title="epubcfi(/6/94[id113]!/4/64/1,:39,:41)" class="annotation-label-pos">POS</div>
 </div>
@@ -1263,25 +1609,18 @@
             <p>树枝尖把大家的皮肤都划破了，他们还时不时地被<span style="color: #33D42D">荨麻</span>刺到。</p>
           </div>
 
-<div class="annotation-label-wapper">
+<p>荨麻 [qián má]</p>
+<p><img data-src="https://www.kostbarenatur.net/wp-content/uploads/2015/09/grosse-brennnessel-urtica-urens-3-1200x800.jpg" alt=""></p>
+<h4 id="第十三章-回家"><a href="#第十三章-回家" class="headerlink" title="第十三章　回家"></a>第十三章　回家</h4><div class="annotation-label-wapper">
     <div>2020年03月03日 20:29</div>
     <div title="epubcfi(/6/96[id112]!/4/22/1,:65,:69)" class="annotation-label-pos">POS</div>
 </div>
 
 <div class="note no-icon">
-            <p>与银行账户相似，世间还有一种叫作‘<span style="color: #FECF0B">关系账户</span>’的东西。</p>
+            <p>与银行账户相似，世间还有一种叫作‘<span style="color: #FECF0B">关系账户</span>’的东西。金先生立即对她解释道：“<span style="color: #FECF0B">当我们伤害别人的时候，就等于是在‘取钱’。</span></p>
           </div>
 
-<div class="annotation-label-wapper">
-    <div>2020年03月03日 20:30</div>
-    <div title="epubcfi(/6/96[id112]!/4/26/1,:12,:33)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>金先生立即对她解释道：“<span style="color: #FECF0B">当我们伤害别人的时候，就等于是在‘取钱’。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
+<h4 id="第十四章-道别"><a href="#第十四章-道别" class="headerlink" title="第十四章　道别"></a>第十四章　道别</h4><div class="annotation-label-wapper">
     <div>2020年03月03日 20:52</div>
     <div title="epubcfi(/6/98[id111]!/4/118/1,:15,:50)" class="annotation-label-pos">POS</div>
 </div>
@@ -1298,736 +1637,6 @@
 <div class="note no-icon">
             <p>道别的时候金先生还对吉娅说：“<span style="color: #FECF0B">永远别忘了，当你努力去成为有能力成为的那种人的时候，你要明白自己并不是独自一人。</span>”</p>
           </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:35</div>
-    <div title="epubcfi(/6/14[id78]!/4/10/1,:0,:8)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">《搞定》的独特性</span>何在？</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:35</div>
-    <div title="epubcfi(/6/14[id78]!/4/12/1,:0,:7)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">一是它的实用性</span>，我其实是指它的模块化、宽容性方法。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:38</div>
-    <div title="epubcfi(/6/14[id78]!/4/20/1,:66,:71)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>本文的另一个成书理念是：<span style="color: #FECF0B">人生循环性</span>。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:40</div>
-    <div title="epubcfi(/6/14[id78]!/4/22/1,:0,:17)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">本书的第二个优点，是其宽泛的适用性</span>。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:43</div>
-    <div title="epubcfi(/6/14[id78]!/4/26/1,:0,:6)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">第三个优点是</span>我随着和戴维·艾伦及其妻子相知为友而获得的亲身感受，我想其他人即使未曾与之谋面，也一定能从戴维的作品中获得直观感受。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:43</div>
-    <div title="epubcfi(/6/14[id78]!/4/26/1,:77,:106)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>那就是戴维·艾伦所提建议的<span style="color: #FECF0B">完整性、真实性，以及他所提供的信息和信息对象之间的关联性。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:46</div>
-    <div title="epubcfi(/6/14[id78]!/4/30/1,:0,:28)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">我们在评价创新者工作重要性的时候，偶尔会忽视其个人特质。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:46</div>
-    <div title="epubcfi(/6/14[id78]!/4/30/1,:135,:151)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>凭借与戴维和凯瑟琳·艾伦个人交往的一些经历，我可以证实许多读者的猜测和大多数人的期待：<span style="color: #FECF0B">他在尽最大努力坦言他的生活认知。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:47</div>
-    <div title="epubcfi(/6/14[id78]!/4/32/1,:106,:157)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">我有一些鉴定书籍的方法，其中两个是：我能不能在一两个月之后还记得它的内容，以及它是否影响了我的世界观。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:55</div>
-    <div title="epubcfi(/6/16[id79]!/4/18/1,:81,:85)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>我们现在几乎能随时动用各种超级工具和应用程序取得卓越成绩，尽管如此，<span style="color: #FECF0B">选择过剩</span>也能轻易浇灭我们工作效率的火焰。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:56</div>
-    <div title="epubcfi(/6/16[id79]!/4/20/1,:133,:135)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>这一领域的创新速度意味着，就在你读到任何特定软件程序的时候，它都有可能因为下一代新程序的出现而变得落伍、遭到削弱，并<span style="color: #33D42D">亟待</span>更新。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:39</div>
-    <div title="epubcfi(/6/16[id79]!/4/60/2/1,:0,:19)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">值得实现的一切生活目标都需要付诸实践。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:47</div>
-    <div title="epubcfi(/6/18[id80]!/4/10/1,:96,:135)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>无论人们做什么事情——也许是下班后与同事一道举杯畅饮；也许是夜深人静时凝视摇篮中安然酣睡的孩子；也许是忙碌地回复着源源不断的电子邮件；也许是在会议结束后抽几分钟时间与潜在的新客户攀谈——都希望<span style="color: #FECF0B">保持放松的心态。要做到这一点，你需要在内心确定：当前事项正是你需要去做的事情。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:47</div>
-    <div title="epubcfi(/6/18[id80]!/4/12/1,:2,:35)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>写作<span style="color: #FECF0B">本书的宗旨在于：帮助你在任何必要的时候，都能达到高效和放松的境界。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:52</div>
-    <div title="epubcfi(/6/18[id80]!/4/26/1,:234,:271)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>而<span style="color: #FECF0B">多数商业人士之所以成功，是因为他们化解的危机和把握的机遇要多于积压的事务。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:53</div>
-    <div title="epubcfi(/6/18[id80]!/4/28/1,:78,:130)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">我们的社会普遍存在一种焦虑情绪——人们会感到没来由的怅然若失，从而产生一种无法解脱、永不停息的紧张情绪。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:55</div>
-    <div title="epubcfi(/6/18[id80]!/4/36/1,:7,:17)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>本书必须把这种<span style="color: #33D42D">动态工作流程管理艺术</span>的精髓转换为线性格式，这是很必要的。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:57</div>
-    <div title="epubcfi(/6/18[id80]!/4/38/2/1,:52,:61)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>这将使你参与其中，而<span style="color: #FECF0B">参与是理解的关键。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:03</div>
-    <div title="epubcfi(/6/24[id82]!/4/12/1,:13,:19)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>本书中的这套方法，完全基于<span style="color: #FECF0B">三个主要目的</span>：（1）收集所有需要处理或者对你有用的事情（现在的、以后的、某一时间的；大的、小的、不大不小的），把它们统统置入一个脱离大脑意识的、条理分明的、可靠的系统中；（2）指导自己在获取任何“输入信息”（也就是接手任何任务）的前期就进行分析和决策，以确保随时拥有一套可以执行或重新协调的“下一步行动”可行清单；（3）管理、协调所有相关内容，履行你在任何时间点对自己和他人做出的各种承诺。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:07</div>
-    <div title="epubcfi(/6/24[id82]!/4/20/1,:14,:95)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>新千年伊始，就出现了这样一个<span style="color: #FECF0B">自相矛盾的现象：人们的生活质量得到了显著提高，但与此同时又承担着自己力所不能及的工作，结果导致他们承受了越来越大的压力。这就是俗语所说的“眼大肚子小，贪多嚼不烂”</span>，过多的选项和机会会带给我们决策和选择压力，而绝大多数人都对怎样改善这种局面感到茫然无措。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:08</div>
-    <div title="epubcfi(/6/24[id82]!/4/24/1,:115,:121)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>仅仅在20世纪的后50年中，在这个工业化的世界里，“工作”的性质已经由流水线装配、制造，以及搬运一类的活动，转变为<span style="color: #33D42D">彼得·德鲁克</span>所定义的那种“知识工作”了。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:12</div>
-    <div title="epubcfi(/6/24[id82]!/4/36/1,:21,:38)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>全新的沟通技术使得这个事实以指数级放大，即<span style="color: #FECF0B">我们的工作和生活并不存在明显界限。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:21</div>
-    <div title="epubcfi(/6/24[id82]!/4/50/4/1,:138,:155)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>简言之，<span style="color: #FECF0B">人们不会长期从事任何一种单一职业。</span> </p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:24</div>
-    <div title="epubcfi(/6/24[id82]!/4/52/2/1,:0,:24)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">我们永远无法为那些全新的事务真正做好充分的准备。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:25</div>
-    <div title="epubcfi(/6/24[id82]!/4/56/1,:181,:192)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>而且，如果你在阅读本书的同时还要分神去考虑其他生活事务，或者你觉得有必要检查电子邮件，以免漏掉新的重要信息，那么你确实患上了<span style="color: #33D42D">“不要错过火车”综合征</span>。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:35</div>
-    <div title="epubcfi(/6/24[id82]!/4/80/2/1,:0,:27)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">混乱不是问题，关键在于需要多久才能发现其内在的相关性。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:44</div>
-    <div title="epubcfi(/6/24[id82]!/4/114/1,:177,:182)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>在日常生活中，大多数人都处于持续、漫长的<span style="color: #33D42D">半压力状态</span>，他们不知道局面可以完全不同——还存在另一种可以改善其处境的积极状态。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:53</div>
-    <div title="epubcfi(/6/24[id82]!/4/142/1,:51,:52)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>你刚刚收到的电子邮件事关部门某个<span style="color: #33D42D">亟</span>待解决的新问题。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:53</div>
-    <div title="epubcfi(/6/24[id82]!/4/144/1,:131,:138)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>这可能非常简单，就像“去夏威夷度假”、“处理有关客户X的事情”、“与苏珊协调大学里的情况”、“弄清新的部门管理结构”、“实施新的投资策略”，或者“研究关于<span style="color: #33D42D">曼纽尔阅读问题</span>的解决方案”。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:58</div>
-    <div title="epubcfi(/6/24[id82]!/4/152,/2/1:0,/4)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">像实干家一样思考问题，像思想家一样付诸行动。<br></span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:58</div>
-    <div title="epubcfi(/6/24[id82]!/4/156/1,:152,:166)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>如果你真的采用了书中建议的措施，你就需要构建<span style="color: #FECF0B">以结果和行动为导向的思维方式</span>，而这种思维方式需要你有意识地进行培养。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:25</div>
-    <div title="epubcfi(/6/24[id82]!/4/158/1,:0,:6)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #33D42D">“知识工作”</span>的本质</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:25</div>
-    <div title="epubcfi(/6/24[id82]!/4/160/1,:6,:56)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>欢迎了解有关<span style="color: #FECF0B">“知识工作”的真实本质和操作原则：你对工作投入的思考，应该比你现在实际付出的多，但是比你预想的要少。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:27</div>
-    <div title="epubcfi(/6/24[id82]!/4/164/1,:200,:224)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>然而事实上，<span style="color: #FECF0B">思考结果是促使希望转化为现实的最有效的手段之一。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:35</div>
-    <div title="epubcfi(/6/24[id82]!/4/190/1,:6,:76)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>我是这样定义<span style="color: #FECF0B">“材料”（stuff）的：进入你的精神或现实世界中但尚未找到归属的任何事情，你尚未确定它对你的真正意义、预期结果和下一步具体行动的所有事情。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:41</div>
-    <div title="epubcfi(/6/24[id82]!/4/208/1,:19,:37)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>然而，在你达到这个境界之前，你首先需要<span style="color: #FECF0B">培养一个习惯：清除大脑中的全部事务。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:44</div>
-    <div title="epubcfi(/6/24[id82]!/4/220/1,:155,:190)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>之所以有这种感觉，是因为<span style="color: #FECF0B">没人能执行任务！你所能做到的仅仅是执行这个任务中的某一个具体行动步骤。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:45</div>
-    <div title="epubcfi(/6/24[id82]!/4/222/2/1,:28,:38)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>事务极少会由于时间匮乏而受阻，它们陷入困境往往是由于未能<span style="color: #FECF0B">预先明确下一步的行动</span>而造成的。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:46</div>
-    <div title="epubcfi(/6/24[id82]!/4/230/1,:11,:42)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>经过多年的观察，我发现<span style="color: #FECF0B">自下而上的工作方法——即从当前活动和任务的最底层入手来处理事务</span>——对提高个人工作效率最具实用价值。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:55</div>
-    <div title="epubcfi(/6/24[id82]!/4/246/1,:0,:33)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">横向控制和纵向控制的目标是一致的：解除你的心理负担，并把事情做好。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:14</div>
-    <div title="epubcfi(/6/26[id83]!/4/8/1,:3,:72)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>我们：<span style="color: #FECF0B">（1）收集引起我们注意的事务和信息；（2）理清每个项目的意义和相关措施；（3）组织整理结果，提出选项；（4）进行思考回顾；（5）选择行动。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:14</div>
-    <div title="epubcfi(/6/26[id83]!/4/4/1,:19,:30)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>轻松掌控知识工作的核心方法，是熟练掌握<span style="color: #FECF0B">工作流程管理的5个阶段</span>，这5个阶段也是我们经验的总结和体现。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:15</div>
-    <div title="epubcfi(/6/26[id83]!/4/12/1,:49,:189)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">如果你打算为朋友做顿饭，但到家时发现厨房一团糟，你会怎样处理？首先要确认摆放不到位的所有东西（收集）；决定保留什么，扔掉什么（理清）；把东西归位——放回冰箱、扔进垃圾箱，或放进水池（整理）；然后核对你的食谱，以及已有的食材和厨具（回顾），然后把黄油放进锅里融化，开始做饭（行动）。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:44</div>
-    <div title="epubcfi(/6/26[id83]!/4/122,/2/1:0,/4/1:8)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">出错好过模棱两可。<br>——弗里曼·戴森</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:58</div>
-    <div title="epubcfi(/6/26[id83]!/4/176/1,:0,:30)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">我是这样给项目下定义的：任何一个需要多个步骤才能完成的任务。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 20:19</div>
-    <div title="epubcfi(/6/26[id83]!/4/226/2/1,:0,:21)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">工作安排越有弹性，人们越能承担繁重的工作。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月06日 08:38</div>
-    <div title="epubcfi(/6/26[id83]!/4/284/1,:39,:87)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>一般情况下，<span style="color: #FECF0B">参考资料系统有两种形式：（1）按特定主题或特定领域分类存储的系统；（2）一般性参考资料归档系统。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月06日 08:38</div>
-    <div title="epubcfi(/6/26[id83]!/4/286/3,:92,:126)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>你总是需要有一个地方来存放厨具的使用说明手册、某个特定工程的手写会议记录，以及<span style="color: #FECF0B">你上一次去东京旅行结束时没来得及兑换的几个日元（下次去时还可以使用）</span>。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月06日 09:10</div>
-    <div title="epubcfi(/6/26[id83]!/4/380/1,:121,:125)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>我们可以用视野即<span style="color: #33D42D">知觉距离</span>的概念进行类比。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月07日 06:32</div>
-    <div title="epubcfi(/6/28[id84]!/4/150/1,:138,:173)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>以问自己这样一个问题作为开始：“<span style="color: #FECF0B">什么样的行为可能会损害我正在进行的工作？我怎样才能防止这类情况的发生？</span>”</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 07:59</div>
-    <div title="epubcfi(/6/34[id86]!/4/12,/2/1:0,/4/1:9)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">通过行动让自己感觉良好，要比通过让自己感觉良好来实现更好的行动容易得多。<br>——O·H·莫尼尔</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:00</div>
-    <div title="epubcfi(/6/34[id86]!/4/16/1,:279,:287)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>我把这个诀窍称为<span style="color: #FECF0B">“把它放在门口”</span>，我们的目的是把它记在心上。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:02</div>
-    <div title="epubcfi(/6/34[id86]!/4/22/2/1,:22,:35)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>高效、创新、富有成效的思维和行动的诀窍，是在<span style="color: #FECF0B">正确的时间关注适当的事情。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:35</div>
-    <div title="epubcfi(/6/34[id86]!/4/116/1,:52,:93)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>正如我以前提到过的，<span style="color: #FECF0B">日程表不应该当作一个行动清单来使用，它应该记录那些必须在指定日期或时间完成的工作。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:37</div>
-    <div title="epubcfi(/6/34[id86]!/4/130/1,:191,:194)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>也可以使用高科技装备，比如<span style="color: #33D42D">PDA</span>。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:37</div>
-    <div title="epubcfi(/6/34[id86]!/4/112/1,:30,:45)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>如果归档系统需要，你还应该准备大量的<span style="color: #33D42D">Pendaflex式悬挂文件夹</span>。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:41</div>
-    <div title="epubcfi(/6/34[id86]!/4/140/1,:31,:49)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>从20世纪晚期开始，市场上就充斥着各种各样的计划手册，从早期的<span style="color: #33D42D">每日计划手册（Day-Timers）</span>和FranklinCovey活页本，到再度启用的Moleskine简易笔记本，再到现在的任务管理软件应用程序。 </p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:41</div>
-    <div title="epubcfi(/6/34[id86]!/4/140/1,:50,:66)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>从20世纪晚期开始，市场上就充斥着各种各样的计划手册，从早期的每日计划手册（Day-Timers）和<span style="color: #33D42D">FranklinCovey活页本</span>，到再度启用的Moleskine简易笔记本，再到现在的任务管理软件应用程序。 </p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:41</div>
-    <div title="epubcfi(/6/34[id86]!/4/140/1,:73,:87)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>从20世纪晚期开始，市场上就充斥着各种各样的计划手册，从早期的每日计划手册（Day-Timers）和FranklinCovey活页本，到再度启用的<span style="color: #33D42D">Moleskine简易笔记本</span>，再到现在的任务管理软件应用程序。 </p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:55</div>
-    <div title="epubcfi(/6/34[id86]!/4/170/1,:232,:274)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">整个归档分类过程不应该超过1分钟，如果达不到这个要求，就说明你的归档系统还需要改进。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:57</div>
-    <div title="epubcfi(/6/34[id86]!/4/174/1,:69,:96)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>我设计的系统对我自己非常合适，很多尝试过的人也有同感，所以<span style="color: #FECF0B">我强烈建议你参考下面提到的方法，来改进自己的归档系统。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 09:06</div>
-    <div title="epubcfi(/6/34[id86]!/4/184/1,:133,:168)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>根据我的经验来说，<span style="color: #FECF0B">“我不需要整理材料，因为使用搜索功能就足以找到它们”这种态度并不可取。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 09:18</div>
-    <div title="epubcfi(/6/34[id86]!/4/202/1,:17,:37)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>到目前为止，科学家还不能解释为什么<span style="color: #FECF0B">带有打印标签的文件夹会让工作变得如此高效</span>，但是我知道这确实是事实。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 09:23</div>
-    <div title="epubcfi(/6/34[id86]!/4/214/1,:28,:29)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>在各种事项的宏大计划中，参考材料和辅助材料的归档工作并非<span style="color: #33D42D">亟</span>待处理，也往往不具有战略意义。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:19</div>
-    <div title="epubcfi(/6/38[id88]!/4/58/1,:289,:295)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>认知科学家现在已经证明了<span style="color: #33D42D">“认知疲劳”</span>的真实性，即你做出的每个或大或小的决定都会在一定程度上消耗你的脑力。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:45</div>
-    <div title="epubcfi(/6/38[id88]!/4/168/1,:45,:61)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>要知道<span style="color: #FECF0B">“决定”并不是一个真正的“行动”</span>，因为真正的“行动”需要耗费时间去执行，而“决定”并非如此。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:45</div>
-    <div title="epubcfi(/6/38[id88]!/4/168/1,:114,:145)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">99%的情况下，在你做出决定之前，你要做的就是获取更多的信息。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:45</div>
-    <div title="epubcfi(/6/38[id88]!/4/172/2/1,:0,:21)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">找出那些能够帮助你做出“决定”的具体行动。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:51</div>
-    <div title="epubcfi(/6/38[id88]!/4/184/1,:488,:493)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>他的同事都说他是由<span style="color: #33D42D">“特富龙”</span>那样的高性能材料制成的。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 07:00</div>
-    <div title="epubcfi(/6/38[id88]!/4/220/1,:73,:76)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>在你完整地建立了自己的任务管理系统之后，你会发现这类委派给他人的任务，形成了一个“等待”清单，这个清单可能是在记事本上，或者一个文件夹里，或者你的<span style="color: #33D42D">PDA</span>中。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 20:00</div>
-    <div title="epubcfi(/6/40[id89]!/4/64,/1:224,/2/1:1)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>当你按照这样的规则来安排你的日程表时，剩下的自然就是那些没有苛刻时间要求的<span style="color: #33D42D">ASAP </span>[1] 行动了。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月11日 19:27</div>
-    <div title="epubcfi(/6/40[id89]!/4/276/1,:22,:39)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>大多数人发现，使用一张清单是最佳的选择，因为<span style="color: #FECF0B">“项目”清单是作为一个总目录来用的</span>，而不是用作每日的工作指导。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月11日 19:27</div>
-    <div title="epubcfi(/6/40[id89]!/4/278/1,:46,:58)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>坦白地说，你拥有多少个项目清单都无关紧要，只要你可以根据需要经常地浏览这些内容就行了，这也是<span style="color: #FECF0B">“每周回顾”的主要内容。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月11日 19:50</div>
-    <div title="epubcfi(/6/40[id89]!/4/324/1,:38,:41)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>许多人与现有和潜在客户交往时，往往试图使用“客户文件夹”和/或客户关系管理（<span style="color: #33D42D">CRM</span>）软件来“管理客户”。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 06:45</div>
-    <div title="epubcfi(/6/40[id89]!/4/376/1,:167,:211)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">一般来说，除非是明确属于某一特定类别，最好还是将资料都归入一个统一的一般性参考资料系统。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 06:47</div>
-    <div title="epubcfi(/6/40[id89]!/4/382/1,:115,:120)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>要知道，这种方法根本行不通，除非它是一个功能强大的<span style="color: #33D42D">CRM系统</span>的一部分，既包含客户信息，也包含经过适当分配和整合的行动触发因素。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 06:59</div>
-    <div title="epubcfi(/6/40[id89]!/4/436/1,:11,:53)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>此外，我们还应注意到，<span style="color: #FECF0B">一个管理良好的“将来/也许”清单与保存各种“材料”的收纳箱之间，是存在着巨大差别的。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 07:04</div>
-    <div title="epubcfi(/6/40[id89]!/4/468/3,:73,:118)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>它可被看作是你自己的邮递系统，<span style="color: #FECF0B">你可以建立属于自己的邮局，通过它给未来的自己发封邮件，通知未来的自己到时候去完成某件事情。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月14日 07:58</div>
-    <div title="epubcfi(/6/40[id89]!/4/518/1,:10,:27)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>我在前面曾经建议过，<span style="color: #FECF0B">你的“工作”至少可以定义为6个级别</span>，每一级别都应该拥有专门的确认手段和评估方法。</p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月14日 08:40</div>
-    <div title="epubcfi(/6/42[id90]!/4/130/2/1,:82,:106)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p>如果你不是自觉地去努力开启这种自我指导的思维过程，那么你就是在<span style="color: #FECF0B">向懒惰屈服让步，你将永远丧失控制自己生活的能力。</span></p>
-          </div>
-
-<div class="annotation-label-wapper">
-    <div>2020年03月14日 08:50</div>
-    <div title="epubcfi(/6/44[id91]!/4/32,/2/1:0,/4/1:10)" class="annotation-label-pos">POS</div>
-</div>
-
-<div class="note no-icon">
-            <p><span style="color: #FECF0B">在约束中能感到自如，那你就是自由的了。<br>——罗伯特·弗罗斯特</span></p>
-          </div>
-
 
 ]]></content>
       <categories>
