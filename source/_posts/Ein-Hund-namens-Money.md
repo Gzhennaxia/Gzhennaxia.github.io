@@ -250,7 +250,7 @@ tags:
 
 {% note no-icon %}
 
-<span style="color: #FECF0B">虽说钱也许不是生活中最要紧的东西，可是在缺钱花的时候它又非常重要。没钱，生活的各个方面都会受到影响，你会整天愁眉苦脸，跟周围的人吵架，还会觉得自己很悲惨，很没用。</span>
+虽说<span style="color: #FECF0B">钱也许不是生活中最要紧的东西，可是在缺钱花的时候它又非常重要</span>。没钱，生活的各个方面都会受到影响，你会整天愁眉苦脸，跟周围的人吵架，还会觉得自己很悲惨，很没用。
 
 {% endnote %}
 
@@ -265,6 +265,8 @@ tags:
 
 {% endnote %}
 
+#### 第十三章　巨大的危机
+
 <div class="annotation-label-wapper">
     <div>2020年02月28日 06:48</div>
     <div title="epubcfi(/6/42[id139]!/4/70/1,:36,:62)" class="annotation-label-pos">POS</div>
@@ -272,7 +274,7 @@ tags:
 
 {% note no-icon %}
 
-<span style="color: #FECF0B">困难、犯错误和丢面子引起的恐惧已经破坏了无数人的生活</span>。”
+“可是还有一点，你不能在困难面前逃跑。<span style="color: #FECF0B">困难、犯错误和丢面子引起的恐惧已经破坏了无数人的生活</span>。”
 
 {% endnote %}
 
@@ -283,20 +285,17 @@ tags:
 
 {% note no-icon %}
 
-“<span style="color: #FECF0B">每当你觉得有些事情不好办的时候，你可以做一件事</span>，”等我歇了口气后，钱钱说，“只要翻一翻成功日记，你就会从过去的事情中找到证据，相信自己未来也有能力完成任何事情。”
+“<span style="color: #FECF0B">每当你觉得有些事情不好办的时候，你可以做一件事</span>，”等我歇了口气后，钱钱说，“<span style="color: #FECF0B">只要翻一翻成功日记，你就会从过去的事情中找到证据，相信自己未来也有能力完成任何事情。</span>”
 
 {% endnote %}
 
-<div class="annotation-label-wapper">
-    <div>2020年02月28日 06:49</div>
-    <div title="epubcfi(/6/42[id139]!/4/82/1,:39,:81)" class="annotation-label-pos">POS</div>
-</div>
+有所学校邀请吉雅做场演讲，吉雅海怕她做不到，钱钱建议她翻一翻成功日记来鼓舞自己。
 
-{% note no-icon %}
+工作和生活中经常会遇到一些机遇和挑战，此时我们经常会心存顾忌，担心自己没有足够的能力应对。在这种时候我们应该尽量放平心态，仔细分析面对这个机遇和挑战究竟需要哪些能力，而这些能力是否在我以前的人生经历中处理其他问题时用到过，如果用到过，说明我们是可以成功应对的。
 
-“每当你觉得有些事情不好办的时候，你可以做一件事，”等我歇了口气后，钱钱说，“<span style="color: #FECF0B">只要翻一翻成功日记，你就会从过去的事情中找到证据，相信自己未来也有能力完成任何事情。</span>”
+在分析现在和回顾过往的过程中找回信心和勇气。
 
-{% endnote %}
+#### 第十四章　投资俱乐部
 
 <div class="annotation-label-wapper">
     <div>2020年02月29日 07:25</div>
@@ -309,6 +308,10 @@ tags:
 
 {% endnote %}
 
+这里的价值应该是对我们来说的价值。在日常购物时，尽量客观的找一找资料、数据，分析价格和价值是否对等，不要盲目、冲动的消费。
+
+#### 第十五章　演　讲
+
 <div class="annotation-label-wapper">
     <div>2020年02月29日 07:44</div>
     <div title="epubcfi(/6/46[id137]!/4/66/1,:54,:84)" class="annotation-label-pos">POS</div>
@@ -316,9 +319,11 @@ tags:
 
 {% note no-icon %}
 
-<span style="color: #FECF0B">一个人觉得最引以为自豪的事情，往往是那些做起来最艰难的事情。</span>
+如果你没有做今天这件事情，你就永远不会知道，给自己一些压力之后，你能够做到些什么。<span style="color: #FECF0B">一个人觉得最引以为自豪的事情，往往是那些做起来最艰难的事情。</span>
 
 {% endnote %}
+
+#### 第十七章　爷爷奶奶害怕风险
 
 <div class="annotation-label-wapper">
     <div>2020年02月29日 08:20</div>
@@ -331,6 +336,8 @@ tags:
 
 {% endnote %}
 
+#### 第十八章　大冒险的结局
+
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:14</div>
     <div title="epubcfi(/6/52[id134]!/4/8/1,:126,:183)" class="annotation-label-pos">POS</div>
@@ -338,7 +345,7 @@ tags:
 
 {% note no-icon %}
 
-<span style="color: #FECF0B">以前他曾经怀疑自己究竟适不适合独立创业，但现在他知道，只要学会把某些自己不喜欢做而又不擅长做的事情交给别人就行了。</span>
+以前他曾经怀疑自己究竟适不适合独立创业，但现在他知道，只<span style="color: #FECF0B">要学会把某些自己不喜欢做而又不擅长做的事情交给别人</span>就行了。
 
 {% endnote %}
 
@@ -353,6 +360,8 @@ tags:
 
 {% endnote %}
 
+#### 自力更生——写给成年人的后记
+
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:26</div>
     <div title="epubcfi(/6/54[id133]!/4/6/2/2/1,:2,:4)" class="annotation-label-pos">POS</div>
@@ -363,6 +372,8 @@ tags:
 打破<span style="color: #33D42D">桎梏</span>，开阔视野
 
 {% endnote %}
+
+桎梏 [zhìgù]：脚镣和手铐；比喻束缚人或阻碍事物发展的东西。
 
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:27</div>
@@ -375,6 +386,8 @@ tags:
 
 {% endnote %}
 
+> 弗里德里希·威廉·奥古斯特·福禄贝尔（德语：Friedrich Wilhelm August Fröbel，1782年4月21日－1852年6月2日），德国教育家，被公认为是19世纪欧洲最重要的几个教育家之一，现代**学前教育的鼻祖**。他不仅创办了第一所称为“幼稚园”的学前教育机构，他的教育思想迄今仍在主导着学前教育理论的基本方向。当时来说，能让孩子上其教育课程者均为有钱有权之父母。——[弗里德里希·福禄贝尔- 维基百科，自由的百科全书 - 維基百科](https://zh.wikipedia.org/zh-hans/弗里德里希·福禄贝尔)
+
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:30</div>
     <div title="epubcfi(/6/54[id133]!/4/22/1,:27,:31)" class="annotation-label-pos">POS</div>
@@ -386,6 +399,12 @@ tags:
 
 {% endnote %}
 
+颐指气使 [yí zhǐ qì shǐ]：意思是指不说话，只用面部表情来示意。形容有权势者指挥别人的[傲慢](https://baike.baidu.com/item/傲慢/7238397)神气。出自唐·[元稹](https://baike.baidu.com/item/元稹/207525)《追封李逊母崔氏博陵郡太君》
+
+【近义词】[盛气凌人](https://baike.baidu.com/item/盛气凌人/1662522)、趾高气扬、神气活现
+
+【反义词】唯唯诺诺、低三下四、奴颜婢膝
+
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:32</div>
     <div title="epubcfi(/6/54[id133]!/4,/26/1:0,/27:0)" class="annotation-label-pos">POS</div>
@@ -393,8 +412,7 @@ tags:
 
 {% note no-icon %}
 
-<span style="color: #FECF0B">我们推崇一种聪明的、简朴的生活方式。也就是说，宁愿购买一件一流产品，也不要不停地买许多的二流产品。而且，不要仅仅因为一件产品的外观不再时髦而新产品正在流行，就不断追逐新鲜的东西。
-</span>
+我们推崇一种<span style="color: #FECF0B">聪明的、简朴的生活方式</span>。也就是说，<span style="color: #FECF0B">宁愿购买一件一流产品，也不要不停地买许多的二流产品</span>。而且，不要仅仅因为一件产品的外观不再时髦而新产品正在流行，就不断追逐新鲜的东西。
 
 {% endnote %}
 
@@ -405,20 +423,47 @@ tags:
 
 {% note no-icon %}
 
-<span style="color: #FECF0B">生活质量不是由越来越多的高科技产品堆砌而成的，而体现在一些别的方面，比如悠闲地享受一下生活，增进邻里关系，表达感情或者从事艺术性和创造性的活动。</span>
+<span style="color: #FECF0B">生活质量不是由越来越多的高科技产品堆砌而成的</span>，而体现在一些别的方面，比如悠闲地享受一下生活，增进邻里关系，表达感情或者从事艺术性和创造性的活动。
 
 {% endnote %}
+
+### 小狗钱钱2
+
+#### 童话与理财
+
+{% cq %}
+
+坐在屋子里
+看墙上的风景画
+在画框里
+
+坐在窗户旁
+看外面的风景
+在窗框里
+
+走下楼去
+想看一看原野
+高楼和烟囱
+横在风景上
+
+想看一幅风景
+没有画框的风景
+我知道
+我还要走很远很远
+
+{% endcq %}
 
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:48</div>
     <div title="epubcfi(/6/70[id125]!/4/22/2/1,:3,:5)" class="annotation-label-pos">POS</div>
 </div>
-
 {% note no-icon %}
 
 高楼和<span style="color: #33D42D">烟囱</span>
 
 {% endnote %}
+
+烟囱 [cōng]
 
 <div class="annotation-label-wapper">
     <div>2020年03月01日 06:51</div>
@@ -438,32 +483,13 @@ tags:
 
 {% note no-icon %}
 
-关键在于你的心态，<span style="color: #FECF0B">在你的心里究竟还有多少框框？
-——“名人”的框框、习惯的框框、观念的框框……</span>
+关键在于你的心态，<span style="color: #FECF0B">在你的心里究竟还有多少框框？——“名人”的框框、习惯的框框、观念的框框……</span>
+
+当然，对于框框我们不可能也不可以视而不见，但最重要的是<span style="color: #FECF0B">在看见框框的同时，你是否也看见了里面的风景。</span>这需要勇气和信心，而<span style="color: #FECF0B">真正的勇敢是在感到最恐惧的时候，你依然在往前走。</span>
 
 {% endnote %}
 
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 06:52</div>
-    <div title="epubcfi(/6/70[id125]!/4/48/1,:27,:49)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-当然，对于框框我们不可能也不可以视而不见，但最重要的是<span style="color: #FECF0B">在看见框框的同时，你是否也看见了里面的风景。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 06:52</div>
-    <div title="epubcfi(/6/70[id125]!/4/48/1,:59,:83)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-这需要勇气和信心，而<span style="color: #FECF0B">真正的勇敢是在感到最恐惧的时候，你依然在往前走。</span>
-
-{% endnote %}
+#### 第二章　白色石头
 
 <div class="annotation-label-wapper">
     <div>2020年03月01日 20:00</div>
@@ -494,31 +520,11 @@ tags:
 
 {% note no-icon %}
 
-<span style="color: #FECF0B">当你把目光都集中在别人的错误和缺点上时，就自然会忽略他们身上闪光的一面。</span>
+<span style="color: #FECF0B">当你把目光都集中在别人的错误和缺点上时，就自然会忽略他们身上闪光的一面</span>。而<span style="color: #FECF0B">一个人只有具备了审视美好事物的能力，世界对他来说才会变得更加美好。</span>
 
 {% endnote %}
 
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 20:03</div>
-    <div title="epubcfi(/6/74[id123]!/4/50/1,:66,:99)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-而<span style="color: #FECF0B">一个人只有具备了审视美好事物的能力，世界对他来说才会变得更加美好。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月01日 20:06</div>
-    <div title="epubcfi(/6/74[id123]!/4/74/1,:137,:159)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-不过金先生倒是给了她一个很好的解释，他总是说：“<span style="color: #FECF0B">正因为你是那么喜欢狗，你所做的工作才有价值。</span>
-
-{% endnote %}
+#### 第三章　放大镜
 
 <div class="annotation-label-wapper">
     <div>2020年03月01日 20:36</div>
@@ -527,7 +533,7 @@ tags:
 
 {% note no-icon %}
 
-老妇人继续耐心地解释道：“<span style="color: #FECF0B">人们通常并不把自己已经理解的事情看作是奇迹。但是每一次的帮助却都是奇迹。</span>
+老妇人继续耐心地解释道：“<span style="color: #FECF0B">人们通常并不把自己已经理解的事情看作是奇迹。但是每一次的帮助却都是奇迹。</span>“唯有依靠这些帮助，我们才能完成本来一个人无法完成的事。“
 
 {% endnote %}
 
@@ -541,6 +547,8 @@ tags:
 <span style="color: #FECF0B">无论在什么情况下都要试着去发现那些积极的东西。</span>”
 
 {% endnote %}
+
+#### 第四章　论文
 
 <div class="annotation-label-wapper">
     <div>2020年03月01日 20:42</div>
@@ -564,27 +572,13 @@ tags:
 
 {% endnote %}
 
-<div class="annotation-label-wapper">
-    <div>2020年03月02日 20:20</div>
-    <div title="epubcfi(/6/84[id118]!/4/102/1,:9,:106)" class="annotation-label-pos">POS</div>
-</div>
+> ![](https://pic2.zhimg.com/80/v2-468c109bebe337f81174574fcae831cd_1440w.jpg)
+>
+> <div align="center">意大利50欧分: **卡比托利欧广场中央**的马可•奥勒留骑马像</div>
+>
+> [马可·奥勒留](https://baike.baidu.com/item/马可·奥勒留/6720350)（公元121 年4月26日－180年3月17日），全名为马尔克·奥列里乌斯·安东尼·奥古斯都（Marcus Aurelius Antoninus Augustus）。拥有**凯撒称号**（Imperator Caesar）的他是[罗马帝国](https://baike.baidu.com/item/罗马帝国/3059)五贤帝时代最后一个皇帝。
 
-{% note no-icon %}
-
-好老师笑了，他说：<span style="color: #FECF0B">“你在把责任推脱给别人的同时，也把权利转让给了他。‘答案’这个词就隐藏在‘职责’当中。（“职责”的德文为Verantwortung，“答案”的德文为Antwort，这是一个文字游戏。——译者注）</span>我们有一个例子能说明这个意思。”
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月02日 20:22</div>
-    <div title="epubcfi(/6/84[id118]!/4/116/1,:38,:123)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-可以这么说，<span style="color: #FECF0B">橘子本身并不在乎你怎么做，它总是提供给你橘子汁。它的答案就是橘子汁。它总是按照自己的意愿给出答案，无论人们怎么做都一样。它绝不会说：‘因为有人敲打我，所以这次榨出的是水。</span>’”
-
-{% endnote %}
+#### 第七章　好老师
 
 <div class="annotation-label-wapper">
     <div>2020年03月02日 20:25</div>
@@ -597,6 +591,40 @@ tags:
 
 {% endnote %}
 
+这里指的是勇于承担自己的职责。
+
+这个世界本身就是不公平的，在遇到不公平的事情时，专注于自身的优势，勇于承担自己的职责(尽可能的想办法充分利用自己的优势)
+
+<div class="annotation-label-wapper">
+    <div>2020年03月02日 20:20</div>
+    <div title="epubcfi(/6/84[id118]!/4/102/1,:9,:106)" class="annotation-label-pos">POS</div>
+</div>
+
+{% note no-icon %}
+
+好老师笑了，他说：<span style="color: #FECF0B">“你在把责任推脱给别人的同时，也把权利转让给了他</span>。<span style="color: #33D42D">‘答案’这个词就隐藏在‘职责’当中。（“职责”的德文为Verantwortung，“答案”的德文为Antwort，这是一个文字游戏。——译者注）</span>”
+
+{% endnote %}
+
+责任对应‘职责’，权利对应‘答案’。即“把责任(职责-Ver<span style="color: #3CA3FF">antwort</span>ung)推脱给别人的同时，也把权利(答案-Antwort)转让给了他”。
+
+牵强的解释：吉雅把她害怕参加演讲比赛的原因归咎于胡伯特认为她英语不好，即把她的责任(克服恐惧参加演讲比赛)推脱给了别人，所以她也把她的权利(决定自己是否参加比赛)转让给了别人。
+
+<div class="annotation-label-wapper">
+    <div>2020年03月02日 20:22</div>
+    <div title="epubcfi(/6/84[id118]!/4/116/1,:38,:123)" class="annotation-label-pos">POS</div>
+</div>
+
+{% note no-icon %}
+
+可以这么说，<span style="color: #FECF0B">橘子本身并不在乎你怎么做，它总是提供给你橘子汁。它的答案就是橘子汁。它总是按照自己的意愿给出答案，无论人们怎么做都一样。它绝不会说：‘因为有人敲打我，所以这次榨出的是水。</span>’”
+
+{% endnote %}
+
+橘子只会承担它自己的责任(给予人橘子汁)
+
+#### 第九章　好老师的秘密
+
 <div class="annotation-label-wapper">
     <div>2020年03月02日 20:56</div>
     <div title="epubcfi(/6/88[id116]!/4/148/1,:19,:89)" class="annotation-label-pos">POS</div>
@@ -607,6 +635,8 @@ tags:
 菲利普老师并不认同吉娅的辩解，他说：“<span style="color: #FECF0B">你必须学会勇于承担自己的职责。也就是说，你要将注意力更多地集中在自己的能力上。与因他人的成绩感到灰心丧气相比，你更应该想办法改进自己的成绩。</span>”
 
 {% endnote %}
+
+不要抱怨，勇于承担自身应尽的责任——改变自己！
 
 <div class="annotation-label-wapper">
     <div>2020年03月03日 06:18</div>
@@ -644,6 +674,8 @@ tags:
 
 {% endnote %}
 
+#### 第十章　7条准则
+
 <div class="annotation-label-wapper">
     <div>2020年03月03日 06:48</div>
     <div title="epubcfi(/6/90[id115]!/4/206/1,:65,:99)" class="annotation-label-pos">POS</div>
@@ -651,7 +683,7 @@ tags:
 
 {% note no-icon %}
 
-有位音乐家曾说过：‘<span style="color: #FECF0B">如果有一天你不再相信自己可以进步，从此以后你演奏的就只是同一首乐曲。</span>’
+有位音乐家曾说过：‘<span style="color: #FECF0B">如果有一天你不再相信自己可以进步，从此以后你演奏的就只是同一首乐曲。</span>’这句话的意思是：只要能坚持不懈地学习，生活就总是多姿多彩的。
 
 {% endnote %}
 
@@ -670,6 +702,8 @@ tags:
 
 {% endnote %}
 
+#### 第十二章　事件
+
 <div class="annotation-label-wapper">
     <div>2020年03月03日 20:10</div>
     <div title="epubcfi(/6/94[id113]!/4/64/1,:39,:41)" class="annotation-label-pos">POS</div>
@@ -681,6 +715,13 @@ tags:
 
 {% endnote %}
 
+荨麻 [qián má]
+
+![](https://www.kostbarenatur.net/wp-content/uploads/2015/09/grosse-brennnessel-urtica-urens-3-1200x800.jpg)
+
+#### 第十三章　回家
+
+
 <div class="annotation-label-wapper">
     <div>2020年03月03日 20:29</div>
     <div title="epubcfi(/6/96[id112]!/4/22/1,:65,:69)" class="annotation-label-pos">POS</div>
@@ -688,20 +729,11 @@ tags:
 
 {% note no-icon %}
 
-与银行账户相似，世间还有一种叫作‘<span style="color: #FECF0B">关系账户</span>’的东西。
+与银行账户相似，世间还有一种叫作‘<span style="color: #FECF0B">关系账户</span>’的东西。金先生立即对她解释道：“<span style="color: #FECF0B">当我们伤害别人的时候，就等于是在‘取钱’。</span>
 
 {% endnote %}
 
-<div class="annotation-label-wapper">
-    <div>2020年03月03日 20:30</div>
-    <div title="epubcfi(/6/96[id112]!/4/26/1,:12,:33)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-金先生立即对她解释道：“<span style="color: #FECF0B">当我们伤害别人的时候，就等于是在‘取钱’。</span>
-
-{% endnote %}
+#### 第十四章　道别
 
 <div class="annotation-label-wapper">
     <div>2020年03月03日 20:52</div>
@@ -724,900 +756,4 @@ tags:
 道别的时候金先生还对吉娅说：“<span style="color: #FECF0B">永远别忘了，当你努力去成为有能力成为的那种人的时候，你要明白自己并不是独自一人。</span>”
 
 {% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:35</div>
-    <div title="epubcfi(/6/14[id78]!/4/10/1,:0,:8)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">《搞定》的独特性</span>何在？
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:35</div>
-    <div title="epubcfi(/6/14[id78]!/4/12/1,:0,:7)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">一是它的实用性</span>，我其实是指它的模块化、宽容性方法。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:38</div>
-    <div title="epubcfi(/6/14[id78]!/4/20/1,:66,:71)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-本文的另一个成书理念是：<span style="color: #FECF0B">人生循环性</span>。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:40</div>
-    <div title="epubcfi(/6/14[id78]!/4/22/1,:0,:17)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">本书的第二个优点，是其宽泛的适用性</span>。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:43</div>
-    <div title="epubcfi(/6/14[id78]!/4/26/1,:0,:6)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">第三个优点是</span>我随着和戴维·艾伦及其妻子相知为友而获得的亲身感受，我想其他人即使未曾与之谋面，也一定能从戴维的作品中获得直观感受。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:43</div>
-    <div title="epubcfi(/6/14[id78]!/4/26/1,:77,:106)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-那就是戴维·艾伦所提建议的<span style="color: #FECF0B">完整性、真实性，以及他所提供的信息和信息对象之间的关联性。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:46</div>
-    <div title="epubcfi(/6/14[id78]!/4/30/1,:0,:28)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">我们在评价创新者工作重要性的时候，偶尔会忽视其个人特质。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:46</div>
-    <div title="epubcfi(/6/14[id78]!/4/30/1,:135,:151)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-凭借与戴维和凯瑟琳·艾伦个人交往的一些经历，我可以证实许多读者的猜测和大多数人的期待：<span style="color: #FECF0B">他在尽最大努力坦言他的生活认知。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:47</div>
-    <div title="epubcfi(/6/14[id78]!/4/32/1,:106,:157)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">我有一些鉴定书籍的方法，其中两个是：我能不能在一两个月之后还记得它的内容，以及它是否影响了我的世界观。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:55</div>
-    <div title="epubcfi(/6/16[id79]!/4/18/1,:81,:85)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-我们现在几乎能随时动用各种超级工具和应用程序取得卓越成绩，尽管如此，<span style="color: #FECF0B">选择过剩</span>也能轻易浇灭我们工作效率的火焰。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 06:56</div>
-    <div title="epubcfi(/6/16[id79]!/4/20/1,:133,:135)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-这一领域的创新速度意味着，就在你读到任何特定软件程序的时候，它都有可能因为下一代新程序的出现而变得落伍、遭到削弱，并<span style="color: #33D42D">亟待</span>更新。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:39</div>
-    <div title="epubcfi(/6/16[id79]!/4/60/2/1,:0,:19)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">值得实现的一切生活目标都需要付诸实践。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:47</div>
-    <div title="epubcfi(/6/18[id80]!/4/10/1,:96,:135)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-无论人们做什么事情——也许是下班后与同事一道举杯畅饮；也许是夜深人静时凝视摇篮中安然酣睡的孩子；也许是忙碌地回复着源源不断的电子邮件；也许是在会议结束后抽几分钟时间与潜在的新客户攀谈——都希望<span style="color: #FECF0B">保持放松的心态。要做到这一点，你需要在内心确定：当前事项正是你需要去做的事情。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:47</div>
-    <div title="epubcfi(/6/18[id80]!/4/12/1,:2,:35)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-写作<span style="color: #FECF0B">本书的宗旨在于：帮助你在任何必要的时候，都能达到高效和放松的境界。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:52</div>
-    <div title="epubcfi(/6/18[id80]!/4/26/1,:234,:271)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-而<span style="color: #FECF0B">多数商业人士之所以成功，是因为他们化解的危机和把握的机遇要多于积压的事务。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:53</div>
-    <div title="epubcfi(/6/18[id80]!/4/28/1,:78,:130)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">我们的社会普遍存在一种焦虑情绪——人们会感到没来由的怅然若失，从而产生一种无法解脱、永不停息的紧张情绪。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:55</div>
-    <div title="epubcfi(/6/18[id80]!/4/36/1,:7,:17)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-本书必须把这种<span style="color: #33D42D">动态工作流程管理艺术</span>的精髓转换为线性格式，这是很必要的。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 19:57</div>
-    <div title="epubcfi(/6/18[id80]!/4/38/2/1,:52,:61)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-这将使你参与其中，而<span style="color: #FECF0B">参与是理解的关键。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:03</div>
-    <div title="epubcfi(/6/24[id82]!/4/12/1,:13,:19)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-本书中的这套方法，完全基于<span style="color: #FECF0B">三个主要目的</span>：（1）收集所有需要处理或者对你有用的事情（现在的、以后的、某一时间的；大的、小的、不大不小的），把它们统统置入一个脱离大脑意识的、条理分明的、可靠的系统中；（2）指导自己在获取任何“输入信息”（也就是接手任何任务）的前期就进行分析和决策，以确保随时拥有一套可以执行或重新协调的“下一步行动”可行清单；（3）管理、协调所有相关内容，履行你在任何时间点对自己和他人做出的各种承诺。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:07</div>
-    <div title="epubcfi(/6/24[id82]!/4/20/1,:14,:95)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-新千年伊始，就出现了这样一个<span style="color: #FECF0B">自相矛盾的现象：人们的生活质量得到了显著提高，但与此同时又承担着自己力所不能及的工作，结果导致他们承受了越来越大的压力。这就是俗语所说的“眼大肚子小，贪多嚼不烂”</span>，过多的选项和机会会带给我们决策和选择压力，而绝大多数人都对怎样改善这种局面感到茫然无措。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:08</div>
-    <div title="epubcfi(/6/24[id82]!/4/24/1,:115,:121)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-仅仅在20世纪的后50年中，在这个工业化的世界里，“工作”的性质已经由流水线装配、制造，以及搬运一类的活动，转变为<span style="color: #33D42D">彼得·德鲁克</span>所定义的那种“知识工作”了。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:12</div>
-    <div title="epubcfi(/6/24[id82]!/4/36/1,:21,:38)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-全新的沟通技术使得这个事实以指数级放大，即<span style="color: #FECF0B">我们的工作和生活并不存在明显界限。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:21</div>
-    <div title="epubcfi(/6/24[id82]!/4/50/4/1,:138,:155)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-简言之，<span style="color: #FECF0B">人们不会长期从事任何一种单一职业。</span> 
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:24</div>
-    <div title="epubcfi(/6/24[id82]!/4/52/2/1,:0,:24)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">我们永远无法为那些全新的事务真正做好充分的准备。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:25</div>
-    <div title="epubcfi(/6/24[id82]!/4/56/1,:181,:192)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-而且，如果你在阅读本书的同时还要分神去考虑其他生活事务，或者你觉得有必要检查电子邮件，以免漏掉新的重要信息，那么你确实患上了<span style="color: #33D42D">“不要错过火车”综合征</span>。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:35</div>
-    <div title="epubcfi(/6/24[id82]!/4/80/2/1,:0,:27)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">混乱不是问题，关键在于需要多久才能发现其内在的相关性。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:44</div>
-    <div title="epubcfi(/6/24[id82]!/4/114/1,:177,:182)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-在日常生活中，大多数人都处于持续、漫长的<span style="color: #33D42D">半压力状态</span>，他们不知道局面可以完全不同——还存在另一种可以改善其处境的积极状态。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:53</div>
-    <div title="epubcfi(/6/24[id82]!/4/142/1,:51,:52)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-你刚刚收到的电子邮件事关部门某个<span style="color: #33D42D">亟</span>待解决的新问题。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:53</div>
-    <div title="epubcfi(/6/24[id82]!/4/144/1,:131,:138)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-这可能非常简单，就像“去夏威夷度假”、“处理有关客户X的事情”、“与苏珊协调大学里的情况”、“弄清新的部门管理结构”、“实施新的投资策略”，或者“研究关于<span style="color: #33D42D">曼纽尔阅读问题</span>的解决方案”。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:58</div>
-    <div title="epubcfi(/6/24[id82]!/4/152,/2/1:0,/4)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">像实干家一样思考问题，像思想家一样付诸行动。
-</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月04日 20:58</div>
-    <div title="epubcfi(/6/24[id82]!/4/156/1,:152,:166)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-如果你真的采用了书中建议的措施，你就需要构建<span style="color: #FECF0B">以结果和行动为导向的思维方式</span>，而这种思维方式需要你有意识地进行培养。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:25</div>
-    <div title="epubcfi(/6/24[id82]!/4/158/1,:0,:6)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #33D42D">“知识工作”</span>的本质
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:25</div>
-    <div title="epubcfi(/6/24[id82]!/4/160/1,:6,:56)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-欢迎了解有关<span style="color: #FECF0B">“知识工作”的真实本质和操作原则：你对工作投入的思考，应该比你现在实际付出的多，但是比你预想的要少。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:27</div>
-    <div title="epubcfi(/6/24[id82]!/4/164/1,:200,:224)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-然而事实上，<span style="color: #FECF0B">思考结果是促使希望转化为现实的最有效的手段之一。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:35</div>
-    <div title="epubcfi(/6/24[id82]!/4/190/1,:6,:76)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-我是这样定义<span style="color: #FECF0B">“材料”（stuff）的：进入你的精神或现实世界中但尚未找到归属的任何事情，你尚未确定它对你的真正意义、预期结果和下一步具体行动的所有事情。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:41</div>
-    <div title="epubcfi(/6/24[id82]!/4/208/1,:19,:37)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-然而，在你达到这个境界之前，你首先需要<span style="color: #FECF0B">培养一个习惯：清除大脑中的全部事务。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:44</div>
-    <div title="epubcfi(/6/24[id82]!/4/220/1,:155,:190)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-之所以有这种感觉，是因为<span style="color: #FECF0B">没人能执行任务！你所能做到的仅仅是执行这个任务中的某一个具体行动步骤。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:45</div>
-    <div title="epubcfi(/6/24[id82]!/4/222/2/1,:28,:38)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-事务极少会由于时间匮乏而受阻，它们陷入困境往往是由于未能<span style="color: #FECF0B">预先明确下一步的行动</span>而造成的。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:46</div>
-    <div title="epubcfi(/6/24[id82]!/4/230/1,:11,:42)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-经过多年的观察，我发现<span style="color: #FECF0B">自下而上的工作方法——即从当前活动和任务的最底层入手来处理事务</span>——对提高个人工作效率最具实用价值。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 06:55</div>
-    <div title="epubcfi(/6/24[id82]!/4/246/1,:0,:33)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">横向控制和纵向控制的目标是一致的：解除你的心理负担，并把事情做好。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:14</div>
-    <div title="epubcfi(/6/26[id83]!/4/8/1,:3,:72)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-我们：<span style="color: #FECF0B">（1）收集引起我们注意的事务和信息；（2）理清每个项目的意义和相关措施；（3）组织整理结果，提出选项；（4）进行思考回顾；（5）选择行动。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:14</div>
-    <div title="epubcfi(/6/26[id83]!/4/4/1,:19,:30)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-轻松掌控知识工作的核心方法，是熟练掌握<span style="color: #FECF0B">工作流程管理的5个阶段</span>，这5个阶段也是我们经验的总结和体现。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:15</div>
-    <div title="epubcfi(/6/26[id83]!/4/12/1,:49,:189)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">如果你打算为朋友做顿饭，但到家时发现厨房一团糟，你会怎样处理？首先要确认摆放不到位的所有东西（收集）；决定保留什么，扔掉什么（理清）；把东西归位——放回冰箱、扔进垃圾箱，或放进水池（整理）；然后核对你的食谱，以及已有的食材和厨具（回顾），然后把黄油放进锅里融化，开始做饭（行动）。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:44</div>
-    <div title="epubcfi(/6/26[id83]!/4/122,/2/1:0,/4/1:8)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">出错好过模棱两可。
-——弗里曼·戴森</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 19:58</div>
-    <div title="epubcfi(/6/26[id83]!/4/176/1,:0,:30)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">我是这样给项目下定义的：任何一个需要多个步骤才能完成的任务。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月05日 20:19</div>
-    <div title="epubcfi(/6/26[id83]!/4/226/2/1,:0,:21)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">工作安排越有弹性，人们越能承担繁重的工作。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月06日 08:38</div>
-    <div title="epubcfi(/6/26[id83]!/4/284/1,:39,:87)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-一般情况下，<span style="color: #FECF0B">参考资料系统有两种形式：（1）按特定主题或特定领域分类存储的系统；（2）一般性参考资料归档系统。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月06日 08:38</div>
-    <div title="epubcfi(/6/26[id83]!/4/286/3,:92,:126)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-你总是需要有一个地方来存放厨具的使用说明手册、某个特定工程的手写会议记录，以及<span style="color: #FECF0B">你上一次去东京旅行结束时没来得及兑换的几个日元（下次去时还可以使用）</span>。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月06日 09:10</div>
-    <div title="epubcfi(/6/26[id83]!/4/380/1,:121,:125)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-我们可以用视野即<span style="color: #33D42D">知觉距离</span>的概念进行类比。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月07日 06:32</div>
-    <div title="epubcfi(/6/28[id84]!/4/150/1,:138,:173)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-以问自己这样一个问题作为开始：“<span style="color: #FECF0B">什么样的行为可能会损害我正在进行的工作？我怎样才能防止这类情况的发生？</span>”
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 07:59</div>
-    <div title="epubcfi(/6/34[id86]!/4/12,/2/1:0,/4/1:9)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">通过行动让自己感觉良好，要比通过让自己感觉良好来实现更好的行动容易得多。
-——O·H·莫尼尔</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:00</div>
-    <div title="epubcfi(/6/34[id86]!/4/16/1,:279,:287)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-我把这个诀窍称为<span style="color: #FECF0B">“把它放在门口”</span>，我们的目的是把它记在心上。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:02</div>
-    <div title="epubcfi(/6/34[id86]!/4/22/2/1,:22,:35)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-高效、创新、富有成效的思维和行动的诀窍，是在<span style="color: #FECF0B">正确的时间关注适当的事情。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:35</div>
-    <div title="epubcfi(/6/34[id86]!/4/116/1,:52,:93)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-正如我以前提到过的，<span style="color: #FECF0B">日程表不应该当作一个行动清单来使用，它应该记录那些必须在指定日期或时间完成的工作。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:37</div>
-    <div title="epubcfi(/6/34[id86]!/4/130/1,:191,:194)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-也可以使用高科技装备，比如<span style="color: #33D42D">PDA</span>。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:37</div>
-    <div title="epubcfi(/6/34[id86]!/4/112/1,:30,:45)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-如果归档系统需要，你还应该准备大量的<span style="color: #33D42D">Pendaflex式悬挂文件夹</span>。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:41</div>
-    <div title="epubcfi(/6/34[id86]!/4/140/1,:31,:49)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-从20世纪晚期开始，市场上就充斥着各种各样的计划手册，从早期的<span style="color: #33D42D">每日计划手册（Day-Timers）</span>和FranklinCovey活页本，到再度启用的Moleskine简易笔记本，再到现在的任务管理软件应用程序。 
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:41</div>
-    <div title="epubcfi(/6/34[id86]!/4/140/1,:50,:66)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-从20世纪晚期开始，市场上就充斥着各种各样的计划手册，从早期的每日计划手册（Day-Timers）和<span style="color: #33D42D">FranklinCovey活页本</span>，到再度启用的Moleskine简易笔记本，再到现在的任务管理软件应用程序。 
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:41</div>
-    <div title="epubcfi(/6/34[id86]!/4/140/1,:73,:87)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-从20世纪晚期开始，市场上就充斥着各种各样的计划手册，从早期的每日计划手册（Day-Timers）和FranklinCovey活页本，到再度启用的<span style="color: #33D42D">Moleskine简易笔记本</span>，再到现在的任务管理软件应用程序。 
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:55</div>
-    <div title="epubcfi(/6/34[id86]!/4/170/1,:232,:274)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">整个归档分类过程不应该超过1分钟，如果达不到这个要求，就说明你的归档系统还需要改进。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 08:57</div>
-    <div title="epubcfi(/6/34[id86]!/4/174/1,:69,:96)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-我设计的系统对我自己非常合适，很多尝试过的人也有同感，所以<span style="color: #FECF0B">我强烈建议你参考下面提到的方法，来改进自己的归档系统。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 09:06</div>
-    <div title="epubcfi(/6/34[id86]!/4/184/1,:133,:168)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-根据我的经验来说，<span style="color: #FECF0B">“我不需要整理材料，因为使用搜索功能就足以找到它们”这种态度并不可取。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 09:18</div>
-    <div title="epubcfi(/6/34[id86]!/4/202/1,:17,:37)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-到目前为止，科学家还不能解释为什么<span style="color: #FECF0B">带有打印标签的文件夹会让工作变得如此高效</span>，但是我知道这确实是事实。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月08日 09:23</div>
-    <div title="epubcfi(/6/34[id86]!/4/214/1,:28,:29)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-在各种事项的宏大计划中，参考材料和辅助材料的归档工作并非<span style="color: #33D42D">亟</span>待处理，也往往不具有战略意义。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:19</div>
-    <div title="epubcfi(/6/38[id88]!/4/58/1,:289,:295)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-认知科学家现在已经证明了<span style="color: #33D42D">“认知疲劳”</span>的真实性，即你做出的每个或大或小的决定都会在一定程度上消耗你的脑力。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:45</div>
-    <div title="epubcfi(/6/38[id88]!/4/168/1,:45,:61)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-要知道<span style="color: #FECF0B">“决定”并不是一个真正的“行动”</span>，因为真正的“行动”需要耗费时间去执行，而“决定”并非如此。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:45</div>
-    <div title="epubcfi(/6/38[id88]!/4/168/1,:114,:145)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">99%的情况下，在你做出决定之前，你要做的就是获取更多的信息。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:45</div>
-    <div title="epubcfi(/6/38[id88]!/4/172/2/1,:0,:21)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">找出那些能够帮助你做出“决定”的具体行动。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 06:51</div>
-    <div title="epubcfi(/6/38[id88]!/4/184/1,:488,:493)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-他的同事都说他是由<span style="color: #33D42D">“特富龙”</span>那样的高性能材料制成的。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 07:00</div>
-    <div title="epubcfi(/6/38[id88]!/4/220/1,:73,:76)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-在你完整地建立了自己的任务管理系统之后，你会发现这类委派给他人的任务，形成了一个“等待”清单，这个清单可能是在记事本上，或者一个文件夹里，或者你的<span style="color: #33D42D">PDA</span>中。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月09日 20:00</div>
-    <div title="epubcfi(/6/40[id89]!/4/64,/1:224,/2/1:1)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-当你按照这样的规则来安排你的日程表时，剩下的自然就是那些没有苛刻时间要求的<span style="color: #33D42D">ASAP </span>[1] 行动了。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月11日 19:27</div>
-    <div title="epubcfi(/6/40[id89]!/4/276/1,:22,:39)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-大多数人发现，使用一张清单是最佳的选择，因为<span style="color: #FECF0B">“项目”清单是作为一个总目录来用的</span>，而不是用作每日的工作指导。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月11日 19:27</div>
-    <div title="epubcfi(/6/40[id89]!/4/278/1,:46,:58)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-坦白地说，你拥有多少个项目清单都无关紧要，只要你可以根据需要经常地浏览这些内容就行了，这也是<span style="color: #FECF0B">“每周回顾”的主要内容。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月11日 19:50</div>
-    <div title="epubcfi(/6/40[id89]!/4/324/1,:38,:41)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-许多人与现有和潜在客户交往时，往往试图使用“客户文件夹”和/或客户关系管理（<span style="color: #33D42D">CRM</span>）软件来“管理客户”。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 06:45</div>
-    <div title="epubcfi(/6/40[id89]!/4/376/1,:167,:211)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">一般来说，除非是明确属于某一特定类别，最好还是将资料都归入一个统一的一般性参考资料系统。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 06:47</div>
-    <div title="epubcfi(/6/40[id89]!/4/382/1,:115,:120)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-要知道，这种方法根本行不通，除非它是一个功能强大的<span style="color: #33D42D">CRM系统</span>的一部分，既包含客户信息，也包含经过适当分配和整合的行动触发因素。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 06:59</div>
-    <div title="epubcfi(/6/40[id89]!/4/436/1,:11,:53)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-此外，我们还应注意到，<span style="color: #FECF0B">一个管理良好的“将来/也许”清单与保存各种“材料”的收纳箱之间，是存在着巨大差别的。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月12日 07:04</div>
-    <div title="epubcfi(/6/40[id89]!/4/468/3,:73,:118)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-它可被看作是你自己的邮递系统，<span style="color: #FECF0B">你可以建立属于自己的邮局，通过它给未来的自己发封邮件，通知未来的自己到时候去完成某件事情。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月14日 07:58</div>
-    <div title="epubcfi(/6/40[id89]!/4/518/1,:10,:27)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-我在前面曾经建议过，<span style="color: #FECF0B">你的“工作”至少可以定义为6个级别</span>，每一级别都应该拥有专门的确认手段和评估方法。
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月14日 08:40</div>
-    <div title="epubcfi(/6/42[id90]!/4/130/2/1,:82,:106)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-如果你不是自觉地去努力开启这种自我指导的思维过程，那么你就是在<span style="color: #FECF0B">向懒惰屈服让步，你将永远丧失控制自己生活的能力。</span>
-
-{% endnote %}
-
-<div class="annotation-label-wapper">
-    <div>2020年03月14日 08:50</div>
-    <div title="epubcfi(/6/44[id91]!/4/32,/2/1:0,/4/1:10)" class="annotation-label-pos">POS</div>
-</div>
-
-{% note no-icon %}
-
-<span style="color: #FECF0B">在约束中能感到自如，那你就是自由的了。
-——罗伯特·弗罗斯特</span>
-
-{% endnote %}
-
 
