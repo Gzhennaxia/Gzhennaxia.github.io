@@ -89,7 +89,7 @@ tags:
 <div style="width: 100%;
             height: 300px;
             background-image: url(http://xxxx/xxx.xxx.jpg);
-            background-size: 703px 756px;
+            background-size: 727px 248px;
             background-position: 0px 0px;"></div>
 ```
 
