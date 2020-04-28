@@ -11,10 +11,11 @@ categories:
 tags:
 ---
 
-<img src="cover" width="100%"/>
+<img src="https://is3-ssl.mzstatic.com/image/thumb/Purple113/v4/a9/ac/b9/a9acb983-76e2-d76d-fbc8-c35388dcee48/pr_source.png/1000x1000bb.jpg" width="100%"/>
 
 <!-- more -->
 
 编辑截止日期
 
 year/month/day hh:mm:ss
+
