@@ -205,6 +205,8 @@ C -->|Two| E[Result 2]</pre></td>
 ## Mermaid
 
 > [mermaid|GitHub](https://github.com/mermaid-js/mermaid)
+>
+> [Mermaid | NexT](https://theme-next.js.org/docs/tag-plugins/mermaid.html)
 
 {% cq %}
 
@@ -214,7 +216,17 @@ Generation of diagram and flowchart from text in a similar manner as markdown.
 
 ### 流程图
 
+{% mermaid graph TD %}
 
+A[Hard] -->|Text| B(Round)
+
+B --> C{Decision}
+
+C -->|One| D[Result 1]
+
+C -->|Two| E[Result 2]
+
+{% endmermaid %}
 
 ## 视频
 
