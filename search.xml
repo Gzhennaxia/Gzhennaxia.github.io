@@ -2279,7 +2279,7 @@
   </entry>
   <entry>
     <title>Git</title>
-    <url>/2020/11/18/Git/</url>
+    <url>/2020/11/19/Git/</url>
     <content><![CDATA[<img data-src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <a id="more"></a>
@@ -2335,7 +2335,7 @@
   </entry>
   <entry>
     <title>GitHub Pages+Hexo+NexT</title>
-    <url>/2020/11/18/GitHub%20Pages+Hexo+NexT/</url>
+    <url>/2020/11/19/GitHub%20Pages+Hexo+NexT/</url>
     <content><![CDATA[<blockquote>
 <p>环境：</p>
 <p>node.js    10.14.2</p>
@@ -2803,7 +2803,7 @@
 <li>Redis 除了做缓存，还有其他的使用场景吗？</li>
 <li>Redis 做分布式锁有用过吗？</li>
 <li>MySQL 你有没有做过分库分表？</li>
-<li>Spring Boot 哪块了解的不叫熟悉？</li>
+<li>Spring Boot 哪块了解的比较熟悉？</li>
 <li>怎么自定义一个 Spring Boot Starter？</li>
 <li>ES 你们一般是用来干嘛？</li>
 <li>Java 的垃圾回收过程是什么样的？比如说垃圾从哪里产生，什么时候触发GC，最后怎么回收？</li>
@@ -3868,7 +3868,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Prepare-for-spring-travel</title>
-    <url>/2020/11/18/Prepare-for-spring-travel/</url>
+    <url>/2020/11/19/Prepare-for-spring-travel/</url>
     <content><![CDATA[<img data-src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <a id="more"></a>
@@ -4039,7 +4039,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Software and Tools</title>
-    <url>/2020/11/18/Software%20and%20Tools/</url>
+    <url>/2020/11/19/Software%20and%20Tools/</url>
     <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
 
 <a id="more"></a>
@@ -5669,7 +5669,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Windows</title>
-    <url>/2020/11/18/Windows/</url>
+    <url>/2020/11/19/Windows/</url>
     <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
 
 <a id="more"></a>
