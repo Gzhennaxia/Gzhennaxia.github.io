@@ -2279,7 +2279,7 @@
   </entry>
   <entry>
     <title>Git</title>
-    <url>/2020/11/23/Git/</url>
+    <url>/2020/12/01/Git/</url>
     <content><![CDATA[<img data-src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <a id="more"></a>
@@ -2335,7 +2335,7 @@
   </entry>
   <entry>
     <title>GitHub Pages+Hexo+NexT</title>
-    <url>/2020/11/23/GitHub%20Pages+Hexo+NexT/</url>
+    <url>/2020/12/01/GitHub%20Pages+Hexo+NexT/</url>
     <content><![CDATA[<blockquote>
 <p>环境：</p>
 <p>node.js    10.14.2</p>
@@ -2776,7 +2776,7 @@
 <li>00:55 离职原因？</li>
 <li>02:04 之前的项目有没有用户量比较大的？</li>
 <li>03:45 自动装箱/拆箱是在编译阶段还是运行阶段完成的？</li>
-<li>04:00 方法的参数值传递还是饮用传递？</li>
+<li>04:00 方法的参数值传递还是引用传递？</li>
 <li>04:55 父类可不可以转型为子类？</li>
 <li>05:22 Java 的多太体现在哪些方面？</li>
 <li>05:56 往 HashMap 里放 1000 条数据，怎么优化它的性能？</li>
@@ -4011,7 +4011,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Prepare-for-spring-travel</title>
-    <url>/2020/11/23/Prepare-for-spring-travel/</url>
+    <url>/2020/12/01/Prepare-for-spring-travel/</url>
     <content><![CDATA[<img data-src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <a id="more"></a>
@@ -4182,7 +4182,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Software and Tools</title>
-    <url>/2020/11/23/Software%20and%20Tools/</url>
+    <url>/2020/12/01/Software%20and%20Tools/</url>
     <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
 
 <a id="more"></a>
@@ -5812,7 +5812,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Windows</title>
-    <url>/2020/11/23/Windows/</url>
+    <url>/2020/12/01/Windows/</url>
     <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
 
 <a id="more"></a>
