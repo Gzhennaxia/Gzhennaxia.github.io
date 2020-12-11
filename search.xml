@@ -2279,7 +2279,7 @@
   </entry>
   <entry>
     <title>Git</title>
-    <url>/2020/12/10/Git/</url>
+    <url>/2020/12/11/Git/</url>
     <content><![CDATA[<img data-src="https://git-scm.com/images/logos/2color-lightbg@2x.png" width="100%"/>
 
 <a id="more"></a>
@@ -2335,7 +2335,7 @@
   </entry>
   <entry>
     <title>GitHub Pages+Hexo+NexT</title>
-    <url>/2020/12/10/GitHub%20Pages+Hexo+NexT/</url>
+    <url>/2020/12/11/GitHub%20Pages+Hexo+NexT/</url>
     <content><![CDATA[<blockquote>
 <p>环境：</p>
 <p>node.js    10.14.2</p>
@@ -4036,7 +4036,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Prepare-for-spring-travel</title>
-    <url>/2020/12/10/Prepare-for-spring-travel/</url>
+    <url>/2020/12/11/Prepare-for-spring-travel/</url>
     <content><![CDATA[<img data-src="https://ws1.sinaimg.cn/large/005M2pcYgy1fzg88oizf2j30b607e0ug.jpg" width="100%"/>
 
 <a id="more"></a>
@@ -4207,7 +4207,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Software and Tools</title>
-    <url>/2020/12/10/Software%20and%20Tools/</url>
+    <url>/2020/12/11/Software%20and%20Tools/</url>
     <content><![CDATA[<img data-src="https://cdn.techopedia.com/images/uploads/92c11d5cff6e43f299d55f5e66fc9ebf.jpg?width=360&height=240&mode=crop" width="100%"/>
 
 <a id="more"></a>
@@ -5837,7 +5837,7 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Windows</title>
-    <url>/2020/12/10/Windows/</url>
+    <url>/2020/12/11/Windows/</url>
     <content><![CDATA[<img data-src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge/public/field/image/2017/03/cloudwallpaper.jpg?itok=VC2ajDrI" width="100%" />
 
 <a id="more"></a>
@@ -5967,10 +5967,8 @@ C -->|Two| E[Result 2]
   </entry>
   <entry>
     <title>Interview</title>
-    <url>/2020/12/10/Interview/</url>
-    <content><![CDATA[<hr>
-<p>title: Interview<br>description: 面试<br>comments: false<br>hidden: false<br>top: false<br>date: 2020-10-21 20:00:51<br>categories:<br>tags:<br>—计算元素值的哈希值。根据哈希值，在位数组中把对应下标的值置为 1。</p>
-<img data-src="https://resources.workable.com/wp-content/uploads/2018/05/prepare-interviews-featured.png" width="100%"/>
+    <url>/2020/10/21/Interview/</url>
+    <content><![CDATA[<img data-src="https://resources.workable.com/wp-content/uploads/2018/05/prepare-interviews-featured.png" width="100%"/>
 
 <a id="more"></a>
 
@@ -5979,7 +5977,6 @@ C -->|Two| E[Result 2]
 <p><a href="https://github.com/CyC2018" target="_blank" rel="noopener">CyC2018</a>/<a href="https://github.com/CyC2018/CS-Notes" target="_blank" rel="noopener">CS-Notes</a></p>
 <p><a href="https://xiaozhuanlan.com/javainterview?rel=javaguide" target="_blank">《Java 面试进阶指南》</a> </p>
 </blockquote>
-<p>[toc]</p>
 <h2 id="简历"><a href="#简历" class="headerlink" title="简历"></a>简历</h2><blockquote>
 <p><a href="https://v2ex.com/t/671405" target="_blank" rel="noopener">前天面试被怼哭,找工作找到崩溃,求各路上仙指点 | V2EX</a></p>
 </blockquote>
@@ -6008,7 +6005,7 @@ C -->|Two| E[Result 2]
 <p>4 用 xx 第三方库实现了 xx 这种就不要写了，比如法务系统里那个“合同页面导出到 word”。这不是你做的，是这个 xx 库做的，你只是一个搬运工。除非这个第三方库有坑，你改这个库或者做了一层 cover 把坑填了，这才值得写。</p>
 <p>5.版本管理工具这种就不要提了。还是那句话，不要复读常识。当然除非你在工作中根据自己的项目情况制定了一套类似 git flow 的版本管理经验，这才值得写。</p>
 <h3 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h3><p>你好，我叫李博，木子李，博士的博。94年的，今年是26。籍贯是陕西。</p>
-<p>17年毕业于延安大学，专业是信息与计算科学，是个一本。</p>
+<p>17年毕业于延安大学，专业是信息与计算科学。</p>
 <p>毕业后就来了深圳工作，到目前为止是有三年多的工作经验。</p>
 <p>平常工作中主要使用的是 Spring Boot、MyBatis 等框架，数据库使用过关系型的 MySQL 和 Oracle，文档型的使用过 MongDB，以及内存型的数据库 Redis。</p>
 <p>目前最近的项目是前后端分离开发的项目，后端使用的 Spring Cloud 的微服务架构，前段使用的是 Vue.js 结合 Element-UI 组件库开发的。</p>
@@ -6020,10 +6017,10 @@ C -->|Two| E[Result 2]
 <h4 id="三大特征"><a href="#三大特征" class="headerlink" title="三大特征"></a>三大特征</h4><p>面向对象的三大特征：封装、继承、多态</p>
 <h5 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h5><p>把数据以及对数据的操作封装在一个类里。</p>
 <h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><h5 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h5><p>父类引用指向子类对象。</p>
-<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>在软件业，AOP 为 Aspect Oriented Programming 的缩写，意为：面向切面编程</p>
+<h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>在软件行业，AOP 为 Aspect Oriented Programming 的缩写，意为：面向切面编程</p>
 <p>Spring AOP 的实现原理：动态代理</p>
 <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="布隆过滤器"><a href="#布隆过滤器" class="headerlink" title="布隆过滤器"></a>布隆过滤器</h3><p>布隆过滤器是一种用来检索元素是否在给定大集合中的数据结构，这种数据结构是高效且性能很好的，但缺点是具有一定的错误识别率和删除难度。并且，理论情况下，添加到集合中的元素越多，误报的可能性就越大。</p>
-<p>布隆过滤器（Bloom Filter）由二进制向量（或者说位数组）和一系列随机映射函数（哈希函数）两部分组成的数据结构。</p>
+<p>布隆过滤器（Bloom Filter）是由二进制向量（或者说位数组）和一系列随机映射函数（哈希函数）两部分组成的数据结构。</p>
 <h4 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h4><ol>
 <li>使用哈希函数对元素值进行计算，得到哈希值（有几个哈希函数得到几个哈希值）。</li>
 <li>根据得到的哈希值，在位数组中把对应下标的值置为 1。</li>
@@ -6034,10 +6031,18 @@ C -->|Two| E[Result 2]
 </ol>
 <p>布隆过滤器说某个元素存在，小概率会误判。布隆过滤器说某个元素不在，那么这个元素一定不在。</p>
 <h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><ol>
-<li>判断给定数据是否存在：比如判断一个数字是否存在于包含大量数字的数字集中（数字集很大，5亿以上！）、 防止缓存穿透（判断请求的数据是否有效避免直接绕过缓存请求数据库）等等、邮箱的垃圾邮件过滤、黑名单功能等等。</li>
-<li>去重：比如爬给定网址的时候对已经爬取过的 URL 去重。</li>
+<li><p>判断给定数据是否存在：</p>
+<ul>
+<li>比如判断一个数字是否存在于包含大量数字的数字集中（数字集很大，5亿以上！）</li>
+<li>防止缓存穿透（判断请求的数据是否有效避免直接绕过缓存请求数据库）</li>
+<li>邮箱的垃圾邮件过滤</li>
+<li>黑名单功能</li>
+</ul>
+</li>
+<li><p>去重：比如爬给定网址的时候对已经爬取过的 URL 去重。</p>
+</li>
 </ol>
-<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><h5 id="Google-Guava-的布隆过滤器"><a href="#Google-Guava-的布隆过滤器" class="headerlink" title="Google Guava 的布隆过滤器"></a>Google Guava 的布隆过滤器</h5><p>创建了一个最多存放 最多 1500个整数的布隆过滤器，并且我们可以容忍误判的概率为百分之一（0.01）</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><h5 id="Google-Guava-的布隆过滤器"><a href="#Google-Guava-的布隆过滤器" class="headerlink" title="Google Guava 的布隆过滤器"></a>Google Guava 的布隆过滤器</h5><p>创建了一个最多存放 1500 个整数的布隆过滤器，并且我们可以容忍误判的概率为百分之一（0.01）</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建布隆过滤器对象</span></span><br><span class="line">BloomFilter&lt;Integer&gt; filter = BloomFilter.create(</span><br><span class="line">  Funnels.integerFunnel(),</span><br><span class="line">  <span class="number">1500</span>,</span><br><span class="line">  <span class="number">0.01</span>);</span><br><span class="line"><span class="comment">// 判断指定元素是否存在</span></span><br><span class="line">System.out.println(filter.mightContain(<span class="number">1</span>));</span><br><span class="line">System.out.println(filter.mightContain(<span class="number">2</span>));</span><br><span class="line"><span class="comment">// 将元素添加进布隆过滤器</span></span><br><span class="line">filter.put(<span class="number">1</span>);</span><br><span class="line">filter.put(<span class="number">2</span>);</span><br><span class="line">System.out.println(filter.mightContain(<span class="number">1</span>));</span><br><span class="line">System.out.println(filter.mightContain(<span class="number">2</span>));</span><br></pre></td></tr></table></figure>
 
 <h5 id="Redis-中的布隆过滤器"><a href="#Redis-中的布隆过滤器" class="headerlink" title="Redis 中的布隆过滤器"></a>Redis 中的布隆过滤器</h5><p>Guava 提供的布隆过滤器的实现只能单机使用（另外，容量扩展也不容易），而现在互联网一般都是分布式的场景。为了解决这个问题，就需要用到 Redis 中的布隆过滤器了。</p>
@@ -6046,7 +6051,7 @@ C -->|Two| E[Result 2]
 <h6 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h6><ol>
 <li><strong><code>BF.ADD</code></strong>：将元素添加到布隆过滤器中，如果该过滤器尚不存在，则创建该过滤器。格式：<code>BF.ADD {key} {item}</code>。</li>
 <li><strong><code>BF.MADD</code></strong>: 将一个或多个元素添加到“布隆过滤器”中，并创建一个尚不存在的过滤器。该命令的操作方式<code>BF.ADD</code>与之相同，只不过它允许多个输入并返回多个值。格式：<code>BF.MADD {key} {item} [item ...]</code> 。</li>
-<li>** <code>BF.EXISTS</code>  ** : 确定元素是否在布隆过滤器中存在。格式：<code>BF.EXISTS {key} {item}</code>。</li>
+<li><strong><code>BF.EXISTS</code></strong> : 确定元素是否在布隆过滤器中存在。格式：<code>BF.EXISTS {key} {item}</code>。</li>
 <li><strong><code>BF.MEXISTS</code></strong> ： 确定一个或者多个元素是否在布隆过滤器中存在格式：<code>BF.MEXISTS {key} {item} [item ...]</code>。</li>
 </ol>
 <h6 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">127.0.0.1:6379&gt; BF.ADD myFilter java</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; BF.ADD myFilter javaguide</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; BF.EXISTS myFilter java</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; BF.EXISTS myFilter javaguide</span><br><span class="line">(<span class="built_in">integer</span>) 1</span><br><span class="line">127.0.0.1:6379&gt; BF.EXISTS myFilter github</span><br><span class="line">(<span class="built_in">integer</span>) 0</span><br></pre></td></tr></table></figure>
@@ -6057,7 +6062,7 @@ C -->|Two| E[Result 2]
 </blockquote>
 <ul>
 <li>B+树的中间节点不保存数据，只在叶子结点中保存数据；而B树数据分布在整颗树中。</li>
-<li>因为B+树的叶子结点按顺序链接，可以很方便的进行<strong>范围查找</strong>。</li>
+<li>B+树的叶子结点按顺序链接，可以很方便的进行<strong>范围查找</strong>。</li>
 </ul>
 <h3 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h3><h4 id="5-个特性"><a href="#5-个特性" class="headerlink" title="5 个特性"></a>5 个特性</h4><ol>
 <li>每个节点要么是红色，要么是黑色；</li>
@@ -6067,7 +6072,7 @@ C -->|Two| E[Result 2]
 <li>从任一节点到其子树中每个叶子节点的路径都包含相同数量的黑色节点；</li>
 </ol>
 <p>HashMap 为什么要使用红黑树？</p>
-<p>红黑树是基于二叉查找树的改造，二叉树查找树具有平衡树和有序性的特点，能够支持快速的查找功能，但平衡树的维护成本比较高，红黑树采用的“适度平衡”标准，可以保证每次插入或删除操作后重平衡过程中，全树拓扑结构的更新仅涉及常数个节点。<strong>尽管最坏情况下需对多达logn个节点重染色，但就分摊意义而言仅为O(1)个。</strong></p>
+<p>红黑树是基于二叉查找树的改造，二叉查找树具有平衡性和有序性的特点，能够支持快速的查找功能，但完全平衡树的维护成本比较高，红黑树采用的“适度平衡”标准，可以保证每次插入或删除操作后的重平衡过程，全树拓扑结构的更新仅涉及常数个节点。<strong>尽管最坏情况下需对多达logn个节点重染色，但就分摊意义而言仅为O(1)个。</strong></p>
 <h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="KMP-算法"><a href="#KMP-算法" class="headerlink" title="KMP 算法"></a>KMP 算法</h3><p>谈到字符串问题，不得不提的就是 KMP 算法，它是用来解决字符串查找的问题，可以在一个字符串（S）中查找一个子串（W）出现的位置。KMP 算法把字符匹配的时间复杂度缩小到 O(m+n) ,而空间复杂度也只有O(m)。因为“暴力搜索”的方法会反复回溯主串，导致效率低下，而KMP算法可以利用已经部分匹配这个有效信息，保持主串上的指针不回溯，通过修改子串的指针，让模式串尽量地移动到有效的位置。</p>
 <h3 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h3><p>排序算法的成本模型是比较和交换的次数。</p>
 <h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><p>从数组中选择最小元素，将它与数组的第一个元素交换位置。再从数组剩下的元素中选择出最小的元素，将它与数组的第二个元素交换位置。不断进行这样的操作，直到将整个数组排序。</p>
@@ -8493,6 +8498,7 @@ C -->|Two| E[Result 2]
 </li>
 <li><p>布隆过滤器</p>
 <p>把所有可能存在的请求的值都存放在布隆过滤器中，当用户请求过来，先判断用户发来的请求的值是否存在于布隆过滤器中。不存在的话，直接返回请求参数错误信息给客户端，存在的话才会继续走下面的流程。</p>
+<p>计算元素值的哈希值。根据哈希值，在位数组中把对应下标的值置为 1。</p>
 </li>
 </ol>
 <h4 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h4><h5 id="什么是缓存雪崩？"><a href="#什么是缓存雪崩？" class="headerlink" title="什么是缓存雪崩？"></a>什么是缓存雪崩？</h5><p>缓存在同一时间大面积的失效，后面的请求都直接落到了数据库上，造成数据库短时间内承受大量请求。</p>
@@ -8619,7 +8625,14 @@ C -->|Two| E[Result 2]
 <p>Term dictionary在磁盘上是以分快的方式保存的，一个block内部利用公共前缀压缩，比如都是Ab开头的单词就可以把Ab省去。这样term dictionary可以更节约磁盘空间。</p>
 <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h3><h4 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h4><p>在 docker 中执行 bash 命令</p>
 <p><code>docker exec -it set-mobile_qa /bin/bash</code></p>
-<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2><h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><h3 id="SSM"><a href="#SSM" class="headerlink" title="SSM"></a>SSM</h3><h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><h4 id="服务雪崩"><a href="#服务雪崩" class="headerlink" title="服务雪崩"></a>服务雪崩</h4><p>服务雪崩就是一个服务的不可用导致了整个调用链上的服务集体雪崩。</p>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h2 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h2><h3 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h3><p>要理解前后端分离，首先要理解什么是前端，什么是后端。</p>
+<p>在系统架构中，前端是负责系统的界面样式、视觉呈现以及和用户交互的部分，后端是负责数据处理的部分。负责这两部分开发的人就是前后端工程师。</p>
+<p>前后端未分离的项目中，HTML页面和数据处理包含在同一个项目里，部署在单个服务器中。客户端(浏览器)发送请求到服务器，服务器查询数据库，再对数据进行相应处理，最后再生成相应的HTML文件，将生成的HTML文件返回给客户端。</p>
+<p>这个阶段前端工程师负责编写网页模版，之后交给后端工程师，后端工程师则将数据嵌入到网页模版中。</p>
+<p>前后端半分离的项目是HTML网页</p>
+<p>将网页模版和数据填充逻辑分离成前端项目，后端项目只负责数据处理。前后端项目分别独立开发和部署，通过HTTP协议传递数据。此时客户端访问前端项目获取HTML、CSS、JS等文件，再通过js向后端发送ajax请求获取数据，</p>
+<p>一个项目包括视图展示和数据处理两大部分，视图展示就是前端，数据处理就是后端。</p>
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><h3 id="SSM"><a href="#SSM" class="headerlink" title="SSM"></a>SSM</h3><h3 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h3><h4 id="服务雪崩"><a href="#服务雪崩" class="headerlink" title="服务雪崩"></a>服务雪崩</h4><p>服务雪崩就是一个服务的不可用导致了整个调用链上的服务集体雪崩。</p>
 <h4 id="服务熔断-1"><a href="#服务熔断-1" class="headerlink" title="服务熔断"></a>服务熔断</h4><p>所谓 <strong>熔断</strong> 就是服务雪崩的一种有效解决方案。当指定时间窗内的请求失败率达到设定阈值时，系统将通过 <strong>断路器</strong> 直接将此请求链路断开。</p>
 <h4 id="服务降级-1"><a href="#服务降级-1" class="headerlink" title="服务降级"></a>服务降级</h4><h4 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h4><h5 id="RPC-解决了什么问题？"><a href="#RPC-解决了什么问题？" class="headerlink" title="RPC 解决了什么问题？"></a>RPC 解决了什么问题？</h5><p><strong>让分布式或者微服务系统中不同服务之间的调用像本地调用一样简单。</strong></p>
 <h5 id="既有-HTTP-为啥用-RPC-进行服务调用"><a href="#既有-HTTP-为啥用-RPC-进行服务调用" class="headerlink" title="既有 HTTP ,为啥用 RPC 进行服务调用?"></a>既有 HTTP ,为啥用 RPC 进行服务调用?</h5><p>RPC 只是一种概念、一种设计，就是为了解决 <strong>不同服务之间的调用问题</strong>, 它一般会包含有 <strong>传输协议</strong> 和 <strong>序列化协议</strong> 这两个。</p>

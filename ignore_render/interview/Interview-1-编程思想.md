@@ -30,7 +30,7 @@
 
 ### AOP
 
-在软件业，AOP 为 Aspect Oriented Programming 的缩写，意为：面向切面编程
+在软件行业，AOP 为 Aspect Oriented Programming 的缩写，意为：面向切面编程
 
 Spring AOP 的实现原理：动态代理
 

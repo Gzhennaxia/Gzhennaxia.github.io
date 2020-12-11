@@ -8,7 +8,6 @@
 
 ##### MyISAM和InnoDB区别
 
-
 MyISAM是MySQL 5.5版之前的默认数据库引擎。5.5版本之后，默认的存储引擎为InnoDB。
 
 **两者的对比：**
