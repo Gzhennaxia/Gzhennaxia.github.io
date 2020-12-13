@@ -31,7 +31,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://quanminyingyu.com/ueditor/image/20190311/1552300547637720.png">
 <meta property="article:published_time" content="2020-11-10T09:45:24.000Z">
-<meta property="article:modified_time" content="2020-12-11T11:26:23.515Z">
+<meta property="article:modified_time" content="2020-12-13T02:55:28.764Z">
 <meta property="article:author" content="Gzhennaxia">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://quanminyingyu.com/ueditor/image/20190311/1552300547637720.png">
@@ -223,7 +223,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-12-11 19:26:23" itemprop="dateModified" datetime="2020-12-11T19:26:23+08:00">2020-12-11</time>
+                <time title="Modified: 2020-12-13 10:55:28" itemprop="dateModified" datetime="2020-12-13T10:55:28+08:00">2020-12-13</time>
               </span>
 
           
@@ -241,14 +241,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>7.6k</span>
+              <span>9.5k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>13 mins.</span>
+              <span>16 mins.</span>
             </span>
             <div class="post-description">面试经历</div>
 
@@ -502,7 +502,7 @@
 <p>2020-11-20 10:00 ~ </p>
 <p>录音笔11月20日_2.aac</p>
 </blockquote>
-<ol>
+<h3 id="一面-3"><a href="#一面-3" class="headerlink" title="一面"></a>一面</h3><ol>
 <li>自我介绍</li>
 <li>02:11 说一下API组具体做的什么，怎么做的？</li>
 <li>02:40 API项目主要的功能是什么，架构是什么，采用了什么技术？</li>
@@ -527,6 +527,77 @@
 <li>20:06 JVM 有没有去了解过？说一下内存模型</li>
 <li>22:37 年轻代空间比例是多少？</li>
 <li>22:47 垃圾回收算法有哪些？有哪些垃圾收集器？</li>
+</ol>
+<h3 id="二面-技术总监"><a href="#二面-技术总监" class="headerlink" title="二面(技术总监)"></a>二面(技术总监)</h3><blockquote>
+<p>录音笔 11月24日_1.aac</p>
+</blockquote>
+<ol>
+<li>00:35 自我介绍</li>
+<li>01:48 最近在专业的领域上有看哪些书籍吗？</li>
+<li>02:26 介绍一下 JVM 的内存模型</li>
+<li>04:35 程序计数器主要的作用是什么？</li>
+<li>05:10 GC 算法有哪些？</li>
+<li>07:17 有哪些对象可以作为可达性分析算法的GC ROOT？</li>
+<li>07:46 如果频繁的出现 Full GC，一般是什么原因造成的？怎么去分析和定位问题？怎么 Dump？做过 dump 文件的分析吗？</li>
+<li>10:11 用 == 比较两个 Integer 对象会是什么结果？</li>
+<li>10:57 一个 byte 有多少位？它能存储的整数范围是多大？如果把128放进去会怎么样？</li>
+<li>11:47 Java list 的实现类有哪些？</li>
+<li>11:58 ArrayList 的默认长度是多少？ArrayList 在扩容的时候是怎么处理的？它是在原有的上扩容还是需要新的数组？为什么不在原有的基础上扩？</li>
+<li>13:25 数组的查询复杂度是多少？</li>
+<li>13:40 HashMap 与 HashTable 有什么区别？</li>
+<li>13:57 HashMap 的数据结构是什么样的？什么时候用的链表，什么时候用红黑树？</li>
+<li>15:52 HashMap 要做到线程安全要怎么做？ConcurrentHashMap 是怎么实现线程安全的？1.8 使用的 synchronize，和我直接在 HashMap 上加 synchronized 有什么不一样的？</li>
+<li>18:32 介绍一下 synchronized 的实现原理，synchronized 有几种锁？synchronized 和 lock 的区别是什么？</li>
+<li>23:11 Java 中的 ThreadLocal 的存储结构上怎样的？</li>
+<li>24:04 如果我要把一个大的任务拆分成多个字任务，最后进行汇总，用多线程怎么设计？</li>
+<li>24:47 jdk 里一个线程默认占用的内存是多少？</li>
+<li>25:06 new 一个 abc 字符串，产生了多少个对象？再new一个abc会产生多少个对象？</li>
+<li>26:30 我们在设置密码的时候是用 String 好还是char好？</li>
+<li>26:51 Java 对象在序列化的时候有哪些属性是不会被序列化的？</li>
+<li>27:36 字符流和字节流有什么区别？字节流的Java类有哪些？</li>
+<li>28:37 数据库哪种用的比较多？对哪个比较熟悉？</li>
+<li>19:12 mysql的存储引擎有哪些？innodb 索引结构是什么？</li>
+<li>30:54 现在有个表，有个字段是存储大文本的，那实现的时候是需要把它放在子表里还是保留在原表里？</li>
+<li>31:38 mysql 的主从复制能介绍一下吗？</li>
+<li>31:55 Spring 的事务传播机制有哪些？</li>
+<li>32:28 Spring 的AOP的技术实现是怎么实现的？CGLIB是通过什么技术实现的？那它是动态的织入还是静态的织入？</li>
+<li>34:13 IoC 是通过什么技术实现的？</li>
+<li>35:06 中间件了解哪些？RabbitMq 是基于什么协议实现的？RabbitMq 消息的发送模式有几种？RabbitMq 的集群模式有几种？</li>
+<li>39:12 Spring Cloud 哪些组建比较熟？</li>
+<li>39:54 Euraka 在CAP里是保障了哪两项？解释一下什么是分区可用性？</li>
+<li>42:07 怎么把mybatis说有的sql语句抓去出来？</li>
+<li>42:57 平常写代码的时候怎么保证代码质量？</li>
+<li>43:44 单元测试有写过mock测试吗？</li>
+<li>44:10 职业规划是怎么样的？</li>
+<li>44:51 你这边有什么问题要问我的吗？</li>
+</ol>
+<h3 id="三面-HR"><a href="#三面-HR" class="headerlink" title="三面(HR)"></a>三面(HR)</h3><blockquote>
+<p>录音笔 11月25日_2.aac</p>
+</blockquote>
+<ol>
+<li>00:57 自我介绍</li>
+<li>03:35 你们主要是做什么项目？我看你写的是跨境电商</li>
+<li>04:21 你们核心的项目是哪一个？</li>
+<li>04:36 你在 API 项目组里是充当一个什么角色？</li>
+<li>04:52 你们这个项目有多少人？</li>
+<li>06:07 你们和欧洲团队是怎么沟通的？</li>
+<li>08:23 通过文档来沟通，你觉得这种沟通效率高还是低？会不会存在语言上的障碍？</li>
+<li>09:47 电商行业有做的好的有不好的，你们公司做的怎么样？</li>
+<li>11:58 你现在是已经提离职了还是在看机会？</li>
+<li>12:10 是已经有拿到了 offer 了吗？</li>
+<li>12:46 你是住在哪个地方？我们工作地点猎头有跟你说吗？</li>
+<li>14:20 你今年换工作的主要原因是你们公司业务受影响了是吗？</li>
+<li>14:48 那你上一家公司的离职原因是什么？</li>
+<li>18:25 你之前做过的项目里，你觉得哪个项目做起来是最优成就感的？你在这个项目中的亮点体现在哪里？</li>
+<li>21:23 之前对宝能集团有做过了解吗？谈一下你对宝能的一些认识。</li>
+<li>23:20 那你有没有什么问题想要问我的？</li>
+<li>23:41 项目你这边感兴趣吗？</li>
+<li>27:39 你在木星软件有得到过晋升加薪的机会吗？</li>
+<li>30:19 你有因为薪资的原因离职吗？</li>
+<li>31:19 你们有其他的一些福利吗？</li>
+<li>33:12 那你的期望薪资是多少？还可以再谈吗？那你综合年薪期望是多少？</li>
+<li>34:43 毕业证这些都有吗？</li>
+<li>38:04 你这边到岗时间是多久？</li>
 </ol>
 <h3 id="定薪"><a href="#定薪" class="headerlink" title="定薪"></a>定薪</h3><blockquote>
 <p>手机通话录音</p>
@@ -594,7 +665,7 @@
       <i class="fa fa-chevron-left"></i> Interview
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/12/11/GitHub%20Pages+Hexo+NexT/" rel="next" title="GitHub Pages+Hexo+NexT">
+    <a href="/2020/12/13/GitHub%20Pages+Hexo+NexT/" rel="next" title="GitHub Pages+Hexo+NexT">
       GitHub Pages+Hexo+NexT <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -656,7 +727,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#深圳市智学云科技"><span class="nav-number">1.</span> <span class="nav-text">深圳市智学云科技</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任职要求"><span class="nav-number">1.1.</span> <span class="nav-text">任职要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一面"><span class="nav-number">1.2.</span> <span class="nav-text">一面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#珍爱网"><span class="nav-number">2.</span> <span class="nav-text">珍爱网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任职资格"><span class="nav-number">2.1.</span> <span class="nav-text">任职资格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一面-1"><span class="nav-number">2.2.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二面"><span class="nav-number">2.3.</span> <span class="nav-text">二面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜电科技"><span class="nav-number">3.</span> <span class="nav-text">搜电科技</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一面-2"><span class="nav-number">3.1.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二面-1"><span class="nav-number">3.2.</span> <span class="nav-text">二面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三面-技术总监"><span class="nav-number">3.3.</span> <span class="nav-text">三面(技术总监)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四面-HR"><span class="nav-number">3.4.</span> <span class="nav-text">四面(HR)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平安智慧城市"><span class="nav-number">4.</span> <span class="nav-text">平安智慧城市</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宝能物流"><span class="nav-number">5.</span> <span class="nav-text">宝能物流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定薪"><span class="nav-number">5.1.</span> <span class="nav-text">定薪</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#薪资结构"><span class="nav-number">5.1.1.</span> <span class="nav-text">薪资结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#福利"><span class="nav-number">5.1.2.</span> <span class="nav-text">福利</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#加班福利"><span class="nav-number">5.1.2.1.</span> <span class="nav-text">加班福利</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#深圳市智学云科技"><span class="nav-number">1.</span> <span class="nav-text">深圳市智学云科技</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任职要求"><span class="nav-number">1.1.</span> <span class="nav-text">任职要求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一面"><span class="nav-number">1.2.</span> <span class="nav-text">一面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#珍爱网"><span class="nav-number">2.</span> <span class="nav-text">珍爱网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#任职资格"><span class="nav-number">2.1.</span> <span class="nav-text">任职资格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一面-1"><span class="nav-number">2.2.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二面"><span class="nav-number">2.3.</span> <span class="nav-text">二面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜电科技"><span class="nav-number">3.</span> <span class="nav-text">搜电科技</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一面-2"><span class="nav-number">3.1.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二面-1"><span class="nav-number">3.2.</span> <span class="nav-text">二面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三面-技术总监"><span class="nav-number">3.3.</span> <span class="nav-text">三面(技术总监)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四面-HR"><span class="nav-number">3.4.</span> <span class="nav-text">四面(HR)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#平安智慧城市"><span class="nav-number">4.</span> <span class="nav-text">平安智慧城市</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#宝能物流"><span class="nav-number">5.</span> <span class="nav-text">宝能物流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一面-3"><span class="nav-number">5.1.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二面-技术总监"><span class="nav-number">5.2.</span> <span class="nav-text">二面(技术总监)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三面-HR"><span class="nav-number">5.3.</span> <span class="nav-text">三面(HR)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定薪"><span class="nav-number">5.4.</span> <span class="nav-text">定薪</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#薪资结构"><span class="nav-number">5.4.1.</span> <span class="nav-text">薪资结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#福利"><span class="nav-number">5.4.2.</span> <span class="nav-text">福利</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#加班福利"><span class="nav-number">5.4.2.1.</span> <span class="nav-text">加班福利</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -734,12 +805,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="Symbols count total">505k</span>
+    <span title="Symbols count total">507k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">14:02</span>
+    <span title="Reading time total">14:05</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
   </div>
