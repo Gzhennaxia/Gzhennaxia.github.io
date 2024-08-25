@@ -34,7 +34,7 @@ tags:
 
 > [全景](https://www.720yun.com/t/5yz6nzw7n4u2mee9uw?pano_id=XUGCuzInuYSsuAmi)
 
-![image-20240825195022628](C:\BELLE\images\image-20240825195022628.png)
+![image-20240825195022628](https://github.com/Gzhennaxia/picx-images-hosting/raw/master/image-20240825195022628.1023moyt95.webp)
 
 
 
