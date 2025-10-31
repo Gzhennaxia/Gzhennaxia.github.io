@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>系统单据同步配置</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#4080FF',
+            neutral: '#F5F7FA',
+            dark: '#1D2129',
+            'gray-light': '#C9CDD4',
+            'gray-medium': '#86909C'
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .transition-height {
+        transition: max-height 0.3s ease-in-out;
+      }
+      .card-shadow {
+        box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.06);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter text-dark min-h-screen">
+  <!-- 顶部导航 -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fa fa-cogs text-primary text-2xl"></i>
+        <h1 class="text-xl font-semibold">系统配置中心</h1>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-gray-medium text-sm">欢迎回来，管理员</span>
+        <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+          <i class="fa fa-user"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->
+  <main class="container mx-auto px-4 py-8">
+    <!-- 页面标题和描述 -->
+    <div class="mb-8">
+      <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold mb-2">ERP与打单系统同步配置</h2>
+      <p class="text-gray-medium">配置从ERP系统(A)同步单据到打单发货系统(B)的相关参数</p>
+    </div>
+    
+    <!-- 配置卡片 -->
+    <div class="bg-white rounded-xl p-6 md:p-8 card-shadow max-w-3xl mx-auto">
+      <form id="syncConfigForm" class="space-y-8">
+        <!-- 配置项1：同步单据类型 -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <label class="text-lg font-medium">
+              控制同步单据类型
+              <span class="text-primary ml-2" title="从ERP系统选择需要同步到打单系统的单据类型">
+                <i class="fa fa-question-circle"></i>
+              </span>
+            </label>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="单据类型选项">
+              <input type="radio" id="salesOrder" name="syncDocType" value="salesOrder" class="peer hidden" checked>
+              <label for="salesOrder" class="flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 
+                peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50">
+                <span class="font-medium mb-1">销售订单</span>
+                <span class="text-sm text-gray-medium">最早创建的基础订单单据</span>
+              </label>
+            </div>
+            
+            <div class="单据类型选项">
+              <input type="radio" id="deliveryNotice" name="syncDocType" value="deliveryNotice" class="peer hidden">
+              <label for="deliveryNotice" class="flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 
+                peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50">
+                <span class="font-medium mb-1">发货通知单</span>
+                <span class="text-sm text-gray-medium">销售订单之后的发货通知单据</span>
+              </label>
+            </div>
+            
+            <div class="单据类型选项">
+              <input type="radio" id="salesOutbound" name="syncDocType" value="salesOutbound" class="peer hidden">
+              <label for="salesOutbound" class="flex flex-col p-4 border-2 rounded-lg cursor-pointer transition-all duration-300 
+                peer-checked:border-primary peer-checked:bg-primary/5 hover:border-primary/50">
+                <span class="font-medium mb-1">销售出库单</span>
+                <span class="text-sm text-gray-medium">最终的出库发货单据</span>
+              </label>
+            </div>
+          </div>
+          
+          <!-- 单据时间顺序说明 -->
+          <div class="bg-neutral p-3 rounded-lg text-sm flex items-center text-gray-medium">
+            <i class="fa fa-info-circle text-primary mr-2"></i>
+            <span>单据时间顺序：销售订单 → 发货通知单 → 销售出库单</span>
+          </div>
+        </div>
+        
+        <!-- 配置项2：物流信息回填设置 -->
+        <div id="backfillConfig" class="space-y-4 overflow-hidden transition-height max-h-0 opacity-0">
+          <div class="flex items-center justify-between">
+            <label class="text-lg font-medium">
+              物流信息回填设置
+              <span class="text-primary ml-2" title="控制是否将物流信息回填至上游单据">
+                <i class="fa fa-question-circle"></i>
+              </span>
+            </label>
+          </div>
+          
+          <div class="pl-2 space-y-3" id="backfillOptions">
+            <!-- 选项会根据选择的单据类型动态生成 -->
+          </div>
+          
+          <div class="bg-neutral p-3 rounded-lg text-sm text-gray-medium">
+            <i class="fa fa-lightbulb-o text-primary mr-2"></i>
+            <span>启用后，快递单号、快递公司和签收状态等信息将自动回填至选中的上游单据</span>
+          </div>
+        </div>
+        
+        <!-- 保存按钮 -->
+        <div class="flex justify-end pt-4 border-t border-gray-100">
+          <button type="button" id="saveConfig" class="px-6 py-2.5 bg-primary text-white rounded-lg hover:bg-primary/90 
+            transition-all duration-300 flex items-center shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <i class="fa fa-save mr-2"></i>
+            保存配置
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- 配置说明卡片 -->
+    <div class="bg-white rounded-xl p-6 mt-6 card-shadow max-w-3xl mx-auto">
+      <h3 class="font-semibold text-lg mb-3 flex items-center">
+        <i class="fa fa-book text-primary mr-2"></i>配置说明
+      </h3>
+      <ul class="space-y-2 text-gray-medium text-sm">
+        <li class="flex items-start">
+          <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+          <span>同步单据类型：选择需要从ERP系统同步到打单系统的单据</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+          <span>物流信息回填：当打单系统生成物流信息后，是否回写到ERP系统的上游单据中</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+          <span>上游单据指的是在时间顺序上早于当前所选单据类型的单据</span>
+        </li>
+      </ul>
+    </div>
+  </main>
+  
+  <!-- 页脚 -->
+  <footer class="bg-white border-t border-gray-200 mt-12 py-6">
+    <div class="container mx-auto px-4 text-center text-gray-medium text-sm">
+      <p>© 2023 打单发货系统(B) 配置中心</p>
+    </div>
+  </footer>
+  
+  <!-- 成功提示弹窗 -->
+  <div id="successToast" class="fixed top-6 right-6 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg 
+    shadow-lg transform translate-x-full transition-transform duration-300 flex items-center z-50">
+    <i class="fa fa-check-circle mr-2"></i>
+    <span>配置保存成功！</span>
+  </div>
+
+  <script>
+    // 单据类型与上游单据的映射关系
+    const docTypeRelations = {
+      salesOrder: {
+        label: '销售订单',
+        upstream: []
+      },
+      deliveryNotice: {
+        label: '发货通知单',
+        upstream: ['salesOrder']
+      },
+      salesOutbound: {
+        label: '销售出库单',
+        upstream: ['deliveryNotice', 'salesOrder']
+      }
+    };
+    
+    // 单据类型中文名称映射
+    const docTypeLabels = {
+      salesOrder: '销售订单',
+      deliveryNotice: '发货通知单',
+      salesOutbound: '销售出库单'
+    };
+    
+    // 获取DOM元素
+    const syncDocTypeRadios = document.querySelectorAll('input[name="syncDocType"]');
+    const backfillConfig = document.getElementById('backfillConfig');
+    const backfillOptions = document.getElementById('backfillOptions');
+    const saveConfigBtn = document.getElementById('saveConfig');
+    const successToast = document.getElementById('successToast');
+    
+    // 初始化页面
+    function init() {
+      // 监听单据类型变化
+      syncDocTypeRadios.forEach(radio => {
+        radio.addEventListener('change', handleDocTypeChange);
+      });
+      
+      // 初始化显示当前选中的单据类型对应的配置
+      const initialChecked = document.querySelector('input[name="syncDocType"]:checked');
+      if (initialChecked) {
+        handleDocTypeChange.call(initialChecked);
+      }
+      
+      // 保存按钮点击事件
+      saveConfigBtn.addEventListener('click', saveConfig);
+    }
+    
+    // 处理单据类型变化
+    function handleDocTypeChange() {
+      const selectedType = this.value;
+      const upstreamDocs = docTypeRelations[selectedType].upstream;
+      
+      // 根据是否有上游单据决定是否显示回填配置
+      if (upstreamDocs.length > 0) {
+        // 显示回填配置区域
+        backfillConfig.style.maxHeight = '500px';
+        backfillConfig.style.opacity = '1';
+        
+        // 生成上游单据选项
+        generateBackfillOptions(upstreamDocs);
+      } else {
+        // 隐藏回填配置区域
+        backfillConfig.style.maxHeight = '0';
+        backfillConfig.style.opacity = '0';
+        backfillOptions.innerHTML = '';
+      }
+    }
+    
+    // 生成回填选项
+    function generateBackfillOptions(upstreamDocs) {
+      backfillOptions.innerHTML = '';
+      
+      // 添加全选选项
+      const allCheckbox = document.createElement('div');
+      allCheckbox.className = 'flex items-center';
+      allCheckbox.innerHTML = `
+        <input type="checkbox" id="backfillAll" class="w-4 h-4 text-primary rounded border-gray-light focus:ring-primary">
+        <label for="backfillAll" class="ml-2 cursor-pointer">全选</label>
+      `;
+      backfillOptions.appendChild(allCheckbox);
+      
+      // 添加分隔线
+      const divider = document.createElement('div');
+      divider.className = 'border-t border-gray-100 my-2';
+      backfillOptions.appendChild(divider);
+      
+      // 添加各个上游单据选项
+      upstreamDocs.forEach(docType => {
+        const docLabel = docTypeLabels[docType];
+        const checkbox = document.createElement('div');
+        checkbox.className = 'flex items-center upstream-checkbox';
+        checkbox.innerHTML = `
+          <input type="checkbox" id="backfill_${docType}" name="backfill" value="${docType}" 
+            class="w-4 h-4 text-primary rounded border-gray-light focus:ring-primary">
+          <label for="backfill_${docType}" class="ml-2 cursor-pointer">回填至${docLabel}</label>
+        `;
+        backfillOptions.appendChild(checkbox);
+      });
+      
+      // 全选功能
+      document.getElementById('backfillAll').addEventListener('change', function() {
+        const checkboxes = document.querySelectorAll('.upstream-checkbox input');
+        checkboxes.forEach(checkbox => {
+          checkbox.checked = this.checked;
+        });
+      });
+      
+      // 监听子选项变化，更新全选状态
+      document.querySelectorAll('.upstream-checkbox input').forEach(checkbox => {
+        checkbox.addEventListener('change', updateSelectAllStatus);
+      });
+    }
+    
+    // 更新全选状态
+    function updateSelectAllStatus() {
+      const checkboxes = document.querySelectorAll('.upstream-checkbox input');
+      const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+      document.getElementById('backfillAll').checked = allChecked;
+    }
+    
+    // 保存配置
+    function saveConfig() {
+      // 获取选中的单据类型
+      const selectedDocType = document.querySelector('input[name="syncDocType"]:checked').value;
+      
+      // 获取选中的回填选项
+      const backfillTargets = [];
+      document.querySelectorAll('input[name="backfill"]:checked').forEach(cb => {
+        backfillTargets.push(cb.value);
+      });
+      
+      // 模拟保存操作
+      console.log('保存配置:', {
+        syncDocType: selectedDocType,
+        backfillTargets: backfillTargets
+      });
+      
+      // 显示成功提示
+      successToast.style.transform = 'translateX(0)';
+      
+      // 3秒后隐藏提示
+      setTimeout(() => {
+        successToast.style.transform = 'translateX(calc(100% + 2rem))';
+      }, 3000);
+    }
+    
+    // 页面加载完成后初始化
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
