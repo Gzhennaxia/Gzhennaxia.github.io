@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-gzhennaxia.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-gzhennaxia.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-gzhennaxia.png">
+  <link rel="mask-icon" href="/images/logo-gzhennaxia.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Pacifico:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-minimal.css">
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":{"gitalk":{"order":-2},"valine":{"order":-1}}},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="投资资金配置与综合收益计算器                                         账户参数配置                                           稳钱账户                                                               年化收益率 (%)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="投资资金配置与收益计算器">
+<meta property="og:url" content="http://yoursite.com/tools/investment/calculator/index.html">
+<meta property="og:site_name" content="Blog in life">
+<meta property="og:description" content="投资资金配置与综合收益计算器                                         账户参数配置                                           稳钱账户                                                               年化收益率 (%)">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-10-20T02:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-31T07:18:44.945Z">
+<meta property="article:author" content="Gzhennaxia">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/tools/investment/calculator/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: false
+  };
+</script>
+
+  <title>投资资金配置与收益计算器 | Blog in life
+  </title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CTGRHBX1SW"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CTGRHBX1SW');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Blog in life</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/gzhennaxia" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+    
+    
+    
+    <div class="post-block" lang="en">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">投资资金配置与收益计算器<a href="https://github.com/Gzhennaxia/Gzhennaxia.github.io/tree/source/source/tools/investment/calculator/index.md" class="post-edit-link" title="Edit this post" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
+</h1>
+
+<div class="post-meta">
+  
+  <ul class="breadcrumb">
+          
+            <li><a href="/tools/">TOOLS</a></li>
+            <li><a href="/tools/investment/">INVESTMENT</a></li>
+          <li>CALCULATOR</li>
+        
+  </ul>
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <div class="page-container">
+    <!-- 页面标题 -->
+    <h1 class="page-title">投资资金配置与综合收益计算器</h1>
+    <!-- 核心网格布局 -->
+    <div class="grid-container">
+        <!-- 左侧：账户参数输入区 -->
+        <div class="card">
+            <h2 class="card-subtitle">账户参数配置</h2>
+            <!-- 稳钱账户输入 -->
+            <div class="input-group">
+                <label class="input-label">稳钱账户</label>
+                <div class="input-grid">
+                    <div>
+                        <span class="input-desc">年化收益率 (%)</span>
+                        <input type="number" step="0.01" value="4.87" class="form-input" id="stableRate">
+                    </div>
+                    <div>
+                        <span class="input-desc">投资占比 (%)</span>
+                        <input type="number" step="1" value="30" max="100" min="0" class="form-input" id="stableRatio">
+                    </div>
+                </div>
+            </div>
+            <!-- 长钱账户输入 -->
+            <div class="input-group">
+                <label class="input-label">长钱账户</label>
+                <div class="input-grid">
+                    <div>
+                        <span class="input-desc">年化收益率 (%)</span>
+                        <input type="number" step="0.01" value="3.96" class="form-input" id="longRate">
+                    </div>
+                    <div>
+                        <span class="input-desc">投资占比 (%)</span>
+                        <input type="number" step="1" value="50" max="100" min="0" class="form-input" id="longRatio">
+                    </div>
+                </div>
+            </div>
+            <!-- 海外账户输入 -->
+            <div class="input-group">
+                <label class="input-label">海外账户</label>
+                <div class="input-grid">
+                    <div>
+                        <span class="input-desc">年化收益率 (%)</span>
+                        <input type="number" step="0.01" value="11.94" class="form-input" id="overseasRate">
+                    </div>
+                    <div>
+                        <span class="input-desc">投资占比 (%)</span>
+                        <input type="number" step="1" value="20" max="100" min="0" class="form-input" id="overseasRatio">
+                    </div>
+                </div>
+            </div>
+            <!-- 占比校验提示 -->
+            <div class="ratio-tip" id="ratioTip">
+                ⚠️ 三个账户占比总和需为100%，当前总和：<span id="totalRatio">100</span>%
+            </div>
+        </div>
+        <!-- 右侧：实时综合收益展示区 -->
+        <div class="card">
+            <h2 class="card-subtitle">实时综合收益计算结果</h2>
+            <!-- 核心收益结果卡片 -->
+            <div class="result-card">
+                <div class="result-header">
+                    <div class="total-return-wrap">
+                        <p class="return-label">当前综合年化收益率</p>
+                        <p class="total-return-value" id="totalReturn">5.83%</p>
+                    </div>
+                    <div class="contribution-grid">
+                        <div class="contribution-card">
+                            <p class="contribution-label">稳钱账户贡献</p>
+                            <p class="contribution-value" id="stableContribution">1.46%</p>
+                        </div>
+                        <div class="contribution-card">
+                            <p class="contribution-label">长钱账户贡献</p>
+                            <p class="contribution-value" id="longContribution">1.98%</p>
+                        </div>
+                        <div class="contribution-card">
+                            <p class="contribution-label">海外账户贡献</p>
+                            <p class="contribution-value" id="overseasContribution">2.39%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 风险偏好-配置对应表 -->
+            <h3 class="table-title">风险偏好-资金配置-综合收益参照表</h3>
+            <div class="table-container">
+                <table class="reference-table">
+                    <thead>
+                        <tr>
+                            <th>风险偏好</th>
+                            <th>稳钱账户占比</th>
+                            <th>长钱账户占比</th>
+                            <th>海外账户占比</th>
+                            <th>综合年化收益</th>
+                            <th>适用人群</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td>保守型</td>
+                            <td>70%</td>
+                            <td>30%</td>
+                            <td>0%</td>
+                            <td class="return-highlight" id="conservativeReturn">4.56%</td>
+                            <td class="user-desc">风险厌恶者、临近退休人群</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td>稳健型</td>
+                            <td>50%</td>
+                            <td>30%</td>
+                            <td>20%</td>
+                            <td class="return-highlight" id="stableReturn">5.83%</td>
+                            <td class="user-desc">普通上班族、不愿承担高风险用户</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td>平衡型</td>
+                            <td>30%</td>
+                            <td>20%</td>
+                            <td>50%</td>
+                            <td class="return-highlight" id="balancedReturn">8.30%</td>
+                            <td class="user-desc">有3-5年投资周期、能接受短期波动</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td>进取型</td>
+                            <td>20%</td>
+                            <td>0%</td>
+                            <td>80%</td>
+                            <td class="return-highlight" id="aggressiveReturn">10.52%</td>
+                            <td class="user-desc">年轻投资者、风险承受能力强</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td>激进型</td>
+                            <td>0%</td>
+                            <td>0%</td>
+                            <td>100%</td>
+                            <td class="return-highlight" id="extremeReturn">11.94%</td>
+                            <td class="user-desc">专业投资者、有海外市场经验</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 获取所有输入元素
+    const stableRate = document.getElementById('stableRate');
+    const stableRatio = document.getElementById('stableRatio');
+    const longRate = document.getElementById('longRate');
+    const longRatio = document.getElementById('longRatio');
+    const overseasRate = document.getElementById('overseasRate');
+    const overseasRatio = document.getElementById('overseasRatio');
+    const totalReturn = document.getElementById('totalReturn');
+    const stableContribution = document.getElementById('stableContribution');
+    const longContribution = document.getElementById('longContribution');
+    const overseasContribution = document.getElementById('overseasContribution');
+    const ratioTip = document.getElementById('ratioTip');
+    const totalRatio = document.getElementById('totalRatio');        
+    // 获取参照表收益展示元素
+    const conservativeReturn = document.getElementById('conservativeReturn');
+    const stableReturn = document.getElementById('stableReturn');
+    const balancedReturn = document.getElementById('balancedReturn');
+    const aggressiveReturn = document.getElementById('aggressiveReturn');
+    const extremeReturn = document.getElementById('extremeReturn');
+    // 实时计算函数
+    function calculateReturn() {
+        // 转换为数值（默认值兜底）
+        const sRate = parseFloat(stableRate.value) || 0;
+        const sRatio = parseFloat(stableRatio.value) || 0;
+        const lRate = parseFloat(longRate.value) || 0;
+        const lRatio = parseFloat(longRatio.value) || 0;
+        const oRate = parseFloat(overseasRate.value) || 0;
+        const oRatio = parseFloat(overseasRatio.value) || 0;            
+        // 计算占比总和
+        const ratioSum = sRatio + lRatio + oRatio;
+        totalRatio.textContent = ratioSum.toFixed(0);            
+        // 占比校验（非100%时提示）
+        if (ratioSum !== 100) {
+            ratioTip.classList.remove('hidden');
+        } else {
+            ratioTip.classList.add('hidden');
+        }
+        // 计算各账户收益贡献
+        const sContribution = (sRate * sRatio / 100).toFixed(2);
+        const lContribution = (lRate * lRatio / 100).toFixed(2);
+        const oContribution = (oRate * oRatio / 100).toFixed(2);
+        // 计算综合收益
+        const total = (parseFloat(sContribution) + parseFloat(lContribution) + parseFloat(oContribution)).toFixed(2);
+        // 更新实时结果展示
+        stableContribution.textContent = `${sContribution}%`;
+        longContribution.textContent = `${lContribution}%`;
+        overseasContribution.textContent = `${oContribution}%`;
+        totalReturn.textContent = `${total}%`;
+        // 更新参照表收益（基于当前账户收益率，固定占比）
+        conservativeReturn.textContent = `${(sRate*0.7 + lRate*0.3 + oRate*0).toFixed(2)}%`;
+        stableReturn.textContent = `${(sRate*0.5 + lRate*0.3 + oRate*0.2).toFixed(2)}%`;
+        balancedReturn.textContent = `${(sRate*0.3 + lRate*0.2 + oRate*0.5).toFixed(2)}%`;
+        aggressiveReturn.textContent = `${(sRate*0.2 + lRate*0 + oRate*0.8).toFixed(2)}%`;
+        extremeReturn.textContent = `${(sRate*0 + lRate*0 + oRate*1).toFixed(2)}%`;
+    }
+    // 为所有输入框添加实时监听
+    [stableRate, stableRatio, longRate, longRatio, overseasRate, overseasRatio].forEach(input => {
+        input.addEventListener('input', calculateReturn);
+    });
+    // 初始加载时计算一次
+    calculateReturn();
+</script>
+
+<style>
+    /* 页面容器：控制最大宽度并居中 */
+    .page-container {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    /* 页面标题样式 */
+    .page-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    /* 核心网格布局：响应式分栏 */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+    /* 大屏适配：3列布局 */
+    @media (min-width: 1024px) {
+        .grid-container {
+            grid-template-columns: 1fr 2fr;
+        }
+        .page-title {
+            font-size: 36px;
+        }
+    }
+    /* 卡片通用样式（输入区+结果区） */
+    .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    }
+    /* 子标题样式（账户配置/收益结果） */
+    .card-subtitle {
+        font-size: 20px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 16px;
+    }
+    /* 输入项组样式 */
+    .input-group {
+        margin-bottom: 20px;
+    }
+    .input-label {
+        display: block;
+        color: #4b5563;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+    /* 输入项双列布局 */
+    .input-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    .input-desc {
+        display: block;
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 4px;
+    }
+    /* 输入框样式 */
+    .form-input {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+    .form-input:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 1px;
+    }
+    /* 占比校验提示 */
+    .ratio-tip {
+        font-size: 14px;
+        color: #ef4444;
+        margin-top: 8px;
+        display: none;
+    }
+    /* 结果卡片样式 */
+    .result-card {
+        background-color: #eff6ff;
+        border-radius: 8px;
+        padding: 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    /* 结果卡片内部布局 */
+    .result-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .total-return-wrap {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    .return-label {
+        font-size: 18px;
+        color: #4b5563;
+    }
+    .total-return-value {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2563eb;
+        margin-top: 8px;
+    }
+    /* 各账户贡献布局 */
+    .contribution-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+    }
+    .contribution-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+    }
+    .contribution-label {
+        font-size: 14px;
+        color: #6b7280;
+    }
+    .contribution-value {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-top: 4px;
+    }
+    /* 大屏适配：结果卡片横向布局 */
+    @media (min-width: 768px) {
+        .result-header {
+            flex-direction: row;
+        }
+        .total-return-wrap {
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .total-return-value {
+            font-size: 48px;
+        }
+        .contribution-grid {
+            width: auto;
+        }
+    }
+    /* 参照表标题 */
+    .table-title {
+        font-size: 18px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 12px;
+    }
+    /* 表格容器：横向滚动适配 */
+    .table-container {
+        overflow-x: auto;
+    }
+    /* 表格样式 */
+    .reference-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .reference-table thead {
+        background-color: #f3f4f6;
+    }
+    .reference-table th,
+    .reference-table td {
+        border: 1px solid #d1d5db;
+        padding: 12px 16px;
+        text-align: left;
+        color: #374151;
+    }
+    .reference-table th {
+        font-weight: 600;
+    }
+    .reference-table .table-row {
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .reference-table .table-row:hover {
+        background-color: rgba(59,130,246,0.05);
+    }
+    .return-highlight {
+        font-weight: 500;
+    }
+    .user-desc {
+        font-size: 14px;
+    }
+</style>
+      </div>
+      
+      
+      
+    </div>
+    
+  <ul class="breadcrumb">
+          
+            <li><a href="/tools/">TOOLS</a></li>
+            <li><a href="/tools/investment/">INVESTMENT</a></li>
+          <li>CALCULATOR</li>
+        
+  </ul>
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text">投资资金配置与综合收益计算器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.1.</span> <span class="nav-text">账户参数配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.2.</span> <span class="nav-text">实时综合收益计算结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-number">1.2.1.</span> <span class="nav-text">风险偏好-资金配置-综合收益参照表</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Gzhennaxia"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Gzhennaxia</p>
+  <div class="site-description" itemprop="description">我不怕千万人阻挡，只怕自己投降</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">58</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/gzhennaxia" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;gzhennaxia" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:gzhennaxia@163.com" title="E-Mail → mailto:gzhennaxia@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-wpexplorer"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gzhennaxia</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="Symbols count total">528k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">14:39</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1278630901&web_id=1278630901"></script>
+  </div>
+
+
+
+
+  <script>
+  function leancloudSelector(url) {
+    url = encodeURI(url);
+    return document.getElementById(url).querySelector('.leancloud-visitors-count');
+  }
+  if (CONFIG.page.isPost) {
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.getAttribute('id'));
+      var title = visitors.getAttribute('data-flag-title');
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .then(response => response.json())
+              .then(() => {
+                leancloudSelector(url).innerText = counter.time + 1;
+              })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              })
+          } else {
+              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+  } else {
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.getAttribute('id'));
+      });
+
+      Counter('get', `/classes/Counter?where=${JSON.stringify({ url: { '$in': entries } })}`)
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length === 0) {
+            document.querySelectorAll('.leancloud_visitors .leancloud-visitors-count').forEach(element => {
+              element.innerText = 0;
+            });
+            return;
+          }
+          for (let item of results) {
+            let { url, time } = item;
+            leancloudSelector(url).innerText = time;
+          }
+          for (let url of entries) {
+            var element = leancloudSelector(url);
+            if (element.innerText == '') {
+              element.innerText = 0;
+            }
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+  }
+
+  fetch('https://app-router.leancloud.cn/2/route?appId=eVUj7cd3MyiEwfcYhXhBLmnh-gzGzoHsz')
+    .then(response => response.json())
+    .then(({ api_server }) => {
+      var Counter = (method, url, data) => {
+        return fetch(`https://${api_server}/1.1${url}`, {
+          method: method,
+          headers: {
+            'X-LC-Id'     : 'eVUj7cd3MyiEwfcYhXhBLmnh-gzGzoHsz',
+            'X-LC-Key'    : 'IfKchdp9FY0HDE1drNF3FDln',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+  <script>
+  if (CONFIG.page.isPost) {
+    wpac_init = window.wpac_init || [];
+    wpac_init.push({
+      widget: 'Rating',
+      id    : 23549,
+      el    : 'wpac-rating',
+      color : 'fc6423'
+    });
+    (function() {
+      if ('WIDGETPACK_LOADED' in window) return;
+      WIDGETPACK_LOADED = true;
+      var mc = document.createElement('script');
+      mc.type = 'text/javascript';
+      mc.async = true;
+      mc.src = '//embed.widgetpack.com/widget.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+    })();
+  }
+  </script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height: element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
+
+
+<script>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+  
+
+  
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout: 3000,
+        priority: true,
+        ignores: [uri => uri.includes('#'),uri => uri == 'http://yoursite.com/tools/investment/calculator/',]
+      });
+      });
+  </script>
+
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'eVUj7cd3MyiEwfcYhXhBLmnh-gzGzoHsz',
+      appKey     : 'IfKchdp9FY0HDE1drNF3FDln',
+      placeholder: "Have one say one",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"mobile":{"show":false},"react":{"opacity":0.7}},"log":false});</script></body>
+</html>
