@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>前海百百递下班时间计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .date-area, .input-area {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            font-size: 18px;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+        #workDate {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .date-status {
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .weekday {
+            background-color: #eafaf1;
+            color: #27ae60;
+        }
+        .weekend {
+            background-color: #fdedeb;
+            color: #e74c3c;
+        }
+        .custom-input {
+            margin-top: 15px;
+        }
+        #customTime {
+            width: calc(100% - 120px);
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+        #useCustomTime {
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #useCustomTime:hover {
+            background-color: #2980b9;
+        }
+        .result-area {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+        .result-item {
+            font-size: 18px;
+            color: #2c3e50;
+            margin: 15px 0;
+        }
+        .result-item span {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .rule-area {
+            border-top: 1px solid #bdc3c7;
+            padding-top: 20px;
+        }
+        .rule-title {
+            font-size: 18px;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        .rule-list {
+            list-style: none;
+            color: #7f8c8d;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>前海百递下班时间计算器</h1>
+
+    <!-- 日期选择区 -->
+    <div class="date-area">
+        <label for="workDate">选择工作日期</label>
+        <input type="date" id="workDate">
+        <div class="date-status" id="dateStatus">请选择日期</div>
+    </div>
+
+    <!-- 上班时间输入区（仅保留手动输入） -->
+    <div class="input-area">
+        <label>请输入上班时间（格式：HH:MM，弹性时段：8:30-9:15）</label>
+        <div class="custom-input">
+            <input type="text" id="customTime" placeholder="例如：08:30 或 09:15">
+            <button id="useCustomTime">确认时间</button>
+        </div>
+    </div>
+
+    <!-- 结果展示区 -->
+    <div class="result-area">
+        <div class="result-item">上班日期：<span id="showDate">-</span></div>
+        <div class="result-item">星期：<span id="showWeekday">-</span></div>
+        <div class="result-item">上班时间：<span id="showStartTime">-</span></div>
+        <div class="result-item">下班时间（满8小时工作时长）：<span id="showEndTime">-</span></div>
+        <div class="result-item">考勤状态：<span id="attendanceStatus">-</span></div>
+        <div class="result-item" id="overtimeInfo" style="display:none;">调休计算：<span id="showOvertime">-</span></div>
+    </div>
+
+    <!-- 考勤规则备查区 -->
+    <div class="rule-area">
+        <h3 class="rule-title" id="ruleTitle">核心考勤规则</h3>
+        <ul class="rule-list" id="ruleList">
+            <li>1. 工作时长：每日需满8小时，不满8小时离岗视为早退。</li>
+            <li>2. 弹性打卡：8:30-9:15为弹性时段，9:15后到岗视为迟到。</li>
+            <li>3. 午休时间：11:45-13:30（不计入工作时长）</li>
+            <li>4. 延误处理：地铁延误可开证明补卡至9:15；恶劣天气参考云之家通知。</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // 获取DOM元素
+    const workDate = document.getElementById('workDate');
+    const dateStatus = document.getElementById('dateStatus');
+    const customTime = document.getElementById('customTime');
+    const useCustomTime = document.getElementById('useCustomTime');
+    const showDate = document.getElementById('showDate');
+    const showWeekday = document.getElementById('showWeekday');
+    const showStartTime = document.getElementById('showStartTime');
+    const showEndTime = document.getElementById('showEndTime');
+    const attendanceStatus = document.getElementById('attendanceStatus');
+    const overtimeInfo = document.getElementById('overtimeInfo');
+    const showOvertime = document.getElementById('showOvertime');
+    const ruleTitle = document.getElementById('ruleTitle');
+    const ruleList = document.getElementById('ruleList');
+
+    // 存储当前输入的上班时间
+    let currentStartTime = '';
+
+    // 设置默认日期为今天
+    const today = new Date();
+    const defaultDate = today.toISOString().split('T')[0];
+    workDate.value = defaultDate;
+
+    // 判断是否为工作日（周一至周五）
+    function isWeekday(dateStr) {
+        const date = new Date(dateStr);
+        const day = date.getDay(); // 0是周日，6是周六
+        return day !== 0 && day !== 6;
+    }
+
+    // 获取星期几文本
+    function getWeekdayText(dateStr) {
+        const date = new Date(dateStr);
+        const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+        return weekdays[date.getDay()];
+    }
+
+    // 时间计算函数：考虑午休时间（11:45-13:30），计算满足8小时工作时长的下班时间
+    function calculateEndTime(startTimeStr) {
+        // 清理时间字符串空格
+        startTimeStr = startTimeStr.trim();
+        // 验证格式并拆分
+        const timeParts = startTimeStr.split(':');
+        if (timeParts.length !== 2) return '00:00';
+
+        const startHour = Number(timeParts[0]);
+        const startMinute = Number(timeParts[1]);
+        // 验证数字有效性
+        if (isNaN(startHour) || isNaN(startMinute) || startHour < 0 || startHour > 23 || startMinute < 0 || startMinute > 59) {
+            return '00:00';
+        }
+
+        // 原有计算逻辑
+        const startTotalMinute = startHour * 60 + startMinute;
+        const lunchStart = 11 * 60 + 45; // 11:45
+        const lunchEnd = 13 * 60 + 30;   // 13:30
+        const lunchDuration = lunchEnd - lunchStart; // 午休时长（105分钟）
+
+        let remainingWorkMinutes = 480;
+        let currentTime = startTotalMinute;
+
+        if (currentTime < lunchStart) {
+            const workBeforeLunch = Math.min(lunchStart - currentTime, remainingWorkMinutes);
+            remainingWorkMinutes -= workBeforeLunch;
+            currentTime += workBeforeLunch;
+
+            if (remainingWorkMinutes === 0) {
+                return formatTime(currentTime);
+            }
+
+            currentTime = lunchEnd;
+        }
+
+        currentTime += remainingWorkMinutes;
+
+        return formatTime(currentTime);
+    }
+
+    // 将分钟数转换为时间格式（HH:MM），处理跨天情况
+    function formatTime(totalMinutes) {
+        let hours = Math.floor(totalMinutes / 60);
+        const minutes = totalMinutes % 60;
+        let suffix = '';
+
+        if (hours >= 24) {
+            hours -= 24;
+            suffix = '（次日）';
+        }
+
+        return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}${suffix}`;
+    }
+
+    // 考勤状态判断函数
+    function getAttendanceStatus(startTimeStr, isWeekday) {
+        // 非工作日上班默认不算迟到
+        if (!isWeekday) {
+            return '非工作日上班（按调休处理）';
+        }
+
+        const [startHour, startMinute] = startTimeStr.split(':').map(Number);
+        const elasticStart = 8 * 60 + 30; // 8:30转换为分钟（510分钟）
+        const elasticEnd = 9 * 60 + 15;   // 9:15转换为分钟（555分钟）
+        const startTotalMinute = startHour * 60 + startMinute;
+
+        if (startTotalMinute >= elasticStart && startTotalMinute <= elasticEnd) {
+            return '在弹性时段内（不算迟到）';
+        } else if (startTotalMinute < elasticStart) {
+            return '早到（不算迟到）';
+        } else {
+            return '超出弹性时段（视为迟到）';
+        }
+    }
+
+    // 更新规则显示
+    function updateRules(isWeekday) {
+        if (isWeekday) {
+            ruleTitle.textContent = '工作日考勤规则';
+            ruleList.innerHTML = `
+                    <li>1. 工作时长：每日需满8小时，不满8小时离岗视为早退。</li>
+                    <li>2. 弹性打卡：8:30-9:15为弹性时段，9:15后到岗视为迟到。</li>
+                    <li>3. 班次时间：上午8:30-11:45，下午13:30-17:45（五天工作制）</li>
+                    <li>4. 午休时间：11:45-13:30（不计入工作时长）</li>
+                    <li>5. 延误处理：地铁延误可开证明补卡至9:15；恶劣天气参考云之家通知。</li>
+                `;
+            overtimeInfo.style.display = 'none';
+        } else {
+            ruleTitle.textContent = '非工作日考勤规则';
+            ruleList.innerHTML = `
+                    <li>1. 非工作日上班统一按照调休假处理。</li>
+                    <li>2. 需至少提前1天申请，通过云之家提交或突发事件3天内邮件审批。</li>
+                    <li>3. 正常打卡，当月日均工时满8小时可申请调休。</li>
+                    <li>4. 超过4小时不满8小时按0.5天调休，满8小时按1天调休。</li>
+                    <li>5. 调休须在半年内休完，未休视为自动放弃。</li>
+                `;
+            overtimeInfo.style.display = 'block';
+        }
+    }
+
+    // 结果更新函数
+    function updateResult() {
+        const dateStr = workDate.value;
+        if (!dateStr || !currentStartTime) return;
+
+        const weekday = getWeekdayText(dateStr);
+        const weekdayFlag = isWeekday(dateStr);
+
+        // 更新日期状态显示
+        showDate.textContent = formatDate(dateStr);
+        showWeekday.textContent = weekday;
+        dateStatus.textContent = weekdayFlag ? '工作日' : '非工作日';
+        dateStatus.className = `date-status ${weekdayFlag ? 'weekday' : 'weekend'}`;
+
+        // 更新时间计算结果
+        showStartTime.textContent = currentStartTime;
+        showEndTime.textContent = calculateEndTime(currentStartTime);
+        attendanceStatus.textContent = getAttendanceStatus(currentStartTime, weekdayFlag);
+
+        // 更新调休信息（非工作日）
+        if (!weekdayFlag) {
+            showOvertime.textContent = '满8小时按1天调休，需半年内休完';
+        }
+
+        // 更新规则显示
+        updateRules(weekdayFlag);
+    }
+
+    // 格式化日期显示（YYYY-MM-DD → YYYY年MM月DD日）
+    function formatDate(dateStr) {
+        const [year, month, day] = dateStr.split('-');
+        return `${year}年${month}月${day}日`;
+    }
+
+    // 事件监听
+    workDate.addEventListener('change', updateResult);
+
+    useCustomTime.addEventListener('click', function() {
+        const startTime = customTime.value.trim();
+        // 简单格式验证（HH:MM）
+        const timeReg = /^\d{2}:\d{2}$/;
+        if (!timeReg.test(startTime)) {
+            alert('请输入正确的时间格式（HH:MM），如09:20');
+            return;
+        }
+        const [hour, minute] = startTime.split(':').map(Number);
+        if (hour < 0 || hour > 23 || minute < 0 || minute > 59) {
+            alert('请输入合法的时间（小时0-23，分钟0-59）');
+            return;
+        }
+        currentStartTime = startTime;
+        updateResult();
+    });
+
+    // 页面初始化
+    window.onload = function() {
+        // 初始状态仅更新日期相关信息
+        const dateStr = workDate.value;
+        if (dateStr) {
+            showDate.textContent = formatDate(dateStr);
+            showWeekday.textContent = getWeekdayText(dateStr);
+            const weekdayFlag = isWeekday(dateStr);
+            dateStatus.textContent = weekdayFlag ? '工作日' : '非工作日';
+            dateStatus.className = `date-status ${weekdayFlag ? 'weekday' : 'weekend'}`;
+            updateRules(weekdayFlag);
+        }
+    };
+</script>
+</body>
+</html>

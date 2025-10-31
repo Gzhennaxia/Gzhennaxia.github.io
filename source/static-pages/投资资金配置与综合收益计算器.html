@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投资资金配置与收益计算器</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 实时计算区域阴影效果 */
+        .result-card {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        /* 输入框聚焦样式 */
+        input:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 1px;
+        }
+        /* 表格hover效果 */
+        .table-row:hover {
+            background-color: rgba(59,130,246,0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- 页面标题 -->
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">投资资金配置与综合收益计算器</h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+            <!-- 左侧：账户参数输入区 -->
+            <div class="bg-white rounded-xl p-5 shadow-sm">
+                <h2 class="text-xl font-semibold text-gray-700 mb-4">账户参数配置</h2>
+                
+                <!-- 稳钱账户输入 -->
+                <div class="mb-5">
+                    <label class="block text-gray-600 mb-1 font-medium">稳钱账户</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <span class="text-sm text-gray-500 mb-1 block">年化收益率 (%)</span>
+                            <input type="number" step="0.01" value="4.87" class="w-full px-3 py-2 border border-gray-300 rounded-lg" id="stableRate">
+                        </div>
+                        <div>
+                            <span class="text-sm text-gray-500 mb-1 block">投资占比 (%)</span>
+                            <input type="number" step="1" value="30" max="100" min="0" class="w-full px-3 py-2 border border-gray-300 rounded-lg" id="stableRatio">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 长钱账户输入 -->
+                <div class="mb-5">
+                    <label class="block text-gray-600 mb-1 font-medium">长钱账户</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <span class="text-sm text-gray-500 mb-1 block">年化收益率 (%)</span>
+                            <input type="number" step="0.01" value="3.96" class="w-full px-3 py-2 border border-gray-300 rounded-lg" id="longRate">
+                        </div>
+                        <div>
+                            <span class="text-sm text-gray-500 mb-1 block">投资占比 (%)</span>
+                            <input type="number" step="1" value="50" max="100" min="0" class="w-full px-3 py-2 border border-gray-300 rounded-lg" id="longRatio">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 海外账户输入 -->
+                <div class="mb-5">
+                    <label class="block text-gray-600 mb-1 font-medium">海外账户</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <span class="text-sm text-gray-500 mb-1 block">年化收益率 (%)</span>
+                            <input type="number" step="0.01" value="11.94" class="w-full px-3 py-2 border border-gray-300 rounded-lg" id="overseasRate">
+                        </div>
+                        <div>
+                            <span class="text-sm text-gray-500 mb-1 block">投资占比 (%)</span>
+                            <input type="number" step="1" value="20" max="100" min="0" class="w-full px-3 py-2 border border-gray-300 rounded-lg" id="overseasRatio">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 占比校验提示 -->
+                <div class="text-red-500 text-sm mt-2 hidden" id="ratioTip">
+                    ⚠️ 三个账户占比总和需为100%，当前总和：<span id="totalRatio">100</span>%
+                </div>
+            </div>
+
+            <!-- 中间：实时综合收益展示区 -->
+            <div class="bg-white rounded-xl p-5 shadow-sm lg:col-span-2">
+                <h2 class="text-xl font-semibold text-gray-700 mb-4">实时综合收益计算结果</h2>
+                <div class="result-card bg-blue-50 rounded-lg p-6 mb-6">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="text-center md:text-left mb-4 md:mb-0">
+                            <p class="text-gray-600 text-lg">当前综合年化收益率</p>
+                            <p class="text-4xl md:text-5xl font-bold text-blue-600 mt-2" id="totalReturn">5.83%</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-4 w-full md:w-auto">
+                            <div class="bg-white rounded-lg p-3 text-center">
+                                <p class="text-sm text-gray-500">稳钱账户贡献</p>
+                                <p class="text-lg font-semibold text-gray-800" id="stableContribution">1.46%</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 text-center">
+                                <p class="text-sm text-gray-500">长钱账户贡献</p>
+                                <p class="text-lg font-semibold text-gray-800" id="longContribution">1.98%</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-3 text-center">
+                                <p class="text-sm text-gray-500">海外账户贡献</p>
+                                <p class="text-lg font-semibold text-gray-800" id="overseasContribution">2.39%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 风险偏好-配置对应表 -->
+                <h3 class="text-lg font-semibold text-gray-700 mb-3">风险偏好-资金配置-综合收益参照表</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border border-gray-300 px-4 py-3 text-left text-gray-700">风险偏好</th>
+                                <th class="border border-gray-300 px-4 py-3 text-left text-gray-700">稳钱账户占比</th>
+                                <th class="border border-gray-300 px-4 py-3 text-left text-gray-700">长钱账户占比</th>
+                                <th class="border border-gray-300 px-4 py-3 text-left text-gray-700">海外账户占比</th>
+                                <th class="border border-gray-300 px-4 py-3 text-left text-gray-700">综合年化收益</th>
+                                <th class="border border-gray-300 px-4 py-3 text-left text-gray-700">适用人群</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-row border-b border-gray-200">
+                                <td class="border border-gray-300 px-4 py-3">保守型</td>
+                                <td class="border border-gray-300 px-4 py-3">70%</td>
+                                <td class="border border-gray-300 px-4 py-3">30%</td>
+                                <td class="border border-gray-300 px-4 py-3">0%</td>
+                                <td class="border border-gray-300 px-4 py-3 font-medium" id="conservativeReturn">4.56%</td>
+                                <td class="border border-gray-300 px-4 py-3 text-sm">风险厌恶者、临近退休人群</td>
+                            </tr>
+                            <tr class="table-row border-b border-gray-200">
+                                <td class="border border-gray-300 px-4 py-3">稳健型</td>
+                                <td class="border border-gray-300 px-4 py-3">50%</td>
+                                <td class="border border-gray-300 px-4 py-3">30%</td>
+                                <td class="border border-gray-300 px-4 py-3">20%</td>
+                                <td class="border border-gray-300 px-4 py-3 font-medium" id="stableReturn">5.83%</td>
+                                <td class="border border-gray-300 px-4 py-3 text-sm">普通上班族、不愿承担高风险用户</td>
+                            </tr>
+                            <tr class="table-row border-b border-gray-200">
+                                <td class="border border-gray-300 px-4 py-3">平衡型</td>
+                                <td class="border border-gray-300 px-4 py-3">30%</td>
+                                <td class="border border-gray-300 px-4 py-3">20%</td>
+                                <td class="border border-gray-300 px-4 py-3">50%</td>
+                                <td class="border border-gray-300 px-4 py-3 font-medium" id="balancedReturn">8.30%</td>
+                                <td class="border border-gray-300 px-4 py-3 text-sm">有3-5年投资周期、能接受短期波动</td>
+                            </tr>
+                            <tr class="table-row border-b border-gray-200">
+                                <td class="border border-gray-300 px-4 py-3">进取型</td>
+                                <td class="border border-gray-300 px-4 py-3">20%</td>
+                                <td class="border border-gray-300 px-4 py-3">0%</td>
+                                <td class="border border-gray-300 px-4 py-3">80%</td>
+                                <td class="border border-gray-300 px-4 py-3 font-medium" id="aggressiveReturn">10.52%</td>
+                                <td class="border border-gray-300 px-4 py-3 text-sm">年轻投资者、风险承受能力强</td>
+                            </tr>
+                            <tr class="table-row">
+                                <td class="border border-gray-300 px-4 py-3">激进型</td>
+                                <td class="border border-gray-300 px-4 py-3">0%</td>
+                                <td class="border border-gray-300 px-4 py-3">0%</td>
+                                <td class="border border-gray-300 px-4 py-3">100%</td>
+                                <td class="border border-gray-300 px-4 py-3 font-medium" id="extremeReturn">11.94%</td>
+                                <td class="border border-gray-300 px-4 py-3 text-sm">专业投资者、有海外市场经验</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 获取所有输入元素
+        const stableRate = document.getElementById('stableRate');
+        const stableRatio = document.getElementById('stableRatio');
+        const longRate = document.getElementById('longRate');
+        const longRatio = document.getElementById('longRatio');
+        const overseasRate = document.getElementById('overseasRate');
+        const overseasRatio = document.getElementById('overseasRatio');
+        
+        // 获取结果展示元素
+        const totalReturn = document.getElementById('totalReturn');
+        const stableContribution = document.getElementById('stableContribution');
+        const longContribution = document.getElementById('longContribution');
+        const overseasContribution = document.getElementById('overseasContribution');
+        const ratioTip = document.getElementById('ratioTip');
+        const totalRatio = document.getElementById('totalRatio');
+        
+        // 获取参照表收益展示元素
+        const conservativeReturn = document.getElementById('conservativeReturn');
+        const stableReturn = document.getElementById('stableReturn');
+        const balancedReturn = document.getElementById('balancedReturn');
+        const aggressiveReturn = document.getElementById('aggressiveReturn');
+        const extremeReturn = document.getElementById('extremeReturn');
+
+        // 实时计算函数
+        function calculateReturn() {
+            // 转换为数值（默认值兜底）
+            const sRate = parseFloat(stableRate.value) || 0;
+            const sRatio = parseFloat(stableRatio.value) || 0;
+            const lRate = parseFloat(longRate.value) || 0;
+            const lRatio = parseFloat(longRatio.value) || 0;
+            const oRate = parseFloat(overseasRate.value) || 0;
+            const oRatio = parseFloat(overseasRatio.value) || 0;
+            
+            // 计算占比总和
+            const ratioSum = sRatio + lRatio + oRatio;
+            totalRatio.textContent = ratioSum.toFixed(0);
+            
+            // 占比校验（非100%时提示）
+            if (ratioSum !== 100) {
+                ratioTip.classList.remove('hidden');
+            } else {
+                ratioTip.classList.add('hidden');
+            }
+            
+            // 计算各账户收益贡献
+            const sContribution = (sRate * sRatio / 100).toFixed(2);
+            const lContribution = (lRate * lRatio / 100).toFixed(2);
+            const oContribution = (oRate * oRatio / 100).toFixed(2);
+            
+            // 计算综合收益
+            const total = (parseFloat(sContribution) + parseFloat(lContribution) + parseFloat(oContribution)).toFixed(2);
+            
+            // 更新实时结果展示
+            stableContribution.textContent = `${sContribution}%`;
+            longContribution.textContent = `${lContribution}%`;
+            overseasContribution.textContent = `${oContribution}%`;
+            totalReturn.textContent = `${total}%`;
+            
+            // 更新参照表收益（基于当前账户收益率，固定占比）
+            conservativeReturn.textContent = `${(sRate*0.7 + lRate*0.3 + oRate*0).toFixed(2)}%`;
+            stableReturn.textContent = `${(sRate*0.5 + lRate*0.3 + oRate*0.2).toFixed(2)}%`;
+            balancedReturn.textContent = `${(sRate*0.3 + lRate*0.2 + oRate*0.5).toFixed(2)}%`;
+            aggressiveReturn.textContent = `${(sRate*0.2 + lRate*0 + oRate*0.8).toFixed(2)}%`;
+            extremeReturn.textContent = `${(sRate*0 + lRate*0 + oRate*1).toFixed(2)}%`;
+        }
+
+        // 为所有输入框添加实时监听
+        [stableRate, stableRatio, longRate, longRatio, overseasRate, overseasRatio].forEach(input => {
+            input.addEventListener('input', calculateReturn);
+        });
+
+        // 初始加载时计算一次
+        calculateReturn();
+    </script>
+</body>
+</html>
