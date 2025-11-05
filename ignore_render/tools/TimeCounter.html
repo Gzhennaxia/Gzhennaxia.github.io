@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>答题计时计次工具</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义主题 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6',
+            secondary: '#10b981',
+            danger: '#ef4444',
+            neutral: '#64748b',
+            dark: '#1e293b',
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .timer-shadow {
+        box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+      }
+      .btn-hover {
+        @apply transition-all duration-300 hover:shadow-lg transform hover:-translate-y-0.5;
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-xl;
+      }
+    }
+  </style>
+  
+  <style>
+    /* 基础动画 */
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+    .pulse-animation {
+      animation: pulse 1.5s infinite;
+    }
+    
+    /* 滚动条美化 */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #64748b;
+    }
+  </style>
+</head>
+<body class="font-inter bg-slate-50 text-dark min-h-screen flex flex-col">
+  <!-- 头部 -->
+  <header class="bg-white shadow-sm py-4 px-6 sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-primary flex items-center">
+        <i class="fa fa-clock-o mr-2" aria-hidden="true"></i>
+        答题计时计次工具
+      </h1>
+      <div class="flex gap-3">
+        <button id="helpBtn" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 rounded-lg flex items-center btn-hover">
+          <i class="fa fa-question-circle mr-1" aria-hidden="true"></i> 帮助
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容区 -->
+  <main class="flex-grow container mx-auto py-8 px-4">
+    <!-- 状态和控制区 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <!-- 计时显示卡片 -->
+      <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+        <h2 class="text-lg font-semibold text-slate-700 mb-4 flex items-center">
+          <i class="fa fa-hourglass-half text-primary mr-2" aria-hidden="true"></i>
+          当前计时
+        </h2>
+        <div id="timerDisplay" class="text-[clamp(2rem,5vw,3rem)] font-mono font-bold text-center text-dark timer-shadow rounded-lg p-4">
+          00:00:00
+        </div>
+        <p id="statusText" class="text-center mt-4 text-neutral">
+          未开始 - 点击"开始"按钮启动计时
+        </p>
+      </div>
+
+      <!-- 答题统计卡片 -->
+      <div class="bg-white rounded-xl shadow-md p-6 card-hover">
+        <h2 class="text-lg font-semibold text-slate-700 mb-4 flex items-center">
+          <i class="fa fa-list-ol text-secondary mr-2" aria-hidden="true"></i>
+          答题统计
+        </h2>
+        <div class="grid grid-cols-2 gap-4 text-center">
+          <div class="bg-slate-50 rounded-lg p-4">
+            <p class="text-sm text-neutral mb-1">已答题目</p>
+            <p id="questionCount" class="text-3xl font-bold text-secondary">0</p>
+          </div>
+          <div class="bg-slate-50 rounded-lg p-4">
+            <p class="text-sm text-neutral mb-1">总耗时</p>
+            <p id="totalTime" class="text-3xl font-bold text-primary">00:00:00</p>
+          </div>
+        </div>
+        <div class="mt-6">
+          <p class="text-sm text-neutral mb-2">快捷操作：</p>
+          <p class="text-center text-sm bg-slate-100 rounded-lg p-2 text-neutral">
+            <i class="fa fa-keyboard-o mr-1" aria-hidden="true"></i>
+            任意键盘按键标记答题完成
+          </p>
+        </div>
+      </div>
+
+      <!-- 控制按钮卡片 -->
+      <div class="bg-white rounded-xl shadow-md p-6 card-hover flex flex-col justify-center">
+        <h2 class="text-lg font-semibold text-slate-700 mb-6 flex items-center">
+          <i class="fa fa-controls text-dark mr-2" aria-hidden="true"></i>
+          操作控制
+        </h2>
+        <div class="flex flex-col gap-4">
+          <button id="startBtn" class="px-6 py-3 bg-secondary text-white rounded-lg font-semibold flex items-center justify-center btn-hover">
+            <i class="fa fa-play mr-2" aria-hidden="true"></i> 开始计时
+          </button>
+          <button id="endBtn" class="px-6 py-3 bg-danger text-white rounded-lg font-semibold flex items-center justify-center btn-hover opacity-50 cursor-not-allowed" disabled>
+            <i class="fa fa-stop mr-2" aria-hidden="true"></i> 结束计时
+          </button>
+          <button id="resetBtn" class="px-6 py-3 bg-neutral text-white rounded-lg font-semibold flex items-center justify-center btn-hover">
+            <i class="fa fa-refresh mr-2" aria-hidden="true"></i> 重置
+          </button>
+          <button id="exportBtn" class="px-6 py-3 bg-primary text-white rounded-lg font-semibold flex items-center justify-center btn-hover opacity-50 cursor-not-allowed" disabled>
+            <i class="fa fa-download mr-2" aria-hidden="true"></i> 导出记录
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 答题记录表格 -->
+    <div class="bg-white rounded-xl shadow-md p-6 mb-8 overflow-hidden">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold text-slate-700 flex items-center">
+          <i class="fa fa-table text-dark mr-2" aria-hidden="true"></i>
+          答题耗时记录
+        </h2>
+        <span id="recordCount" class="bg-slate-100 text-neutral px-3 py-1 rounded-full text-sm">
+          共 0 条记录
+        </span>
+      </div>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[600px] text-left">
+          <thead>
+            <tr class="bg-slate-100 border-b border-slate-200">
+              <th class="py-3 px-4 font-semibold text-neutral">题号</th>
+              <th class="py-3 px-4 font-semibold text-neutral">开始时间</th>
+              <th class="py-3 px-4 font-semibold text-neutral">结束时间</th>
+              <th class="py-3 px-4 font-semibold text-neutral">耗时</th>
+            </tr>
+          </thead>
+          <tbody id="recordTableBody">
+            <tr class="text-center">
+              <td colspan="4" class="py-8 text-neutral">
+                <i class="fa fa-info-circle mr-1" aria-hidden="true"></i> 暂无答题记录
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- 帮助模态框 -->
+  <div id="helpModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl shadow-xl max-w-md w-full max-h-[80vh] overflow-y-auto p-6 m-4">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-primary">使用帮助</h3>
+        <button id="closeHelpBtn" class="text-slate-500 hover:text-slate-700">
+          <i class="fa fa-times text-xl" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="space-y-4 text-slate-700">
+        <div>
+          <h4 class="font-semibold text-dark mb-1">1. 开始计时</h4>
+          <p class="text-sm">点击"开始计时"按钮启动计时器，开始答题</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-dark mb-1">2. 标记答题完成</h4>
+          <p class="text-sm">每完成一道题，按下键盘上的任意键即可标记，系统会自动记录耗时</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-dark mb-1">3. 结束计时</h4>
+          <p class="text-sm">所有题目完成后，点击"结束计时"按钮停止计时</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-dark mb-1">4. 导出记录</h4>
+          <p class="text-sm">计时结束后，可以点击"导出记录"按钮下载CSV格式的答题记录</p>
+        </div>
+        <div>
+          <h4 class="font-semibold text-dark mb-1">5. 耗时计算规则</h4>
+          <ul class="list-disc list-inside text-sm">
+            <li>第一次标记：从开始计时到第一次标记的时间</li>
+            <li>后续标记：本次标记与上一次标记的时间差</li>
+            <li>总耗时：从开始到结束的总时间</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-6 px-4">
+    <div class="container mx-auto text-center">
+      <p class="text-slate-400">答题计时计次工具 &copy; 2024</p>
+      <p class="text-slate-500 text-sm mt-2">
+        <i class="fa fa-lightbulb-o mr-1" aria-hidden="true"></i>
+        提升答题效率，记录每一刻进步
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // 全局状态变量
+    const state = {
+      isRunning: false,
+      startTime: null,
+      endTime: null,
+      timerInterval: null,
+      currentTime: 0,
+      tags: [],
+      questionCount: 0
+    };
+
+    // DOM 元素
+    const timerDisplay = document.getElementById('timerDisplay');
+    const statusText = document.getElementById('statusText');
+    const questionCountEl = document.getElementById('questionCount');
+    const totalTimeEl = document.getElementById('totalTime');
+    const recordTableBody = document.getElementById('recordTableBody');
+    const recordCountEl = document.getElementById('recordCount');
+    const startBtn = document.getElementById('startBtn');
+    const endBtn = document.getElementById('endBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const exportBtn = document.getElementById('exportBtn');
+    const helpBtn = document.getElementById('helpBtn');
+    const closeHelpBtn = document.getElementById('closeHelpBtn');
+    const helpModal = document.getElementById('helpModal');
+
+    // 格式化时间为 HH:MM:SS
+    function formatTime(ms) {
+      const totalSeconds = Math.floor(ms / 1000);
+      const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+      const seconds = String(totalSeconds % 60).padStart(2, '0');
+      return `${hours}:${minutes}:${seconds}`;
+    }
+
+    // 格式化日期时间
+    function formatDateTime(date) {
+      return date.toLocaleString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      });
+    }
+
+    // 更新计时器显示
+    function updateTimer() {
+      state.currentTime += 1000;
+      timerDisplay.textContent = formatTime(state.currentTime);
+    }
+
+    // 记录答题标签
+    function addTag() {
+      if (!state.isRunning) return;
+
+      const now = new Date();
+      const tagTime = now.getTime() - state.startTime;
+      
+      state.tags.push({
+        timestamp: now,
+        elapsedTime: tagTime,
+        questionNumber: state.tags.length + 1
+      });
+
+      state.questionCount = state.tags.length;
+      questionCountEl.textContent = state.questionCount;
+      
+      // 更新表格记录
+      updateRecordTable();
+      
+      // 更新状态文本
+      statusText.innerHTML = `<i class="fa fa-check-circle text-secondary mr-1" aria-hidden="true"></i> 已标记第 ${state.questionCount} 道题`;
+    }
+
+    // 更新记录表格 - 修复每道题的结束时间显示
+    function updateRecordTable() {
+      if (state.tags.length === 0) {
+        recordTableBody.innerHTML = `
+          <tr class="text-center">
+            <td colspan="4" class="py-8 text-neutral">
+              <i class="fa fa-info-circle mr-1" aria-hidden="true"></i> 暂无答题记录
+            </td>
+          </tr>
+        `;
+        recordCountEl.textContent = '共 0 条记录';
+        return;
+      }
+
+      let tableHtml = '';
+      
+      state.tags.forEach((tag, index) => {
+        const prevTag = state.tags[index - 1];
+        let duration = 0;
+        let questionStartTime = '';
+        
+        if (index === 0) {
+          // 第一题：开始时间为计时开始时间
+          questionStartTime = formatDateTime(new Date(state.startTime));
+          // 第一题耗时：从开始到第一次标记的时间
+          duration = tag.elapsedTime;
+        } else {
+          // 后续题目：开始时间为上一题的标记时间
+          questionStartTime = formatDateTime(prevTag.timestamp);
+          // 后续题目耗时：当前标记 - 上一次标记的时间
+          duration = tag.elapsedTime - prevTag.elapsedTime;
+        }
+        
+        // 每道题的结束时间都是当前的标记时间
+        let questionEndTime = formatDateTime(tag.timestamp);
+        
+        // 最后一题在计时结束后，同时显示标记时间和总结束时间
+        if (index === state.tags.length - 1 && state.endTime) {
+          questionEndTime = `${formatDateTime(tag.timestamp)}<br/><small class="text-slate-400">总结束: ${formatDateTime(state.endTime)}</small>`;
+        }
+        
+        tableHtml += `
+          <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
+            <td class="py-3 px-4 font-medium">${tag.questionNumber}</td>
+            <td class="py-3 px-4 text-neutral">${questionStartTime}</td>
+            <td class="py-3 px-4 text-neutral" style="white-space: pre-line;">${questionEndTime}</td>
+            <td class="py-3 px-4 font-semibold ${duration > 60000 * 5 ? 'text-danger' : 'text-primary'}">${formatTime(duration)}</td>
+          </tr>
+        `;
+      });
+      
+      recordTableBody.innerHTML = tableHtml;
+      recordCountEl.textContent = `共 ${state.tags.length} 条记录`;
+    }
+
+    // 开始计时
+    function startTimer() {
+      if (state.isRunning) return;
+      
+      state.isRunning = true;
+      state.startTime = new Date().getTime() - state.currentTime;
+      
+      // 更新UI状态
+      timerDisplay.classList.add('pulse-animation');
+      statusText.innerHTML = '<i class="fa fa-play-circle text-secondary mr-1" aria-hidden="true"></i> 计时中 - 按任意键标记答题完成';
+      startBtn.disabled = true;
+      startBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      endBtn.disabled = false;
+      endBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      exportBtn.disabled = true;
+      exportBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      
+      // 启动计时器
+      state.timerInterval = setInterval(updateTimer, 1000);
+    }
+
+    // 结束计时
+    function endTimer() {
+      if (!state.isRunning) return;
+      
+      state.isRunning = false;
+      state.endTime = new Date();
+      
+      // 清除计时器
+      clearInterval(state.timerInterval);
+      
+      // 更新UI状态
+      timerDisplay.classList.remove('pulse-animation');
+      statusText.innerHTML = `<i class="fa fa-check-circle text-secondary mr-1" aria-hidden="true"></i> 计时结束 - 共答题 ${state.questionCount} 道`;
+      startBtn.disabled = false;
+      startBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      endBtn.disabled = true;
+      endBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      exportBtn.disabled = false;
+      exportBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      
+      // 更新总耗时
+      totalTimeEl.textContent = formatTime(state.currentTime);
+      
+      // 更新表格（补全最后一题的总结束时间）
+      updateRecordTable();
+    }
+
+    // 重置所有状态
+    function resetAll() {
+      // 停止计时器
+      if (state.isRunning) {
+        clearInterval(state.timerInterval);
+      }
+      
+      // 重置状态
+      state.isRunning = false;
+      state.startTime = null;
+      state.endTime = null;
+      state.currentTime = 0;
+      state.tags = [];
+      state.questionCount = 0;
+      
+      // 更新UI
+      timerDisplay.textContent = '00:00:00';
+      timerDisplay.classList.remove('pulse-animation');
+      statusText.textContent = '未开始 - 点击"开始"按钮启动计时';
+      questionCountEl.textContent = '0';
+      totalTimeEl.textContent = '00:00:00';
+      
+      // 更新按钮状态
+      startBtn.disabled = false;
+      startBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      endBtn.disabled = true;
+      endBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      exportBtn.disabled = true;
+      exportBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      
+      // 清空表格
+      updateRecordTable();
+    }
+
+    // 导出记录为CSV - 同时导出每道题的开始和结束时间
+    function exportRecords() {
+      if (state.tags.length === 0) {
+        alert('暂无答题记录可导出');
+        return;
+      }
+      
+      // 构建CSV内容
+      let csvContent = "题号,题目开始时间,题目结束时间,总计时结束时间,耗时(秒)\n";
+      
+      state.tags.forEach((tag, index) => {
+        const prevTag = state.tags[index - 1];
+        let durationSec = 0;
+        let questionStartTime = '';
+        let totalEndTimeStr = state.endTime ? formatDateTime(state.endTime) : '';
+        
+        if (index === 0) {
+          questionStartTime = formatDateTime(new Date(state.startTime));
+          durationSec = Math.floor(tag.elapsedTime / 1000);
+        } else {
+          questionStartTime = formatDateTime(prevTag.timestamp);
+          durationSec = Math.floor((tag.elapsedTime - prevTag.elapsedTime) / 1000);
+        }
+        
+        const questionEndTime = formatDateTime(tag.timestamp);
+        
+        csvContent += `${tag.questionNumber},"${questionStartTime}","${questionEndTime}","${totalEndTimeStr}","${durationSec}"\n`;
+      });
+      
+      // 添加总耗时
+      const totalSec = Math.floor(state.currentTime / 1000);
+      csvContent += `,,,"总耗时(秒)",${totalSec}\n`;
+      
+      // 创建下载链接
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      
+      // 文件名：答题记录_日期时间.csv
+      const dateStr = new Date().toLocaleString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+      }).replace(/[^\d]/g, '');
+      
+      link.setAttribute('href', url);
+      link.setAttribute('download', `答题记录_${dateStr}.csv`);
+      link.style.visibility = 'hidden';
+      
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // 事件监听
+    startBtn.addEventListener('click', startTimer);
+    endBtn.addEventListener('click', endTimer);
+    resetBtn.addEventListener('click', resetAll);
+    exportBtn.addEventListener('click', exportRecords);
+    
+    // 键盘任意键标记答题
+    document.addEventListener('keydown', (e) => {
+      // 排除一些功能性按键，避免误触发
+      const excludedKeys = ['Escape', 'Tab', 'Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'NumLock', 'ScrollLock'];
+      if (!excludedKeys.includes(e.key) && state.isRunning) {
+        addTag();
+      }
+    });
+    
+    // 帮助模态框
+    helpBtn.addEventListener('click', () => {
+      helpModal.classList.remove('hidden');
+    });
+    
+    closeHelpBtn.addEventListener('click', () => {
+      helpModal.classList.add('hidden');
+    });
+    
+    helpModal.addEventListener('click', (e) => {
+      if (e.target === helpModal) {
+        helpModal.classList.add('hidden');
+      }
+    });
+    
+    // 初始化
+    updateRecordTable();
+  </script>
+</body>
+</html>
