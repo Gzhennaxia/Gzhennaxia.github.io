@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性下班时间计算器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        .input-section {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5f6368;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dadce0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 30px;
+        }
+        button:hover {
+            background-color: #0d66d0;
+        }
+        .result-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #1a73e8;
+        }
+        .result-item {
+            margin: 12px 0;
+            font-size: 16px;
+        }
+        .result-item span {
+            font-weight: 500;
+            color: #1a73e8;
+        }
+        .info-text {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #5f6368;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>弹性下班时间计算器</h1>
+        
+        <div class="input-section">
+            <label for="startTime">请输入上班时间（格式：HH:MM）</label>
+            <input type="text" id="startTime" placeholder="例如：08:30 或 09:15">
+        </div>
+        
+        <button id="calculateBtn">计算下班时间</button>
+        
+        <div class="result-section">
+            <div class="result-item">上班时间：<span id="showStart">-</span></div>
+            <div class="result-item">下班时间：<span id="showEnd">-</span></div>
+            <div class="result-item">工作时长：<span id="showDuration">8小时</span></div>
+        </div>
+        
+        <div class="info-text">
+            <p>• 基础规则：8:30上班 → 17:45下班（包含午休时间）</p>
+            <p>• 弹性原则：晚到几分钟，下班时间相应推迟几分钟</p>
+            <p>• 示例：8:40上班 → 17:55下班，9:00上班 → 18:15下班</p>
+        </div>
+    </div>
+
+    <script>
+        // 获取DOM元素
+        const startTimeInput = document.getElementById('startTime');
+        const calculateBtn = document.getElementById('calculateBtn');
+        const showStart = document.getElementById('showStart');
+        const showEnd = document.getElementById('showEnd');
+        
+        // 基础时间：8:30上班对应17:45下班
+        const baseStartHour = 8;
+        const baseStartMinute = 30;
+        const baseEndHour = 17;
+        const baseEndMinute = 45;
+        
+        // 计算下班时间
+        function calculateEndTime(startTimeStr) {
+            // 验证时间格式
+            const timeReg = /^\d{2}:\d{2}$/;
+            if (!timeReg.test(startTimeStr)) {
+                alert('请输入正确的时间格式（HH:MM）');
+                return null;
+            }
+            
+            // 解析输入的时间
+            const [startHour, startMinute] = startTimeStr.split(':').map(Number);
+            
+            // 验证时间有效性
+            if (startHour < 0 || startHour > 23 || startMinute < 0 || startMinute > 59) {
+                alert('请输入有效的时间（小时0-23，分钟0-59）');
+                return null;
+            }
+            
+            // 计算与基础时间的差值（分钟）
+            const baseTotalMinutes = baseStartHour * 60 + baseStartMinute;
+            const inputTotalMinutes = startHour * 60 + startMinute;
+            const difference = inputTotalMinutes - baseTotalMinutes;
+            
+            // 计算下班时间
+            let endTotalMinutes = baseEndHour * 60 + baseEndMinute + difference;
+            
+            // 处理跨天情况
+            let nextDay = false;
+            if (endTotalMinutes >= 24 * 60) {
+                endTotalMinutes -= 24 * 60;
+                nextDay = true;
+            }
+            
+            // 转换为小时和分钟
+            const endHour = Math.floor(endTotalMinutes / 60);
+            const endMinute = endTotalMinutes % 60;
+            
+            // 格式化输出
+            const endTimeStr = `${endHour.toString().padStart(2, '0')}:${endMinute.toString().padStart(2, '0')}`;
+            return nextDay ? `${endTimeStr}（次日）` : endTimeStr;
+        }
+        
+        // 绑定计算按钮事件
+        calculateBtn.addEventListener('click', function() {
+            const startTime = startTimeInput.value.trim();
+            if (!startTime) {
+                alert('请输入上班时间');
+                return;
+            }
+            
+            const endTime = calculateEndTime(startTime);
+            if (endTime) {
+                showStart.textContent = startTime;
+                showEnd.textContent = endTime;
+            }
+        });
+        
+        // 支持回车键计算
+        startTimeInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
