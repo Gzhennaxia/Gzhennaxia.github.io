@@ -361,50 +361,89 @@
                 <div class="directory-header" onclick="toggleDirectory('static-pages-section')">
                     <div class="directory-title">🌐 Static Pages (静态页面工具)</div>
                     <div style="display: flex; align-items: center; gap: 15px;">
-                        <span class="directory-count">8 个文件</span>
+                        <span class="directory-count">8 个页面</span>
                         <span class="toggle-icon">▼</span>
                     </div>
                 </div>
                 <div class="file-list">
-                    <div class="file-item">
-                        <span class="file-icon">⏰</span>
-                        <a href="static-pages/FlexibleOffDutyTimeCalculator.html" class="file-link" target="_blank">FlexibleOffDutyTimeCalculator.html</a>
-                        <span class="file-size">6.7 KB</span>
+                    <!-- 练习 / 学习 -->
+                    <div class="subdir-section">
+                        <div class="subdir-header" onclick="event.stopPropagation(); toggleSubdir(this)">
+                            <span class="subdir-title">📚 练习 / 学习</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="subdir-content file-list">
+                            <div class="file-item">
+                                <span class="file-icon">🔢</span>
+                                <a href="static-pages/百分比分数等式练习.html" class="file-link" target="_blank">百分比 ↔ 分数等式练习</a>
+                                <span class="file-size">36.7 KB</span>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-icon">⏱️</span>
+                                <a href="static-pages/TimeCounter.html" class="file-link" target="_blank">答题计时计次工具</a>
+                                <span class="file-size">20.5 KB</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="file-item">
-                        <span class="file-icon">⏱️</span>
-                        <a href="static-pages/TimeCounter.html" class="file-link" target="_blank">TimeCounter.html</a>
-                        <span class="file-size">20.5 KB</span>
+
+                    <!-- 下班时间 -->
+                    <div class="subdir-section">
+                        <div class="subdir-header" onclick="event.stopPropagation(); toggleSubdir(this)">
+                            <span class="subdir-title">🕐 下班时间</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="subdir-content file-list">
+                            <div class="file-item">
+                                <span class="file-icon">🏢</span>
+                                <a href="static-pages/前海百递下班时间计算器.html" class="file-link" target="_blank">前海百递下班时间计算器</a>
+                                <span class="file-size">13.4 KB</span>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-icon">🕐</span>
+                                <a href="static-pages/弹性下班时间计算器.html" class="file-link" target="_blank">弹性下班时间计算器</a>
+                                <span class="file-size">6.7 KB</span>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-icon">⏰</span>
+                                <a href="static-pages/FlexibleOffDutyTimeCalculator.html" class="file-link" target="_blank">Flexible Off-Duty Time Calculator（英文版）</a>
+                                <span class="file-size">6.7 KB</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="file-item">
-                        <span class="file-icon">🏢</span>
-                        <a href="static-pages/前海百递下班时间计算器.html" class="file-link" target="_blank">前海百递下班时间计算器.html</a>
-                        <span class="file-size">13.4 KB</span>
+
+                    <!-- 理财 / 工具 -->
+                    <div class="subdir-section">
+                        <div class="subdir-header" onclick="event.stopPropagation(); toggleSubdir(this)">
+                            <span class="subdir-title">🛠 理财 / 工具</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="subdir-content file-list">
+                            <div class="file-item">
+                                <span class="file-icon">💰</span>
+                                <a href="static-pages/投资资金配置与综合收益计算器.html" class="file-link" target="_blank">投资资金配置与综合收益计算器</a>
+                                <span class="file-size">14.7 KB</span>
+                            </div>
+                            <div class="file-item">
+                                <span class="file-icon">🔧</span>
+                                <a href="static-pages/多段单引号JSON解析工具.html" class="file-link" target="_blank">多段单引号 JSON 解析工具</a>
+                                <span class="file-size">6.9 KB</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="file-item">
-                        <span class="file-icon">🔧</span>
-                        <a href="static-pages/多段单引号JSON解析工具.html" class="file-link" target="_blank">多段单引号JSON解析工具.html</a>
-                        <span class="file-size">5.5 KB</span>
-                    </div>
-                    <div class="file-item">
-                        <span class="file-icon">🕐</span>
-                        <a href="static-pages/弹性下班时间计算器.html" class="file-link" target="_blank">弹性下班时间计算器.html</a>
-                        <span class="file-size">6.7 KB</span>
-                    </div>
-                    <div class="file-item">
-                        <span class="file-icon">💰</span>
-                        <a href="static-pages/投资资金配置与综合收益计算器.html" class="file-link" target="_blank">投资资金配置与综合收益计算器.html</a>
-                        <span class="file-size">14.7 KB</span>
-                    </div>
-                    <div class="file-item">
-                        <span class="file-icon">🌸</span>
-                        <a href="static-pages/flowers.html" class="file-link" target="_blank">flowers.html（中秋国庆·大荔种花计划）</a>
-                        <span class="file-size">187.3 KB</span>
-                    </div>
-                    <div class="file-item">
-                        <span class="file-icon">🚄</span>
-                        <a href="static-pages/国庆回家乘车方案.html" class="file-link" target="_blank">国庆回家乘车方案.html（四方案：北京看姐姐 / 合肥运城 / 西安直飞 / 北京运城联程）</a>
-                        <span class="file-size">68.6 KB</span>
+
+                    <!-- 生活 / 计划 -->
+                    <div class="subdir-section">
+                        <div class="subdir-header" onclick="event.stopPropagation(); toggleSubdir(this)">
+                            <span class="subdir-title">🌱 生活 / 计划</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="subdir-content file-list">
+                            <div class="file-item">
+                                <span class="file-icon">🌸</span>
+                                <a href="static-pages/flowers.html" class="file-link" target="_blank">大荔种花计划（中秋国庆）</a>
+                                <span class="file-size">187.4 KB</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
